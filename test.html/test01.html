@@ -1,11 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>화면설계 test </title>
+    <style>
+        /* font */
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* layout */
+        #header1 {
+            height: 70px;
+            background-color: #f8bbd0;
+            line-height: 70px;
+        }
+
+        #header2 {
+            height: 70px;
+            background-color: #df8ca9;
+            line-height: 70px;
+        }
+
+        #banner {
+            height: 400px;
+            background-color: #f48fb1;
+            line-height: 400px;
+        }
+
+        #contents1 {
+            height: 300px;
+            background-color: #f06292;
+            line-height: 300px;
+        }
+
+        #contents2 {
+            height: 900px;
+            background-color: #ec407a;
+            line-height: 900px;
+        }
+
+        #contents3 {
+            height: 1600px;
+            background-color: #e91e63;
+            line-height: 1600px;
+        }
+
+        #contents4 {
+            height: 400px;
+            background-color: #cd195b;
+            line-height: 400px;
+        }
+
+        #footer1 {
+            height: 100px;
+            background-color: #c2185b;
+            line-height: 100px;
+        }
+
+        #footer2 {
+            height: 100px;
+            background-color: #530a28;
+            line-height: 100px;
+        }
+
+        /* container */
+        .container {
+            width: 1280px;
+            margin: 0 auto;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+            font-size: 72px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'S-CoreDream-8Heavy';
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="wrap">
+        <div id="header">
+            <div id="header1">
+                <div class="container">header_top</div>
+            </div>
+            <div id="header2">
+                <div class="container">header_bom</div>
+            </div>
+        </div>
+        <!-- //header -->
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <!-- //banner -->
+        <div id="contents">
+            <div id="contents1">
+                <div class="container">contents1</div>
+            </div>
+            <div id="contents2">
+                <div class="container">contents2</div>
+            </div>
+            <div id="contents3">
+                <div class="container">contents3</div>
+            </div>
+            <div id="contents4">
+                <div class="container">contents4</div>
+            </div>
+        </div>
+        <!-- //contents -->
+        <div id="footer">
+            <div id="footer1">
+                <div class="container">footer_top</div>
+            </div>
+            <div id="footer2">
+                <div class="container">footer_bom</div>
+            </div>
+            <div class="container"></div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
 </body>
+
 </html>

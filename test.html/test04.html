@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>화면구현 test 03</title>
+    <title>화면구현 test 03 </title>
+    <style>
+        /* font */
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* body */
+        body {
+            background: #ffebee;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* layout */
+        #wrap {
+            width: 1200px;
+            height: 1600px;
+            margin: 0 auto;
+            color: #fff;
+            font-size: 72px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'S-CoreDream-8Heavy';
+
+        }
+
+        #header {
+            width: 900px;
+            height: 400px;
+            line-height: 400px;
+            background: #ffcdd2;
+            float: right;
+        }
+
+        #side {
+            width: 300px;
+            height: 1600px;
+            line-height: 1600px;
+            background: #ef9a9a;
+            float: left;
+        }
+
+        #contents {
+            width: 900px;
+            height: 800px;
+            line-height: 800px;
+            background: #e57373;
+            float: right;
+        }
+
+        #footer {
+            width: 900px;
+            height: 400px;
+            line-height: 400px;
+            background: #ef5350;
+            float: right;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="wrap">
+        <div id="header">header</div>
+        <!-- //header -->
+        <div id="side">side</div>
+        <!-- //side -->
+        <div id="contents">contents</div>
+        <!--//contents  -->
+        <div id="footer">footer</div>
+        <!--//footer  -->
+    </div>
+    <!-- //wrap -->
 </body>
+
 </html>
