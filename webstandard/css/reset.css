@@ -20,6 +20,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+/* 블릿 기호 초기화 */
+ul,ol,dl,menu {list-style: none;}
+
 /* IR 효과 */
 .ir_pm {
     display: block; 
