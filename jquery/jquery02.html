@@ -6,6 +6,7 @@
     <title>jQuery</title>
     <style>
         li{margin: 2px;}
+        a {padding: 0 10px;}
     </style>
 </head>
 <body>
@@ -13,13 +14,13 @@
     <h1>기본 선택자</h1>
     <div id="sample">
         <ul id="list1" class="list">
-            <li class="list1"><a href="#">list1</a></li>
-            <li class="list2"><a href="#">list2</a></li>
-            <li class="list3"><a href="#">list3</a></li>
+            <li class="list1"><a href="https://www.daum.net">list1</a></li>
+            <li class="list2"><a href="https://www.naver.com">list2</a></li>
+            <li class="list3"><a href="list2">list3</a></li>
             <li class="list4"><a href="#">list4</a></li>
-            <li class="list5"><a href="#">list5</a></li>
-            <li class="list6"><a href="#">list6</a></li>
-            <li class="list7"><a href="#">list7</a></li>
+            <li class="list5"><a href="#" class="link">list5</a></li>
+            <li class="list6"><a href="#" class="link">list6</a></li>
+            <li class="list7"><a href="https://gitbook.com">list7</a></li>
             <li class="list8"><a href="#">list8</a></li>
             <li class="list9"><a href="#">list9</a></li>
             <li class="list10"><a href="#">list10</a>
@@ -68,7 +69,7 @@
                 </ul></li>
         </ul>
         <ul id="list3" class="list">
-            <li class="list1"><a href="#">list1</a></li>
+            <li class="list1"><a href="#"></a></li>
             <li class="list2"><a href="#">list2</a></li>
             <li class="list3"><a href="#">list3</a></li>
             <li class="list4"><a href="#">list4</a></li>
@@ -121,7 +122,44 @@
         //$(".list5 + li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //형제 선택자(5번 뒤에 6번 list만 선택)
         //$(".list5 ~ li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //형제들 선택자(5번이후 6번부터 하위 목록 선택)
 
-        
+        //속성 선택자
+        // $("li a[href='https://www.naver.com/'").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"});
+        // $("li a[href^='https'").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //https로 시작하는 태그 찾기
+        // $("li a[href$='net'").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //com 으로 끝나는 태그 찾기
+        // $("li a[href*='naver']").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //naver가 포함되어있는 속성 찾기
+        // $("li a[href][class]").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"});
+
+        //기본 필터 선택자
+        // $("li:eq(4)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //list5번에 표시가 된다 0부터 시작하므로
+        // $("li:gt(4)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); // list6이하에 모든목록에 표시된다.
+        // $("li:lt(4)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //list 5 상위항목(list 1,2,3,4)
+        //$(":header").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+        //$("li:first").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+        //$("li:last").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+        // $("li:odd").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //짝수 목록과 그 목록이 짝수라면 그 자식 모두다
+        // $("li:even").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //홀수 목록과 그 목록이 홀수라면 자식 모두다
+
+        // 내용 필터 선택자
+        // $("li:contains('list4')").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //list 4번-내용까지 선택하는 것 
+        // $("li a:empty").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"});  //내용이 비어있는 목록 선택
+        // $("li:parent").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //내용이 있는 목록 선택
+        // $("li:has(li)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //자식li목록을 가지고 있는 것들 선택
+
+        //보임 필터 선택자
+        // $("li:hidden").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+        // $("li:visible").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+
+        //자식요소 필터 선택자
+        //$("li:first").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+        //$("li:first-child").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+        //$("li:last").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //가장 하위 자식
+        // $("li:last-child").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 자식까지 모두
+        // $("li:nth-child(4)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //4번목록과 4번 자식
+        // $("li:nth-child(4n)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //4의배수목록과 4의배수 자식
+        // $("li:nth-child(2n+1)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); //홀수목록과 홀수자식
+        // $("li:nth-child(odd)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+        // $("li:nth-child(even)").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
+        // $("li:only-child").css({backgroundColor:"#f44336", border:"1px dashed #303f9f", color:"#fff"}); 
     </script>
 </body>
 </html>
