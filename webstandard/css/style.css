@@ -322,6 +322,7 @@
 .notice4 li span {float: right; width: 30%; text-align: right;}
 .notice4 a.more {position: absolute; right: 9px; top: 9px;}
 
+/* 게시판6 */
 .gallery {position: relative; border: 1px solid #ccc; height: 255px; overflow: hidden;}
 .gallery h4 {font-size: 14px; color: #0093bd; padding: 10px 0 8px 11px; border-bottom: 1px solid #ccc;}
 .gallery .gallery_btn {position: absolute; right: 5px; top: 7px;}
