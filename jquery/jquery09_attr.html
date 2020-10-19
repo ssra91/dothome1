@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+
+    <div id="img">
+        <img src="img/img03.jpg" alt="이미지1" width="300">
+        <p class="desc"></p>
+        <button class="btn1">200</button>
+        <button class="btn2">400</button>
+        <button class="btn3">600</button>
+    </div>
+    
+
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js"></script>
+    <script>
+        //img를 클릭하면 이미지가 사라지게 해라
+        $("img").click(function(){
+            // $(this).css("display","none");
+            let txt = ($ (this).attr("src") );
+
+            $(".desc").text(txt);
+        });
+
+        //$(".desc").css({"background-Color":"red","color":"white"});
+        //desc를 선택해서 패딩을 20px
+        //$("p:visible").css({"background-Color":"red","color":"white","padding":"20px"});
+        //$("p").css({"background-Color":"red","color":"white","padding":"20px"});
+        //$("p:parent").css({"background-Color":"red","color":"white","padding":"20px"});
+        //$("p:first").css({"background-Color":"red","color":"white","padding":"20px"});
+        //$("p:last").css({"background-Color":"red","color":"white","padding":"20px"});
+        //$("p:eq(0)").css({"background-Color":"red","color":"white","padding":"20px"});
+        //$("p:lt(1)").css({"background-Color":"red","color":"white","padding":"20px"});
+        $("p:even").css({"background-Color":"red","color":"white","padding":"20px"});
+
+        //첫번째 버튼을 클릭하면 이미지 크기를 200으로
+        $(".btn1").click(function(){
+            $("img").attr("width","200");
+        });
+        $(".btn2").click(function(){
+            $("img").attr("width","500");
+        });
+        $(".btn3").click(function(){
+            $("img").attr("width","1000");
+        });
+
+
+
+        // //배열선언
+        // const arr1 = new Array();
+        // arr1[0] = 100;
+        // arr1[1] = 200;
+
+        // document.write(arr1[0],"<br>");
+        // document.write(arr1[1],"<br><br>");
+
+        // const arr2 = [100,200,300,400];
+        // document.write(arr2[0],"<br>");
+        // document.write(arr2[1],"<br>");
+        // document.write(arr2[2],"<br>");
+        // document.write(arr2[3],"<br><br>");
+
+        // const arr3 = [100,200,300,400,500,600,700,800,900];
+        // //for문을 이용해서
+
+        // for(let i=0; i<arr3.length; i++){
+        //     document.write(arr3[i], "<br><br>");
+        // }
+
+        // // for(let i=0; i<arr3.length; i++){
+        // //     document.write(arr3[i], "<br><br>");
+        // //     document.write(i, "<br>")
+        // // }
+
+        // arr3.forEach((element, index, array) => {
+        //     document.write(element, "<br>");
+        //     document.write(index, "<br>");
+        //     document.write(array, "<br>");
+        // })
+
+        // document.write("<br><br>");
+        // // arr3.forEach((element) => {
+        // //     document.write(element, "<br>");
+        // // })
+
+        // //for in문
+        // for( let i in arr3){
+        //     document.write(arr3[i]);
+        // }
+        // document.write("<br>");
+
+        // //for of문
+        // for(let i of arr3){
+        //     document.write(i);
+        // }
+        </script>
+</body>
+</html>
