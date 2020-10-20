@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    
+
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js"></script>
+    <script>
+
+        const arr1 = [100,200,300,400,500,600,700];
+        //for문을 이용하여 출력
+        for(let i=0; i<arr1.length; i++){
+            document.write(arr1[i]);
+        }
+        document.write("<br>");
+
+        //forEach를 이용하여 출력
+        arr1.forEach((elem) => {   //elem 감싸는 괄호 생략가능
+            document.write(elem);
+        });  
+        document.write("<br>");  
+
+        //for in문
+        for(let i in arr1){
+            document.write(arr1[i]);
+        }
+        document.write("<br>");
+
+        //for of문
+        for( let i of arr1 ){
+            document.write(i);
+        }
+
+        // let a = []; //배열선언
+        // for( let i = 1; i <= 5; i++){
+        //     a += [i];     //a= a+[i]
+        //     // a=a+[1]   a=a[1]
+        //     // a=a+[2]   a=a[2]
+        //     // a=a+[3]   a=a[3]
+        //     // a=a+[4]   a=a[4]
+        //     // a=a+[5]   a=a[5]
+        // }
+        // console.log(a)
+        // document.wirte(a[0],"<br>")
+        // document.wirte(a[1],"<br>")
+        // document.wirte(a[2],"<br>")
+        // document.wirte(a[3],"<br>")
+        // document.wirte(a[4],"<br>")
+
+        // document.write("<br><br>")
+
+        // //배열 비구조화 할당
+        // let [x, y] = [100, 200];
+
+        // document.write(x);
+        // document.write(y);
+        // document.write("<br><br>");
+
+        // [x, y] = [y, x]
+
+        // document.write(x);
+        // document.write(y);
+        document.write("<br><br>");
+
+        //Array 객체
+        const arr10 = [100,200,300,400,500];
+        const arr20 = [600,700,800,900,1000];
+
+        document.write(arr10, "<br>");
+        document.write(arr10.join('*'),"<br>");
+        document.write(arr10.reverse(),"<br>");  //거꾸로 나오는거
+        document.write(arr10.sort(),"<br>"); 
+        document.write(arr10.sort(function(a, b){return b - a}),"<br>");  //높은 숫자부터 정렬
+        document.write(arr10.sort(function(a, b){return a - b}),"<br>");  //높은 숫자부터 정렬
+        document.write(arr10.slice(1,3),"<br>");   //200,300
+        document.write(arr10.concat(arr20),"<br>");   //합쳐서 나온다.
+        document.write(arr10.shift(),"<br>");   //맨앞에 있는 값을 제거 한다.
+        document.write(arr10,"<br>");
+        document.write(arr10,unshift(100),"<br>"); //200,300,400,500
+        document.writep(arr10.pop(),"<br>");
+
+
+        
+
+        
+    </script>
+</body>
+</html>
