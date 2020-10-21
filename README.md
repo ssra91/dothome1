@@ -7,7 +7,7 @@
 <a href="https://ssra91.github.io/dothome1/index.html">바로가기</a>
 
 #제이쿼리 예제
-find() : <a href="https://ssra91.github.io/dothome1/jquery/jquery04_find2.html">바로가기</a>
+find() : <a href="https://ssra91.github.io/dothome1/jquery/jquery04_find2.html">바로가기</a><br>
 addClass/removeClass () : <a href="https://ssra91.github.io/dothome1/jquery/jquery05_addClass.html">바로가기</a>
 addClass/removeClass2 () : <a href="https://ssra91.github.io/dothome1/jquery/jquery06_addClass2.html">바로가기</a>
 toggleClass() :  <a href="https://ssra91.github.io/dothome1/jquery/jquery05_addClass.html">바로가기</a>
