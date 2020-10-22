@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="ssra10">
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
-    <meta name="keywords" content="김소라, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, ssra10, publisher, css3, html, markup, design, Webstoryboy">
+    <meta name="keywords"
+        content="김소라, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, ssra10, publisher, css3, html, markup, design, Webstoryboy">
     <title>Sora | ssra10 | Menu Effect </title>
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
@@ -45,6 +47,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
     <a class="sr-only" href="#content">Skip to main content</a>
     <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
@@ -76,68 +79,92 @@
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9" role="main">
-                <!-- 배너광고 -->
+            <div class="col-md-12" role="main">
+                <!-- 배너광고 1140 -->
                 <div class="ad">
                     <script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-	new PartnersCoupang.G({ id:347661 });
-</script>
+                    <script>
+                        new PartnersCoupang.G({
+                            id: 348415
+                        });
+                    </script>
                 </div>
-                <!-- //배너광고 -->
+                <!-- //배너광고 1140-->
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">클리핑 마스크</h2>
-                    <p class="bs-callout bs-callout-info">클레핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸 것처럼 나타내는 기능입니다..</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/Sample01.jpg">
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/Sample02.jpg">
-                            </a>
-                        </div>
+                    <h2 id="intro2" class="page-header">SIDE MENU</h2>
+                    <p class="bs-callout bs-callout-info">ToggleClass()를 이용하여 클래스를 추가한 뒤 hasClass()로 클래스 여부를 확인하여 사이드
+                        메뉴를 제작하였습니다. 글씨의 변경은 text() 메서드를 이용하였습니다.</p>
+                    <div class="codepen">
+                        <p class="codepen" data-height="500" data-theme-id="light" data-default-tab="js,result"
+                            data-user="ssra91" data-slug-hash="pobjGJb"
+                            style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                            data-pen-title="Menu-Side Menu">
+                            <span>See the Pen <a href="https://codepen.io/ssra91/pen/pobjGJb">
+                                    Menu-Side Menu</a> by ssra91 (<a href="https://codepen.io/ssra91">@ssra91</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                     </div>
                 </div>
                 <!-- Intro1 -->
-            </div>
-            <!-- //col-md-9 -->
-
-            <!-- //col-md-3 -->
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">레이어 마스크</a></li>
-                    </ul>
+                <!-- intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">TAB MENU1</h2>
+                    <p class="bs-callout bs-callout-info">버튼을 클릭하면 기존의 클래스를 삭제하고(removeClass) 클릭한 요소의 클래스
+                        추가(addClass)메서드를 이용하였습니다.</p>
+                    <div class="codepen">
+                        <p class="codepen" data-height="500" data-theme-id="light" data-default-tab="js,result"
+                            data-user="ssra91" data-slug-hash="bGeeWay"
+                            style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                            data-pen-title="Menu - Tab menu1">
+                            <span>See the Pen <a href="https://codepen.io/ssra91/pen/bGeeWay">
+                                    Menu - Tab menu1</a> by ssra91 (<a href="https://codepen.io/ssra91">@ssra91</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    </div>
                 </div>
+                <!-- //intro2 -->
+                <!-- intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">TAB MENU2</h2>
+                    <p class="bs-callout bs-callout-info">접근성을 고려하여 초점이동을 준수한 웹 표준 탭 메뉴를 완성하였습니다.</p>
+                    <div class="codepen">
+                        <p class="codepen" data-height="500" data-theme-id="light" data-default-tab="js,result" data-user="ssra91" data-slug-hash="GRqqVYE" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tab  menu2">
+                            <span>See the Pen <a href="https://codepen.io/ssra91/pen/GRqqVYE">
+                            Tab  menu2</a> by ssra91 (<a href="https://codepen.io/ssra91">@ssra91</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                          </p>
+                          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                    <!-- //intro3 -->
+                </div>
+                <!-- //col-md-12 -->
             </div>
-            <!--//col-md-3 -->
+            <!-- //row -->
         </div>
-        <!-- //row -->
-    </div>
-    <!-- //container -->
-    <!-- Footer -->
-    <footer class="bs-footer" role="contentinfo">
-        <div class="container">
-            <ul class="footer-links muted">
-                <li>Currently v2.0</li>
-                <li>&middot;</li>
-                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
-                <li>&middot;</li>
-                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
-                <li>&middot;</li>
-                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
-            </ul>
-        </div>
-    </footer>
-    <!-- //Footer -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/docs.min.js"></script>
-    <script src="../assets/js/prism.js"></script>
+        <!-- //container -->
+        <!-- Footer -->
+        <footer class="bs-footer" role="contentinfo">
+            <div class="container">
+                <ul class="footer-links muted">
+                    <li>Currently v2.0</li>
+                    <li>&middot;</li>
+                    <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                    <li>&middot;</li>
+                    <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                    <li>&middot;</li>
+                    <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- //Footer -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="../assets/js/jquery-1.9.1.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/docs.min.js"></script>
+        <script src="../assets/js/prism.js"></script>
 </body>
+
 </html>
