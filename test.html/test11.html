@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형 레이아웃 테스트 03</title>
     <style>
+        /* body */
         body {
             background-color: linen;
         }
-
+        /* reset */
         * {
             margin: 0;
             padding: 0;
         }
-
+        /* container */
         .container {
             width: 1200px;
             margin: 0 auto;
         }
-
+        /* layout */
         header {
             width: 100%;
             height: 100px;
@@ -57,8 +58,8 @@
             background-color: mediumpurple;
             overflow: hidden;
         }
-
-        @media (max-width: 1280px) {
+        /* 화면크기 0 ~ 1280px */
+        @media (max-width: 1290px) {
             .container {
                 width: 100%;
             }
@@ -75,7 +76,7 @@
                 width: 100%;
             }
         }
-
+        /* 화면크기 0 ~ 900px */
         @media (max-width: 900px) {
             aside {
                 width: 100%;
@@ -90,7 +91,7 @@
                 width: 50%;
             }
         }
-
+        /* 화면크기 0 ~ 480px */
         @media (max-width: 480px) {
             article:nth-of-type(1) {
                 width: 100%;
@@ -109,13 +110,21 @@
     <div id="wrap">
         <main class="container">
             <header></header>
+            <!-- //header -->
             <aside></aside>
+            <!-- //aside -->
             <article class="article1"></article>
+            <!-- //article1 -->
             <article class="article2"></article>
+            <!-- //article2 -->
             <article class="article3"></article>
+            <!-- //article3 -->
             <footer></footer>
+            <!-- //footer -->
+        </main>
+        <!-- //container -->
     </div>
-    </div>
+    <!-- //wrap -->
 </body>
 
 </html>
