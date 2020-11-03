@@ -432,39 +432,41 @@
             }
 
             //나타나기
-            if(scrollTop > $("#section1").offset().top){
-                $("#section1").addClass("show");
-            }
-            if(scrollTop > $("#section2").offset().top){
-                $("#section2").addClass("show");
-            }
-            if(scrollTop > $("#section3").offset().top){
-                $("#section3").addClass("show");
-            }
-            if(scrollTop > $("#section4").offset().top){
-                $("#section4").addClass("show");
-            }
-            if(scrollTop > $("#section5").offset().top){
-                $("#section5").addClass("show");
-            }
-            if(scrollTop > $("#section6").offset().top){
-                $("#section6").addClass("show");
-            }
-            if(scrollTop > $("#section7").offset().top){
-                $("#section7").addClass("show");
-            }
-            if(scrollTop > $("#section8").offset().top){
-                $("#section8").addClass("show");
-            }
-            if(scrollTop > $("#section9").offset().top){
-                $("#section9").addClass("show");
-            }
-        });
-        // for(i=0; i<9; i++){
-        //     if(scrollTop > $("#section[i]").offset().top){
-        //         $("#section[i]").addClass("show");
-        //     }  
-        // }
+        //     if(scrollTop > $("#section1").offset().top){
+        //         $("#section1").addClass("show");
+        //     }
+        //     if(scrollTop > $("#section2").offset().top){
+        //         $("#section2").addClass("show");
+        //     }
+        //     if(scrollTop > $("#section3").offset().top){
+        //         $("#section3").addClass("show");
+        //     }
+        //     if(scrollTop > $("#section4").offset().top){
+        //         $("#section4").addClass("show");
+        //     }
+        //     if(scrollTop > $("#section5").offset().top){
+        //         $("#section5").addClass("show");
+        //     }
+        //     if(scrollTop > $("#section6").offset().top){
+        //         $("#section6").addClass("show");
+        //     }
+        //     if(scrollTop > $("#section7").offset().top){
+        //         $("#section7").addClass("show");
+        //     }
+        //     if(scrollTop > $("#section8").offset().top){
+        //         $("#section8").addClass("show");
+        //     }
+        //     if(scrollTop > $("#section9").offset().top){
+        //         $("#section9").addClass("show");
+        //     }
+        // });
+        for(let i=0; i < 10; i++) {
+            if(scrollTop > $("#section").offset().top) {
+                $(".sOffsetTop").css("color","red");
+            }else {
+                $(".sOffsetTop").css("color","white");
+            } 
+        }
     </script>
 </body>
 </html>
