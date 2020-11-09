@@ -380,8 +380,15 @@
     padding-bottom: 3px; 
     font-weight: bold;
 }
-.popup ul {overflow: hidden;}
-.popup li {float: left; width: 93px; margin-right: 5px;}
-.popup li:last-child {margin-right: 0;}
-.popup li img {width: 100%;}
+/* .popup ul {overflow: hidden;} */
+/* .popup li {float: left; width: 93px; margin-right: 5px;} */
+/* .popup li:last-child {margin-right: 0;} */
+/* .popup li img {width: 100%;} */
    
+/* 라이트 박스 */
+.popup .lightbox {overflow: hidden;}
+.popup .lightbox a {float: left; width: 93px; margin-right: 5px;}
+.popup .lightbox a:last-child {margin-right: 0;}
+.popup .lightbox a img {width: 100%;}
+
+/* 이미지 슬라이드 */
