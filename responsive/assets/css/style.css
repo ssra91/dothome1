@@ -292,14 +292,14 @@ padding-bottom: 40px;}
 .slider .slick-active figcaption span {opacity: 1; transform: translateX(0px);}
 
 .slider .slick-prev {
-    position: absolute; left: 0; bottom: 0;
+    position: absolute; left: 0; bottom: -1px;
     width: 30px; height: 30px; 
     display: inline-block;
     text-indent: -9999px;
     border-color: #5dbfeb;
 }
 .slider .slick-next {
-    position: absolute; right: 0; bottom: 0;
+    position: absolute; right: 0; bottom: -1px;
     width: 30px; height: 30px; 
     display: inline-block;
     text-indent: -9999px;
