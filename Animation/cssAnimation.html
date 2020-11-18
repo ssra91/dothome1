@@ -13,6 +13,8 @@
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/docs.min.css" rel="stylesheet">
     <link href="../assets/css/prism.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
@@ -498,23 +500,22 @@
             </div>
                 <!-- //intro5 -->
 
-<style>
-    .timing.bg6 {height: 600px;}
-    .timing.bg6 > div {background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);}    
-    .timing25.normal {animation: move2 4s 5 ease normal;}
-    .timing26.reverse {animation: move2 4s 5 ease reverse;}
-    .timing27.alternate {animation: move2 4s 5 ease alternate;}
-    .timing28.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+                <style>
+                    .timing.bg6 {height: 600px;}
+                    .timing.bg6 > div {background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);}    
+                    .timing25.normal {animation: move2 4s 5 ease normal;}
+                    .timing25.reverse {animation: move2 4s 5 ease reverse;}
+                    .timing25.alternate {animation: move2 4s 5 ease alternate;}
+                    .timing25.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+                    @keyframes move2 {
+                        0% {left: 0; top: 0;}
+                        25% {left: calc(100% - 120px); top: 0;}
+                        50% {left: calc(100% - 120px); top: calc(100% - 120px);}
+                        75% {left: 0; top: calc(100% - 120px);}
+                        100% {left: 0; top: 0;}                        
+                    }
+                </style>
 
-    @keyframes move2 {
-        0% {left: 0; top: 0;}
-        25% {left: calc(100%- 120px); top: 0;}
-        50% {left: calc(100%- 120px); top: calc(100%- 120px);}
-        75% {left: 0; top: calc(100%- 120px);}
-        100% {left: 0; top: 0;}
-    }
-</style>
-<!-- //intro5 -->
                 <!-- Intro6-->
                 <div class="bs-docs-section">
                     <h2 id="intro6" class="page-header">animation-direction 
@@ -532,12 +533,128 @@
 <pre class="line-numbers language-css"><code>.timing.bg6 {height: 600px;}
 .timing.bg6 > div {background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);}    
 .timing25.normal {animation: move2 4s 5 ease normal;}
-.timing26.reverse {animation: move2 4s 5 ease reverse;}
-.timing27.alternate {animation: move2 4s 5 ease alternate;}
-.timing28.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}  
+.timing25.reverse {animation: move2 4s 5 ease reverse;}
+.timing25.alternate {animation: move2 4s 5 ease alternate;}
+.timing25.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;} 
+@keyframes move2 {
+    0% {left: 0; top: 0;}
+    25% {left: calc(100% - 120px); top: 0;}
+    50% {left: calc(100% - 120px); top: calc(100% - 120px);}
+    75% {left: 0; top: calc(100% - 120px);}
+    100% {left: 0; top: 0;}                        
+} 
 </code></pre>
             </div>
-                <!-- //intro5 -->
+                <!-- //intro6 -->
+
+
+                <style>
+                    .timing.bg7 > div {background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);}
+                    .timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none;}
+                    .timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards;}
+                    .timing28.show {animation: move3 3s 1 ease; animation-fill-mode: backwards;}
+                    .timing29.show {animation: move3 3s 1 ease; animation-fill-mode: both;}
+
+                    @keyframes move3 {
+                        0% {left: 0%;}
+                        100% {left: calc(100% - 120px);}
+                    }
+                </style>
+                <!-- Intro7-->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">animation-fill-mode
+                        <button type="button" class="btn btn-warning start7">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation-direction</em></h3>
+                        <div class="timing bg7">
+                            <div class="timing26"><span>timing26</span></div>
+                            <div class="timing27"><span>timing27</span></div>
+                            <div class="timing28"><span>timing28</span></div>
+                            <div class="timing29"><span>timing29</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none;}
+.timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards;}
+.timing28.show {animation: move3 3s 1 ease; animation-fill-mode: backwards;}
+.timing29.show {animation: move3 3s 1 ease; animation-fill-mode: both;}
+@keyframes move3 {
+    0% {left: 0%;}
+    100% {left: calc(100% - 120px);}
+}
+</code></pre>
+            </div>
+                <!-- //intro7 -->
+
+                <style>
+                    .timing.bg8 {height: 600px;}
+                    .timing.bg8 > div {background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);}
+                    .timing30.running {animation: move2 4s 100 ease; animation-play-state: running;}
+                    .timing30.paused {animation: move2 4s 100 ease; animation-play-state: paused;}
+
+                </style>
+                <!-- Intro8-->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">animation-play-state
+                        <button type="button" class="btn btn-warning start8-1">running</button>
+                        <button type="button" class="btn btn-warning start8-2">paused</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation-direction</em></h3>
+                        <div class="timing bg8">
+                            <div class="timing30"><span>timing30</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.timing30.running {animation: move2 4s 100 ease; animation-play-state: running;}
+.timing30.paused {animation: move2 4s 100 ease; animation-play-state: paused;}
+</code></pre>
+            </div>
+                <!-- //intro8 -->
+
+                <style>
+                    .timing.bg9 {display: flex; justify-content: space-between; min-height: 400px;}
+                    .timing.bg9 > div {background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);}
+                    .timing.bg9 > div.ani1 {animation: wobble 1s 10 ease;}
+                    .timing.bg9 > div.ani2 {animation: swing 1s 10 ease;}
+                    .timing.bg9 > div.ani3 {animation: headShake 1s 10 ease;}
+                    .timing.bg9 > div.ani4 {animation: tada 1s 10 ease;}
+                    .timing.bg9 > div.ani5 {animation: heartBeat 1s 10 ease;}
+                    .timing.bg9 > div.ani6 {animation: flash 1s 10 ease;}
+                    .timing.bg9 > div.ani7 {animation: jello 1s 10 ease;}
+                </style>
+                <!-- Intro9-->
+                <div class="bs-docs-section">
+                    <h2 id="intro9" class="page-header">animation-play-state
+                        <button type="button" class="btn btn-warning">ani1</button>
+                        <button type="button" class="btn btn-warning">ani2</button>
+                        <button type="button" class="btn btn-warning">ani3</button>
+                        <button type="button" class="btn btn-warning">ani4</button>
+                        <button type="button" class="btn btn-warning">ani5</button>
+                        <button type="button" class="btn btn-warning">ani6</button>
+                        <button type="button" class="btn btn-warning">ani7</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation-direction</em></h3>
+                        <div class="timing bg9">
+                            <div class="timing31"><span>timing31</span></div>
+                            <div class="timing32"><span>timing32</span></div>
+                            <div class="timing33"><span>timing33</span></div>
+                            <div class="timing34"><span>timing34</span></div>
+                            <div class="timing35"><span>timing35</span></div>
+                            <div class="timing36"><span>timing36</span></div>
+                            <div class="timing37"><span>timing37</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.timing.bg9 > div.ani1 {animation: wobble 1s 10 ease;}
+.timing.bg9 > div.ani2 {animation: swing 1s 10 ease;}
+.timing.bg9 > div.ani3 {animation: headShake 1s 10 ease;}
+.timing.bg9 > div.ani4 {animation: tada 1s 10 ease;}
+.timing.bg9 > div.ani5 {animation: heartBeat 1s 10 ease;}
+.timing.bg9 > div.ani6 {animation: flash 1s 10 ease;}
+.timing.bg9 > div.ani7 {animation: jello 1s 10 ease;}
+</code></pre>
+            </div>
+                <!-- //intro9 -->
             </div>
             <!-- //col-md-12 -->
 
@@ -607,17 +724,29 @@
             $(".timing.bg5 > div").addClass("show");
         });
 
+        // $("#intro6 > button").click(function(){
+        //     $(this).text();
+        //     $(".timing.bg6 > div").addClass(normal,reverse,alternate,alternate-reverse);
+        //     setTimeout(function(){
+        //         $(".timing.bg6 > div").removeClass(normal,reverse,alternate,alternate-reverse);
+        //     },4000);
         $("#intro6 > button").click(function(){
-            $(this).text();
-            $(".timing.bg6 > div").addClass(normal,reverse,alternate,alternate-reverse);
-            setTimeout(function(){
-                $(".timing.bg6 > div").removeClass(normal,reverse,alternate,alternate-reverse);
-            },4000);
-            
-            // $(".timing.bg6 > div").addClass(text);
-            // setTimeout(function(){
-            //     $(".timing.bg6 > div").removeClass(text);
-            // },10000);
+            let txt = $(this).text();
+            $(".timing.bg6 > div").removeClass("normal reverse alternate alternate-reverse").addClass(txt);
+        });
+
+        $(".start7").click(function(){
+            $(".timing.bg7 > div").addClass("show"); 
+        });
+
+        $("#intro8 > button").click(function(){
+            let txt = $(this).text();
+            $(".timing30").removeClass("running paused").addClass(txt);
+        });
+
+        $("#intro9 > button").click(function(){
+            let txt = $(this).text();
+            $(".timing.bg9 > div").removeClass("ani1 ani2 ani3 ani4 ani5 ani6 ani7").addClass(txt);
         });
     </script>
 </body>
