@@ -76,7 +76,7 @@
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9" role="main">
+            <div class="col-md-12" role="main">
                 <!-- 배너광고 -->
                 <div class="ad">
                     <script src="https://ads-partners.coupang.com/g.js"></script>
@@ -85,36 +85,209 @@
 </script>
                 </div>
                 <!-- //배너광고 -->
-                <!-- Intro1 -->
+
+                <!-- Intro0 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">클리핑 마스크</h2>
-                    <p class="bs-callout bs-callout-info">클레핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸 것처럼 나타내는 기능입니다..</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/Sample01.jpg">
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/Sample02.jpg">
-                            </a>
-                        </div>
+                    <h2 id="intro0" class="page-header">Animation</h2>
+                    <p class="bs-callout bs-callout-info">
+                        $("selector").animate(properties); <br>
+                        $("selector").animate(properties, duration);<br>
+                        $("selector").animate(properties, duration, easing);<br>
+                        $("selector").animate(properties, duration, easing, collback);
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>유형</th>
+                                    <th>메서드</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ce va" rowspan="3">Basic</td>
+                                    <td>.hide()</td>
+                                    <td>선택한 요소를 숨깁니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.show()</td>
+                                    <td>선택한 요소를 보여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.toggle() <span style="color:red">★</span></td>
+                                    <td>선택한 요소를 숨김/보여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td class="ce va" rowspan="4">Fading</td>
+                                    <td>.fadeIn()</td>
+                                    <td>선택한 요소를 천천히 보여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.fadeOut()</td>
+                                    <td>선택한 요소를 천천히 숨김니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.fadeto()</td>
+                                    <td>선택한 요소를 투명도를 조절합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.fadeToggle()</td>
+                                    <td>선택한 요소를 천천히 숨김/보여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td class="ce va" rowspan="3">Sliding</td>
+                                    <td>.slideDown()</td>
+                                    <td>선택한 요소를 슬라이딩으로 보여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.slideToggle()</td>
+                                    <td>선택한 요소를 슬라이딩으로 숨김/보여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.slideUp()</td>
+                                    <td>선택한 요소를 슬라이딩으로 숨김니다.</td>
+                                </tr>
+                                <tr>
+                                    <td class="ce va" rowspan="7">custom</td>
+                                    <td>.animate() <span style="color:red">★</span></td>
+                                    <td>선택한 요소에 애니메이션을 적용합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.clearQueue()</td>
+                                    <td>선택한 요소에 첫 번째 큐만 실행하고 대기 중인 큐는 모두 삭제합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.delay()</td>
+                                    <td>선택한 요소의 애니메이션 효과를 지연합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.dequeue()</td>
+                                    <td>선택한 요소 스택에 쌓인 큐를 모두 제거합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.finish()</td>
+                                    <td>선택한 요소의 진행중인 애니메이션을 강제로 종료합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.queue()</td>
+                                    <td>선택한 요소 스택에 대기 중인 큐를 반환하거나 추가할 수 있습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.stop()</td>
+                                    <td>선택한 요소의 실행중인 애니메이션을 정지합니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+                <!-- //Intro0 -->
+                <style>
+                    .timing {height: 500px;}
+                    .timing > div {
+                        width: 80px; height: 80px;
+                        border-radius: 50%;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 80px;
+                        margin: 10px;
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    .timing.bg1 > div {background-image: linear-gradient(to right, #F83600 0%, #F9D423 100%);}
+                </style>
                 <!-- Intro1 -->
-            </div>
-            <!-- //col-md-9 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">
+                        Animation01
+                        <button type="button" class="btn btn-warning">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg1">
+                            <div class="animation01"><span>01</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$("#intro1 > button").click(function(){
+    $(".animation01").animate({left: 100%},1000)
+    .animate({top: 100%},1000)
+    .animate({left:"0%"},1000)
+    .animate({top:"0%"},1000);
+});
+</code></pre>
+                <!-- //Intro1 -->
 
-            <!-- //col-md-3 -->
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">레이어 마스크</a></li>
-                    </ul>
-                </div>
+                <style>
+                    .timing {height: 500px;}
+                    .timing > div {
+                        width: 80px; height: 80px;
+                        border-radius: 50%;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 80px;
+                        margin: 10px;
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    .timing.bg2 > div {background-image: linear-gradient(to right, #F83600 0%, #F9D423 100%);}
+                </style>
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">
+                        Animation02 - easing
+                        <button type="button" class="btn btn-warning">swing</button>
+                        <button type="button" class="btn btn-warning">_default</button>
+                        <button type="button" class="btn btn-warning">easeInQuad</button>
+                        <button type="button" class="btn btn-warning">easeOutQuad</button>
+                        <button type="button" class="btn btn-warning">easeInOutQuad</button>
+                        <button type="button" class="btn btn-warning">easeInCubic</button>
+                        <button type="button" class="btn btn-warning">easeOutCubic</button>
+                        <button type="button" class="btn btn-warning">easeInOutCubic</button>
+                        <button type="button" class="btn btn-warning">easeInQuart</button>
+                        <button type="button" class="btn btn-warning">easeOutQuart</button>
+                        <button type="button" class="btn btn-warning">easeInOutQuart</button>
+                        <button type="button" class="btn btn-warning">easeInQuint</button>
+                        <button type="button" class="btn btn-warning">easeOutQuint</button>
+                        <button type="button" class="btn btn-warning">easeInOutQuint</button>
+                        <button type="button" class="btn btn-warning">easeInExpo</button>
+                        <button type="button" class="btn btn-warning">easeOutExpo</button>
+                        <button type="button" class="btn btn-warning">easeInOutExpo</button>
+                        <button type="button" class="btn btn-warning">easeInSine</button>
+                        <button type="button" class="btn btn-warning">easeOutSine</button>
+                        <button type="button" class="btn btn-warning">easeInOutSine</button>
+                        <button type="button" class="btn btn-warning">easeInCirc</button>
+                        <button type="button" class="btn btn-warning">easeOutCirc</button>
+                        <button type="button" class="btn btn-warning">easeInOutCirc</button>
+                        <button type="button" class="btn btn-warning">easeInElastic</button>
+                        <button type="button" class="btn btn-warning">easeOutElastic</button>
+                        <button type="button" class="btn btn-warning">easeInOutElastic</button>
+                        <button type="button" class="btn btn-warning">easeInBack</button>
+                        <button type="button" class="btn btn-warning">easeOutBack</button>
+                        <button type="button" class="btn btn-warning">easeInOutBack</button>
+                        <button type="button" class="btn btn-warning">easeInBounce</button>
+                        <button type="button" class="btn btn-warning">easeOutBounce</button>
+                        <button type="button" class="btn btn-warning">easeInOutBounce</button>
+                        
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg2">
+                            <div class="animation02"><span>02</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$("#intro2 > button").click(function(){
+    let ease = $(this).text();
+    $(".animation02").animate({left: leftWidth},1000,ease)
+    .animate({top: leftHeight},1000,ease)
+    .animate({left:"0%"},1000,ease)
+    .animate({top:"0%"},1000,ease);
+});
+</code></pre>
+                <!-- //Intro2 -->
             </div>
-            <!--//col-md-3 -->
+            <!-- //col-md-12 -->
+        </div>
+            
         </div>
         <!-- //row -->
     </div>
@@ -139,5 +312,26 @@
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        //left: calc (100% - 120px) 100% 박스의 크기  120px 원의 크기
+        const leftWidth = $(".sample").width() - 100;
+        const leftHeight = $(".sample").height() - 140; 
+
+        $("#intro1 > button").click(function(){
+            $(".animation01").animate({left: leftWidth},1000)
+            .animate({top: leftHeight},1000)
+            .animate({left:"0%"},1000)
+            .animate({top:"0%"},1000);
+        });
+
+        $("#intro2 > button").click(function(){
+            let ease = $(this).text();
+            $(".animation02").animate({left: leftWidth},1000,ease)
+            .animate({top: leftHeight},1000,ease)
+            .animate({left:"0%"},1000,ease)
+            .animate({top:"0%"},1000,ease);
+        });
+    </script>
 </body>
 </html>
