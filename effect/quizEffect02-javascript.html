@@ -234,16 +234,10 @@
         // questionAnswer.hide();
         // questionEx.hide();
         for(let i=0; i<quizInfo.length; i++){
-            // questionAnswer[i].style.display = "none";
-            // questionEx[i].style.display = "none";
             confirmBottom[i].style.display="none";
         }
 
         //정답 확인
-        // questionBtn.click(function(){
-        //     $(this).hide();
-        //     $(this).nextAll().show();
-        // });
         questionBtn.forEach(elem => {
             elem.addEventListener("click", function(){
                 this.style.display = "none";

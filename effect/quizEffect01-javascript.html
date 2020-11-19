@@ -129,6 +129,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         //선택자
+        // const questionAsk = $(".question");
+        // const questionNum = $(".num");
+        // const questionBtn = $("confirm-btn");
+        // const questionAnswer = $(".confirm-answer");
+        // const questionEx = $(".confirm-ex");
+
         const questionAsk = document.querySelector(".question");
         const questionNum = document.querySelector(".num");
         const questionBtn = document.querySelector(".confirm-btn");
@@ -142,17 +148,28 @@
         const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다."
 
         //문제 출력
+        // questionNum.html(quizNum);
+        // questionAsk.html(quizAsk);
+        // questionAnswer.html(quizAnswer);
+        // questionEx.html(quizEx);
         questionNum.innerHTML = quizNum;
         questionAsk.innerHTML = quizAsk;
         questionAnswer.innerHTML = quizAnswer;
         questionEx.innerHTML = quizEx;
 
         //정답 숨기기
+        // questionAnswer.hide();
+        // questionEx.hide();
         questionAnswer.style.display="none";
         questionEx.style.display="none";
 
         //정답확인
         //버튼을 누르면 버튼은 사라지고 정답과 해설은 나타나게 해라
+        // questionBtn.click(function(){
+        //     questionBtn.hide();
+        //     questionAnswer.show();
+        //     questionEx.show();
+        // });
         questionBtn.addEventListener("click",function(){
             questionAnswer.style.display="block";
             questionEx.style.display="block";
