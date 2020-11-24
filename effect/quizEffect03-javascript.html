@@ -255,16 +255,17 @@
                         questionBtn.style.display = "none";
                         questionAnswer.style.display ="block";
                         questionEx.style.display = "block";
-                    }
+                    }else {
                         //오답입니다.
                         // alert("오답");
                         questionAnswer.innerHTML = "오답";
                         questionBtn.style.display = "none";
                         questionAnswer.style.display ="block";
                         questionEx.style.display = "block";
+                    }
                 }
-            }
-            // alert("클릭했습니다.");
+                // alert("클릭했습니다.");
+            };
         }
         questionBtn.addEventListener("click", answerQuiz);
 
