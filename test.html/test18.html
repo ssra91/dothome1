@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test18</title>
+    <style>
+        /* reset */
+        *{ margin:0; padding: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none;}
+
+        /* body */
+        body{font-family: 'NanumSquare';}
+
+        /* layout */
+        #wrap {}
+        #header {height: 86px; background: #fff; position: fixed; width: 100%; z-index: 1000;}
+        #banner {            
+            position: relative;
+            height: 670px;
+            /* margin-top: -90px; */
+            animation: an 5s infinite;
+            background: rgba(0,0,0,.4)
+            }       
+        #contents {}    
+        #cont1 {height: 300px; }  
+        #cont2 {height: 1200px;}  
+
+        .header {}
+        .header .logo 
+        {background: url(https://static-clova.pstatic.net/static/468c453/img/sprite/sp_svg_icon.png) no-repeat; width: 145px; height: 30px; 
+            background-position: -4px -62px; position: absolute; left: 0; top: 0; margin-top: 27px;
+        }
+        .header .menu {text-align: center;}
+        .header .menu ul {}
+        .header .menu li {padding: 0 20px; margin-top: 27px; display: inline-block;}
+        .header .menu li a {color: #a8a8a8;}
+        .header .menu li:hover a {border-bottom: 1px solid #fff; color: green;}
+        .header .quick {position: absolute; right: 0; top: 0; margin-top: 27px;}
+        .header .quick ul {} 
+        .header .quick li {display: inline-block;} 
+        .header .quick li a {color: #a8a8a8; border: 1px solid #a8a8a8; padding: 5px 10px; border-radius: 3px;} 
+
+        .banner {
+            position: relative;
+            width: 1060px;
+            margin: 0 auto;
+            padding: 250px 0 0 105px;
+            z-index: 20;
+            text-align: left;           
+    }
+    @keyframes an {
+        0% { background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_3.png) no-repeat; background-size: cover; opacity: 3;}
+        50% { background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_2.png) no-repeat; background-size: cover; opacity: 3;}
+        100% { background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_1.png) no-repeat; background-size: cover; opacity: 3;}
+    }
+        .banner h2 {
+            font-size: 52px;
+            line-height: 54px;
+            letter-spacing: -1px;
+            font-weight: 300;
+            color: #fff;
+        } 
+        .banner p {
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: -.3px;
+            font-weight: 300;
+            color: #dfdfdf;
+        }
+
+        .cont1 {padding-top: 10px;}
+        .cont1 .lang_box {
+            position: relative;
+            height: 34px;
+            padding-top: 40px;
+            padding-left: 80px;
+        }
+        .cont1 .lang_box .lang {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            height: 32px;
+            border: 1px solid #dbdbdb;
+            border-radius: 2px;
+            background: #ededed;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 140px;
+
+        }
+        .cont1 .lang_box .lang .lang1 {
+            float: left;
+            width: 76px;
+            height: 32px;
+            margin: -1px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            font-size: 13px;
+            line-height: 34px;
+            text-align: center;
+            color: #888;
+            float: left;
+        }
+        .cont1 .lang_box .lang .lang2 {
+            border-radius: 2px;
+            color: #2ebc76;
+            background: #fff;
+            float: left;
+            width: 76px;
+            height: 32px;
+            font-size: 14px;
+            text-align: center;
+            padding-top: 9px;
+        }
+
+
+        footer {height: 150px; background: #191919;}
+
+        .footer {padding: 40px 0;}
+        .footer .logo {
+            background: url(https://static-clova.pstatic.net/static/468c453/img/sprite/sp_svg_icon.png) no-repeat; 
+            display: block;
+            background-position: -4px -34px;
+            width: 145px; 
+            height: 20px;
+            }
+
+        .footer .list {
+            overflow: hidden; 
+            font-size:6px; 
+            color:#666; 
+            letter-spacing: -.2px; 
+            font-weight: bold; 
+            background-image: 7px; 
+            overflow: hidden; 
+            padding: 20px 0; 
+            text-align: center;}
+        .footer .list .list1 {float: left; padding-right: 140px;}
+        .footer .list .list2 {float: left; padding: 0 140px 0 140px;}
+        .footer .list .list3 {float: left; }
+
+        .container {width: 1200px; height: inherit;  margin: 0 auto; position: relative;}   
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header">
+                    <h1 class="logo"></h1>
+                    <ul class="menu">
+                        <li><a href="#">기술 &middot; 솔루션</a></li>
+                        <li><a href="#">제품</a></li>
+                        <li><a href="#">플랫폼</a></li>
+                        <li><a href="#">파트너</a></li>
+                        <li><a href="#">리서치</a></li>
+                    </ul>
+                    <ul class="quick">
+                        <li><a href="#">Biz Start</a></li>
+                        <li><a href="#">비즈니스 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <section id="banner">
+            <div class="container">
+                <div class="banner">
+                    <h2>Careers</h2>
+                    <p>클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해<br>
+                        우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</p>
+                </div>
+            </div>
+        </section>
+        <!-- //banner -->
+        <section id="contents">
+            <section id="cont1">
+                <div class="container">
+                    <div class="cont1">
+                        <div class="lang_box">
+                            <div class="lang">
+                                <h3 class="lang1">English</h3>
+                                <h3 class="lang2">Korean</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cont2">
+                <div class="container">
+                    <div class="button">
+                        <a href="#" class="btn">상시채용</a>
+                    </div>
+                </div>
+            </section>
+            <section id="cont3">
+                <div class="container">
+                    <div class="details">
+                        <h3>소개</h3>
+                        <h3>지원자격</h3>
+                        <h3>우대</h3>
+                        <h3>채용하고 싶은 사람</h3>
+                    </div>
+                </div>
+            </section>
+                        <div class="details">
+                            <h3>
+                                <p>소개</p>
+                                <ul class="detail">
+                                    <li class="detail_type1">
+                                        CLOVA AI Research는 클로바에 필요한 선행 AI기술 연구개발 위한 글로벌 팀입니다. 클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 우수한 역량을 보<br>
+                                        유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.
+                                    </li>
+                                    <li class="detial_type2">
+                                        CLOVA AI Research는 클로바 내부 뿐 아니라 네이버 내의 타 조직들과 매우 강력하고 열린 협업체계를 구축하고 있습니다.
+                                    </li>
+                                    <li class="detail_type3">
+                                        글로벌 팀이므로 공용언어는 영어를 사용합니다.
+                                    </li>
+                                </ul>
+                            </h3>
+                            <ul class="detail">
+                                <li class="detail_type4">
+                                    CLOVA의 성능향상을 위한 AI 선행 기술 연구가 가능한 인력<br>
+                                    (자연어처리, 컴퓨터비전, 추천 등을 포함한 기계학습기반 AI기술 전 분야)
+                                    <p class="sentence">
+                                        <p>최신 AI 연구 기술에 대한 이해 , 우수한 연구 역량 및 실적</p>
+                                        <p>프로젝트를 리딩하고 연구방향을 제시할 수 있는 강력한 연구개발 리더십</p>
+                                    </p>
+                                </li>
+                                <p class="sentence">
+                                    <p>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</p>
+                                    <p>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</p>
+                                    <p>머신러닝/딥러닝 모델 설계 및 구축 경험</p>
+                                    <p>최신 AI 논문에 대한 빠르고 정확한 구현 능력</p>
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        </section>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <h1 class="logo"></h1>
+                    <ul class ="list">
+                        <li class="list1">고객센터 1833-5387 ｜ 09:00 - 18:00(주말, 공휴일 휴무)</li>
+                        <li class="list2">powered by Naver · LINE</li>
+                        <li class="list3">공지사항 ｜ 이용약관 ｜ CLOVA 채용안내 ｜CLOVA JP</li>
+                    </ul>
+                </div>
+            </div> 
+        </footer>
+    </div>
