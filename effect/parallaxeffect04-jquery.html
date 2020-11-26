@@ -274,15 +274,6 @@
     <div class="info bottom">
         <ul>
             <li>scrollTop( ) : <span class="scrollTop">0</span>px</li>
-            <li>#section1 : <span class="s1OffsetTop">0</span>px</li>
-            <li>#section2 : <span class="s2OffsetTop">0</span>px</li>
-            <li>#section3 : <span class="s3OffsetTop">0</span>px</li>
-            <li>#section4 : <span class="s4OffsetTop">0</span>px</li>
-            <li>#section5 : <span class="s5OffsetTop">0</span>px</li>
-            <li>#section6 : <span class="s6OffsetTop">0</span>px</li>
-            <li>#section7 : <span class="s7OffsetTop">0</span>px</li>
-            <li>#section8 : <span class="s8OffsetTop">0</span>px</li>
-            <li>#section9 : <span class="s9OffsetTop">0</span>px</li>
         </ul>
     </div>
     <!-- //info -->
@@ -404,8 +395,72 @@
             //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
             //     });
             // }
+            // if($(window).scrollTop() > $("#section2").offset().top){
+            //     $("#section2 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section2 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
+            // }
+            // if($(window).scrollTop() > $("#section3").offset().top){
+            //     $("#section3 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section3 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
+            // }
+            // if($(window).scrollTop() > $("#section4").offset().top){
+            //     $("#section4 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section4 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
+            // }
+            // if($(window).scrollTop() > $("#section5").offset().top){
+            //     $("#section5 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section5 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
+            // }
+            // if($(window).scrollTop() > $("#section6").offset().top){
+            //     $("#section6 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section6 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
+            // }
+            // if($(window).scrollTop() > $("#section7").offset().top){
+            //     $("#section7 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section7 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
+            // }
+            // if($(window).scrollTop() > $("#section8").offset().top){
+            //     $("#section8 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section8 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
+            // }
+            // if($(window).scrollTop() > $("#section9").offset().top){
+            //     $("#section9 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section9 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
+            // }
 
-            //한글자씩 나오게 하기 (한번에)
+            //한글자씩 나오게 하기 (한번에) 과부하걸림
             $(".content-item").each(function(){
                 if($(window).scrollTop() > $(this).offset().top){
                     gsap.to($(this).find(".content-item-desc span"),{duration:.3, opacity:1, y:0, stagger:0.05, ease:Power1.ease});
