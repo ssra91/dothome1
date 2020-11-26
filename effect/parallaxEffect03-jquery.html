@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax02 - javascript</title>
+    <title>Parallax03 - jQuery</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
         /* reset */
@@ -31,7 +31,7 @@
 
         /* info */
         .info {
-            position: fixed; z-index: 1000;;
+            position: fixed; z-index: 1000;
         }
         .info.left {
             left: 20px; top: 20px;
@@ -57,7 +57,7 @@
         .info li a {
             color: #fff;
             width: 25px; height: 25px;
-            border: 1px dashed #222;
+            border: 1px dashed #fff;
             display: inline-block;
             border-radius: 50%;
             text-align: center;
@@ -66,8 +66,8 @@
             margin: 5px;
         }
         .info li a.active {
-            background: #222;
-            color: #fff;
+            background: #fff;
+            color: #000;
         }
         @media(max-width: 800px){
             .info h1 { display:none;}
@@ -79,8 +79,8 @@
             --color-title : #fff;
             --color-sub : #999;
             --color-link : #000;
-            --color-bg : #797979;
-            --font-cafe: 'Wemakeprice-Bold';
+            --color-bg : #111;
+            --font-cafe: 'Cafe24Danjunghae';
             --font-lato: 'Lato', sans-serif;
 
 
@@ -168,31 +168,31 @@
         }
 
         .content-item:nth-child(1) .content-item-img {
-            background: url(img/img10.jpg); background-size: cover;
+            background: url(img/img01.jpg); background-size: cover;
         }
         .content-item:nth-child(2) .content-item-img {
-            background: url(img/img11.jpg); background-size: cover;
+            background: url(img/img02.jpg); background-size: cover;
         }
         .content-item:nth-child(3) .content-item-img {
-            background: url(img/img12.jpg); background-size: cover;
+            background: url(img/img03.jpg); background-size: cover;
         }
         .content-item:nth-child(4) .content-item-img {
-            background: url(img/img13.jpg); background-size: cover;
+            background: url(img/img04.jpg); background-size: cover;
         }
         .content-item:nth-child(5) .content-item-img {
-            background: url(img/img14.jpg); background-size: cover;
+            background: url(img/img05.jpg); background-size: cover;
         }
         .content-item:nth-child(6) .content-item-img {
-            background: url(img/img15.jpg); background-size: cover;
+            background: url(img/img06.jpg); background-size: cover;
         }
         .content-item:nth-child(7) .content-item-img {
-            background: url(img/img16.jpg); background-size: cover;
+            background: url(img/img07.jpg); background-size: cover;
         }
         .content-item:nth-child(8) .content-item-img {
-            background: url(img/img17.jpg); background-size: cover;
+            background: url(img/img08.jpg); background-size: cover;
         }
         .content-item:nth-child(9) .content-item-img {
-            background: url(img/img18.jpg); background-size: cover;
+            background: url(img/img09.jpg); background-size: cover;
         } 
 
         /* position: relative;
@@ -210,7 +210,7 @@
         .contents > section.show {
             opacity: 1;
             transform: translateX(0);
-        } */
+        }
 
         /* 개별적으로 나타나기 */
         /* .contents > section .content-item-num {
@@ -236,22 +236,21 @@
         .contents > section.show .content-item-num {opacity: 0.7; transform: translateY(0);}
         .contents > section.show .content-item-title {opacity: 1; transform: translateX(0);}
         .contents > section.show .content-item-imgWrap {opacity: 1; transform: translateY(0);}
-        .contents > section.show .content-item-desc {opacity: 1; transform: translateX(0);} */
-
+        .contents > section.show .content-item-desc {opacity: 1; transform: translateX(0);} */ 
     </style>
 </head>
 <body>
    
    
     <div class="info left">
-        <h1>Parallax Effect02 - javascript</h1>
-        <p>패럴랙스 스크롤링 효과 - 이질감 느끼기</p>
+        <h1>Parallax Effect03 - jQuery</h1>
+        <p>패럴랙스 스크롤링 효과 - 기본</p>
     </div>
     <div class="info right">
         <ul>
             <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
-            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html"class="active">2</a></li>
-            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
+            <li><a href="parallax03-jquery.html" class="active" >3</a><a href="parallax03-javascript.html">3</a></li>
             <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
             <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
             <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
@@ -263,10 +262,10 @@
 
     <div class="info bottom">
         <ul>
-            <li>scrollTop( ) : <span class="pageYOffset">0</span>px</li>
+            <li>scrollTop( ) : <span class="scrollTop">0</span>px</li>
         </ul>
     </div>
-    <!-- info -->
+    <!-- //info -->
 
     <main>
         <section id="parallax-wrap">
@@ -350,45 +349,30 @@
     </main>
 
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
+        
+        let scrollTop = $(window).scrollTop();  //시간차가 생기게 함수 밖에 안에 따로 scrollTop을 준다 100일 때 90
 
-        window.addEventListener("scroll",()=>{
-            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop); //옛날 버전 호환성을 맞춰주기 위해 같이 써준다.
-            // let offset1 = (pageYOffset-document.getElementById("section1").offsetTop)*0.2;  //시작점을 0으로 맞춰주기 위해 offsetTop값을 빼준다.
-            // let offset2 = (pageYOffset-document.getElementById("section2").offsetTop)*0.2;
-            // let offset3 = (pageYOffset-document.getElementById("section3").offsetTop)*0.2;
-            // let offset4 = (pageYOffset-document.getElementById("section4").offsetTop)*0.2;
-            // let offset5 = (pageYOffset-document.getElementById("section5").offsetTop)*0.2;
-            // let offset6 = (pageYOffset-document.getElementById("section6").offsetTop)*0.2;
-            // let offset7 = (pageYOffset-document.getElementById("section7").offsetTop)*0.2;
-            // let offset8 = (pageYOffset-document.getElementById("section8").offsetTop)*0.2;
-            // let offset9 = (pageYOffset-document.getElementById("section9").offsetTop)*0.2;
+        function scroll(){
+            const newScrollTop = $(window).scrollTop();
+            const different = newScrollTop - scrollTop; //오차가 나게 하기 위해서 빼준다.
 
-            // document.querySelector("#section1 .content-item-desc").style.transform = "translateY("+ -offset1 +"px)";
-            // document.querySelector("#section2 .content-item-desc").style.transform = "translateY("+ -offset2 +"px)";
-            // document.querySelector("#section3 .content-item-desc").style.transform = "translateY("+ -offset3 +"px)";
-            // document.querySelector("#section4 .content-item-desc").style.transform = "translateY("+ -offset4 +"px)";
-            // document.querySelector("#section5 .content-item-desc").style.transform = "translateY("+ -offset5 +"px)";
-            // document.querySelector("#section6 .content-item-desc").style.transform = "translateY("+ -offset6 +"px)";
-            // document.querySelector("#section7 .content-item-desc").style.transform = "translateY("+ -offset7 +"px)";
-            // document.querySelector("#section8 .content-item-desc").style.transform = "translateY("+ -offset8 +"px)";
-            // document.querySelector("#section9 .content-item-desc").style.transform = "translateY("+ -offset9 +"px)";
+            console.log("scrollTop :" + scrollTop);
+            console.log("newScrollTop :" + newScrollTop);
+            console.log("different :" + different);
 
-            // for(let i=1; i<=9; i++){
-            //     let offset = (pageYOffset-document.getElementById("section"+i).offsetTop)*0.2; 
-            //     document.querySelector("#section"+i+ " .content-item-desc").style.transform = "translateY("+ -offset +"px)";
-            // }
+            gsap.to(".content-item-imgWrap",{duration: .3, skewY: different * 0.2, ease: Power1.ease});
+            gsap.to(".content-item-num",{duration: .6, x: different * 3, ease: Power1.ease});
+            gsap.to(".content-item-desc",{duration: .6, skewX: different * 0.2, ease: Power4.ease});
 
-            //한번에(each)
-            document.querySelectorAll(".content-item").forEach((elem)=>{
-                let target = elem.childNodes[7];
-                let offset = (pageYOffset - elem.offsetTop)*0.2;
-                target.style.transform = "translateY("+ -offset +"px)";
-            });
-            // 출력용
-            document.querySelector(".scrollTop").innerText = pageYOffset;
-        });
+            // $("content-item-imgWrap").css({"transform":"skewY(" + different + "deg)"});
 
+            scrollTop = newScrollTop;  //초기화 현상
+            requestAnimationFrame(scroll);   //1초에 60번 돌리는 효과 마우스가 움직일 때마다 (different값)
+        }
+        scroll();
         
     </script>
 </body>
