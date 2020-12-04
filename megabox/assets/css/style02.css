@@ -158,6 +158,7 @@
 .help article {float: left; margin-right: 2%; width: 32%; height: 350px;}
 .help article > div {border: 1px solid #dbdbdb; height: 350px;}
 .help article.help_box3 {margin-right: 0;}
+.help article.help_box3 > div {border: 0;}
 .help article h3 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
 
 /* 공지사항 */
@@ -176,12 +177,26 @@
 
 /* 할인카드 */
 .card {padding:17px;}
-.card ul {}
 .card ul li {position: relative; border: 1px solid #d7d7d7; padding: 17px; margin-bottom: 17px; min-height: 102px; box-sizing: border-box;}
 .card ul li span {position: absolute; left: 17px; top: 17px;}
 .card ul li span img {width: 105px;}
 .card ul li strong {display: block; font-size: 18px; color:#777; padding-left: 120px;}
 .card ul li em {display: block; font-size: 14px; color:#777; font-weight: 300; padding-left: 120px;}
+
+/* 고객센터 */
+.service ul {overflow: hidden;}
+.service li {float: left; width: 50%; height: 193px; box-sizing: border-box; border: 1px solid #dbdbdb; text-align: center;  }
+.service li a span {display: block; width: 120px; height: 120px; margin: 20px auto 0 auto; overflow: hidden;}
+.service li a strong {color: #666; font-size: 18px; font-weight: 500;}
+.service li a .sv1 {background-position: 0 -267px}
+.service li a .sv2 {background-position: -100px -267px}
+.service li a .sv3 {background-position: -201px -267px}
+.service li a .sv4 {background-position: -300px -267px}
+.service li:nth-child(1) {border-right: 0; border-bottom: 0;}
+.service li:nth-child(2) {border-bottom: 0;}
+.service li:nth-child(3) {border-right: 0; }
+
+
 
 
 /* 미디어쿼리 */
@@ -204,6 +219,16 @@
 
     .banner_menu .bm_left ul {display: none;}
     .banner_menu .bm_right ul:first-child {display: none;}
+
+    .help article.help_box1 {width: 49%; margin-right: 2%; }
+    .help article.help_box2 {width: 49%; margin-right: 0; }
+    .help article.help_box3 {width: 100%; margin-top:2%; }
+    .help article {height: auto;}
+    .service li {width:25%; height: auto;}
+    .service li:nth-child(1) {border-bottom: 1px solid #d7d7d7;}
+    .service li:nth-child(2) {border-bottom: 1px solid #d7d7d7; border-right: 0;}
+    .servic li a strong {display: block; padding-bottom:10% ;}
+
 }
 
 @media (max-width: 960px){
@@ -256,6 +281,19 @@
     .new {padding: 24px; background-color: #fff; margin-top: 24px;}
     .new h2 {font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;}
     .new .new_right {padding: 24px;}
+
+    #help .row {padding: 0 24px;}
+    .help {padding-bottom: 24px;}
+    .help article.help_box1 {padding: 24px; width: 100%; box-sizing: border-box; background: #fff; margin-right: 0; margin-top: 24px;}
+    .help article.help_box2 {padding: 24px; width: 100%; box-sizing: border-box;  background: #fff; margin-right: 0; margin-top: 24px;}
+    .help article.help_box3 { width: 100%; background: #fff; margin-top:0; margin-top: 24px;}
+    .help article.help_box1 h3 {font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;}
+    .help article.help_box2 h3 {font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;}
+    .help article.help_box3 h3 {display: none;}
+    .help article.help_box3 > div {height: auto;}
+    .service li {border: 0;}
+    .notice {}
+
 }
 
 @media (max-width: 600px){
@@ -307,6 +345,18 @@
     .new .new_right .star {padding: 9px 0;}
     .new .new_right .select .s1 {width: 100%; margin-right: 0; margin-bottom: 2%;}
     .new .new_right .select .s2 {width: 100%;}
+
+    #help .row {padding: 0 8px;}
+    .help article.help_box1 {margin-top: 8px; padding: 16px;}
+    .help article.help_box2 {margin-top: 8px; padding: 16px;}
+    .help article.help_box3 {margin-top: 8px;}
+    .help article.help_box1 h3 {font-size: 18px; margin-bottom: 0;}
+    .help article.help_box2 h3 {font-size: 18px; margin-bottom: 0;}
+    .card {padding: 8px;}
+    .service li {width: 50%;}
+    .service li:nth-child(1) {border-right: 1px solid #d7d7d7;}
+    .service li:nth-child(3) {border-right: 1px solid #d7d7d7;}
+
 }
 
 @media (max-width: 480px){
@@ -315,4 +365,16 @@
 
 @media (max-width: 320px){
     .movie_title li a {margin-right: 9px;}
+    .notice {padding: 8px;}
+    .notice ul li ul {left: 9px; top: 56px;}
+    .notice ul li ul li {padding: 8px;}
+    .notice ul li a {padding: 5px 10px;}
+    .help article > div {height: 287px;}
+    .card ul li {padding: 8px; margin-bottom: 8px; min-height: 90px; }
+    .card ul li span {left: 11px; top: 10px;}
+    .card ul li span img {width: 60px;  }
+    .card ul li strong {padding-left: 75px; font-size: 14px;}
+    .card ul li em {padding-left: 75px;}
+    .service li a span {width: 70px; height: 70px;}
+    .service li a strong {font-size: 14px;}
 }

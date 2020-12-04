@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SliderEffect08 - jQuery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        @font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        *, *::before, *::after {
+            box-sizing:  border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;  /* 이미지는 inline 구조여서 여백이 생기므로 여백초기화 */
+        }
+        ul {
+            list-style:none;
+        }
+
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {
+            left: 20px; top: 20px;
+        }
+        .info.right {
+            right: 20px; top: 20px;
+        }
+        .info.bottom {
+            right: 20px; bottom: 20px;
+        }
+        .info h1 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+        .info p {
+            font-size: 1rem;
+        }
+        .info ul {}
+        .info li {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        .info li a {
+            color: #fff;
+            width: 25px; height: 25px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-size: 0.8rem;
+            margin: 5px;
+        }
+        .info li a.active {
+            background: #fff;
+            color: #000;
+        }
+        @media(max-width: 800px){
+            .info h1 { display:none;}
+        }
+
+        /* main */
+        body {
+            --color-h1 : #dc6e25;
+            --color-title : #fff;
+            --color-sub : #999;
+            --color-link : #000;
+            --color-bg : #111;
+            --font-cafe: 'TmoneyRoundWindExtraBold';
+            --font-lato: 'Lato', sans-serif;
+
+
+            background-color: var(--color-bg);
+            color: var(--color-title);
+            font-family: var(--font-cafe);
+            font-size: 16px;
+            background: url(img/img04@2.jpg) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(1, 34, 7, 0.5);
+        }
+
+        /* slider */
+        .slider_wrap {
+            width: 800px; height: 480px; overflow: hidden; position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%); z-index: 100;
+        }
+        .slider_img {
+            overflow: hidden;
+            position: relative;
+        }
+        .slider_img .slider {
+            float: left;
+            height: 480px;
+            width: 800px;
+            position: relative;
+        }
+        .slider_img .slider span {
+            position: absolute; left: 5px; top: 5px;
+        }
+
+        .slider-btn a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            padding: 20px;
+            background: rgba(0,0,0,0.5);
+            text-transform: capitalize;
+            font-family: var(--font-cafe);
+            color: var(--color-title);
+        }
+        .slider-btn a.prev {
+            left: 0;
+        }
+        .slider-btn a.next {
+            right: 0;
+        }
+        .slider-dot {
+            position: absolute; 
+            left: 50%; bottom: 30px;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+        }
+        .slider-dot a {
+            width: 20px; height: 20px;
+            display: inline-block;
+            background: rgba(0,0,0,0.3);
+            text-indent: -9999;
+            border-radius: 50%;
+            margin: 5px;
+            transition: background 0.3s, transform 0.2s ;
+            /* 닷 이미지 */
+            width: 150px; height: 70px; line-height: 70px;
+            text-align: center; background-size: cover;
+            border-radius: 3px;
+            white-space: nowrap;
+            text-indent: initial;
+            color: #fff;
+        }
+        .slider-dot a.active {
+            background-color: rgba(255,255,255,0.9);
+            /* 닷이미지 */
+            background-size: cover;
+            background-color: rgba(46,19,19,0.9);
+            background-blend-mode: difference;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+   
+   
+    <div class="info left">
+        <h1>Slider Effect08 - jQuery</h1>
+        <p>이미지 슬라이드 - 버튼,닷에 이미지 넣어서 만들기 </p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="sliderEffect01-jquery.html">1</a><a href="sliderEffect01-javascript.html">1</a></li>
+            <li><a href="sliderEffect02-jquery.html">2</a><a href="sliderEffect02-javascript.html">2</a></li>
+            <li><a href="sliderEffect03-jquery.html">3</a><a href="sliderEffect03-javascript.html">3</a></li>
+            <li><a href="sliderEffect04-jquery.html">4</a><a href="sliderEffect04-javascript.html">4</a></li>
+            <li><a href="sliderEffect05-jquery.html">5</a><a href="sliderEffect05-javascript.html">5</a></li>
+            <li><a href="sliderEffect06-jquery.html">6</a><a href="sliderEffect06-javascript.html">6</a></li>
+            <li><a href="sliderEffect07-jquery.html"class="active">7</a><a href="sliderEffect07-javascript.html">7</a></li>
+            <li><a href="sliderEffect08-jquery.html">8</a><a href="sliderEffect08-javascript.html">8</a></li>
+            <li><a href="sliderEffect09-jquery.html">9</a><a href="sliderEffect09-javascript.html">9</a></li>
+        </ul>
+    </div>
+
+    <!-- //info -->
+
+    <!-- main -->
+    <main>
+        <div class="slider_wrap">
+            <div class="slider_img">
+                <div class="slider s1"><img src="img/img09.jpg" alt="이미지"><span>이미지1</span></div>
+                <div class="slider s2"><img src="img/img10.jpg" alt="이미지"><span>이미지2</span></div>
+                <div class="slider s3"><img src="img/img02.jpg" alt="이미지"><span>이미지3</span></div>
+                <div class="slider s4"><img src="img/img03.jpg" alt="이미지"><span>이미지4</span></div>
+                <div class="slider s5"><img src="img/img07.jpg" alt="이미지"><span>이미지5</span></div>
+            </div>    
+        </div>
+        <div class="slider-btn">
+            <a href="#" class="prev">prev</a>
+            <a href="#" class="next">next</a>
+        </div>
+        <div class="slider-dot">
+            <!-- <a href="#" class="dot active">1</a>
+            <a href="#" >2</a>
+            <a href="#" >3</a>
+            <a href="#" >4</a>
+            <a href="#" >5</a> -->
+        </div>
+    </main>
+    <!-- //main -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+        const sliderWrap = $(".slider_wrap");
+        const sliderImg = $(".slider_img");
+        const slider = $(".slider");
+        const sliderBtn = $(".slider-btn");
+        const sliderDot = $(".slider-dot");
+
+        let sliderCount = slider.length;
+        let sliderWidth = slider.outerWidth();
+        let sliderHeight = slider.outerHeight();
+        let sliderTotalWidth = sliderWidth * sliderCount;
+        let sliderShowNumber = 1;
+        let currentIndex = 0;
+        let dotIndex = "";
+
+
+        //무한으로
+        // let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone(); //선택자만큼 복사를 해라(sliderShowNumber)하나가 복사 됨
+        // sliderImg.append(sliderCopy);
+
+
+        sliderImg.css({width: sliderTotalWidth, height: sliderHeight}); 
+
+        //이미지 움직이기
+        function gotoSlider(index){
+            sliderImg.animate({left:-sliderWidth * index}, 400); //0->-400 번호가 들어가게 되면 이미지가 이동하도록
+            currentIndex = index;  //값이 누적이 되서 증감이 된다 증감식을 쓰지 않아도
+            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");  //next버튼 부르면 닷 버튼의 active도 같이 붙을 수 있게 currentIndex값을 바꿀수 있는 값을 넣어주었다 핵심은 currentIndex
+        }
+
+        //이미지 개수만큼 닷 버튼 만들기 (html에 적어주지 않고 스크립트로)
+        slider.each(function(index){ 
+           let sliderName = $(this).find("img").attr("alt");
+           let sliderSrc = $(this).fomd("img").attr("src");
+           dotIndex += "<a href='#' style='background-image:url("+sliderSrc+")'>"+sliderName+"</a>";
+        };
+
+
+
+        //닷 버튼 클릭하기
+        sliderDot.on("click","a",function(e){
+            e.preventDefault();
+            gotoSlider($(this).index()); //현재 숫자가 어떤이미지인지 알고 싶으려면 index메소드이용
+            //alert($(this).index());
+        };
+
+
+
+        //버튼 클릭하기
+        sliderBtn.on("click","a",function(e){   //a태그 포함하여 클릭 이벤트 추가
+            e.preventDefault(); //기본값을 막아준다?
+            let nextIndex = (currentIndex + 1) % sliderCount;  //오른쪽 버튼->nextIndex   1씩 추가되고 1씩 증가
+            let prevIndex = (currentIndex - 1) % sliderCount; 
+            //if(currentIndex==0){
+                //prevIndex = sliderCount-1;  //만약에 currentIndex가 0이 된다면 preIndex는 sliderCount에서 1을 뺀 4가 되어야 한다. 그래야 이전 이미지누르면 첫번째 이미지로 이동한다.
+            //}
+
+            if(currentIndex == 0) prevIndex = sliderCount -1;  
+            
+            //console.log("nextIndex:"+ nextIndex);   //-1이 나오면 안된다 이전 마지막 사진 번호가 4번이니까 4번이 나와야 하므로 -1 
+            console.log("prevIndex:"+ prevIndex);     //클릭할때마다 1씩 추가 해야 하는데 잘 되나 확인 하기 위해 콘솔로그로 확인 이미지 하나당 400씩 추가 되어야 하기 때문에    
+
+
+                if($(this).hasClass("prev")){
+                gotoSlider(prevIndex);   //있으면 고투슬라이더 함수로 가라
+            }else {
+                gotoSlider(nextIndex);
+            }
+
+        });
+
+      
+        
+    </script>
+</body>
+</html>
