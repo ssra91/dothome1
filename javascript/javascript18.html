@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>javascript18</title>
+</head>
+
+<body>
+    <script>
+        //숫자 크기
+        let num = prompt("당신이 좋아하는 숫자는?");
+
+        if (num > 100) {
+            document.write("숫자는 100보다 큽니다."); //true일때
+        } else {
+            document.write("숫자는 100보다 작습니다."); //false일때
+        }
+
+        //짝수 홀수 구별법
+        let num2 = prompt("당신이 좋아하는 숫자는?");
+
+        if (num2 % 2 == 0) {
+            document.write("당신이 좋아하는 숫자는 짝수입니다.")
+        } else {
+            document.write("당신이 좋아하는 숫자는 홀수입니다.")
+        }
+
+        //아이디 비밀번호 구분하기
+        let userID = prompt("아이디를 입력하세요~");
+        let userPW = prompt("비밀번호를 입력하세요~");
+
+        if (userID == "webstoryboy" && userPW == "1234") {
+            document.write("환영합니다.");
+        } else {
+            document.write("아이디 또는 비밀번호를 확인해주세요!")
+        }
+        
+        //확인하기
+        let conf = confirm ("정말로 탈퇴를 원하십니까?");
+        
+        if(conf){  //conf 변수가 아닌데도 true로 인식해버린다.
+            document.write("탈퇴처리 되었습니다.")
+        } else {
+            document.write("탈퇴처리가 취소되었습니다.")
+        }
+    </script>
+</body></html>

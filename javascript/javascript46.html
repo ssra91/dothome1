@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 슬라이드 복습</title>
+</head>
+<body>
+    <div id = "gallery">
+        <img id="img" src="img/pic_1.jpg" alt="이미지1" style="width: 300px;">
+        <button class = "prev">이전이미지</button>
+        <button class = "next">다음이미지</button>
+    </div>
+    <script>
+        document.getElementById("img").setAttribute("alt","인물이미지입니다.");
+
+        //버튼을 클릭하는 경고창 출력
+        let prev = document.querySelector(".prev");
+        let next = document.querySelector(".next");
+        let image = document.getElementById("img");
+        let num = 1;
+        prev.addEventListener("click", function(){
+         
+            if(num == 1){
+                alert("처음이미지 입니다.")
+                return;
+            }
+            num--;
+            image.setAttribute("src","img/pic_"+num+".jpg");
+            console.log(num);
+        });
+        next.addEventListener("click", function(){
+   
+            if(num == 8){
+                alert("마지막 이미지입니다.")
+                return;
+            }
+            num++;
+            image.setAttribute("src","img/pic_"+num+".jpg");
+            console.log(num);
+        })
+    </script>
+    
+</body>
+</html>

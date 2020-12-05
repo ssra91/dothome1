@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function func1(){
+        //             document.write("함수가 실행되었습니다.");
+        //           func1();  //무한루프에 빠진다.  
+        //         }
+        //         func1();
+
+        // function func2(num){
+        //     if(num == 0){
+        //         document.write("함수가 종료되었습니다.");
+        //     } else {
+        //         document.write("함수가 실행되었습니다.");
+        //         func2( num-1 );
+        //     }
+    
+        // }
+        // func2(20);
+
+        // let num = 0;
+        // function testFnc(){
+        //     num++;
+        //     document.write(num,"<br>");
+        //     if(num == 10) return;
+        //     testFnc();
+        // }
+        // testFnc();
+
+        function func6(num){
+            for(let i=1; i<=20; i++){
+                num(i);
+            }
+        }
+
+        let value = function(i){
+            document.write("함수가 실행되었습니다.");
+        }
+        func6(value);
+
+    </script>
+</body>
+</html>

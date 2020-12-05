@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>922복습</title>
+    <style>
+        #wrap {width: 500px; height: 450px;}
+        #header {width: 500px; height: 50px;}
+        #nav {width: 500px; height: 50px;}
+        #side {width: 200px; height: 300px; float: left;}
+        #contents {width: 300px; height: 300px; float: left;}
+        #footer {width: 500px; height: 50; clear: both;}
+    </style>
+</head>
+<body>
+    <button id = "button">클릭</button>
+ 
+
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="side">side</div>
+        <div id="contents">contents</div>
+        <div id="footer">footer</div>
+    </div>
+    
+    <script>
+        let color=["#311B92","#1a237e","#004D40","#1B5E20","#827717"];
+
+        //color 변수 안에 갯수 출력
+        document.write(color.length,"<br><br>");
+
+    
+        //color 안에 있는 데이터 출력(FOR문을 사용하지 않고 출력)
+        document.write(color[0],"<br>");
+        document.write(color[1],"<br>");
+        document.write(color[2],"<br>");
+        document.write(color[3],"<br>");
+        document.write(color[4],"<br>");
+
+     
+        //for문을 이용해서 출력
+        for(let i=0; i<color.length; i++){
+            document.write(color[i],"<br>");
+        }
+
+        //#header {background-color:#fff} CSS를 자바스크립트로 바꾼것
+        document.getElementById("header").style.backgroundColor = color[0];
+        document.getElementById("nav").style.backgroundColor = color[1];
+        document.getElementById("side").style.backgroundColor = color[2];
+        document.getElementById("contents").style.backgroundColor = color[3];
+        document.getElementById("footer").style.backgroundColor = color[4];
+
+        // for(let i = 0; i<color.length; i++){
+        //     document.getElementById("header").style.backgroundcolor = color[i]; 
+        // }
+
+        let i = 0;
+        //버튼을 클릭하면 경고창 출력
+        document.getElementById("button").addEventListener("click", function(){
+            i++;
+             if( i >= color.length){
+            i = 0;
+        }
+        document.getElementById("header").style.backgroundColor = color[i - 0];
+        document.getElementById("nav").style.backgroundColor = color[i - 1];
+        document.getElementById("side").style.backgroundColor = color[i - 2];
+        document.getElementById("contents").style.backgroundColor = color[i - 3];
+        document.getElementById("footer").style.backgroundColor = color[i - 4];
+        console.log(i);
+
+        });
+        
+
+    </script>
+
+</body>
+</html>

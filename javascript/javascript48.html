@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>924복습</title>
+</head>
+<body>
+    <script>
+        // //객체 선언
+        // let obj1 = new Object();
+        // obj1[0] = 1000;
+        // obj1[1] = 2000;
+
+        // //두개의 데이터 값의 합을 출력하세요.
+        // document.write(obj1[0]+obj1[1]);
+        // document.write("<br>");
+
+        // let obj2 = {a:1000, b:2000}
+        // //두개 데이터 값의 합을 구하시오.
+        // document.write(obj2.a + obj2.b);
+        // document.write("<br>");
+
+        // let obj3 = {a:[100,200,300], b:1000};
+
+        // //200+300
+        // //300+1000
+        // document.write(obj3.a[1]+obj3.a[2]);
+        // document.write("<br>");
+
+        // document.write(obj3.a[2] + obj3.b);
+        // document.write("<br>");
+
+        // let obj4 = {
+        //     a:[100,200,300],
+        //     b:"자바스크립트",
+        //     c:function(){
+        //         document.write(" 실행되었습니다.");
+        //     },
+        //     d:function(){
+        //         document.write(this.b + "가 실행되었습니다.");
+        //     }
+        // }
+
+        // document.write(obj4.a[0]);
+        // document.write(obj4.a[1]);
+        // document.write(obj4.a[2]);
+        // document.write("<br>");
+
+        // document.write(obj4.b);
+        // obj4.c();
+
+        // document.write("<br>");
+        // obj4.d();
+        // document.write("<br>");
+
+        // //객체 생성자 표기법(함수와 객체가 합쳐진 식)
+        // function obj5(a,b){
+        //     this.a = a;
+        //     this.b = b;
+        //     this.c = function(){
+        //         return a * b;
+        //     }
+        // }
+
+        // let result1 = new obj5(100,200);
+        // let result2 = new obj5("자바스크립트를", "실행했습니다.");
+        // document.write(result1.a);
+        // document.write("<br>");
+        // document.write(result1.b);
+        // document.write("<br>");
+        // document.write(result1.c());
+        // document.write("<br>");
+        // document.write(result2.a);
+        // document.write(result2.b);
+
+        // document.write("<br>");
+
+        // //선언적 함수(func1)
+        // //함수가 호출되었습니다.
+
+        // function func1(){
+        //     document.write("1. 함수가 호출되었습니다.<br>")
+        // }
+        // func1();
+        // //익명함수(let)
+        // let func2 = function(){
+        //     document.write("2. 함수가 호출되었습니다.<br>");
+        // }
+        // func2();
+        // //매개변수 함수 호출
+        // function func3(name){
+        //     document.write("3. "+name+"가 호출되었습니다.<br>");
+        // }func3("함수");
+
+        // function func4(name1, name2){
+        //     document.write("4. "+name1+"가 "+name2+"되었습니다.<br>");
+        // }
+        // func4("함수","호출");
+
+        //리턴값이 있는 함수
+        // function func5(){
+        //     let str = "5. 함수가 호출되었습니다.";
+        //     return str;
+        // }
+        // let value = func5();
+        // document.write(value);
+
+        // document.write("<br>");
+
+        //내부함수(스코프:범위)
+
+        // let score = 10; //전역변수
+
+        // function func1(){
+        //     //let score = 50;  //지역변수
+        //     score = 50; //전역번수 10 -> 50으로 변경
+        //     document.write("func1 score:" + score, "<br>");
+        // }
+        // func1();
+        // document.write(score);
+
+        // //func1 score:5
+        // //50
+
+
+        // function func1(){
+        //     document.write("전역함수");
+        // }
+
+        // function outerFunc2(){
+        //     function innerFunc2(){
+        //         document.write("지역함수");
+        //     }innerFunc2();  //지역함수(없으면 '전역함수'만 출력된다)
+        // }
+        // outerFunc2();
+        // func1();
+
+        // //지역함수전역함수
+
+        // (function(){
+        //     let num = 100;
+        //     function menu(){
+        //         num +=100;
+        //         document.write(num);
+        //     }
+        //     menu();
+        // }());
+
+        // //원래 내부함수로 쓰면
+        // function ee(){
+        //     (function(){
+        //     let num = 100;
+        //     function menu(){
+        //         num +=100;
+        //         document.write(num);
+        //     }
+        //     menu();
+        //     }())
+        //     ee();
+        // }
+
+        // function CheckWeight (name, height, weight){
+        //     this.userName = name;
+        //     this.userHeight = height;
+        //     this.userWeight = weight;
+        //     this.minWeight;
+        //     this.maxWeight;
+        //     this.getInfo = function(){
+        //         let str = "";
+        //         str += "이름: "+this.userName+", ";
+        //         str += "키: "+this.userHeight+", ";
+        //         str += "몸무게: "+this.userWeight+", ";
+        //         return str;
+        //     }
+        //     this.getResult = function(){
+        //         this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+        //         this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+        //         if( this.userWeight > this.minWeight && this.userWeight <= this.maxWeight){
+        //             return "정상 몸무게입니다.";
+        //         } else if ( this.userWeight < this.minWeight ){
+        //             return "살좀 찌세요.";
+        //         }else {
+        //             return "살좀 빼세요.";
+        //         }
+        //     }
+        // }
+        // let kim = new CheckWeight("소라", 168, 50);
+        // let han = new CheckWeight("정순", 156, 50);
+
+        // document.write(kim.getInfo());
+        // document.write(han.getResult());
+
+        function CheckWeight (name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+        }
+        CheckWeight.prototype.getInfo = function(){
+            let str = "";
+            str += "이름: " + this.userName + ", ";
+            str += "키: " + this.userHeight + ", ";
+            str += "몸무게: " + this.userWeight + ", ";
+            return str;
+        }
+        CheckWeight.prototype.getResult = function(){
+            this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+            this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+            if(this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight){
+                return "정상몸무게입니다.";
+            }else if( this. userWeight < this.minWeight){
+                return "정상 몸무게보다 미달입니다.";
+            }else {
+                return "정상 몸무게보다 초과입니다.";
+            }
+        }
+
+        let kim = new CheckWeight("소라","170", "50");
+        document.write(kim.getInfo());
+        document.write(kim.getResult());
+
+        
+        
+
+   
+    </script>
+</body>
+</html>

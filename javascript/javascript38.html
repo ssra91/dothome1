@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //변수 num1, num2 만들고 100, 200 저장한 다음, 출력;
+        let num1 = 100;
+        let num2 = 200;
+
+        document.write(num1,"<br>");
+        document.write(num2,"<br><br>");
+
+        //배열을 선언하고, 첫번째 저장소에 100, 두번째에 200 입력하고 출력
+        let arr1 = new Array ();
+        arr1[0] = 100;
+        arr1[1]= 200;
+
+        document.write(arr1[0],"<br>");
+        document.write(arr1[1],"<br><br>");
+
+        //배열을 선언과 동시에 데이터(100,200)를 넣고 출력
+        let arr2 = new Array(100,200);
+
+        document.write(arr2[0], "<br>");
+        document.write(arr2[1],"<br><br>");
+
+        //배열을 선언하지 않고 바로 데이터를 입력하고 출력
+        let arr3 = [100,200];
+
+        document.write(arr3[0], "<br>");
+        document.write(arr3[1],"<br><br>");
+
+        //객체를 선언하고 첫번째 저장소에 100, 200 입력하고 출력
+        let obj1 = new Object();
+        obj1[0] = 300;
+        obj1[1] = 400;
+
+        document.write(obj1[0], "<br>");
+        document.write(obj1[1],"<br><br>");
+
+        //
+        let obj2 = new Object(300,400);
+
+        document.write(obj2[0], "<br>");
+        document.write(obj2[1],"<br><br>");
+
+        let obj3 = {a:300, b:400};
+
+        document.write(obj3.a,"<br>");
+        document.write(obj3.b,"<br><br>");
+
+
+        let obj4 = new Object();
+        obj4.a = [100, 200]; //객체안에 배열을 넣을수있다.
+        obj4.b = "javascript";
+
+        document.write(obj4.a, "<br>");//a만 쓰면 100,200 다 출력
+        document.write(obj4.a[0], "<br>"); 
+        document.write(obj4.a[1], "<br>");
+        document.write(obj4.b, "<br><br>");
+
+        let obj5 = {
+            a:100,    //or{"a":100}
+            b:"100", 
+            c:[100,200], 
+            d:function(){
+                document.write("객체가 실행되었습니다.");
+                    }
+                }  
+            document.write(obj5.a,"<br>")
+            document.write(obj5.b,"<br>");
+            document.write(obj5.c,"<br>");
+            document.write(obj5.c[0],"<br>");  
+            document.write(obj5.c[1],"<br>");
+            document.write(obj5.d,"<br>");
+            obj5.d();  //함수이기때문에
+
+    </script>
+</body>
+</html>

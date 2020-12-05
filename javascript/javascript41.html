@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //이것은 빨간색i입니다.
+        // for(let i = 1; i<= 100; i++){
+        // document.write("이것은 빨간색" +i+ "입니다.","<br>");
+        // }
+
+        // document.write("<br>");
+
+        // //이것은 검은색i입니다.
+        // for(let i = 1; i<=100; i++){
+        //     document.write("이것은 검정색" +i+ "입니다.","<br>");
+        // }
+    
+        // function colorName(color){
+        //     for(let i = 1; i<=10; i++){
+        //         document.write("이것은" + color,i+ "입니다.","<br>");
+        //  } 
+        // }
+        // colorName("빨간색");
+        // colorName("파란색");
+        // colorName("노란색");
+
+        // function func1(){
+        //     document.write("function1가 실행되었습니다.");
+        // }
+        // function func1(){
+        //     document.write("function2가 실행되었습니다.");
+        // }
+        // func1();
+        // //function2가 실행되었습니다.
+        // //똑같은 함수가 있을 경우에는 마지막 함수가 출력된다.(밑에있는게 우선순위)
+
+        // function func1(){
+        //     document.write("함수가 실행되었습니다1.","<br>");
+        // }
+        // func1();
+
+        // let func2 = function(){
+        //     document.write("함수가 실행되었습니다2."); 
+        // }
+        // func2();
+
+        // var count = 0;
+        // myFnc();
+
+        // function myFnc(){
+        //     count++;
+        //     document.write("hello"+ count,"<br>");
+        // }
+
+        // myFnc();
+
+        // var theFnc = function(){
+        //     count++;
+        //     document.write("bye"+ count,"<br>");
+        // }
+
+        // theFnc();
+
+        //hello1
+        //hello2
+        //bye3
+
+        //let color = ["white", "yellow", "aqua", "purple"];
+
+        //document.write(color[0]);
+
+        // let i = 0;
+        // function changeColor(){
+        //     i++;
+        //     if( i>= color.length){
+        //         i = 0;
+        //     }
+        //     let bodyTag = document.getElementById("theBody");
+        // bodyTag.style.backgroundColor = color[i];
+        // console.log("i : " + i);
+        // console.log("color[i] : " + color[i]);
+
+        // }
+        // function func3(name){
+        //     document.write(name);
+        // }
+        // func3("함수가 실행되었습니다.");
+
+        // function func4(name1, name2){
+        //     document.write(name1+"가"+name2+"되었습니다.");
+        // }
+        // func4("함수","실행");
+
+        // function myFnc(name,area){
+        //     document.write("안녕하세요" + name + "입니다.", "<br>");
+        //     document.write("사는 곳은" + area + "입니다.", "<br><br>");
+        // }
+        // myFnc("홍당무","서울");
+        // myFnc("깍두기","부산");
+
+         //안녕하세요홍당무입니다.
+         //사는 곳은서울입니다.
+
+         //안녕하세요깍두기입니다.
+         //사는 곳은부산입니다.
+
+        //  let rightId = "korea";
+        //  let rightPw = "1234";
+
+        //  function login(id, pw){
+        //      if(id == rightId){
+        //          //아이디값이 맞을 때
+        //          if(pw == rightPw){
+        //              //아이디가 맞고, 비밀번호도 일치할 때
+        //              document.write(id + "님 환영합니다.");
+        //          }else {
+        //              //아이디는 맞지만, 비밀번호가 틀릴 때
+        //              document.write("잘못된 비밀번호 입니다.");
+        //          }
+        //      }else {
+        //          //아이디값이 틀릴 때
+        //          document.write("존재하지 않은 아이디입니다.");
+        //      }
+        //  }
+        //  let useId = prompt("아이디를 입력하세요.");
+        //  let usePw = prompt("비밀번호를 입력하세요.");
+
+        //  login (useId,usePw);
+
+        function sum(){
+            let sum = arguments[0] + arguments [1] + arguments[2];
+            document.write(sum);
+        }
+        sum(100,200,300);
+        //600
+
+        function sum1(){
+            let a, b, c, sum;
+            sum = a + b + c;
+            document.write(sum);
+        }
+        sum1(100,200,300);
+
+    </script>
+
+</head>
+<body id = "theBody">
+</body>
+</html>
