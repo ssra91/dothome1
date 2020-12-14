@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //50~100까지 출력하기(for문)
+    for(let i=50; i<=100; i++){
+        document.write(i + ",");
+    }
+    document.write("<br>");
+    
+    //while문
+    num = 50;
+    while (num<=100){
+        document.write(num + ",");
+        num++;
+    }
+    
+    document.write("<br>");
+
+    //50~100까지 출력하기(짝수는 파란색, 홀수는 노란색, 4의 배수는 빨간색)
+    //for문
+    for(let i=50; i<=100; i++){
+        if(i % 4 ==0){
+            document.write ( "<span style ='color:red'>"+ i +"</span>");
+        } else if (i % 2 == 0){
+            document.write ("<span style ='color:blue'>"+ i +"</span>");
+        }
+        else {
+            document.write("<span style = 'color:yellow'>"+ i +"</span>");
+        }
+    }
+
+    document.write("<br>");
+    //while 문
+    let num2 = 50;
+    while(num2 <= 100){
+        if(num2 % 4 == 0){
+            document.write("<span style = 'color:red'>" + num2 + "</span>");
+        } else if(num2 % 2 == 0){
+        document.write("<span style ='color:blue'>"+ num2 +"</span>");
+        }
+        else {
+        document.write("<span style = 'color:yellow'>" + num2 + "</span>");
+        } 
+        num2++;
+    } 
+</script>
+<table border ="1">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+</table>
+<br>
+<script>
+    let num = 1;
+    let table="<table border ='1'>"
+    for(let i=1; i<=2; i++){
+        table +="<tr>";
+        for(let j=1; j<=4; j++){
+            table += "<td>"+ num +"</td>";
+            num++;
+        }table += "</tr>";
+    }table += "</table>";
+    document.write(table);
+</script>
+
+<script>
+    let num =1;
+    let table ="<table border ='1'>"
+    for(let i= 1; i<=2; i++){
+        table += "<tr>";
+        for(let j=1; j<=4; j++){
+            table += "<td>" + num + "</td>";
+            num +=2;
+        
+        }table += "</tr>";
+    }table += "</table>";
+    document.write(table);
+</script>
+
+    
+</body>
+</html>

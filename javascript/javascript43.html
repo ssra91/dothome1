@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //선언적 함수(func1)
+        //함수를 실행하였습니다.
+        function func1(){
+            document.write("함수를 실행하였습니다.<br>");
+        }
+        func1();
+
+
+        //익명함수(func2)
+        let func2 = function(){
+            document.write("함수를 실행하였습니다.<br>");
+        }
+        func2();
+
+        //매개변수가 있는 함수
+        function func3(str){
+            document.write(str + "를 실행하였습니다.<br>");
+        }
+        func3("함수")
+
+        function func4(str1,str2){
+            document.write(str + "를" + str2 + "실행하였습니다.<br>");
+        }
+        func3("함수","실행");
+
+        //리턴값이 있는 함수
+        function func5(){
+            let str = "함수가 실행되었습니다.";
+            return str;
+        }
+        let value = func5();
+        document.write(value);
+
+        //리턴값 + 매개변수
+        // function func6(num1, num2){
+        //     //return가 없으면 원래식
+        //     // let sum;
+        //     // sum = num1 + num2;
+        //     // document.write(sum);
+        //     return num1 + num2;
+        // }
+        // let result = func6(100,200);
+        // document.write(result);
+   
+        //평균점수 구하기
+        function testAvg(arrData){
+            let sum = 0;
+            for ( let i = 0; i < arrData.length; i++){
+                sum += Number(prompt(arrData[i] + "점수는?", "0"));
+            }
+            let avg = sum / arrData.length;
+            return avg;
+        }
+        let arrSubject = ["국어", "수학"];
+        let result =testAvg(arrSubject);
+
+        document.write(result);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>javascript12</title>
+</head>
+
+<body>
+    <script>
+        let num1 = 10; //전역변수 num1에 숫자 10을 할당
+        let num2 = 20; //전역변수 num2에 숫자 20을 할당
+        let num3 = 20; //전역변수 num3에 숫자 20을 할당
+        let result;
+
+        result = num3++; //20=20+1
+        document.write(result,"<br>");
+        document.write(num3,"<br>");
+        
+        result = num3++; //num3=21을 result로 보내주고 +1을 해줘서 22가된다.
+        document.write(result,"<br>");
+        document.write(num3,"<br>");
+        
+        result = ++num3; //num3=22값에 +1=23 값을  result 로 보내준다
+        document.write(result,"<br>");
+        document.write(num3,"<br>"); 
+    </script>
+
+</body>
+
+</html>

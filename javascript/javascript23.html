@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중 if</title>
+    <script>
+         let score = prompt("당신의 자바스크립트 점수는?");
+        let grade;
+
+        if (score >= 90){
+            grade = "A";
+        } else if (score >= 80 && score < 90){
+            grade = "B";
+        } else if (score >= 70 && score < 80){
+            grade = "C";
+        } else if (score >= 60 && score < 70){
+            grade = "D";
+        } else if(score < 60){
+            grade = "F";
+        }
+        //다중 if 
+        //90점 이상 --> A
+        //80점~90점 --> B
+        //70점~80점 --> C
+        //60점~70점 --> D
+        //60점 미만 --> F
+        switch(grade){
+            case"A" : document.write("당신의 학점은 A 입니다.");
+            break;
+            case "B" : document.write("당신의 학점은 B 입니다.");
+            break;
+            case "C" : document.write("당신의 학점은 C 입니다.");
+            break;
+            case "D" : document.write("당신의 학점은 D 입니다.");
+            break;
+            case "F" : document.write("당신의 학점은 F 입니다.");
+            break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

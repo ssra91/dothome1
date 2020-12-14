@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="galleryZone">
+        <p><img id="photo" src="img/pic_1.jpg" alt="이미지1" style="width: 500px;"></p>
+        <div>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </div>
+    </div>
+
+    <script>
+        let num = 1;
+        function gallery(direct){
+            if(direct){
+                if(num == 8) {
+                    return;
+                  
+                } 
+                num++;
+            }else {
+                if(num == 1) {
+                    return;
+                }
+                num--;
+            }
+            console.log(num);
+            let imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src", "img/pic_"+num+".jpg");
+        }
+    </script>
+</body>
+</html>
