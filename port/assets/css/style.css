@@ -1,13 +1,66 @@
 /* layout */
 #wrap {}
-#header {background: #111; height: 110px;;}
+#header {height: 110px; background: #ffd87e; border-bottom: 1px solid #c66559;}
+#main {height: 2200px; background: #ffd87e; position: relative;}
 
 
 /* container */
-.container {margin: 0 auto; height: inherit; width: 1920px;}
+.container {margin: 0 auto; width: 1920px;}
 
 /* header */
-.header {background-color: #ffd87e;}
-.left {}
-.title {}
-.right {}
+.header {display: flex; text-align: center; }
+.header_menu {flex-basis: 100px; padding: 10px 75px 0px 60px; color: #b33f4c; text-transform: uppercase;}
+.header_menu .left {font-size: 36px; padding-top: 20px;}
+.header_menu .title {flex-basis: 1550px; font-size: 65px;}
+.header_menu .right {font-size: 36px;  padding-top: 20px;}
+
+/* main */
+.main {}
+.main .desc1 {
+    position: absolute; left: 0; top: 0;
+    margin: 320px 713px 0px 380px;
+    z-index: 1;
+}
+.main .desc2 {
+    position: absolute; left: 0; top: 0;
+    margin: 474px 346px 0 891px;
+    z-index: 2;
+}
+.main .desc3 {
+    position: absolute; left: 0; top: 0;
+    margin: 645px 770px 0 428px;
+    z-index: 3;
+}
+.main .desc4 {
+    margin: 947px 1457px 0 150px;
+    position: absolute; left: 0; top: 0;
+}
+.main .dot {
+    margin: 418px 149px 0 1050px;
+    position: absolute; left: 0; top: 0;
+}
+.main p {
+    width: 1495px; height: 512px; 
+    font-size: 70px; font-weight: normal; 
+    line-height: 1.6; letter-spacing: 0.4px; 
+    text-align:left; 
+    -webkit-text-stroke: 4px #b33f4c;
+    color: #ffd87e;
+    margin: 1390px 212px 298px 213px;
+    position: absolute; left: 0;bottom: 0;
+    z-index: 0;
+}
+.main .opparrow {
+    margin: 927px 934px 0 935px; position: absolute; left: 0; top: 0;
+}
+.main .arrow1 {
+    margin: 900px 0 0 650px;
+    position: absolute; top: 0;
+}
+.main .arrow2 {
+    margin: 1424px 1500px 0 0;
+    position: absolute; left: 0;top: 0;
+}
+.main .arrow3 {}
+.main .arrow4 {}
+.main .arrow5 {}
