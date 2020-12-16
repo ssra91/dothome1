@@ -5,10 +5,10 @@
     src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
   }
 /* layout */
-#wrap {width: 100%;}
+#wrap {}
 #header {height: 110px; background: #ffd87e; border-bottom: 1px solid #c66559; position: fixed; z-index: 1000; width: 100%;}
-#main {height: 2200px; background: #ffd87e; position: relative;}
-#aboutme {}
+#main {height: 2200px; background: #ffd87e; position: relative; width: 100%;}
+#aboutme {background: #f9d3e0;}
 
 
 /* container */
@@ -26,26 +26,26 @@
 .main .images {position: absolute; left: 0; top: 0;}
 .main .desc1 {
     position: absolute; left: 0; top: 0;
-    margin: 280px 713px 0px 380px;
+    margin: 280px 0px 0px 380px;
     z-index: 1;
     animation: show ;
 }
 .main .desc2 {
     position: absolute; left: 0; top: 0;
-    margin: 438px 346px 0 891px;
+    margin: 438px 0px 0 891px;
     z-index: 2;
 }
 .main .desc3 {
     position: absolute; left: 0; top: 0;
-    margin: 560px 770px 0 428px;
+    margin: 560px 0px 0 428px;
     z-index: 3;
 }
 .main .desc4 {
-    margin: 880px 1457px 0 150px;
+    margin: 880px 0px 0 150px;
     position: absolute; left: 0; top: 0;
 }
 .main .dot {
-    margin: 380px 149px 0 1050px;
+    margin: 380px 0px 0 1050px;
     position: absolute; left: 0; top: 0;
 }
 .main p {
@@ -55,13 +55,13 @@
     text-align:left; 
     -webkit-text-stroke: 3px #b33f4c;
     color: #ffd87e;
-    margin: 1300px 213px 298px 220px;
+    margin: 1300px 0px 0px 220px;
     position: absolute; left: 0; top: 0;
     z-index: 0;
     font-family: 'Godo';
 }
 .main .opparrow {
-    margin: 850px 934px 0 935px; position: absolute; left: 0; top: 0;
+    margin: 850px 0px 0 935px; position: absolute; left: 0; top: 0;
 }
 
 .main .arrow1 {
@@ -69,11 +69,11 @@
     position: absolute; top: 0; left: 0;
 }
 .main .arrow2 {
-    margin: 1322px 1500px 0 0;
+    margin: 1322px 1383px 0 0;
     position: absolute; left: 0;top: 0;
 }
 .main .arrow3 {
-    margin: 1607px 0PX 36PX 1570px;
+    margin: 1607px 0PX 0PX 1570px;
     position: absolute; left: 0; top: 0;
 }
 .main .arrow4 {
