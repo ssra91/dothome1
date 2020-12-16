@@ -90,55 +90,64 @@
                     <h2 id="intro1" class="page-header">Slider Effect01</h2>
                     <p class="bs-callout bs-callout-info">이미지 슬라이드를 이용한 효과입니다. (제이쿼리,자바스크립트)</p>
                     <iframe width="100%" height="800px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>   
-                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home1" aria-controls="home1" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile1" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home1">
 <pre class="line-numbers language-js"><code>//jQuery 
-    const sliderWrap = $(".slider_wrap");
-    const sliderImg = $(".slider_img");
-    const slider = $(".slider");
-    
-    let currentIndex = 0; //현재 첫 번째 보이는 이미지
-    let sliderCount = slider.length;  //이미지 갯수
+const sliderWrap = $(".slider_wrap");
+const sliderImg = $(".slider_img");
+const slider = $(".slider");
 
-    //3초에 한번씩 함수를 실행
-    setInterval(function(){
-        let nextIndex = (currentIndex + 1) % sliderCount; //그 다음 이미지를 보여주기 위한 함수 +1 (currentIndex +1)
+let currentIndex = 0; //현재 첫 번째 보이는 이미지
+let sliderCount = slider.length;  //이미지 갯수
 
-        slider.eq(currentIndex).fadeOut(); //첫번째 이미지를 의미(slider.eq(currentIndex))
-        slider.eq(nextIndex).fadeIn();  //두번째 이미지를 나타나게 하는것 
+//3초에 한번씩 함수를 실행
+setInterval(function(){
+    let nextIndex = (currentIndex + 1) % sliderCount; //그 다음 이미지를 보여주기 위한 함수 +1 (currentIndex +1)
 
-        console.log("currentIndex : " + currentIndex);
-        console.log("nextIndex :" + nextIndex);
-        //currentIndex++;
-        currentIndex = nextIndex;
-    },3000);
+    slider.eq(currentIndex).fadeOut(); //첫번째 이미지를 의미(slider.eq(currentIndex))
+    slider.eq(nextIndex).fadeIn();  //두번째 이미지를 나타나게 하는것 
+
+    console.log("currentIndex : " + currentIndex);
+    console.log("nextIndex :" + nextIndex);
+    //currentIndex++;
+    currentIndex = nextIndex;
+},3000);
 </code></pre>
-                
-<iframe width="100%" height="800px" src="sliderEffect01-javascript.html" frameborder="0"></iframe>                 
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile1">
 <pre class="line-numbers language-js"><code>//JavaScript 
-    const sliderWrap = document.querySelector(".slider_wrap");
-    const sliderImg = document.querySelector(".slider-img");
-    const slider = document.querySelectorAll(".slider");
+const sliderWrap = document.querySelector(".slider_wrap");
+const sliderImg = document.querySelector(".slider-img");
+const slider = document.querySelectorAll(".slider");
 
-    let currentIndex = 0;  //현재 보이는 첫번째 이미지
-    let sliderCount = slider.length;  //이미지 갯수
+let currentIndex = 0;  //현재 보이는 첫번째 이미지
+let sliderCount = slider.length;  //이미지 갯수
 
-    setInterval(() => {   //setInterval (function(){}); 를 화살표 함수로 바꿨다.
-        let nextIndex = (currentIndex + 1) % sliderCount;
-                            //(0 + 1) % 5 -> 1
-                            //(1 + 1) % 5 -> 2
-                            //(2 + 1) % 5 -> 3
-                            //(3 + 1) % 5 -> 4
-                            //(4 + 1) % 5 -> 0
-                            //(0 + 1) % 5 -> 1
-                            //(0 + 1) % 5 -> 2
+setInterval(() => {   //setInterval (function(){}); 를 화살표 함수로 바꿨다.
+    let nextIndex = (currentIndex + 1) % sliderCount;
+                        //(0 + 1) % 5 -> 1
+                        //(1 + 1) % 5 -> 2
+                        //(2 + 1) % 5 -> 3
+                        //(3 + 1) % 5 -> 4
+                        //(4 + 1) % 5 -> 0
+                        //(0 + 1) % 5 -> 1
+                        //(0 + 1) % 5 -> 2
 
-        //slider.eq(currentindex).fadeOut();
-        //slider[currentIndex]  //슬라이드를 배열식으로 해서 첫번째 인자를 가져오라.
-        slider[currentIndex].style.opacity = "0";
-        slider[nextIndex].style.opacity = "1"; 
-        currentIndex = nextIndex;
-    }, 3000);
-</code></pre>   
+    //slider.eq(currentindex).fadeOut();
+    //slider[currentIndex]  //슬라이드를 배열식으로 해서 첫번째 인자를 가져오라.
+    slider[currentIndex].style.opacity = "0";
+    slider[nextIndex].style.opacity = "1"; 
+    currentIndex = nextIndex;
+}, 3000);
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Intro1 -->
 
@@ -147,7 +156,13 @@
                     <h2 id="intro2" class="page-header">Slider Effect02</h2>
                     <p class="bs-callout bs-callout-info">이미지 슬라이드를 이용한 효과입니다. (제이쿼리,자바스크립트)</p>
                     <iframe width="100%" height="800px" src="sliderEffect02-jquery.html" frameborder="0"></iframe>   
-                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home2" aria-controls="home2" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home2">
 <pre class="line-numbers language-js"><code>//jQuery 
 const sliderWrap = $(".slider_wrap");
 const sliderImg = $(".slider_img");
@@ -174,10 +189,10 @@ setInterval(function(){
 
     // console.log("currentIndex :"+ currentIndex)
     // console.log("sliderPosition:" + sliderPosition)
-},3000);    
+},3000);
 </code></pre>
-                
-<iframe width="100%" height="800px" src="sliderEffect02-javascript.html" frameborder="0"></iframe>                 
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile2">
 <pre class="line-numbers language-js"><code>//JavaScript 
 const sliderWrap = document.querySelector(".slider_wrap");
 const sliderImg = document.querySelector(".slider_img");
@@ -200,10 +215,448 @@ setInterval(function(){
     sliderImg.style.transition = "all 0.6s";
 
     gsap.to(sliderImg,{duration:0.6, left:sliderPosition, ease: "sine.out"});
-},3000);    
-</code></pre>   
+},3000);
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Intro1 -->
+                <!-- Intro2 -->
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Slider Effect03</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 - 가로로 이동하기(연속적)(제이쿼리,자바스크립트)</p>
+                    <iframe width="100%" height="800px" src="sliderEffect03-jquery.html" frameborder="0"></iframe>   
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home3" aria-controls="home3" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile3" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home3">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider_wrap");
+const sliderImg = $(".slider_img");
+const slider = $(".slider");
+
+setInterval(function(){
+    sliderImg.animate({left:"-800px"},400,function(){  //400은 4초를 의미
+        //alert("ddd")
+        $(".slider:first-child").appendTo(sliderImg); //뒤에 추가 한다...?
+        sliderImg.css("left","");  //이게 없으면 애니메이션이 작동하지 않는다 appendto때문에 이미지는 바뀌지만 
+    });  //0.4초
+},3000);
+</code></pre>
+                            </div>
+            <div role="tabpanel" class="tab-pane" id="profile3">
+<pre class="line-numbers language-js"><code>;
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intro3 -->
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Slider Effect04</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 - 위로 넘기기(제이쿼리,자바스크립트)</p>
+                    <iframe width="100%" height="800px" src="sliderEffect04-jquery.html" frameborder="0"></iframe>   
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home4" aria-controls="home4" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile4" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home4">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider_wrap");
+const sliderImg = $(".slider_img");
+const slider = $(".slider");
+
+let currentIndex = 0;
+let sliderCount = slider.length -1;
+let sliderHeight = slider.height();
+let sliderSpeed = 400;  
+
+//한바퀴
+//setInterval(function(){
+    //currentIndex < 4 ? currentIndex++ : currentIndex = 0;  //순차적으로 01234나오게 해주려고 0으로 해줌
+
+    //let sliderPosition = currentIndex * (-480) + "px";  //처음에는 0 그다음에는 480 960 포지션값을 줘라...
+    //let sliderPosition = currentIndex * -sliderHeight; 
+    //sliderImg.animate({top:sliderPosition},400);
+    //sliderImg.animate({top:sliderPosition},sliderSpeed);
+//},3000);
+
+//연속적으로 
+setInterval(function(){
+    sliderImg.animate({top: -sliderHeight},sliderSpeed,function(){ 
+        $(".slider:eq(0)").appendTo(sliderImg);  
+        sliderImg.css("top","");  
+    });
+    
+},3000);
+</code></pre>
+                            </div>
+            <div role="tabpanel" class="tab-pane" id="profile4">
+<pre class="line-numbers language-js"><code>;
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intro4 -->
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">Slider Effect04</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 - 이미지 슬라이드(제이쿼리,자바스크립트)</p>
+                    <iframe width="100%" height="800px" src="sliderEffect05-jquery.html" frameborder="0"></iframe>   
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home5" aria-controls="home5" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile5" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home5">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider_wrap");
+const sliderImg = $(".slider_img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = slider.width();
+let sliderHeight = slider.height();
+let sliderTotalWidth = sliderWidth * sliderCount; //슬라이드 이미지 개수가 바뀌어도 작동이되게
+
+sliderImg.css({width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth}); //marginleft를 안주면 왼쪽에는 이미지가 없으니까 슬라이드img 
+$(".slider:last-child").prependTo(sliderImg);                                             //시작점을 옮겨줄라고  미리 왼쪽에 준비해둬야 자연스럽게 움직이기 때문에 줌
+//오른쪽은 상관없지만 왼쪽에는 해놔야 이미지가 자연스럽게 움직임
+
+function moveLeft(){
+    //alert("왼쪽 버튼을 클릭")
+    sliderImg.animate({left: + sliderWidth }, 400, function(){
+        $(".slider:last-child").prependTo(sliderImg);
+        sliderImg.css("left","");
+    }); //기준점이 left로 되있어서 left만 줌
+}
+function moveRight(){
+    //alert("오른쪽 버튼을 클릭")
+    sliderImg.animate({left: - sliderWidth }, 400, function(){
+        $(".slider:first-child").appendTo(sliderImg);
+        sliderImg.css("left","");
+    }); 
+}
+
+sliderBtn.find(".prev").click(function(){
+    moveLeft();
+});
+sliderBtn.find(".next").click(function(){
+    moveRight();
+});
+</code></pre>
+                            </div>
+            <div role="tabpanel" class="tab-pane" id="profile5">
+<pre class="line-numbers language-js"><code>;
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intro5 -->
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">Slider Effect06</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 - 3단 슬라이드 만들기(제이쿼리,자바스크립트)</p>
+                    <iframe width="100%" height="800px" src="sliderEffect06-jquery.html" frameborder="0"></iframe>   
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home6" aria-controls="home6" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile6" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home6">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider_wrap");
+const sliderImg = $(".slider_img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let sliderCount = slider.length;
+//let sliderWidth = slider.width();
+let sliderWidth = slider.outerWidth(); //padding 값을 포함하지 않은 순수 width값 부를때
+let sliderShowNumber = 3;
+let currentIndex = 0;
+
+let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone(); //12345뒤에 123이 있음
+//콘솔로그로 확인하면 slider123이 나타남
+sliderImg.append(sliderCopy);
+
+//alert(sliderWidth); ->380(padding을 줬기 때문에 400이였던 width값이 380로 나옴)
+function moveLeft(){  //처음이미지일때
+    if(currentIndex == 0){  //0과 같다면 5를 대입시켜줘라
+        currentIndex = sliderCount; //5=sliderCount
+        sliderImg.css("margin-left", sliderWidth * -currentIndex);
+    }
+    currentIndex--; //클릭할때마다 이미지가 바뀌도록
+    sliderImg.animate({"margin-left": -sliderWidth * currentIndex},400);
+}
+function moveRight(){  //마지막 이미지일때
+    if(currentIndex == sliderCount){  
+        currentIndex = 0;
+        sliderImg.css("margin-left",currentIndex);
+    }
+    currentIndex++; //클릭할때마다 이미지가 바뀌도록
+    sliderImg.stop().animate({"margin-left": -sliderWidth * currentIndex},400); //0일떄 0 1일떄 400 2일때 800 ...
+}       //margin주고 -를 주면 왼쪽으로 간다고 생각하면 됨
+
+//버튼 만들기
+sliderBtn.on("click","a",function(){
+    if($(this).hasClass("prev")){
+        moveLeft();               
+    } else {
+        moveRight();
+    }
+});
+</code></pre>
+                            </div>
+            <div role="tabpanel" class="tab-pane" id="profile6">
+<pre class="line-numbers language-js"><code>;
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intro6 -->
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">Slider Effect07</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 - 버튼,닷 만들기(제이쿼리,자바스크립트)</p>
+                    <iframe width="100%" height="800px" src="sliderEffect07-jquery.html" frameborder="0"></iframe>   
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home7" aria-controls="home7" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile7" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home7">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider_wrap");
+const sliderImg = $(".slider_img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+const sliderDot = $(".slider-dot");
+
+let sliderCount = slider.length;
+let sliderWidth = slider.outerWidth();
+let sliderHeight = slider.outerHeight();
+let sliderTotalWidth = sliderWidth * sliderCount;
+let sliderShowNumber = 1;
+let currentIndex = 0;
+let dotIndex = "";
+
+//무한으로
+// let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone(); //선택자만큼 복사를 해라(sliderShowNumber)하나가 복사 됨
+// sliderImg.append(sliderCopy);
+
+sliderImg.css({width: sliderTotalWidth, height: sliderHeight}); 
+
+//이미지 움직이기
+function gotoSlider(index){
+    sliderImg.animate({left:-sliderWidth * index}, 400); //0->-400 번호가 들어가게 되면 이미지가 이동하도록
+    currentIndex = index;  //값이 누적이 되서 증감이 된다 증감식을 쓰지 않아도
+    sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");  //next버튼 부르면 닷 버튼의 active도 같이 붙을 수 있게 currentIndex값을 바꿀수 있는 값을 넣어주었다 핵심은 currentIndex
+}
+
+//이미지 개수만큼 닷 버튼 만들기 (html에 적어주지 않고 스크립트로)
+slider.each(function(){  //slider에 each(슬라이드 개수만큼 반복해주는식)를 쓰면  element와 index를 값을 불러올수 있다. 알수있다
+    dotIndex += "<a href='#'></a>";  //+를 해주는 이유는 이미지 개수가 증가해도 이미지 개수만큼 나올수 있도록 해주기 위해 
+});
+sliderDot.html(dotIndex); //sliderDot한테 dotIndex의 문자열을 뿌려줌
+sliderDot.find("a").eq(0).addClass("active");    //active추가 시켜주라
+
+//닷버튼에 번호 글씨 나오게 하려면(참고용)
+// slider.each(function(index){
+//     let name = $(this).find("img").attr("alt");
+//     dotIndex += "<a href='#'>"+name+"</a>";
+// });
+
+//닷 버튼 클릭하기
+sliderDot.on("click","a",function(e){
+    e.preventDefault();
+    gotoSlider($(this).index()); //현재 숫자가 어떤이미지인지 알고 싶으려면 index메소드이용
+    //alert($(this).index());
+});
+
+//버튼 클릭하기
+sliderBtn.on("click","a",function(e){   //a태그 포함하여 클릭 이벤트 추가
+    e.preventDefault(); //기본값을 막아준다?
+    let nextIndex = (currentIndex + 1) % sliderCount;  //오른쪽 버튼->nextIndex   1씩 추가되고 1씩 증가
+    let prevIndex = (currentIndex - 1) % sliderCount; 
+    //if(currentIndex==0){
+        //prevIndex = sliderCount-1;  //만약에 currentIndex가 0이 된다면 preIndex는 sliderCount에서 1을 뺀 4가 되어야 한다. 그래야 이전 이미지누르면 첫번째 이미지로 이동한다.
+    //}
+
+    if(currentIndex == 0) prevIndex = sliderCount -1;  
+    
+    //console.log("nextIndex:"+ nextIndex);   //-1이 나오면 안된다 이전 마지막 사진 번호가 4번이니까 4번이 나와야 하므로 -1 
+    console.log("prevIndex:"+ prevIndex);     //클릭할때마다 1씩 추가 해야 하는데 잘 되나 확인 하기 위해 콘솔로그로 확인 이미지 하나당 400씩 추가 되어야 하기 때문에    
+
+
+        if($(this).hasClass("prev")){
+        gotoSlider(prevIndex);   //있으면 고투슬라이더 함수로 가라
+    }else {
+        gotoSlider(nextIndex);
+    }
+
+});
+</code></pre>
+                            </div>
+            <div role="tabpanel" class="tab-pane" id="profile7">
+<pre class="line-numbers language-js"><code>;
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intro7 -->
+                <!-- Intro7_1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7_1" class="page-header">Slider Effect07_1</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 - 버튼,닷에 이미지 넣어서 만들기(제이쿼리,자바스크립트)</p>
+                    <iframe width="100%" height="800px" src="sliderEffect07_1-jquery.html" frameborder="0"></iframe>   
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home7_1" aria-controls="home7_1" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile7_1" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home7_1">
+<pre class="line-numbers language-js"><code> const sliderWrap = $(".slider_wrap");
+const sliderImg = $(".slider_img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+const sliderDot = $(".slider-dot");
+
+let sliderCount = slider.length;
+let sliderWidth = slider.outerWidth();
+let sliderHeight = slider.outerHeight();
+let sliderTotalWidth = sliderWidth * sliderCount;
+let sliderShowNumber = 1;
+let currentIndex = 0;
+let dotIndex = "";
+
+
+//무한으로
+// let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone(); //선택자만큼 복사를 해라(sliderShowNumber)하나가 복사 됨
+// sliderImg.append(sliderCopy);
+
+
+sliderImg.css({width: sliderTotalWidth, height: sliderHeight}); 
+
+//이미지 움직이기
+function gotoSlider(index){
+    sliderImg.animate({left:-sliderWidth * index}, 400); //0->-400 번호가 들어가게 되면 이미지가 이동하도록
+    currentIndex = index;  //값이 누적이 되서 증감이 된다 증감식을 쓰지 않아도
+    sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");  //next버튼 부르면 닷 버튼의 active도 같이 붙을 수 있게 currentIndex값을 바꿀수 있는 값을 넣어주었다 핵심은 currentIndex
+}
+
+//이미지 개수만큼 닷 버튼 만들기 (html에 적어주지 않고 스크립트로)
+slider.each(function(index){ 
+    let sliderName = $(this).find("img").attr("alt");
+    let sliderSrc = $(this).fomd("img").attr("src");
+    dotIndex += "<a href='#' style='background-image:url("+sliderSrc+")'>"+sliderName+"</a>";
+};
+
+//닷 버튼 클릭하기
+sliderDot.on("click","a",function(e){
+    e.preventDefault();
+    gotoSlider($(this).index()); //현재 숫자가 어떤이미지인지 알고 싶으려면 index메소드이용
+    //alert($(this).index());
+};
+
+//버튼 클릭하기
+sliderBtn.on("click","a",function(e){   //a태그 포함하여 클릭 이벤트 추가
+    e.preventDefault(); //기본값을 막아준다?
+    let nextIndex = (currentIndex + 1) % sliderCount;  //오른쪽 버튼->nextIndex   1씩 추가되고 1씩 증가
+    let prevIndex = (currentIndex - 1) % sliderCount; 
+    //if(currentIndex==0){
+        //prevIndex = sliderCount-1;  //만약에 currentIndex가 0이 된다면 preIndex는 sliderCount에서 1을 뺀 4가 되어야 한다. 그래야 이전 이미지누르면 첫번째 이미지로 이동한다.
+    //}
+
+    if(currentIndex == 0) prevIndex = sliderCount -1;  
+    
+    //console.log("nextIndex:"+ nextIndex);   //-1이 나오면 안된다 이전 마지막 사진 번호가 4번이니까 4번이 나와야 하므로 -1 
+    console.log("prevIndex:"+ prevIndex);     //클릭할때마다 1씩 추가 해야 하는데 잘 되나 확인 하기 위해 콘솔로그로 확인 이미지 하나당 400씩 추가 되어야 하기 때문에    
+
+
+        if($(this).hasClass("prev")){
+        gotoSlider(prevIndex);   //있으면 고투슬라이더 함수로 가라
+    }else {
+        gotoSlider(nextIndex);
+    }
+
+});
+</code></pre>
+                            </div>
+            <div role="tabpanel" class="tab-pane" id="profile7_1">
+<pre class="line-numbers language-js"><code>;
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intro7_1 -->
+                <!-- sample01 -->
+                <div class="bs-docs-section">
+                    <h2 id="sample01" class="page-header">sample01</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">sample01</em></h3>
+                        <div class="boxWrap">
+                            <iframe width="100%" height="800px" src="sliderEffect-3d.html" frameborder="0"></iframe> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<pre class="line-numbers language-css"><code>const n = 12;
+gsap.timeline()
+    .set("#container", {perspective: 800})
+for(let i=0; i<n; i++){
+    let b = document.createElement('div');
+    b.classList.add("box");
+    document.getElementById("container").appendChild(b);
+
+    gsap.set(b,{
+        left:'50%',
+        top:'50%',
+        x:'-50%',
+        y:'-50%',
+        z: 600,
+        width:300,
+        height:600,
+        borderRadius: 20,
+        background: () => 'hsl('+(i/n*360)+', 100%, 50%)'
+    });
+
+    gsap.fromTo(b,{
+        scaleY:0,
+        zIndex:()=>(i<n/2)?-i:i,
+        rotationY:90+i/n*206.5,
+        transformOrigin:String("50% 50% -1060%")
+    },{
+        scaleY:1,
+        duration:1,
+        delay:1,
+        ease:'elastic'
+    })
+    b.onmouseenter = (e) => {
+        gsap.to(b, {duration:0.3, rotationX: -14, y:'-130%', ease:'back.out(6)'})
+    }
+    b.onmouseleave = (e) => {
+        gsap.to(b, {duration:0.4, rotationX: 0, y:'-50%'})
+    }
+}
+window.onmousemove = (e) => {
+    gsap.to('box',{duration: 0.6, rotationY: (i)=>45+i/n*206.5+90*(e.clentX/window.innerWidth)})
+} 
+</code></pre>
+                <!-- //sample01 -->
             </div>
             <!-- //col-md-12 -->
         </div>

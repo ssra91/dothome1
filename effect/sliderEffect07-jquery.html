@@ -248,18 +248,12 @@
         //     dotIndex += "<a href='#'>"+name+"</a>";
         // });
 
-
-
-
-
         //닷 버튼 클릭하기
         sliderDot.on("click","a",function(e){
             e.preventDefault();
             gotoSlider($(this).index()); //현재 숫자가 어떤이미지인지 알고 싶으려면 index메소드이용
             //alert($(this).index());
         });
-
-
 
         //버튼 클릭하기
         sliderBtn.on("click","a",function(e){   //a태그 포함하여 클릭 이벤트 추가

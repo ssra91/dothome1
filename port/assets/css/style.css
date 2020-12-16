@@ -1,76 +1,107 @@
+@font-face {
+    font-family: 'Godo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+  }
 /* layout */
-#wrap {}
-#header {height: 110px; background: #ffd87e; border-bottom: 1px solid #c66559;}
+#wrap {width: 100%;}
+#header {height: 110px; background: #ffd87e; border-bottom: 1px solid #c66559; position: fixed; z-index: 1000; width: 100%;}
 #main {height: 2200px; background: #ffd87e; position: relative;}
+#aboutme {}
 
 
 /* container */
-.container {margin: 0 auto; width: 100%;}
+.container {margin: 0 auto;}
 
 /* header */
-.header {display: flex; text-align: center;}
-.header_menu {flex-basis: 100px; padding: 10px 75px 0px 60px; color: #b33f4c; text-transform: uppercase;}
-.header_menu .left {font-size: 36px; padding-top: 20px;}
-.header_menu .title {flex-basis: 1550px; font-size: 65px;}
-.header_menu .right {font-size: 36px;  padding-top: 20px;}
+.header {padding: 10px 60px 10px 60px; color: #b33f4c; text-transform: uppercase;}
+.header_menu {display: flex; text-align: center; font-family: 'Impact', 'Arial Narrow Bold', sans-serif;}
+.header .header_menu .left {font-size: 28px; padding: 20px 10px;}
+.header .header_menu .title {flex-basis: 1650px; font-size: 60px;}
+.header .header_menu .right {font-size: 28px;  padding: 20px 10px;}
 
 /* main */
 .main {}
 .main .images {position: absolute; left: 0; top: 0;}
 .main .desc1 {
     position: absolute; left: 0; top: 0;
-    margin: 320px 713px 0px 380px;
+    margin: 280px 713px 0px 380px;
     z-index: 1;
+    animation: show ;
 }
 .main .desc2 {
     position: absolute; left: 0; top: 0;
-    margin: 474px 346px 0 891px;
+    margin: 438px 346px 0 891px;
     z-index: 2;
 }
 .main .desc3 {
     position: absolute; left: 0; top: 0;
-    margin: 645px 770px 0 428px;
+    margin: 560px 770px 0 428px;
     z-index: 3;
 }
 .main .desc4 {
-    margin: 947px 1457px 0 150px;
+    margin: 880px 1457px 0 150px;
     position: absolute; left: 0; top: 0;
 }
 .main .dot {
-    margin: 418px 149px 0 1050px;
+    margin: 380px 149px 0 1050px;
     position: absolute; left: 0; top: 0;
 }
 .main p {
-    width: 1495px; height: 512px; 
-    font-size: 70px; font-weight: normal; 
+    width: 1470px; height: 512px; 
+    font-size: 74px; font-weight: normal; 
     line-height: 1.6; letter-spacing: 0.4px; 
     text-align:left; 
-    -webkit-text-stroke: 4px #b33f4c;
+    -webkit-text-stroke: 3px #b33f4c;
     color: #ffd87e;
-    margin: 1390px 212px 298px 213px;
-    position: absolute; left: 0;bottom: 0;
+    margin: 1300px 213px 298px 220px;
+    position: absolute; left: 0; top: 0;
     z-index: 0;
+    font-family: 'Godo';
 }
 .main .opparrow {
-    margin: 927px 934px 0 935px; position: absolute; left: 0; top: 0;
+    margin: 850px 934px 0 935px; position: absolute; left: 0; top: 0;
 }
+
 .main .arrow1 {
-    margin: 900px 0 0 940px;
-    position: absolute; top: 0;
+    margin: 790px 0 0 970px;
+    position: absolute; top: 0; left: 0;
 }
 .main .arrow2 {
-    margin: 1424px 1500px 0 0;
+    margin: 1322px 1500px 0 0;
     position: absolute; left: 0;top: 0;
 }
 .main .arrow3 {
-    margin: 1707px 0PX 36PX 1570px;
-    position: absolute; left: 0; bottom: 0;
+    margin: 1607px 0PX 36PX 1570px;
+    position: absolute; left: 0; top: 0;
 }
 .main .arrow4 {
-    margin: 1752px 600px 278px 1041px;
-    position: absolute; left: 0; bottom: 0;
+    margin: 1595px 600px 278px 1041px;
+    position: absolute; left: 0; top: 0;
 }
 .main .arrow5 {
-    margin: 2066px 1447px 67px 363px;
-    position: absolute; left: 0; bottom: 0;
+    margin: 1900px 1447px 67px 363px;
+    position: absolute; left: 0; top: 0;
 }
+
+/* aboutme */
+.aboutme {}
+.aboutme h2 {}
+.aboutme p {}
+.aboutme .me {}
+.aboutme .seemore {}
+
+
+
+
+
+
+
+/* 미디어쿼리 */
+@media (max-width:1220px){}
+@media (max-width:1024px){}
+@media (max-width:960px){}
+@media (max-width:768px){}
+@media (max-width:600px){}
+@media (max-width:320px){}
