@@ -5,10 +5,10 @@
 
 
 /* container */
-.container {margin: 0 auto; width: 1920px;}
+.container {margin: 0 auto; width: 100%;}
 
 /* header */
-.header {display: flex; text-align: center; }
+.header {display: flex; text-align: center;}
 .header_menu {flex-basis: 100px; padding: 10px 75px 0px 60px; color: #b33f4c; text-transform: uppercase;}
 .header_menu .left {font-size: 36px; padding-top: 20px;}
 .header_menu .title {flex-basis: 1550px; font-size: 65px;}
@@ -16,6 +16,7 @@
 
 /* main */
 .main {}
+.main .images {position: absolute; left: 0; top: 0;}
 .main .desc1 {
     position: absolute; left: 0; top: 0;
     margin: 320px 713px 0px 380px;
@@ -54,13 +55,22 @@
     margin: 927px 934px 0 935px; position: absolute; left: 0; top: 0;
 }
 .main .arrow1 {
-    margin: 900px 0 0 650px;
+    margin: 900px 0 0 940px;
     position: absolute; top: 0;
 }
 .main .arrow2 {
     margin: 1424px 1500px 0 0;
     position: absolute; left: 0;top: 0;
 }
-.main .arrow3 {}
-.main .arrow4 {}
-.main .arrow5 {}
+.main .arrow3 {
+    margin: 1707px 0PX 36PX 1570px;
+    position: absolute; left: 0; bottom: 0;
+}
+.main .arrow4 {
+    margin: 1752px 600px 278px 1041px;
+    position: absolute; left: 0; bottom: 0;
+}
+.main .arrow5 {
+    margin: 2066px 1447px 67px 363px;
+    position: absolute; left: 0; bottom: 0;
+}
