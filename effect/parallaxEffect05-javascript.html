@@ -381,8 +381,8 @@
         // })
         document.querySelectorAll("a[href^='#']").forEach(elem => {
             elem.addEventListener("click", e => {
-                e.preventDefault();
-                document.querySelector(elem.getAttribute('href')).scrollIntoView({
+                e.preventDefault();  //이벤트르 막아주고
+                document.querySelector(elem.getAttribute('href')).scrollIntoView({  //해당영역으로 스크롤이 움직이도록 
                     behavior : 'smooth'
                 })
             });
