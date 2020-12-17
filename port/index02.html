@@ -20,21 +20,35 @@
 
         /* layout */
         #wrap {}
-        #header {width: 100vw; background: #ffd87e; border-bottom: 2px solid #c66559; position: fixed;}
-        #main {width: 100vw; height: 2300px; background: #ffd87e;}
+        #header {width: 100vw; background: #ffd87e; border-bottom: 2px solid #c66559; position: fixed; z-index: 1000;}
+        #main {width: 100vw; height: 2300px; background: #ffd87e; }
 
         /* header */
         .header {font-family: 'Impact'; text-transform: uppercase;}
         .header .header_menu {display: flex; text-align: center; color: #b43f4d; }
-        .header .header_menu .left {font-size: 1.2em;  padding: 2.5em; margin-left: 6em;}
-        .header .header_menu .title {flex-basis: 90vw; font-size: 2.3em; padding: 0.8em;}
-        .header .header_menu .right {font-size: 1.2em; padding: 2.5em;  margin-right: 6em;}
+        .header .header_menu .left {font-size: 1.5em;  padding: 2em; margin-left: 3em;}
+        .header .header_menu .title {flex-basis: 90vw; font-size: 2.9em;padding: 0.5em;}
+        .header .header_menu .right {font-size: 1.5em; padding: 2em;  margin-right: 3em;}
 
         /* main */
+        .main {position: relative;}
+        .main > div {position: absolute; left: 0; top: 0;}
+        .main .desc1 {padding: 18em 0 0 0.5em;}
+        .main .desc2 {padding: 27em 0 0 32em}
+        .main .desc3 {}
+        .main .desc4 {}
+        .main .dot {}
+        .main .opparrow {}
+        .main .arrow1{}
+        .main .arrow2 {}
+        .main .arrow3 {}
+        .main .arrow4 {}
+        .main .arrow5 {}
+        .main p {}
 
 
         /* container */
-        .container {width: 1620px; margin: 0 auto;}
+        .container {width: 63.3vw; margin: 0 auto;}
     </style>
 </head>
 <body>
@@ -54,20 +68,42 @@
         <main id="main">
             <div class="container">
                 <div class="main">
-                    <img class="desc1" src="./assets/img/svg1.svg" width="827" height="230">
-                    <img class="desc2" src="./assets/img/svg2.svg" width="682" height="214">
-                    <img class="desc3" src="./assets/img/svg3.svg" width="722" height="198">
-                    <img class="desc4" src="./assets/img/box.svg" width="313" height="88">
-                    <img class="dot" src="./assets/img/dot.svg" width="750" height="750">
-                    <img class="opparrow" src="./assets/img/opparrow.svg" width="51" height="47">
-                    <img class="arrow1" src="./assets/img/arrow1.svg" width="930" height="581">
-                    <img class="arrow2" src="./assets/img/arrow2.svg" width="536" height="390">
-                    <img class="arrow3" src="./assets/img/arrow3.svg" width="328" height="457">
-                    <img class="arrow4" src="./assets/img/arrow4.svg" width="280" height="170">
-                    <img class="arrow5" src="./assets/img/arrow5.svg" width="118" height="67">  
-                    <p>제자리 걸음보다는 항상 배우려는 자세로 한 걸음씩 나아가는 신입 프론트앤드 개발자 김소라
+                    <div class="desc1">
+                        <img src="./assets/img/svg1.svg" width="827" height="230">
+                    </div>
+                    <div class="desc2">
+                        <img src="./assets/img/svg2.svg" width="682" height="214">
+                    </div>
+                    <!-- <div class="desc3">
+                        <img src="./assets/img/svg3.svg" width="722" height="198"> 
+                    </div>
+                    <div class="desc4">
+                        <img src="./assets/img/box.svg" width="313" height="88">  
+                    </div>
+                    <div class="dot">
+                        <img src="./assets/img/dot.svg" width="750" height="750">
+                    </div>
+                    <div class="opparrow">
+                        <img src="./assets/img/opparrow.svg" width="51" height="47">
+                    </div>
+                    <div class="arrow1">
+                        <img src="./assets/img/arrow1.svg" width="930" height="581">
+                    </div>
+                    <div class="arrow2">
+                        <img src="./assets/img/arrow2.svg" width="536" height="390">
+                    </div>
+                    <div class="arrow3">
+                        <img src="./assets/img/arrow3.svg" width="328" height="457">
+                    </div>
+                    <div class="arrow4">
+                        <img src="./assets/img/arrow4.svg" width="280" height="170">
+                    </div>
+                    <div class="arrow5">
+                        <img src="./assets/img/arrow5.svg" width="118" height="67">  
+                    </div>  -->
+                    <!-- <p>제자리 걸음보다는 항상 배우려는 자세로 한 걸음씩 나아가는 신입 프론트앤드 개발자 김소라
                         라고 합니다. 저의 사이트에 오신것을 환영하며 바로 시작하겠습니다!! Let's gooooooo
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </main>
