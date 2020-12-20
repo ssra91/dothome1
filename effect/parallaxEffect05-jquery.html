@@ -376,9 +376,9 @@
         
         $("a[href^='#']").click(function(e){
             e.preventDefault();
-            let target = $($(this).attr("href"))//href에 섹션들이 있으니까 바로 선택자로 만들어 줄수 있다.
+            let target = $($(this).attr("href"))
             
-            $("html,body").animate({scrollTop : target.offset().top},800,"easeInOutQuint"); //각섹션의 스크롤값을 구해서 8초 간격으로 애니메이션이 움직이게 하라
+            $("html,body").animate({scrollTop : target.offset().top},800,"easeInOutQuint"); 
         })
     </script>
 </body>
