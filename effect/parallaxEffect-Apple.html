@@ -13,6 +13,8 @@
         }
         * {margin: 0; padding: 0; box-sizing: border-box;}
         body {height: 20000px; font-family: 'NEXON Lv2 Gothic Bold';}
+        em {font-style: normal;}
+        iframe {border: 0; width: 100%; height: 100%;}
         .scroll {
             position: fixed; right: 10px; top: 10px;
             width: 50px; height: 50px; line-height: 50px;
@@ -71,7 +73,7 @@
             text-align: center;
             line-height: 1.2;
             background-repeat: no-repeat;
-            background-image: url(img/apple-text-bg.jpg);
+            background-image: url(img/textbg.jpg);
             background-size: cover;
             background-clip: text;
             -webkit-background-clip: text;
@@ -114,7 +116,7 @@
         .s2Txt04 {
             width: 60vw;
             height: 60vh;
-            background-image: url(img/apple-pad-mokup.png);
+            background-image: url(img/applepaddle.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center top;
@@ -134,8 +136,73 @@
             width: 100%; height: 100%;
             transform: translate(-50%, -50%);
         }
+        .s2Txt04 .imgWrap > div .view {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            width: 100px; height: 100px;
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            line-height: 100px;
+            text-decoration: none;
+            transition: all 400ms ease;
+        }
+        .s2Txt04 .imgWrap > div .view.white {
+            background: rgba(255,255,255,.5);
+            color: rgba(255,255,255,0.8);
+            box-shadow: 0 0 0 6px inset rgba(255,255,255,.9);
+        }
+        .s2Txt04 .imgWrap > div .view.white:hover {
+            background: rgba(255,255,255,.7);
+            color: rgba(255,255,255,1);
+            box-shadow: 0 0 0 0 inset rgba(255,255,255,.9);
+        }
+        .s2Txt04 .imgWrap > div .view:hover {
+            box-shadow: 0 0 0 6px inset rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.7);
+        }
+
+         /* section3 */
+        .s3Txt01 {
+             width: 100vw; height: 100vh;
+             background: #000;
+             overflow: hidden;
+         }
+        .s3Txt02 h2 {
+            font-size: 4vw;
+            text-align: center;
+            line-height: 1.2;
+            background-repeat: no-repeat;
+            background-image: url(img/textbg.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+
+        .txtBox {}
+        .txtBox1 {left: 200%; transform: scale(0.5);}
+        .txtBox2 {left: 200%; transform: scale(0.5);}
+        .txtBox3 {left: 200%; transform: scale(0.5);}
+        .txtBox4 {left: 200%; transform: scale(0.5);}
+        .txtBox5 {left: 200%; transform: scale(0.5);}
+        .txtBox6 {left: 200%; transform: scale(0.5);}
+
+        .aniBOX1 {width: 50vw; height: 50vh;}
+        .aniBOX2 {width: 50vw; height: 50vh;}
+        .aniBOX3 {width: 50vw; height: 50vh;}
+        .aniBOX4 {width: 50vw; height: 50vh;}
+        .aniBOX5 {width: 50vw; height: 50vh;}
+        .aniBOX6 {width: 50vw; height: 50vh;}
+
+
     </style>
-</head>
 <body>
     <div class="scroll">0</div>
     <div id="contents">
@@ -188,7 +255,7 @@
                 data-8800 = "opacity:1; top: 14%; transform: translate(-50%, -50%) scale(1)"
                 data-27000 = "opacity:1; top: 14%; transform: translate(-50%, -50%) scale(1)"
                 data-28000 = "opacity:1; top: 50%; transform: translate(-50%, -50%) scale(1.5)"
-            >I've been working on Sites</h2>
+            >The sites I've been working on</h2>
             <div class="s2Txt03">
                 <div class="fixed text1"
                     data-9800 = "top: 50%; opacity:0"
@@ -247,23 +314,30 @@
                     <div class="img1"
                         data-12000 = "left: 50%"
                         data-14000 = "left: -50%"
-                    ><img src="img/webs.png" alt="웹표준"></div>
+                    ><img src="img/webs.png" alt="웹표준">
+                    <a href="#" class="view">VIEW</a>
+                </div>
                     <div class="img2"
                         data-12000 = "left: 150%"
                         data-14000 = "left: 50%"
                         data-16000 = "left: 50%"
                         data-18000 = "left: -50%"
-                    ><img src="img/resp.png" alt="반응형"></div>
+                    ><img src="img/resp.png" alt="반응형">
+                    <a href="#" class="view">VIEW</a>
+                </div>
                     <div class="img3"
                         data-16000 = "left: 150%"
                         data-18000 = "left: 50%"
                         data-20000 = "left: 50%"
                         data-22000 = "left: -50%"
-                    ><img src="img/mega.PNG" alt="메가박스"></div>
+                    ><img src="img/mega.PNG" alt="메가박스">
+                    <a href="#" class="view">VIEW</a>
+                </div>
                     <div class="img4"
                         data-20000 = "left: 150%"
                         data-22000 = "left: 50%"
-                    ><img src="img/port.png" alt="리액트"></div>
+                    ><img src="img/port.png" alt="리액트">
+                    <a href="#" class="view white">VIEW</a>
                 </div>
                 
                 <!-- <div class="img3">웹표준이미지3</div>
@@ -272,7 +346,76 @@
         </div>
     </section>
     <!-- //section2 -->
-        <section id="section3">
+        <section id="section3"
+            data-29999="display:none"
+            data-30000="display:block"
+            data-40000="display:block"
+            data-46001="display:none"
+        >
+            <div class="s3Txt01 fixed" data-titlt="검은색 배경"
+                data-30000 = "width:200vw; heigh200vw"
+                data-34000 = "width:30vw; height:30vw">
+                <div class="s3Txt02">
+                    <h2 class="txtBox fixed"
+                        data-32000="left:50%"
+                        data-34000 = "left:-150%"
+                    ><span>The sites I've been working on</span></h2>
+                        <h2 class="txtBox1 fixed"
+                            data-33000="left:200%"
+                            data-36000="left:-200%"
+                        >Animation1</span></h2>
+                        <h2 class="txtBox2 fixed"
+                            data-35000="left:200%"
+                            data-38000="left:-200%"
+                        >Animation2</span></h2>
+                        <h2 class="txtBox3 fixed"
+                            data-37000="left:200%"
+                            data-40000="left:-200%"
+                        >Animation3</span></h2>
+                        <h2 class="txtBox4 fixed"
+                            data-39000="left:200%"
+                            data-42000="left:-200%"
+                        >Animation4</span></h2>
+                        <h2 class="txtBox5 fixed"
+                            data-41000="left:200%"
+                            data-44000="left:-200%"
+                        >Animation5</span></h2>
+                        <h2 class="txtBox6 fixed"
+                            data-43000="left:200%"
+                            data-46000="left:-200%"
+                        >Animation6</span></h2>
+                </div>
+            </div> 
+            <div class="s3Txt03">
+                <div class="aniBox1 fixed"
+                    data-33000="left:200%; top:20%"
+                    data-37000 = "left:-200%; top:20%"
+                >
+                    <div class="view">
+                        <iframe src=""></iframe>
+                    </div>
+                </div>
+                <div class="aniBox2 fixed"
+                    data-34000="left:200%; top:20%"
+                    data-38000 = "left:-200%; top:20%"
+                >
+                    <div>
+                        <iframe src="" frameborder="0"></iframe>
+                    </div>
+            </div>
+                <div class="aniBox3 fixed"
+                    data-35000="left:200%; top:20%"
+                    data-39000 = "left:-200%; top:20%"
+                >
+                <div>
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+                <div class="aniBox4 fixed"></div>
+                <div class="aniBox5 fixed"></div>
+                <div class="aniBox6 fixed"></div>
+            </div>
+      
         </section>
         <!-- //section3 -->
         <section id="section4">
@@ -282,7 +425,7 @@
         </section>
         <!-- //section5 -->
         <section id="section6">
-        </dsectioniv>
+        </section>
         <!-- //section6 -->
     </div>
     <!-- script -->
