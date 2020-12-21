@@ -11,9 +11,17 @@
 
     <!-- webfonts -->
     <link href="//db.onlinewebfonts.com/c/4cbf858ccd9ffd3923bed6843a474080?family=Impact" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 
     <style>
+        @font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
         * {margin: 0; padding: 0;}
 
         #header {
@@ -121,14 +129,36 @@
             -webkit-text-stroke: 3px #b33f4c;
             padding: 5vw;
             color:  #FFD87E;
+            font-weight: 900;
         }
 
-        #aboutme {background: #f9d3e0;}
+        #aboutme {background: #f9d3e0; height: 110vh; position: relative;}
         .aboutme {}
-        .aboutme p {}
-        .aboutme h2 {}
-        .aboutme img:nth-child(1) {}
-        .aboutme img:nth-child(2) {}
+        .aboutme p {
+            font-family: 'Chosunilbo_myungjo';
+            color: #3f52a0;
+            position: absolute; left: 6%; top: 28%;
+            width: 40%; line-height: 1.83;
+            letter-spacing: 0.18;
+            font-size: 1.3vw;
+        }
+        .aboutme h2 {
+            font-size: 2.6vw; 
+            color:#3f52a0;
+            line-height: 1.24; 
+            position: absolute; 
+            left: 5%; top: 10%;
+            padding: 0 6vw 0 1vw;
+            font-family: 'RobotoSlab';
+        }
+        .aboutme .me {
+            position: absolute; left: 55%;  top: 18%;
+            width: 38%;
+        }
+        .aboutme .box {
+            position: absolute; left: 16%; top: 80%;
+            width: 20%;
+        }
 
         .container {}
     </style>
@@ -161,8 +191,8 @@
                     <h2>[IF SOMEONE ASKED ME TO DESCRIBE YOU IN JUST TWO WORDS, 
                         I’D SAY SIMPLY AMAZING]</h2>
                     <p>안녕하세요. 앞으로 프론트앤드 개발자로 일하게 될 김소라 라고 합니다. 저는 대학을 졸업하고 아르바이트를 하면서 다른 분야로 취업준비를 하다가 우연한 기회로 웹 퍼블리셔로 전향하게 되었습니다. 항상 저에게는 컴퓨터는 생소하고 거리가 먼 존재였습니다. 하지만 좋은 기회를 얻어 시작하게된 코딩공부가 처음에는 막연하고 고정관념에 갖혀 부정하기에만 그쳤습니다. 하지만 시간이 지나고 배움의 깊이가 깊어질수록 재미있고 앞으로의 저 자신이 궁금해지기도 하고 더 많은것을 배우고 도움을 주고 받는 사람이 되고 싶다는 욕심이 생기게 되었습니다. 저는 무언가를 할때 하면 하고 아니면 아니다 라는 마인드로 행동을 합니다. 이런 부분이 어떻게 보면 극단적으로 보일수 있겠지만 그만큼 지금저에게 코딩은 끝까지 가보고 싶은 존재가  되었습니다. 그만큼 기대하셔도 좋다고 말씀드리고 싶습니다.</p>
-                    <img src="assets/img/aboutme.svg" alt="이미지">
-                    <img src="assets/img/seemore.svg" alt="이미지">
+                    <img class="me" src="assets/img/aboutme.svg" alt="이미지">
+                    <img class="box" src="assets/img/seemore.svg" alt="이미지">
                 </div>
             </div>
         </section>
