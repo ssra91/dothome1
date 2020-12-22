@@ -412,21 +412,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-
         function scrollReveal(){
-            const reveal = doument.querySelectorAll(".reveal");
-            reveal.forEach(elem => {
+            const reveal = document.querySelectorAll(".reveal")
+            reveal.forEach(el => {
                 let scrollTop = document.documentElement.scrollTop + window.innerHeight/2;
-                console.log(offsetTop)  //오프셋 값을 구해볼때 오류가 무엇인가 알아내기 위해 콘솔로그로 확인한다.
-                let offsetTop = elem.offsetTop + elem.parentElement.offsetTop;  
-
+                let offsetTop = el.offsetTop + el.parentElement.offsetTop;
                 if(scrollTop > offsetTop){
-                    elem.classList.add("show");
+                    el.classList.add("show")
                 }
             })
         }
+        window.addEventListener("scroll", scrollReveal);
 
-      window.addEventListener("scroll", scrollReveal);
+    //     function scrollReveal(){
+    //         const reveal = doument.querySelectorAll(".reveal");
+    //         reveal.forEach(elem => {
+    //             let scrollTop = document.documentElement.scrollTop + window.innerHeight/2;
+    //             console.log(offsetTop)  //오프셋 값을 구해볼때 오류가 무엇인가 알아내기 위해 콘솔로그로 확인한다.
+    //             let offsetTop = elem.offsetTop + elem.parentElement.offsetTop;  
+
+    //             if(scrollTop > offsetTop){
+    //                 elem.classList.add("show");
+    //             }
+    //         })
+    //     }
+
+    //   window.addEventListener("scroll", scrollReveal);
         
     </script>
 </body>
