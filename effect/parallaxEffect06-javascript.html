@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax06 - javascript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        @font-face {
+            font-family: 'Cafe24Danjunghae';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {
+            box-sizing:  border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;  /* 이미지는 inline 구조여서 여백이 생기므로 여백초기화 */
+        }
+        ul {
+            list-style:none;
+        }
+
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {
+            left: 20px; top: 20px;
+        }
+        .info.right {
+            right: 20px; top: 20px;
+        }
+        .info.bottom {
+            right: 20px; bottom: 20px;
+        }
+        .info h1 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+        .info p {
+            font-size: 1rem;
+        }
+        .info ul {}
+        .info li {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        .info li a {
+            color: #fff;
+            width: 25px; height: 25px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-size: 0.8rem;
+            margin: 5px;
+        }
+        .info li a.active {
+            background: #fff;
+            color: #000;
+        }
+        @media(max-width: 800px){
+            .info h1 { display:none;}
+        }
+
+        /* main */
+        body {
+            --color-h1 : #dc6e25;
+            --color-title : #fff;
+            --color-sub : #999;
+            --color-link : #000;
+            --color-bg : #111;
+            --font-cafe: 'Cafe24Danjunghae';
+            --font-lato: 'Lato', sans-serif;
+
+
+            background-color: var(--color-bg);
+            color: var(--color-title);
+            font-family: var(--font-cafe);
+        }
+        #parallax-wrap h1 {
+            color: var(--color-h1);
+            font-family: var(--font-lato);
+            font-size: 8vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 10vw 8vw 0 8vw;
+        }
+        #parallax-wrap h1 em {
+            display: block;
+            font-weight: 100;
+            padding-left: 18vw;
+        }
+
+        .content {
+            margin: 0 auto 35vh;
+            width: 100%;
+        }
+        .content-item {
+            width: 1200px;
+            max-width: 90vw;
+            margin: 60vh 0 60vh;
+            position: relative;
+        }
+        .content-item:nth-child(even) {
+            margin-left: auto;  /*마진값을 풀어준다 기본값으로 주고 싶을때 auto */
+        }
+        .content-item-num {
+            font-size: 25vw;
+            font-weight: 100;
+            font-family: var(--font-lato);
+            position: absolute;
+            right: -5vw;
+            top: -20vw;
+            opacity: 0.2;
+        }
+        .content-item:nth-child(even) .content-item-num {
+            right: auto;
+            left: -5vw;
+        }
+        .content-item-title {
+            text-align: right;
+            padding-bottom: 5px;
+        }
+        .content-item:nth-child(even) .content-item-title {
+           text-align: left;
+        }
+        .content-item-imgWrap {
+            position: relative;
+            width: 100%;
+            padding-bottom: 50%;
+        }
+        .content-item-img {
+            width: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            background: url(img/img01.jpg);
+            height: 100%;
+        }
+        
+        .content-item-desc {
+            font-size: 5vw;
+            line-height: 1.4;
+            text-align: right;
+            word-break: keep-all;
+            margin-right: -4vw;
+            margin-top: -6vw;
+            padding-left: 8vw;
+            z-index: 100;
+            position: relative;
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 10vw;
+            margin-left: -4vw;
+        }
+
+        .content-item:nth-child(1) .content-item-img {
+            background: url(img/img01.jpg); background-size: cover;
+        }
+        .content-item:nth-child(2) .content-item-img {
+            background: url(img/img02.jpg); background-size: cover;
+        }
+        .content-item:nth-child(3) .content-item-img {
+            background: url(img/img03.jpg); background-size: cover;
+        }
+        .content-item:nth-child(4) .content-item-img {
+            background: url(img/img04.jpg); background-size: cover;
+        }
+        .content-item:nth-child(5) .content-item-img {
+            background: url(img/img05.jpg); background-size: cover;
+        }
+        .content-item:nth-child(6) .content-item-img {
+            background: url(img/img06.jpg); background-size: cover;
+        }
+        .content-item:nth-child(7) .content-item-img {
+            background: url(img/img07.jpg); background-size: cover;
+        }
+        .content-item:nth-child(8) .content-item-img {
+            background: url(img/img08.jpg); background-size: cover;
+        }
+        .content-item:nth-child(9) .content-item-img {
+            background: url(img/img09.jpg); background-size: cover;
+        } 
+
+        /* position: relative;
+            1. position: absolute 기준점 역할
+            2. position: absolute를 사용하지 않고 z-index를 사용할 경우
+            3. position: absolute를 사용하지 않고 left, top을 통해서 설정할 경우
+        */
+
+        /* 한번에 나타나기 */
+        .content-item-desc span {
+            opacity: 0;
+            transform: translateY(100px);
+            display: inline-block; 
+            transition: all 0.77s cubic-bezier(0.87, -0.01, 0.12, 0.65);
+            min-width: 20px; 
+            /* 인라인블럭하면 빈칸이 없어 지므로 빈칸 만들어 주기 위해 min-width */
+        }
+
+        /* reveal */
+        .reveal > div, 
+        .reveal > span {
+            opacity: 0;
+        }
+        .reveal.show > div, 
+        .reveal.show > span {
+            animation: opacitiy 1000ms 200ms linear forwards;
+        }
+        .reveal {
+            position: relative;
+        }
+        .reveal::before {
+            content: '';
+            position: absolute;
+            right: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #fff;
+        }
+        .reveal.reveal-two::after {
+            content: '';
+            position: absolute;
+            right: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #DC6E25;
+        }
+        .reveal.show::before {
+            animation: reveal 1000ms cubic-bezier(.77,0,.18,1);
+        }
+        /* 두가지 */
+        .reveal.reveal-two.reveal-RTL.show::after {
+            animation: reveal 1000ms 300ms cubic-bezier(.77,0,.18,1);
+        }
+        .reveal.reveal-two.reveal-TTB.show::after {
+            animation: reveal-TTB 1000ms 300ms cubic-bezier(.77,0,.18,1);
+        }
+        .reveal.reveal-two.reveal-BTT.show::after {
+            animation: reveal-BTT 1000ms 300ms cubic-bezier(.77,0,.18,1);
+        }
+        .reveal.reveal-two.show::after {
+            animation: reveal 1000ms 300ms cubic-bezier(.77,0,.18,1);
+        }
+        /* 기본값 */
+        .reveal.reveal-RTL.show::before {
+            animation: reveal-RTL 1000ms cubic-bezier(.77,0,.18,1);
+        }
+        .reveal.reveal-TTB.show::before {
+            animation: reveal-TTB 1000ms cubic-bezier(.77,0,.18,1);
+        }
+        .reveal.reveal-BTT.show::before {
+            animation: reveal-BTT 1000ms cubic-bezier(.77,0,.18,1);
+        }
+        @keyframes reveal {
+            0% {width: 0; left: 0;}
+            50% {width: 100%; left: 0;}
+            80% {width: 100%; left: 0;}
+            100% {width: 0; left: 100%;}
+        }
+        @keyframes reveal-RTL {
+            0% {width: 0; right: 0;}
+            50% {width: 100%; right: 0;}
+            80% {width: 100%; right: 0;}
+            100% {width: 0; right: 100%;}
+        }
+        @keyframes reveal-TTB {
+            0% {width: 100%; height: 0; top: 100%; bottom: 0;}
+            50% {width: 100%; height: 0; top: 0; bottom: 100%;}
+            80% {width: 100%; height: 0; top: 0; bottom: 100%;}
+            100% {width: 100%; height: 100%; top:100%; bottom: 0;}
+        }
+        @keyframes reveal-BTT {
+            0% {width: 100%; height: 0; top: 0; bottom: 100%;}
+            50% {width: 100%; height: 0; top:100%; bottom: 0;}
+            80% {width: 100%; height: 0; top:100%; bottom: 0;}
+            100% {width: 100%; height: 100%; top:0; bottom: 100%;}
+        }
+        @keyframes opacitiy {
+            0% {opacity: 0;}
+            60% {opacity: 0;}
+            70% {opacity: 1;}
+            100% {opacity: 1;}
+        } 
+    </style>
+</head>
+<body>
+   
+   
+    <div class="info left">
+        <h1>Parallax Effect06 - javascript</h1>
+        <p>패럴랙스 스크롤링 효과 - 리빌효과</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
+            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
+            <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
+            <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
+            <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html"class="active">6</a></li>
+            <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
+            <li><a href="parallax08-jquery.html">8</a><a href="parallax08-javascript.html">8</a></li>
+            <li><a href="parallax09-jquery.html">9</a><a href="parallax09-javascript.html">9</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <ul>
+            <li>scrollTop( ) : <span class="scrollTop">0</span>px</li>
+        </ul>
+    </div>
+    <!-- //info -->
+
+    <main>
+        <section id="parallax-wrap">
+            <h1>Parallax<em>Scrolling</em></h1>
+            <div class="contents">
+                <!-- section#section$*9 -->
+                <section id="section1" class="content-item">
+                    <span class="content-item-num">01</span>
+                    <h2 class="content-item-title">Section1</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc "><span>높은 목표를 세우고, 스스로 채찍질 한다.</span></p>  <!-- 글자한테는 span처리를 해주어라! -->
+                </section>
+                <section id="section2" class="content-item">
+                    <span class="content-item-num">02</span>
+                    <h2 class="content-item-title">Section2</h2>
+                    <figure class="content-item-imgWrap reveal reveal-two">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc reveal reveal-two"><span>우리의 꿈은 모두 이루어 질 것이다.</span></p>
+                </section>
+                <section id="section3" class="content-item">
+                    <span class="content-item-num">03</span>
+                    <h2 class="content-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap reveal reveal-RTL">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc reveal reveal-RTL"><span>꿈이 있다면, 그 꿈을 잡고 절대 놓아주지 마라.</span></p>
+                </section>
+                <section id="section4" class="content-item">
+                    <span class="content-item-num">04</span>
+                    <h2 class="content-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap reveal reveal-TTB">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc reveal reveal-TTB"><span>미래는 현재 우리가 무엇을 하는가에 달려있다.</span></p>
+                </section>
+                <section id="section5" class="content-item">
+                    <span class="content-item-num">05</span>
+                    <h2 class="content-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap reveal reveal-BTT">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc reveal reveal-BTT"><span>미래를 예측하는 최선의 방법은 미래를 창조하는 것이다.</span></p>
+                </section>
+                <section id="section6" class="content-item">
+                    <span class="content-item-num">06</span>
+                    <h2 class="content-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap reveal">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc reveal"><span>나는 어제와 다른 사람이 될 것이다.</span></p>
+                </section>
+                <section id="section7" class="content-item">
+                    <span class="content-item-num">07</span>
+                    <h2 class="content-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap reveal reveal-two">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc reveal reveal-two"><span>세상은 고통으로 가득하지만 이겨내는 일로도 가득차 있다.</span></p>
+                </section>
+                <section id="section8" class="content-item">
+                    <span class="content-item-num">08</span>
+                    <h2 class="content-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap reveal reveal-RTL">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc reveal reveal-RTL"><span>나는 폭풍이 두렵지 않다.</span></p>
+                </section>
+                <section id="section9" class="content-item">
+                    <span class="content-item-num">09</span>
+                    <h2 class="content-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap reveal reveal-BTT">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc reveal reveal-BTT"><span>기운과 끈기는 모든것을 이겨낸다.</span></p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+
+        function scrollReveal(){
+            const reveal = doument.querySelectorAll(".reveal");
+            reveal.forEach(elem => {
+                let scrollTop = document.documentElement.scrollTop + window.innerHeight/2;
+                console.log(offsetTop)  //오프셋 값을 구해볼때 오류가 무엇인가 알아내기 위해 콘솔로그로 확인한다.
+                let offsetTop = elem.offsetTop + elem.parentElement.offsetTop;  
+
+                if(scrollTop > offsetTop){
+                    elem.classList.add("show");
+                }
+            })
+        }
+
+      window.addEventListener("scroll", scrollReveal);
+        
+    </script>
+</body>
+</html>
