@@ -247,17 +247,27 @@
 #04839d;}
         .skills img:nth-child(3) {width: 96.5%; position: absolute; left: 2%;top: 52%;}
 
-        #history {background: #999; height: 100vh; position: relative;}
+        #history {background: #fbd4ca; height: 100vh; position: relative;}
         .history{ 
             text-transform: uppercase;
-            -webkit-text-stroke: 8px #1e8ca2;
-            font-size: 20vw;
+            -webkit-text-stroke: 6px #1e8ca2;
+            font-size: 25vw;
+            letter-spacing: -0.5vw;
+            color:#fbd4ca ;
+            font-family: 'Impact';
         }
         .history .txt1 {
-            position: absolute; top: 6%; left: 35%;
+            position: absolute; top: 5%; left: 30%; z-index: 100;
         }
         .history .txt2 {
-            position: absolute; top: 6%; left: 35%;
+            position: absolute; top: 40%; left: 8%;
+        }
+
+        .arrow {background: #fbd4ca; position: relative; height: 50vh;}
+        .arrow img {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .container {}
@@ -353,6 +363,13 @@
                 <div class="history">
                     <p class="txt1">the</p>
                     <p class="txt2">history</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="arrow">
+                    <img src="assets/img/arrow.svg" alt="화살표">
                 </div>
             </div>
         </section>
