@@ -6,7 +6,7 @@ ul, ol, dl, menu {list-style: none;}
 
 /* 폰트 초기화 */
 input, textarea, select, button, table {
-    font-family: 'Nanum Gothic', 'Impact', 'Malgun Gothic', '맑은 고딕', '돋움', sans-serif; 
+    font-family: 'Nanum Gothic', 'Impact', 'Malgun Gothic', '맑은 고딕', '돋움', sans-serif, 'Chosunilbo_myungjo', 'Roboto+Slab'; 
     color: #222; 
     font-size: 13px; 
     line-height: 1.5;

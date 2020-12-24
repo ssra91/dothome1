@@ -249,12 +249,12 @@
                 this.events();
             }
             binds(){
-                this.mouseMove = this.mouseMove.bind(this);
+                this.mouseMove = this.mouseMove2.bind(this);
             }
             events(){
-                window.addEventListener('mousemove', this.mouseMove);
+                window.addEventListener('mousemove2', this.mouseMove2);
             }
-            mouseMove(e){
+            mouseMove2(e){
                 gsap.to(".span-slow", {
                     duration: .4,
                     x: positionSlow,
