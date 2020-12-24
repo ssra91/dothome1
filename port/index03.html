@@ -313,22 +313,34 @@
             position: absolute; left: 63%; top: 85%;
             font-weight: bold;
         }
-        .animationSideBox1 .num {display: flex; position: absolute; left: 75%; top: 86%;}
-        .animationSideBox1 .num > li {flex-direction: row; color: #1e8ca2; font-size: 2.5vw; flex: 1 1 30%;}
-        .animationSideBox1 .num .fir {
+        .animationSideBox1 .num {display: flex; position: absolute; left: 72%; top: 85%;}
+        .animationSideBox1 .num > li {
+            flex-direction: row; 
+            font-size: 1.8vw; 
+            padding: 2% 8%; 
+            border-radius: 50%; 
+            border: 5px solid #1e8ca2; 
+            margin: 8.8%;
+            font-weight: bold;
         }
-        .animationSideBox1 .num .sec {
-           
+        .animationSideBox1 .num > li a {
+            color: #1e8ca2;
         }
-        .animationSideBox1 .num .thr {
-           
+        .animationSideBox1 .num > li:last-child {
+            margin-right: auto;
         }
-        .animationSideBox1 .num .for {
-           
+        .animationSideBox1 .num > li a:hover {
+            color: white;
         }
-        .animationSideBox1 .num .fif {
-           
+        .animationSideBox1 .num > li:hover {
+            border-color: white;
         }
+        .animationSideBox1 iframe {
+            width: 43%; height: 50%; position: absolute; left: 6.35%; top: 26.2%;
+        }
+        /* .animationSideBox1 .loading:hover {
+            color: rgba(4,131,157,0.5);
+        } */
 
         .container {}
     </style>
@@ -449,12 +461,13 @@
                     <div class="bignum">1</div>
                     <div class="back">back</div>
                     <ul class="num">
-                        <li class="fir"><a href="#">1</a></li>
-                        <li class="sec"><a href="#">2</a></li>
-                        <li class="thr"><a href="#">3</a></li>
-                        <li class="for"><a href="#">4</a></li>
-                        <li class="fif"><a href="#">5</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
                     </ul>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/GaspAnimation.html" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
