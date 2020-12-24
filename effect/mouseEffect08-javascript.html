@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect08 - jquery</title>
+    <title>Mouse Effect08 - javascript</title>
     
     <style>
         @font-face {
@@ -137,7 +137,7 @@
 
        <!-- info -->
     <div class="info left">
-        <h1>Mouse Effect07 - jquery</h1>
+        <h1>Mouse Effect08 - javascript</h1>
         <p>마우스 방향에 따라 움직이기</p>
     </div>
     <div class="info right">
@@ -149,7 +149,7 @@
             <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
             <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
             <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html">7</a></li>
-            <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html"class="active">8</a></li>
+            <li><a href="mouseEffect08-jquery.html"class="active">8</a><a href="mouseEffect08-javascript.html">8</a></li>
             <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
         </ul>
     </div>
@@ -238,6 +238,34 @@
         //         x:-positionFast
         //     })
         // }
+        class mouseMove {
+            constructor(obj){
+                this.positionSlow = (e.pageX - window.innerWidth/2) * 0.1;
+                this.positionFast = (e.pageX - window.innerWidth/2) * 0.2;  
+                this.init();
+            }
+            init(){
+                this.binds();
+                this.events();
+            }
+            binds(){
+                this.mouseMove = this.mouseMove.bind(this);
+            }
+            events(){
+                window.addEventListener('mousemove', this.mouseMove);
+            }
+            mouseMove(e){
+                gsap.to(".span-slow", {
+                    duration: .4,
+                    x: positionSlow,
+                })
+                gsap.to(".span-fast", {
+                    duration: .4,
+                    x: -positionFast,
+                })
+            }
+        }
+        new mouseMove();
 
     </script>
 </body>
