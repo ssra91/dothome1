@@ -8,6 +8,7 @@
     <!-- CSS Style -->
     <link rel="stylesheet" href="assets/css/style03.css">
     <link rel="stylesheet" href="assets/css/reset03.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
 
     <!-- webfonts -->
     <link href="//db.onlinewebfonts.com/c/4cbf858ccd9ffd3923bed6843a474080?family=Impact" rel="stylesheet" type="text/css"/>
@@ -250,7 +251,8 @@
         .skills img:nth-child(3) {width: 96.5%; position: absolute; left: 2%;top: 52%;}
 
         #history {background: #fbd4ca; height: 100vh; position: relative;}
-        .history{ 
+        .history img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 78vw;}
+        /* .history{ 
             text-transform: uppercase;
             -webkit-text-stroke: 6px #1e8ca2;
             font-size: 25vw;
@@ -258,21 +260,12 @@
             color:#fbd4ca ;
             font-family: 'Impact';
         }
-        .history .txt1 {
-            position: absolute; top: 5%; left: 30%; z-index: 100;
-        }
-        .history .txt2 {
-            position: absolute; top: 40%; left: 8%;
-        }
+        .history .txt1 {position: absolute; top: 5%; left: 30%; z-index: 100;}
+        .history .txt2 { position: absolute; top: 40%; left: 8%;} */
+
         /* 화살표 */
-        
         .arrow {background: #fbd4ca; position: relative; height: 50vh;}
-        .arrow img {
-            position: absolute;
-            left: 50%; top: 56.5%;
-            transform: translate(-50%, -50%);
-            width: 9%;
-        }
+        .arrow img {position: absolute; left: 50%; top: 60%;transform: translate(-50%, -50%); width: 6vw; }
 
         /* 애니메이션 */
         #animationBox {}
@@ -550,23 +543,86 @@
         .animationSideBox5 iframe {width: 42.8%; height: 51%; position: absolute; left: 6.35%; top: 26.2%; }
 
         /* 텍스트 애니메이션 */
-        #animationtxt {background: #999;}
+        #animationtxt {background: #fbd4ca; overflow: hidden;}
         .animationtxt { position: relative; height: 50vh; text-transform: uppercase; display: inline-block;}
+        .animationtxt .anitxt {}
         .animationtxt .anitxt1 {
             font-size: 9vw; color: #1e8ca2;
              font-family: 'Roboto Condensed', sans-serif; 
              font-weight: bold;
-             white-space: nowrap; overflow: hidden;
+             white-space: nowrap;
              position: absolute; left: 0; top: 15%;
             }
         .animationtxt .anitxt2 {
             font-size: 9vw; color:  #fbd4ca;
              font-family: 'Roboto Condensed', sans-serif; 
              white-space: nowrap;
-             font-weight: bold; overflow: hidden;
+             font-weight: bold; 
              -webkit-text-stroke: 6px #1e8ca2;
              position: absolute; left: 0; top: 45%;
         }
+
+        /* website */
+        #website {}
+        .website {background: #FFD87E; position: relative; height: 50vh;}
+        .website img:nth-child(1) {position: absolute; left: 50%; top: 51%; transform: translate(-50%, -50%); width: 25%; z-index: 100;}
+        .website img:nth-child(2) {position: absolute; left: 45%; top: 59%; width: 22%;}
+
+        /* webstandard section 1 */
+        #wsdpage1 {}
+        .wsdpage1 {background: #FFD87E; position: relative; height: 100vh;}
+        .wsdpage1 img:nth-child(1) {position: absolute; left: 56%; top: 15%; width: 37%; display: inline-block;}
+        .wsdpage1 img:nth-child(2) {position: absolute; left: 9%; top: 17.5%; width: 35.5%; display: inline-block;}
+        .wsdpage1 h2 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 56%; top: 18%;}
+        .wsdpage1 p {position: absolute; font-size: 1.65vw; left: 57.1%; top: 37%; font-family: 'Chosunilbo_myungjo'; width: 35.3%; line-height: 1.68; letter-spacing: 0.1vw;}
+        .wsdpage1 .seesite1 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 57%; top: 73%; text-transform: uppercase;}
+        .wsdpage1 .seesite1:hover {color: white;}
+        .wsdpage1 .seecode1 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 77.8%; top: 73%; text-transform: uppercase;}
+        .wsdpage1 .seecode1:hover {color: white;}
+
+        /* webstandard section 2 */
+        .wsdpage2 {background: #FFD87E; position: relative; height: 100vh;}
+        .wsdpage2 img:nth-child(1) {position: absolute; left: 9%; top: 15%; width: 37%; display: inline-block;}
+        .wsdpage2 img:nth-child(2) {position: absolute; left: 56%; top: 18%; width: 35.5%; display: inline-block;}
+        .wsdpage2 h2 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 11.7%; top: 18%;}
+        .wsdpage2 p {position: absolute; font-size: 1.65vw; left: 10.3%; top: 40%; font-family: 'Chosunilbo_myungjo'; width: 35.3%; line-height: 1.68; letter-spacing: 0.1vw;}
+        .wsdpage2 .seesite2 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 10%; top: 73%; text-transform: uppercase;}
+        .wsdpage2 .seesite2:hover {color: white;}
+        .wsdpage2 .seecode2 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 30.8%; top: 73%; text-transform: uppercase;}
+        .wsdpage2 .seecode2:hover {color: white;}
+
+         /* webstandard section 3 */
+         #wsdpage3 {}
+        .wsdpage3 {background: #FFD87E; position: relative; height: 100vh;}
+        .wsdpage3 img:nth-child(1) {position: absolute; left: 56%; top: 15%; width: 37%; display: inline-block;}
+        .wsdpage3 img:nth-child(2) {position: absolute; left: 9%; top: 17.5%; width: 35.5%; display: inline-block;}
+        .wsdpage3 h2 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 61.5%; top: 18%;}
+        .wsdpage3 p {position: absolute; font-size: 1.65vw; left: 57.3%; top: 37%; font-family: 'Chosunilbo_myungjo'; width: 35.1%; line-height: 1.68; letter-spacing: 0.1vw;}
+        .wsdpage3 .seesite3 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 57%; top: 73%; text-transform: uppercase;}
+        .wsdpage3 .seesite3:hover {color: white;}
+        .wsdpage3 .seecode3 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 77.8%; top: 73%; text-transform: uppercase;}
+        .wsdpage3 .seecode3:hover {color: white;}
+
+        /* webstandard section 4 */
+        .wsdpage4 {background: #FFD87E; position: relative; height: 100vh;}
+        .wsdpage4 img:nth-child(1) {position: absolute; left: 9%; top: 15%; width: 37%; display: inline-block;}
+        .wsdpage4 img:nth-child(2) {position: absolute; left: 56%; top: 18%; width: 35.5%; display: inline-block;}
+        .wsdpage4 h2 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 15%; top: 18%;}
+        .wsdpage4 p {position: absolute; font-size: 1.65vw; left: 10.6%; top: 40%; font-family: 'Chosunilbo_myungjo'; width: 35%; line-height: 1.68; letter-spacing: 0.1vw;}
+        .wsdpage4 .seesite4 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 10%; top: 73%; text-transform: uppercase;}
+        .wsdpage4 .seesite4:hover {color: white;}
+        .wsdpage4 .seecode4 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 30.8%; top: 73%; text-transform: uppercase;}
+        .wsdpage4 .seecode4:hover {color: white;}
+
+        /* 화살표 */
+        .rightarrow {background: #FFD87E; position: relative; height: 70vh; overflow: hidden;}
+        .rightarrow img {
+            position: absolute;
+            left: 50%; top: 43%;
+            transform: translate(-50%, -50%);
+            height: 50%;
+        }
+
         .container {}
 
 
@@ -684,8 +740,9 @@
         <section id="history">
             <div class="container">
                 <div class="history">
-                    <p class="txt1">the</p>
-                    <p class="txt2">history</p>
+                    <img src="assets/img/thehistory.svg" alt="타이틀이미지">
+                    <!-- <p class="txt1">the</p>
+                    <p class="txt2">history</p> -->
                 </div>
             </div>
         </section>
@@ -801,15 +858,77 @@
         <section id="animationtxt">
             <div class="container">
                 <div class="animationtxt">
-                    <p class="anitxt1">I would like to show you all about me. this is sora's creative portfolio page.</p>
-                    <p class="anitxt2">this is sora's creative portfolio page. I would like to show you all about me.</p>
+                    <div class="anitxt">
+                        <p class="anitxt1">I would like to show you all about me. this is sora's creative portfolio page.</p>
+                        <p class="anitxt2">this is sora's creative portfolio page. I would like to show you all about me.</p>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="website">
             <div class="container">
                 <div class="website">
-                    <img src="assets/" alt="">
+                    <img src="assets/img/website.svg" alt="타이틀이미지">
+                    <img src="assets/img/reference2.svg" alt="타이틀이미지">
+                </div>
+            </div>
+        </section>
+        <section id="wsdpage1">
+            <div class="container">
+                <div class="wsdpage1">
+                    <img src="assets/img/sitedot.svg" alt="이미지">
+                    <img src="assets/img/wsdmokeup.svg" alt="목업이미지">
+                    <h2>webstandard site</h2>
+                    <p>웹 표준을 준수하여 작업한 사이트 입니다. 슬라이드, 탭, 메뉴, 팝업, 동영상 기능을 작업하였습니다.
+                        slick.js를 이용하여 슬라이드, 라이트박스 생성 플러그인을 이용하여 갤러리 효과를 주었습니다.</p>
+                    <a class="seesite1" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    <a class="seecode1" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="wsdpage2">
+            <div class="container">
+                <div class="wsdpage2">
+                    <img src="assets/img/sitedot.svg" alt="이미지">
+                    <img src="assets/img/rpsmokeup.svg" alt="목업이미지">
+                    <h2>RESPONSIVE SITE</h2>
+                    <p>미디어 쿼리를 이용하여 작업한 반응형 사이트입니다. 
+                        디바이스 종류에 따라 유연하게 화면을 변경할수 있으며, 메뉴 슬라이드, 탭, 동영상, 마우스 오버등을 동적인 효과를 주었습니다.</p>
+                    <a class="seesite2" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    <a class="seecode2" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="wsdpage3">
+            <div class="container">
+                <div class="wsdpage3">
+                    <img src="assets/img/sitedot.svg" alt="이미지">
+                    <img src="assets/img/mbmokeup.svg" alt="목업이미지">
+                    <h2>megabox SITE</h2>
+                    <p>메가박스 반응형 사이트 입니다. 이미지 슬라이더, 탭메뉴, 모달 등 다양한 스크립트 요소를 활용하였고, 
+                        Swiper플러그인을 이용하여 css효과를 주었고, 크로스 브라우징은 익스클로러 8버전부터 지원합니다.</p>
+                    <a class="seesite3" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    <a class="seecode3" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="wsdpage4">
+            <div class="container">
+                <div class="wsdpage4">
+                    <img src="assets/img/sitedot.svg" alt="이미지">
+                    <img src="assets/img/cvmokeup.svg" alt="목업이미지">
+                    <h2>naver clova</h2>
+                    <p>네이버 클로바 사이트입니다. 
+                        이미지 스프라이트 기법을 활용하여 로고와 아이콘을 페이지에 위치 시켜주고, background에 이미지를 넣어 배경에 넣어주어 사이트를 만들었습니다.</p>
+                    <a class="seesite4" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    <a class="seecode4" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="rightarrow">
+            <div class="container">
+                <div class="rightarrow">
+                    <img src="assets/img/rightsidearrow.svg" alt="화살표이미지">
                 </div>
             </div>
         </section>
