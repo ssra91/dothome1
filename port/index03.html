@@ -638,25 +638,58 @@
         .effect img:nth-child(1) {position: absolute; left: 50%; top: 8%; transform: translate(-50%, -50%); width: 55vw; z-index: 1000;}
         .effect img:nth-child(2) {position: absolute; left: 50.6%; top: 8.3%; transform: translate(-50%, -50%); width: 55vw; z-index: 900;}
         .effect img:nth-child(3) {position: absolute; left: 50%; top: 53.5%; transform: translate(-50%, -50%); width: 85vw;}
-        .effect .effectbox1 {
-           width: 52vw; height: 45vh; position: absolute; left: 9.8%; top: 12.4%;
-        }
-        .effect .effectbox2 {
-        width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 26.3%;
-        }
-        .effect .effectbox3 {
-         width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 40.5%;
-        }
-        .effect .effectbox4 {
-           background:#111; width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 54.75%;
-        }
-        .effect .effectbox5 {
-           background:#111; width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 69%;
-        }
-        .effect .effectbox6 {
-           background:#111; width: 52vw; height: 45.2vh; position: absolute; left: 9.8%; top: 83%;
-        }
 
+        .effect > img {display: inline-block;}
+        .effect .effect1 .effectbox1 {
+             width: 52vw; height: 45vh; position: absolute; left: 9.8%; top: 12.4%;
+        }
+        .effect .effect1 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 14.8%;}
+        .effect .effect1 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 15.2%;}
+        .effect .effect1 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 20.5%; z-index: 10;}
+        .effect .effect1 img:nth-child(4) {width: 15vw; position: absolute; left: 72.1%; top: 19.3%;}
+
+        .effect .effect2 .effectbox2 {
+            width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 26.3%;
+        }
+        .effect .effect2 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 29%;}
+        .effect .effect2 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 29.5%;}
+        .effect .effect2 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 34.8%; z-index: 10;}
+        .effect .effect2 img:nth-child(4) {width: 15vw; position: absolute; left: 72.2%; top: 33.4%;}
+
+        .effect .effect3 .effectbox3 {
+            width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 40.5%;
+        }
+        .effect .effect3 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 44.8%;}
+        .effect .effect3 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 45.3%;}
+        .effect .effect3 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 51%; z-index: 10;}
+        .effect .effect3 img:nth-child(4) {width: 15vw; position: absolute; left: 72.1%; top: 49.6%;}
+
+        .effect .effect4 .effectbox4 {
+            width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 54.75%;
+        }
+        .effect .effect4 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 59%;}
+        .effect .effect4 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 60.3%;}
+        .effect .effect4 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 66%; z-index: 10;}
+        .effect .effect4 img:nth-child(4) {width: 15vw; position: absolute; left: 72.1%; top: 64.6%; }
+
+        .effect .effect5 .effectbox5 {
+           width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 69%;
+        }
+        .effect .effect5 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 74%;}
+        .effect .effect5 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 74.3%;}
+        .effect .effect5 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 81%; z-index: 10;}
+        .effect .effect5 img:nth-child(4) {width: 15vw; position: absolute; left: 72.1%; top: 79.6%;}
+
+        .effect .effect6 .effectbox6 {
+           width: 52vw; height: 45.2vh; position: absolute; left: 9.8%; top: 83%;
+        }
+        .effect .effect6 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 89%;}
+        .effect .effect6 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 89.3%;}
+        .effect .effect6 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 95%; z-index: 10;}
+        .effect .effect6 img:nth-child(4) {width: 15vw; position: absolute; left: 72.1%; top: 93.6%;}
+
+
+        
         /* 텍스트 애니메이션2 */
         #animationtxt2 {background:#f9d3e0; overflow: hidden;}
         .animationtxt2 { position: relative; height: 50vh; text-transform: uppercase; display: inline-block;}
@@ -1023,12 +1056,49 @@
                     <img src="assets/img/effecttxt.svg" alt="이미지">
                     <img src="assets/img/effecttxtsdw.svg" alt="이미지">
                     <img src="assets/img/effectbox.svg" alt="박스틀이미지">
-                    <iframe class="effectbox1" src="http://ssra10.dothome.co.kr/port/effect/parallaxEffect01.html" scrolling="yes" frameborder="0"></iframe>
-                    <iframe class="effectbox2" src="http://ssra10.dothome.co.kr/port/effect/mouseEffect01.html" scrolling="yes" frameborder="0"></iframe>
-                    <iframe class="effectbox3" src="http://ssra10.dothome.co.kr/port/effect/sliderEffect01.html" scrolling="yes" frameborder="0"></iframe>
-                    <iframe class="effectbox4" src="http://ssra10.dothome.co.kr/port/effect/quizEffect01.html" scrolling="yes" frameborder="0"></iframe>
-                    <iframe class="effectbox5" src="http://ssra10.dothome.co.kr/port/effect/mouseEffect02.html" scrolling="yes" frameborder="0"></iframe>
-                    <iframe class="effectbox6" src="http://ssra10.dothome.co.kr/port/effect/parallaxEffect02.html" scrolling="yes" frameborder="0"></iframe>
+
+                    <div class="effect1">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox1" src="http://ssra10.dothome.co.kr/port/effect/parallaxEffect01.html" scrolling="yes" frameborder="0"></iframe>   
+                    </div>
+                    <div class="effect2">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox2" src="http://ssra10.dothome.co.kr/port/effect/mouseEffect01.html" scrolling="yes" frameborder="0"></iframe>
+                    </div>
+                    <div class="effect3">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox3" src="http://ssra10.dothome.co.kr/port/effect/sliderEffect01.html" scrolling="yes" frameborder="0"></iframe> 
+                    </div>
+                    <div class="effect4">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox4" src="http://ssra10.dothome.co.kr/port/effect/quizEffect01.html" scrolling="yes" frameborder="0"></iframe>
+                    </div>
+                    <div class="effect5">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox5" src="http://ssra10.dothome.co.kr/port/effect/mouseEffect02.html" scrolling="yes" frameborder="0"></iframe>
+                    </div>
+                    <div class="effect6">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox6" src="http://ssra10.dothome.co.kr/port/effect/parallaxEffect02.html" scrolling="yes" frameborder="0"></iframe>
+                    </div>
 
                 </div>
             </div>
@@ -1050,10 +1120,10 @@
                 <img src="assets/img/lastsection.svg" alt="타이틀이미지">
                 <img src="assets/img/showoffu.svg" alt="타이틀이미지">
                 <img src="assets/img/thehightlight.svg" alt="타이틀이미지">
-                <img src="assets/img/barrow1" alt="화살표이미지">
-                <img src="assets/img/barrow2" alt="화살표이미지">
-                <img src="assets/img/barrow3" alt="화살표이미지">
-                <img src="assets/img/barrow4" alt="화살표이미지">
+                <img src="assets/img/barrow1.svg" alt="화살표이미지">
+                <img src="assets/img/barrow2.svg" alt="화살표이미지">
+                <img src="assets/img/barrow3.svg" alt="화살표이미지">
+                <img src="assets/img/barrow4.svg" alt="화살표이미지">
             </div>
         </div>
     </section>
