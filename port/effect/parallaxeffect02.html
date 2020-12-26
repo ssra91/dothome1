@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax01 - javascript</title>
+    <title>Parallax04 - jQuery</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
         /* reset */
@@ -31,25 +31,25 @@
 
         /* info */
         /* .info {
-            position: fixed; z-index: 1000;;
-        } */
-        /* .info.left {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {
             left: 20px; top: 20px;
-        } */
-        /* .info.right {
+        }
+        .info.right {
             right: 20px; top: 20px;
-        } */
-        /* .info.bottom {
-            right: 5px; bottom: 5px;
-        } */
-        /* .info h1 {
+        }
+        .info.bottom {
+            right: 20px; bottom: 20px;
+        }
+        .info h1 {
             font-size: 2rem;
             line-height: 1.4;
-        } */
-        /* .info p {
+        }
+        .info p {
             font-size: 1rem;
-        } */
-        /* .info ul {}
+        }
+        .info ul {}
         .info li {
             font-size: 1rem;
             line-height: 1.4;
@@ -57,21 +57,21 @@
         .info li a {
             color: #fff;
             width: 25px; height: 25px;
-            border: 1px dashed #222;
+            border: 1px dashed #fff;
             display: inline-block;
             border-radius: 50%;
             text-align: center;
             line-height: 25px;
             font-size: 0.8rem;
             margin: 5px;
-        } */
-        /* .info li a.active {
-            background: #222;
-            color: #fff;
-        } */
+        }
+        .info li a.active {
+            background: #fff;
+            color: #000;
+        }
         @media(max-width: 800px){
             .info h1 { display:none;}
-        }
+        } */
 
         /* main */
         body {
@@ -79,8 +79,8 @@
             --color-title : #fff;
             --color-sub : #999;
             --color-link : #000;
-            --color-bg : #cecece;
-            --font-cafe: 'Wemakeprice-Bold';
+            --color-bg : #111;
+            --font-cafe: 'Cafe24Danjunghae';
             --font-lato: 'Lato', sans-serif;
 
 
@@ -202,18 +202,29 @@
         */
 
         /* 한번에 나타나기 */
-        .contents > section {
-            opacity:0;
-            transition: all 1s;
-            transform: translateX(200px);
-        }
-        .contents > section.show {
-            opacity: 1;
-            transform: translateX(0);
+        .content-item-desc span {
+            opacity: 0;
+            transform: translateY(100px);
+            display: inline-block; 
+            transition: all 0.77s cubic-bezier(0.87, -0.01, 0.12, 0.65);
+            min-width: 20px; 
+            /* 인라인블럭하면 빈칸이 없어 지므로 빈칸 만들어 주기 위해 min-width */
         }
 
+        /* 한글자씩 나타나기 */
+        /* .content-item-desc span {
+            opacity: 0;
+            transform: translateY(150px);
+            transition: all 0.77s cubic-bezier(0.87, -0.01, 0.12, 0.65);
+        }
+        .content-item-desc span.show {
+            transform: translateY(0);  
+            opacity: 1;
+        } */
+
+
         /* 개별적으로 나타나기 */
-        .contents > section .content-item-num {
+        /* .contents > section .content-item-num {
             opacity: 0;
             transform: translateY(200px);
             transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.26, 1.01);
@@ -236,46 +247,36 @@
         .contents > section.show .content-item-num {opacity: 0.7; transform: translateY(0);}
         .contents > section.show .content-item-title {opacity: 1; transform: translateX(0);}
         .contents > section.show .content-item-imgWrap {opacity: 1; transform: translateY(0);}
-        .contents > section.show .content-item-desc {opacity: 1; transform: translateX(0);}
-
+        .contents > section.show .content-item-desc {opacity: 1; transform: translateX(0);} */ 
     </style>
 </head>
 <body>
    
    
     <!-- <div class="info left">
-        <h1>Parallax Effect01 - javascript</h1>
-        <p>패럴랙스 스크롤링 효과 - 기본</p>
-    </div> -->
-    <!-- <div class="info right">
+        <h1>Parallax Effect04 - jQuery</h1>
+        <p>패럴랙스 스크롤링 효과 - 글자 효과</p>
+    </div>
+    <div class="info right">
         <ul>
-            <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html" class="active">1</a></li>
+            <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
             <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
-            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
-            <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
+            <li><a href="parallax03-jquery.html" >3</a><a href="parallax03-javascript.html">3</a></li>
+            <li><a href="parallax04-jquery.html" class="active">4</a><a href="parallax04-javascript.html">4</a></li>
             <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
             <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
             <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
             <li><a href="parallax08-jquery.html">8</a><a href="parallax08-javascript.html">8</a></li>
             <li><a href="parallax09-jquery.html">9</a><a href="parallax09-javascript.html">9</a></li>
         </ul>
-    </div> -->
+    </div>
 
     <div class="info bottom">
         <ul>
-            <li>scrollTop( ) : <span class="pageYOffset">0</span>px</li>
-            <li>#section1 : <span class="s1OffsetTop">0</span>px</li>
-            <li>#section2 : <span class="s2OffsetTop">0</span>px</li>
-            <li>#section3 : <span class="s3OffsetTop">0</span>px</li>
-            <li>#section4 : <span class="s4OffsetTop">0</span>px</li>
-            <li>#section5 : <span class="s5OffsetTop">0</span>px</li>
-            <li>#section6 : <span class="s6OffsetTop">0</span>px</li>
-            <li>#section7 : <span class="s7OffsetTop">0</span>px</li>
-            <li>#section8 : <span class="s8OffsetTop">0</span>px</li>
-            <li>#section9 : <span class="s9OffsetTop">0</span>px</li>
+            <li>scrollTop( ) : <span class="scrollTop">0</span>px</li>
         </ul>
-    </div>
-    <!-- info -->
+    </div> -->
+    <!-- //info -->
 
     <main>
         <section id="parallax-wrap">
@@ -288,7 +289,7 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+                    <p class="content-item-desc ">높은 목표를 세우고, 스스로 채찍질 한다.</p>
                 </section>
                 <section id="section2" class="content-item">
                     <span class="content-item-num">02</span>
@@ -359,147 +360,114 @@
     </main>
 
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
+        
+        // let text = $("#section1 .content-item-desc").text();
+        // let split = text.split("").join("</span><span>");
+        //     split = "<span>" + split + "</span>";
+        
+        //글씨 쪼개기
+        $(".content-item-desc").each(function(){
+            let text = $(this).text();
+            let split = text.split("").join("</span><span aria-hidden='true'>");
+            split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-label",text);
+        });
+        //나타나기
+        $(window).scroll(function(){
+            //한번에 나오게 하기
+            // $(".content-item").each(function(){
+            //     if( $(window).scrollTop() > $(this).offset().top ){
+            //         $(this).find(".content-item-desc").addClass("show");
+            //     } else {
+            //         $(this).find(".content-item-desc").removeClass("show");
+            //     }
+            // });
 
-        // $(window).scroll(function(){
-        //     const scrollTop = $(window).scrollTop(); //브라우저의 하이트값을 더해줘라
-
-        // });
-        window.addEventListener("scroll",function(){
-            let pageYOffset = window.pageYOffset + screen.height/2;
-
-            //출력용
-            document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
-            // document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-            // document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-            // document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-            // document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-            // document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-            // document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-            // document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-            // document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-            // document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
-
-            //글씨색 출력용
-            // if (pageYOffset > document.getElementById("section1").offsetTop ) {
-            //     document.querySelector(".s1OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s1OffsetTop").style.color = "white";
+            //한글자씩 나오게 하기
+            // if($(window).scrollTop() > $("#section1").offset().top){
+            //     $("#section1 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section1 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
-            // if (pageYOffset > document.getElementById("section2").offsetTop ) {
-            //     document.querySelector(".s2OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s2OffsetTop").style.color = "white";
+            // if($(window).scrollTop() > $("#section2").offset().top){
+            //     $("#section2 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section2 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
-            // if (pageYOffset > document.getElementById("section3").offsetTop ) {
-            //     document.querySelector(".s3OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s3OffsetTop").style.color = "white";
+            // if($(window).scrollTop() > $("#section3").offset().top){
+            //     $("#section3 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section3 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
-            // if (pageYOffset > document.getElementById("section4").offsetTop ) {
-            //     document.querySelector(".s4OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s4OffsetTop").style.color = "white";
+            // if($(window).scrollTop() > $("#section4").offset().top){
+            //     $("#section4 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section4 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
-            // if (pageYOffset > document.getElementById("section5").offsetTop ) {
-            //     document.querySelector(".s5OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s5OffsetTop").style.color = "white";
+            // if($(window).scrollTop() > $("#section5").offset().top){
+            //     $("#section5 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section5 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
-            // if (pageYOffset > document.getElementById("section6").offsetTop ) {
-            //     document.querySelector(".s6OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s6OffsetTop").style.color = "white";
+            // if($(window).scrollTop() > $("#section6").offset().top){
+            //     $("#section6 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section6 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
-            // if (pageYOffset > document.getElementById("section7").offsetTop ) {
-            //     document.querySelector(".s7OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s7OffsetTop").style.color = "white";
+            // if($(window).scrollTop() > $("#section7").offset().top){
+            //     $("#section7 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section7 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
-            // if (pageYOffset > document.getElementById("section8").offsetTop ) {
-            //     document.querySelector(".s8OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s8OffsetTop").style.color = "white";
+            // if($(window).scrollTop() > $("#section8").offset().top){
+            //     $("#section8 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section8 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
-            // if (pageYOffset > document.getElementById("section9").offsetTop ) {
-            //     document.querySelector(".s9OffsetTop").style.color = "red"; 
-            // }else {
-            //     document.querySelector(".s9OffsetTop").style.color = "white";
-            // }
-            //한번에 쓰기(for문)
-            for(let i =1; i<9; i++){
-                document.querySelector(".s"+i+"OffsetTop").textContent = document.getElementById("section"+i).offsetTop;  // textContent=innerText
-                if (pageYOffset > document.getElementById("section"+i).offsetTop ) {
-                    document.querySelector(".s"+i+"OffsetTop").style.color = "red"; 
-                }else {
-                    document.querySelector(".s"+i+"OffsetTop").style.color = "white";
-                }
-            }
-            
-            //나타나기
-            // if(scrollTop > $("#section1").offset().top){
-            //     $("#section1").addClass("show");
-            // }else {
-            //     $("#section1").removeClass("show");
-            // }
-            //나타나기
-            // if(pafeYOffset >document.getElementById("section1").offsetTop){
-            //     document.getElementById("section1").classList.add("show");
-            // }else {
-            //     document.getElementById("section1").classList.remove("show");
-            // }
-            // if(pafeYOffset >document.getElementById("section2").offsetTop){
-            //     document.getElementById("section2").classList.add("show");
-            // }else {
-            //     document.getElementById("section2").classList.remove("show");
-            // }
-            // if(pafeYOffset >document.getElementById("section3").offsetTop){
-            //     document.getElementById("section3").classList.add("show");
-            // }else {
-            //     document.getElementById("section3").classList.remove("show");
-            // }
-            // if(pafeYOffset >document.getElementById("section4").offsetTop){
-            //     document.getElementById("section4").classList.add("show");
-            // }else {
-            //     document.getElementById("section4").classList.remove("show");
-            // }
-            // if(pafeYOffset >document.getElementById("section5").offsetTop){
-            //     document.getElementById("section5").classList.add("show");
-            // }else {
-            //     document.getElementById("section5").classList.remove("show");
-            // }
-            // if(pafeYOffset >document.getElementById("section6").offsetTop){
-            //     document.getElementById("section6").classList.add("show");
-            // }else {
-            //     document.getElementById("section6").classList.remove("show");
-            // }
-            // if(pafeYOffset >document.getElementById("section7").offsetTop){
-            //     document.getElementById("section7").classList.add("show");
-            // }else {
-            //     document.getElementById("section7").classList.remove("show");
-            // }
-            // if(pafeYOffset >document.getElementById("section8").offsetTop){
-            //     document.getElementById("section8").classList.add("show");
-            // }else {
-            //     document.getElementById("section8").classList.remove("show");
-            // }
-            // if(pafeYOffset >document.getElementById("section9").offsetTop){
-            //     document.getElementById("section9").classList.add("show");
-            // }else {
-            //     document.getElementById("section9").classList.remove("show");
+            // if($(window).scrollTop() > $("#section9").offset().top){
+            //     $("#section9 .content-item-desc span").each(function(i){
+            //        // console.log(i)  //span값의 크기를 알아보기위해 0-22까지 있는거 확인
+            //        setTimeout(() => {
+            //         $("#section9 .content-item-desc span").eq(i).addClass("show");
+            //        }, 50 * (i+1)); //각 span마다 시간차를 주기 위해
+            //     });
             // }
 
-            //나타나기
-            document.querySelectorAll(".content-item").forEach(elem => {
-                if(pageYOffset > elem.offsetTop){
-                    elem.classList.add("show");
-                }else {
-                    elem.classList.remove("show");
+            //한글자씩 나오게 하기 (한번에) 과부하걸림
+            $(".content-item").each(function(){
+                if($(window).scrollTop() > $(this).offset().top){
+                    gsap.to($(this).find(".content-item-desc span"),{duration:.3, opacity:1, y:0, stagger:0.05, ease:Power1.ease});
                 }
             });
         });
         
-
     </script>
 </body>
 </html>
