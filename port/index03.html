@@ -28,13 +28,14 @@
         * {margin: 0; padding: 0;}
 
         /* header */
-        #header {
+        /* #header {
             position: relative;
             background: #FFD87E;
             font-family: 'Impact';
             display: flex;
             padding: 2vh 0;
             border-bottom: 1px solid #B43F4D;
+            
         }
         #header div:nth-child(1){
             font-size: 2vw;
@@ -53,7 +54,17 @@
         }
         #header div a {
             color: #B43F4D;
-        }
+        } */
+
+        #wrap {}
+        #header {width: 100vw; background: #ffd87e; border-bottom: 2px solid #c66559; position: fixed; z-index: 2000;}
+
+        /* header */
+        .header {font-family: 'Impact'; text-transform: uppercase;height: 10vh;position: relative;}
+        .header .header_menu {display: flex; text-align: center; color: #b43f4d; position: relative;}
+        .header .header_menu .left {font-size: 1.8vw;  padding: 3.2vh 5vw; position: absolute; left: 0%; top: 0%;}
+        .header .header_menu .title {font-size: 3vw;position: absolute; left: 50%; top: 0%; transform: translate(-50%, 0%); padding: 1.6vh;}
+        .header .header_menu .right {font-size: 1.8vw; padding: 3.2vh 5vw; position: absolute; right: 0%; top:0%;}
 
         /* banner */
         #banner {
@@ -156,7 +167,8 @@
             position: absolute; 
             left: 5%; top: 10%;
             padding: 0 6vw 0 1vw;
-            font-family: 'RobotoSlab';
+            font-family: 'Roboto Slab', serif;
+            font-weight: bold;
         }
         .aboutme .me {
             position: absolute; left: 60%;  top: 18%;
@@ -178,7 +190,7 @@
             position: absolute; right: 60%; top: 23%; width: 32%;
         }
         .aboutme2 h2 {
-            font-family: 'RobotoSlab';
+            font-family: 'Roboto Slab', serif; font-weight: bold;
             font-size: 2.6vw; 
             color:#3f52a0;
             position: absolute; top: 30%; left: 50%;
@@ -208,6 +220,7 @@
         .aboutme3 h2 {
             position:absolute; right:47%; top:23%; font-size: 2.6vw; 
             color:#3f52a0; width: 44%; text-align: right;
+            font-family: 'Roboto Slab', serif; font-weight: bold;
         }
         .aboutme3 p {
             font-family: 'Chosunilbo_myungjo';
@@ -790,6 +803,112 @@
 
 
         /* 미디어쿼리 */
+        @media (max-width:1920px) {
+            /* banner */
+            #banner img:nth-child(1) {width: 36%; top: 30%;}
+            #banner img:nth-child(2) {width: 46%;top: 16%;}
+            #banner img:nth-child(3) {width: 39.1%; left: 64.8%;}
+            #banner img:nth-child(4) {width: 38%; left: 42%; top: 31.1%;}
+            #banner img:nth-child(5) {width: 14%; left: 14%; top: 43%;}
+            #banner img:nth-child(6) {top: 40.5%;}
+            #banner img:nth-child(7) {width: 50%; left: 75%; top: 51%;}
+            #banner p {font-size: 4vw; padding: 7vw;}
+            #banner img:nth-child(8) {width: 45%; width: 26%; left: 13%; top: 71%;}
+            #banner img:nth-child(9) {left: 36.5%; top: 65.5%;}
+            #banner img:nth-child(10) {width: 18%; position: absolute; left: 63%; top: 82%;}
+            #banner img:nth-child(11) {left: 94%; width: 13%; top: 88%;}
+            #banner img:nth-child(12) {width: 7%;}
+
+            /* aboutme */
+            .aboutme .me {top: 21%; left: 59%; width: 34%;}
+            .aboutme h2 {top: 12%;}
+            .aboutme p {top: 31%;}
+            .aboutme .box {left: 19%; top: 76%; width: 17%;}
+            .aboutme2 .me2 {right: 59%; top: 19%;width: 34%;}
+            .aboutme2 .TitleBox {left: 32%; width: 35%; top: 8%;}
+            .aboutme2 h2 {top: 26%;} 
+            .aboutme2 p {top: 41%;}
+            .aboutme2 .box2 {width: 17%; right: 20%;top: 73%;}
+            .aboutme3 .me3 { left: 60%; top: 19%; width: 34%;}
+            .aboutme3 .TitleBox {left: 32%; top: 8%; width: 35%;}
+            .aboutme3 h2 {top: 19%;}
+            .aboutme3 p {width: 42.2%; left: 10%; top: 36%;}
+            .aboutme3 .box3 {left: 53.9%; top: 80%; width: 4.5%;}
+
+            /* animation */
+            .animationSideBox1 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox1 img { width: 88%; left: 7%;}
+            .animationSideBox1 iframe {width: 41.8%; height: 49%; left: 8.37%;top: 26.2%;}
+            .animationSideBox1 .bignum1 {left: 9.2%; top: 78.6%;}
+            .animationSideBox1 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox1 .num {left: 73.5%; top: 82.7%;}
+
+            .animationSideBox2 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox2 img { width: 88%; left: 7%;}
+            .animationSideBox2 iframe {width: 41.8%; height: 49%; left: 8.37%;top: 26.2%;}
+            .animationSideBox2 .bignum2 {left: 16.1%; top: 78.6%;}
+            .animationSideBox2 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox2 .num {left: 73.5%; top: 82.7%;}
+
+            .animationSideBox3 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox3 img { width: 88%; left: 7%;}
+            .animationSideBox3 iframe {width: 41.8%; height: 49%; left: 8.37%;top: 26.2%;}
+            .animationSideBox3 .bignum3 {left: 23.3%; top: 78.6%;}
+            .animationSideBox3 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox3 .num {left: 73.5%; top: 82.7%;}
+
+            .animationSideBox4 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox4 img { width: 88%; left: 7%;}
+            .animationSideBox4 iframe {width: 41.8%; height: 49%; left: 8.37%;top: 25.8%;}
+            .animationSideBox4 .bignum4 {left: 30.5%; top: 78.6%;}
+            .animationSideBox4 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox4 .num {left: 73.5%; top: 82.7%;}
+
+            .animationSideBox5 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox5 .img { width: 88%; left: 7%;}
+            .animationSideBox5 iframe {width: 41.8%; height: 49%; left: 7%;top: 26.8%;}
+            .animationSideBox5 .bignum5 {left: 36.6%; top: 79.6%;}
+            .animationSideBox5 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox5 .num {left: 73.5%; top: 82.7%;}
+
+            /* effect */
+            .effect img:nth-child(3) {top: 53%;}
+            .effect .effect1 .effectbox1 {top: 13% }
+            .effect .effect1 img:nth-child(1) {width: 13vw; left: 78%; top: 16%;}
+            .effect .effect1 img:nth-child(2) {width: 13vw; left: 78.8%; top: 16.5%;}
+            .effect .effect1 img:nth-child(3) {width: 13vw; left: 78%; top: 21%;}
+            .effect .effect1 img:nth-child(4) {width: 13vw; left: 72.3%; top: 20%;}
+
+            .effect .effect2 img:nth-child(1) {width: 13vw; left: 78%; top: 29.9%;}
+            .effect .effect2 img:nth-child(2) {width: 13vw; left: 78.9%; top: 30.4%;}
+            .effect .effect2 img:nth-child(3) {width: 13vw;left: 78%;top: 34.8%;}
+            .effect .effect2 img:nth-child(4) { width: 13vw; left: 72.5%;top: 33.8%;}
+
+            .effect .effect3 .effectbox3 {top: 40.2%;}
+            .effect .effect3 img:nth-child(1) {width: 13vw; left: 78%; top: 43.7%;}
+            .effect .effect3 img:nth-child(2) {width: 13vw; left: 79%; top: 44.2%;}
+            .effect .effect3 img:nth-child(3) {width: 13vw; left: 78%; top: 48.5%}
+            .effect .effect3 img:nth-child(4) {width: 13vw; left: 72.5%; top: 47.5%;}
+
+            .effect .effect4 .effectbox4 {top: 53.95%;}
+            .effect .effect4 img:nth-child(1) {width: 13vw;left: 78%;}
+            .effect .effect4 img:nth-child(2) {width: 13vw; left: 79%; top: 58%;}
+            .effect .effect4 img:nth-child(3) {width: 13vw; left: 78%; top: 62.6%;}
+            .effect .effect4 img:nth-child(4) {width: 13vw; left: 72.5%;top: 61.6%;}
+
+            .effect .effect5 .effectbox5 {top: 67.9%;}
+            .effect .effect5 img:nth-child(1) {width: 13vw; left: 78%; top: 71.3%;}
+            .effect .effect5 img:nth-child(2) { width: 13vw; left: 78.9%; top: 71.9%;}
+            .effect .effect5 img:nth-child(3) {width: 13vw; left: 78%; top: 76.5%;}
+            .effect .effect5 img:nth-child(4) { width: 13vw; left: 72.5%;top: 75.6%;}
+
+            .effect .effect6 .effectbox6 {top: 81.6%;}
+            .effect .effect6 img:nth-child(1) {width: 13vw; left: 78%; top: 84.8%;}
+            .effect .effect6 img:nth-child(2) { width: 13vw; left: 78.9%; top: 90.3%;}
+            .effect .effect6 img:nth-child(3) {width: 13vw; left: 78.9%; top: 85.38%;}
+            .effect .effect6 img:nth-child(4) { width: 13vw; left: 72.5%;top: 89.3%;}
+
+        }
         @media (max-width:1280px) {
             #banner img:nth-child(2) {
             width: 47%;
@@ -853,20 +972,24 @@
             .animationSideBox1 .back { 
                 text-transform: uppercase; color: #1e8ca2; 
                 font-family: 'Roboto+Slab';font-size: 3vw; position: absolute;
-                left: 64.3%; top: 79.3%; font-weight: bold;
-}
+                left: 64.3%; top: 79.3%; font-weight: bold;}
             .animationSideBox1 .num {display: flex; position: absolute; left: 73%; top: 79.2%;}
             .animationSideBox1 iframe {width: 42.8%; height: 45%; position: absolute; left: 6.42%; top: 26.2%;} 
         }
     </style>
 </head>
 <body>
-    <div id="wrap">
-        <header id="header">
-            <div><a href="#">MENU</a></div>
-            <div><a href="#">PORTFOLIO</a></div>
-            <div><a href="#">GITHUB</a></div>
-        </header>
+        <div id="wrap">
+            <header id="header">
+                <div class="header">
+                    <div class="header_menu">
+                        <div class="left">Menu</div>
+                        <div class="title">Portfolio</div>
+                        <div class="right">github</div>
+                    </div>
+                </div>
+            </header>
+            <!-- //header -->
         <nav id="banner">
             <img src="assets/img/bannerDot.svg" alt="이미지">
             <img src="assets/img/banner1.svg" alt="이미지">
