@@ -618,8 +618,8 @@
         .rightarrow {background: #FFD87E; position: relative; height: 70vh; overflow: hidden;}
         .rightarrow img {
             position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
+            left: 50%; top: 16%;
+            transform: translate(-50%, 0%);
             height: 50%;
         }
 
@@ -717,21 +717,39 @@
         .highttitle img:nth-child(1) {width: 31.5vw; position: absolute; left: 50%; top:40.2%; transform: translate(-50%, -50%); z-index: 100;}
         .highttitle img:nth-child(2) {width: 34vw; position: absolute; left: 50%; top: 58.5%; transform: translate(-50%, -50%);}
         .highttitle img:nth-child(3) {width: 8.5vw; position: absolute; top: 5.5%; left: 61%;}
-        .highttitle img:nth-child(4) {position: absolute; width: 16vw; left: 18%; top: 70%; z-index: 100;}
+        .highttitle img:nth-child(4) {position: absolute; width: 22vw; left: 9.3%; top: 70%; z-index: 100;}
 
         /* hightitle */
         #highlight {}
         .highlight {background: #F9D3E0; position: relative; height: 125vh;}
         .highlight img:nth-child(1) {width: 80vw; left: 50%; top: 12%; transform: translate(-50%, 0); position: absolute; z-index: 1000;}
-        .highlight img:nth-child(2) {width: 46.5vw; position: absolute; right: -12%; top: -11%;}
+        .highlight img:nth-child(2) {width: 34.5vw; position: absolute; right: 0%; top: -11%;}
         .highlight img:nth-child(3) {position: absolute; width: 8%; top: 63%; left: 64%;}
-        .highlight img:nth-child(4) {position: absolute; left: 50%; top: 80%; transform: translate(-50%, -50%); width: 6vw;}
-        .highlight img:nth-child(5) {position: absolute; left: 0; width: 32vw; top: 67%; z-index: 100;}
-        .highlight img:nth-child(6) {width: 10vw; position: absolute; right: 10vw; top: 90%; z-index: 1000;}
+        .highlight img:nth-child(4) {position: absolute; left: 50%; top: 84%; transform: translate(-50%, -50%); width: 6vw;}
+        .highlight img:nth-child(5) {position: absolute; left: 0; width: 31vw; top: 71%; z-index: 100;}
+        .highlight img:nth-child(6) {width: 10vw; position: absolute; right: 10vw; top: 95%; z-index: 1000;}
 
         /* react */
+        #reactpage {}
+        .reactpage {background: #F9D3E0; position: relative; height: 190vh;}
+        .reactpage img:nth-child(1) {position: absolute; width: 52vw; left: 50%; top: 6%; transform: translate(-50%, 0); z-index: 1000;}
+        .reactpage img:nth-child(2) {position: absolute; width: 52vw; left: 50.8%; top: 6.8%; transform: translate(-50%, 0); z-index: 900;}
+        .reactpage img:nth-child(3) {width: 80vw; position: absolute; left: 50%; top: 21%; transform: translate(-50%, 0);}
+        .reactpage img:nth-child(4) {position: absolute; width: 12vw; left: 9%; top: 78%;}
+        .reactpage img:nth-child(5) {position: absolute; left: 50%; top: 93%; transform: translate(-50%, -50%); width: 6vw; z-index: 100;}
 
+        /* vue */
+        #vuepage {}
+        .vuepage {background:#F9D3E0; position: relative; height: 170vh;}
+        .vuepage img:nth-child(1) {position: absolute; width: 30.5vw; left: 50%; top: 13%; transform: translate(-50%, 0); z-index: 1002;}
+        .vuepage img:nth-child(2) {position: absolute; width: 30.8vw; left: 50.8%; top: 14%; transform: translate(-50%, 0); z-index: 1001;}
+        .vuepage img:nth-child(3) {width: 80vw; position: absolute; left: 50%; top: 28%; transform: translate(-50%, 0); z-index: 1000;}
+        .vuepage img:nth-child(4) {position: absolute; width: 20vw; right: 0%; top: -20%;}
+        .vuepage img:nth-child(5) {position: absolute; left: 23vw; width: 8vw; top: 8%;}
+        .vuepage img:nth-child(6) {position: absolute; width: 38vw; left: -19.5%; bottom: 3%;}
+        .vuepage img:nth-child(7) {position: absolute; bottom: 0; width: 11vw; right: 1.5vw;}
 
+        
         /* footer */
         footer {}
         .footer1 {background:#FFD87E; height: 100vh; position: relative;}
@@ -748,8 +766,16 @@
         .footer2 {position: relative; background: #FFD87E; height: 70vh; overflow: hidden;}
         .footer2 h2 {position: absolute; left: 50%; top: 26%; transform: translate(-50%, -50%); font-size: 4.5vw; font-family: 'Impact'; color: #b33f4c;}
         .footer2 .emailbox {position: absolute; left: 50%; top: 58%; transform: translate(-50%, -50%); width: 40vw;}
-        .footer2 .rec {position: absolute; left: 0; bottom: 0; background: #b33f4c; height: 10vh; width: 100vw;}
-
+        .footer2 p {color: #FFD87E;
+            position: absolute;
+            left: 62.8%;
+            font-size: 2vw;
+            text-transform: uppercase;
+            bottom: 38.5%;
+            font-weight: bold;
+        }
+        .footer2 .rec {position: absolute; left: 0; bottom: 0; background: #b33f4c; height: 10vh; width: 100vw; text-align: center; color: #FFD87E; }
+        .footer2 .rec span {text-align: center; color: white; text-transform: uppercase; font-size: 2vw; position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
         .container {}
 
@@ -1150,10 +1176,10 @@
             <div class="highlight">
                 <img src="assets/img/thehightlight.svg" alt="타이틀이미지">
                 <img src="assets/img/barrow3.svg" alt="화살표이미지">
-                <img src="assets/img/barrow4.svg" alt="화살표이미지">
+                <img src="assets/img/barrow2.svg" alt="화살표이미지">
                 <img src="assets/img/boppsitarrow.svg" alt="3단화살표">
-                <img src="assets/img/barrow5.svg" alt="화살표이미지">
-                <img src="assets/img/barrow6.svg" alt="화살표이미지">
+                <img src="assets/img/barrow1.svg" alt="화살표이미지">
+                <img src="assets/img/barrow4.svg" alt="화살표이미지">
             </div>
         </div>
     </section>
@@ -1163,6 +1189,21 @@
                 <img src="assets/img/react.svg" alt="타이틀이미지">
                 <img src="assets/img/reactsdw.svg" alt="타이틀이미지">
                 <img src="assets/img/reactbox.svg" alt="박스이미지">
+                <img src="assets/img/barrow7.svg" alt="화살표이미지">
+                <img src="assets/img/boppsitarrow.svg" alt="3단화살표">
+            </div>
+        </div>
+    </section>
+    <section id="vuepage">
+        <div class="container">
+            <div class="vuepage">
+                <img src="assets/img/vue.svg" alt="타이틀이미지">
+                <img src="assets/img/vuesdw.svg" alt="타이틀이미지">
+                <img src="assets/img/reactbox.svg" alt="박스이미지">
+                <img src="assets/img/barrow8.svg" alt="화살표이미지">
+                <img src="assets/img/barrow9.svg" alt="화살표이미지">
+                <img src="assets/img/barrow10.svg" alt="화살표이미지">
+                <img src="assets/img/barrow11.svg" alt="화살표이미지">
             </div>
         </div>
     </section>
@@ -1180,7 +1221,8 @@
             <div class="footer2">
                 <h2>JUST CONTACT ME NOW :)</h2>
                 <img class="emailbox" src="assets/img/emailbox.svg" alt="이메일박스이미지">
-                <div class="rec"></div>
+                <p>e-mail</p>
+                <div class="rec"><span>sora's portfolio</span></div>
             </div>
         </div>
     </footer>
