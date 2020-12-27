@@ -731,24 +731,37 @@
 
         /* react */
         #reactpage {}
-        .reactpage {background: #F9D3E0; position: relative; height: 190vh;}
+        .reactpage {background:#F9D3E0; position: relative; height: 190vh;}
         .reactpage img:nth-child(1) {position: absolute; width: 52vw; left: 50%; top: 6%; transform: translate(-50%, 0); z-index: 1000;}
         .reactpage img:nth-child(2) {position: absolute; width: 52vw; left: 50.8%; top: 6.8%; transform: translate(-50%, 0); z-index: 900;}
         .reactpage img:nth-child(3) {width: 80vw; position: absolute; left: 50%; top: 21%; transform: translate(-50%, 0);}
         .reactpage img:nth-child(4) {position: absolute; width: 12vw; left: 9%; top: 78%;}
         .reactpage img:nth-child(5) {position: absolute; left: 50%; top: 93%; transform: translate(-50%, -50%); width: 6vw; z-index: 100;}
+        .reactpage .buttons {display: inline-block;}
+        .reactpage .buttons .site {position: absolute; width: 13vw; left: 23%; top: 35%;}
+        .reactpage .buttons .shadow1 {position: absolute; width: 13vw; left: 23.8%; top: 35.8%;}
+        .reactpage .buttons .figma {position: absolute; width: 13vw; left: 23%; top: 46%; z-index: 10;}
+        .reactpage .buttons .shadow2 {position: absolute; width: 13vw; left: 17.3%; top: 46.8%;}
+        .reactpage .buttons .github {position: absolute; width: 13vw; left: 23%; top: 60%;}
+        .reactpage .buttons .shadow3 {position: absolute; width: 13vw; left: 17.3%; top: 57.8%;}
 
         /* vue */
         #vuepage {}
         .vuepage {background:#F9D3E0; position: relative; height: 170vh;}
         .vuepage img:nth-child(1) {position: absolute; width: 30.5vw; left: 50%; top: 13%; transform: translate(-50%, 0); z-index: 1002;}
         .vuepage img:nth-child(2) {position: absolute; width: 30.8vw; left: 50.8%; top: 14%; transform: translate(-50%, 0); z-index: 1001;}
-        .vuepage img:nth-child(3) {width: 80vw; position: absolute; left: 50%; top: 28%; transform: translate(-50%, 0); z-index: 1000;}
+        .vuepage img:nth-child(3) {width: 80vw; position: absolute; left: 50%; top: 28%; transform: translate(-50%, 0); z-index: 100;}
         .vuepage img:nth-child(4) {position: absolute; width: 20vw; right: 0%; top: -20%;}
         .vuepage img:nth-child(5) {position: absolute; left: 23vw; width: 8vw; top: 8%;}
         .vuepage img:nth-child(6) {position: absolute; width: 38vw; left: -19.5%; bottom: 3%;}
         .vuepage img:nth-child(7) {position: absolute; bottom: 0; width: 11vw; right: 1.5vw;}
-
+        .vuepage .buttons {display: inline-block;}
+        .vuepage .buttons .site {position: absolute; width: 13vw; left: 23%; top: 43%;}
+        .vuepage .buttons .shadow1 {position: absolute; width: 13vw; left: 23.8%; top: 43.8%;}
+        .vuepage .buttons .figma {position: absolute; width: 13vw; left: 23%; top: 55%; z-index: 1000;}
+        .vuepage .buttons .shadow2 {position: absolute; width: 13vw; left: 17.3%; top: 55.8%;  z-index: 999;}
+        .vuepage .buttons .github {position: absolute; width: 13vw; left: 16.5%; top: 68%; z-index: 1000;}
+        .vuepage .buttons .shadow3 {position: absolute; width: 13vw; left: 17.3%; top: 68.8%;  z-index: 999;}
         
         /* footer */
         footer {}
@@ -766,16 +779,9 @@
         .footer2 {position: relative; background: #FFD87E; height: 70vh; overflow: hidden;}
         .footer2 h2 {position: absolute; left: 50%; top: 26%; transform: translate(-50%, -50%); font-size: 4.5vw; font-family: 'Impact'; color: #b33f4c;}
         .footer2 .emailbox {position: absolute; left: 50%; top: 58%; transform: translate(-50%, -50%); width: 40vw;}
-        .footer2 p {color: #FFD87E;
-            position: absolute;
-            left: 62.8%;
-            font-size: 2vw;
-            text-transform: uppercase;
-            bottom: 38.5%;
-            font-weight: bold;
-        }
+        .footer2 p {color: #FFD87E; position: absolute; left: 62.8%; font-size: 2vw; text-transform: uppercase; bottom: 38.5%; font-weight: bold;}
         .footer2 .rec {position: absolute; left: 0; bottom: 0; background: #b33f4c; height: 10vh; width: 100vw; text-align: center; color: #FFD87E; }
-        .footer2 .rec span {text-align: center; color: white; text-transform: uppercase; font-size: 2vw; position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);}
+        .footer2 .rec span {text-align: center; color: white; text-transform: uppercase; font-size: 2vw; position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%); font-weight: bold;}
 
         .container {}
 
@@ -784,7 +790,55 @@
 
 
         /* 미디어쿼리 */
-        @media (max-width:1220px) {
+        @media (max-width:1280px) {
+            #banner img:nth-child(2) {
+            width: 47%;
+            position: absolute;
+            left: 42%;
+            top: 16%;
+            }
+            #banner img:nth-child(3) {
+            width: 44%;
+            position: absolute;
+            left: 64%;
+            top: 24%;
+        }
+            #banner img:nth-child(4) {
+            width: 42%;
+            position: absolute;
+            left: 40%;
+            top: 31%;
+        }
+        .aboutme .box {
+    position: absolute;
+    left: 18%;
+    top: 70%;
+    width: 18%;
+}
+.aboutme p {
+    font-family: 'Chosunilbo_myungjo';
+    color: #3f52a0;
+    position: absolute;
+    left: 6%;
+    top: 30%;
+    width: 44%;
+    line-height: 1.83;
+    letter-spacing: 0.18;
+    font-size: 1.2vw;
+}
+
+.aboutme h2 {
+    font-size: 2.6vw;
+    color: #3f52a0;
+    line-height: 1.24;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    top: 9%;
+    padding: 0 6vw 0 1vw;
+    font-family: 'RobotoSlab';
+}
+
             .animationSideBox1 .bignum {
             position: absolute;left: 6.9%; top: 74.6%; 
             color: #1e8ca2; border: 4.5px solid #1e8ca2; 
@@ -1191,6 +1245,14 @@
                 <img src="assets/img/reactbox.svg" alt="박스이미지">
                 <img src="assets/img/barrow7.svg" alt="화살표이미지">
                 <img src="assets/img/boppsitarrow.svg" alt="3단화살표">
+                <div class="buttons">
+                    <img class="site" src="assets/img/bsitebox.svg" alt="박스이미지">
+                    <img class="shadow1" src="assets/img/bsdw.svg" alt="그림자이미지">
+                    <img class="figma" src="assets/img/bfigmabox.svg" alt="박스이미지">
+                    <img class="shadow2" src="assets/img/bsdw.svg" alt="그림자이미지">
+                    <img class="github" src="assets/img/bgithubbox.svg" alt="박스이미지">
+                    <img class="shadow3" src="assets/img/bsdw.svg" alt="그림자이미지">
+                </div>
             </div>
         </div>
     </section>
@@ -1204,6 +1266,14 @@
                 <img src="assets/img/barrow9.svg" alt="화살표이미지">
                 <img src="assets/img/barrow10.svg" alt="화살표이미지">
                 <img src="assets/img/barrow11.svg" alt="화살표이미지">
+                <div class="buttons">
+                    <img class="site" src="assets/img/bsitebox.svg" alt="박스이미지">
+                    <img class="shadow1" src="assets/img/bsdw.svg" alt="그림자이미지">
+                    <img class="figma" src="assets/img/bfigmabox.svg" alt="박스이미지">
+                    <img class="shadow2" src="assets/img/bsdw.svg" alt="그림자이미지">
+                    <img class="github" src="assets/img/bgithubbox.svg" alt="박스이미지">
+                    <img class="shadow3" src="assets/img/bsdw.svg" alt="그림자이미지">
+                </div>
             </div>
         </div>
     </section>
