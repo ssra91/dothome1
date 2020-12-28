@@ -245,13 +245,13 @@
                 this.init();
             }
             init(){
-                this.binds();
-                this.events();
+                this.bind();
+                this.event();
             }
-            binds(){
+            bind(){
                 this.mouseMove = this.mouseMove2.bind(this);
             }
-            events(){
+            event(){
                 window.addEventListener('mousemove2', this.mouseMove2);
             }
             mouseMove2(e){

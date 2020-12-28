@@ -73,25 +73,33 @@
         window.addEventListener("resize", calculate);
         window.addEventListener("load", calculate);
         // 애니메이션
-        const animate = () => {
-            // 가속
-            acc += 0.1;
-            if(hover){
-                acc -= 0.35;
+        // const animate = () => {
+        //     // 가속
+        //     acc += 0.1;
+        //     if(hover){
+        //         acc -= 0.35;
+        //     }
+        //     // 최대값 제한걸기
+        //     acc = Math.min(13, Math.max(0, acc));
+        //     // 가속도 주기
+        //     speed += acc;
+        //     if(speed >= wordWidth) {
+        //         speed = 0;
+        //     }
+        //     // 텍스트 효과
+        //     item.style.transform = `translateX(${-speed}px) skewX(${-2 * acc}deg)`
+        //     //RaF
+        //     requestAnimationFrame(animate)
+        // }
+        // animate();
+
+        class animate {
+            constructor(obj){
+                this.item = document.querySelector(".menu-item");
+                this.word = item.querySelector(".menu-word");
             }
-            // 최대값 제한걸기
-            acc = Math.min(13, Math.max(0, acc));
-            // 가속도 주기
-            speed += acc;
-            if(speed >= wordWidth) {
-                speed = 0;
-            }
-            // 텍스트 효과
-            item.style.transform = `translateX(${-speed}px) skewX(${-2 * acc}deg)`
-            //RaF
-            requestAnimationFrame(animate)
         }
-        animate();
+        new animate();
         // // 변수 설정
         // let wordWidth = 0;
         // let width = 0;
