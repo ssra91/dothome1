@@ -1,7 +1,10 @@
 /* layout */
 #contents {}
 #section1 {height: 100vh; background: #FFD87E;}
-#section2 {height: 1100px; background: #FFD87E;}
+#section2 {height: 1100px; background: url(../img/bannerArrow2.svg) no-repeat top right/750px,
+    url(../img/bannerArrow3.svg) no-repeat left 80%,
+    url(../img/bannerArrow4.svg) no-repeat 30% 40%,
+    url(../img/bannerArrow5.svg) no-repeat 70% 68%/200px,url(../img/bannerArrow7.svg) no-repeat 45% 95%/100px #FFD87E;}
 #section3 {}
 #section4 {}
 #section5 {}
@@ -50,6 +53,19 @@
     background: url(../img/bannerDot.svg) no-repeat right bottom / 560px, url(../img/bannerArrow1.svg) no-repeat bottom center
 }
 .sec1 .text-wrap {text-transform: uppercase;}
+.sec1 .text-wrap a {
+    font-size: 2vw; position: absolute; 
+    left: 0%; top: 85%;
+    border: 2px solid #b43f4d;
+    color: #b43f4d;
+    padding: 3px 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.sec1 .text-wrap a:hover {
+    box-shadow: 0 0.5rem 0.5rem -0.2rem #b43f4d;
+    transform: translatey(-0.2rem);
+    color:#b43f4d;
+}
 .sec1 .text-wrap .txt1 {
     left: 45%; top: 35%;
     transform: translate(-50%, -50%) rotate(-10deg) skewX(-20deg);
