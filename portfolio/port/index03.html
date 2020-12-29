@@ -1,0 +1,1376 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="assets/css/style03.css">
+    <link rel="stylesheet" href="assets/css/reset03.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+    <!-- webfonts -->
+    <link href="//db.onlinewebfonts.com/c/4cbf858ccd9ffd3923bed6843a474080?family=Impact" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@200;300;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <style>
+        @font-face {
+        font-family: 'Chosunilbo_myungjo';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+        * {margin: 0; padding: 0;}
+
+        /* header */
+        /* #header {
+            position: relative;
+            background: #FFD87E;
+            font-family: 'Impact';
+            display: flex;
+            padding: 2vh 0;
+            border-bottom: 1px solid #B43F4D;
+            
+        }
+        #header div:nth-child(1){
+            font-size: 2vw;
+            padding: 2vh 3vw;
+        }
+        #header div:nth-child(2){
+            font-size: 4.3vw;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #header div:nth-child(3){
+            font-size: 2vw;
+            padding: 3.8vh 3vw;
+            position: absolute; right: 0%; top:0%;
+        }
+        #header div a {
+            color: #B43F4D;
+        } */
+
+        #wrap {}
+        #header {width: 100vw; background: #ffd87e; border-bottom: 2px solid #c66559; position: fixed; z-index: 2000;}
+
+        /* header */
+        .header {font-family: 'Impact'; text-transform: uppercase;height: 10vh;position: relative;}
+        .header .header_menu {display: flex; text-align: center; color: #b43f4d; position: relative;}
+        .header .header_menu .left {font-size: 1.8vw;  padding: 3.2vh 5vw; position: absolute; left: 0%; top: 0%;}
+        .header .header_menu .title {font-size: 3vw;position: absolute; left: 50%; top: 0%; transform: translate(-50%, 0%); padding: 1.6vh;}
+        .header .header_menu .right {font-size: 1.8vw; padding: 3.2vh 5vw; position: absolute; right: 0%; top:0%;}
+
+        /* banner */
+        #banner {
+            position: relative;
+            height: 210vh;
+            background: #FFD87E;
+        }
+        #banner img {
+            transform: translate(-50%, -50%);
+        }
+        #banner img:nth-child(1) {
+            width: 38%;
+            position: absolute;
+            left: 75%; top: 28%;
+        }
+        #banner img:nth-child(2) {
+            width: 43%;
+            position: absolute;
+            left: 42%; top: 14%;
+        }
+        #banner img:nth-child(3) {
+            width: 43%;
+            position: absolute;
+            left: 64%; top: 24%;
+        }
+        #banner img:nth-child(4) {
+            width: 40%;
+            position: absolute;
+            left: 40%; top: 32%;
+        }
+        #banner img:nth-child(5) {
+            width: 15%;
+            position: absolute;
+            left: 13%; top: 45%;
+        }
+        #banner img:nth-child(6) {
+            width: 3%;
+            position: absolute;
+            left: 50%; top: 45%;
+        }
+        #banner img:nth-child(7) {
+            width: 45%;
+            position: absolute;
+            left: 77%; top: 55%;
+        }
+        #banner img:nth-child(8) {
+            width: 45%;
+            width: 27%;
+            position: absolute;
+            left: 14%; top: 75%;
+        }
+        #banner img:nth-child(9) {
+            width: 7%;
+            position: absolute;
+            left: 40%; top: 78%;
+        }
+        #banner img:nth-child(10) {
+            width: 9%;
+            position: absolute;
+            left: 62%; top: 84%;
+        }
+        #banner img:nth-child(11) {
+            width: 10%;
+            position: absolute;
+            left: 95%; top: 93%;
+        }
+        #banner img:nth-child(12) {
+            width: 4%;
+            position: absolute;
+            left: 23%; top: 95%;
+        }
+        #banner p {
+            font-size: 4.2vw;
+            position: absolute;
+            left: 0; bottom: 10%;
+            line-height: 1.6;
+            letter-spacing: .4;
+            transform: translate(-50% -50%);
+            -webkit-text-stroke: 3px #b33f4c;
+            padding: 5vw;
+            color:  #FFD87E;
+            font-weight: 900;
+        }
+
+        /* aboutme */
+        #aboutme {background: #f9d3e0; height: 110vh; position: relative;}
+        .aboutme {}
+        .aboutme p {
+            font-family: 'Chosunilbo_myungjo';
+            color: #3f52a0;
+            position: absolute; left: 6%; top: 30%;
+            width: 44%; line-height: 1.83;
+            letter-spacing: 0.18;
+            font-size: 1.3vw;
+        }
+        .aboutme h2 {
+            font-size: 2.6vw; 
+            color:#3f52a0;
+            line-height: 1.24; 
+            position: absolute; 
+            left: 5%; top: 10%;
+            padding: 0 6vw 0 1vw;
+            font-family: 'Roboto Slab', serif;
+            font-weight: bold;
+        }
+        .aboutme .me {
+            position: absolute; left: 60%;  top: 18%;
+            width: 32%;
+        }
+        .aboutme .box {
+            position: absolute; left: 16%; top: 80%;
+            width: 20%;
+        }
+
+        /* aboutme2 */
+        #aboutme2 {background: #f9d3e0; height: 110vh; position: relative;}
+        .aboutme2 {}
+        .aboutme2 .TitleBox {
+            position: absolute; left: 23%; top: 10%;
+            width: 55%; height: 7%;
+        }
+        .aboutme2 .me2 {
+            position: absolute; right: 60%; top: 23%; width: 32%;
+        }
+        .aboutme2 h2 {
+            font-family: 'Roboto Slab', serif; font-weight: bold;
+            font-size: 2.6vw; 
+            color:#3f52a0;
+            position: absolute; top: 30%; left: 50%;
+        }
+        .aboutme2 p {
+            font-family: 'Chosunilbo_myungjo';
+            color: #3f52a0;
+            font-size: 1.3vw;
+            position: absolute; left: 50%; top: 47%;
+            width: 43%; line-height: 1.83;
+            letter-spacing: 0.18;
+        }
+        .aboutme2 .box2 {
+            width: 18%; position: absolute; right: 19%; top: 82%;
+        }
+
+        /* aboutme3 */
+        #aboutme3 {background: #f9d3e0; height: 110vh; position: relative;}
+        .aboutme3 {}
+        .aboutme3 .TitleBox {
+            position: absolute; left: 23%; top: 10%;
+            width: 55%; height: 7%;
+        }
+        .aboutme3 .me3 {
+            position: absolute; left: 62%; top: 23%; width: 32%;
+        }
+        .aboutme3 h2 {
+            position:absolute; right:47%; top:23%; font-size: 2.6vw; 
+            color:#3f52a0; width: 44%; text-align: right;
+            font-family: 'Roboto Slab', serif; font-weight: bold;
+        }
+        .aboutme3 p {
+            font-family: 'Chosunilbo_myungjo';
+            color: #3f52a0;
+            font-size: 1.28vw;
+            width: 46.5%; line-height: 1.83;
+            letter-spacing: 0.13;
+            position: absolute; left: 7%; top: 40%;
+            text-align: right;
+        }
+        .aboutme3 .box3 {
+            position: absolute; left: 54.8%; top: 82.5%; width: 5.5%;
+        }
+
+        /* aboutme4 */
+        #aboutme4 {background: #f9d3e0; height: 110vh; position: relative;}
+        .aboutme4 {}
+        .aboutme4 img {}
+        .aboutme4 img:nth-child(1) {position: absolute; left: 14%; top: 10%; width: 28%;z-index: 10;}
+        .aboutme4 img:nth-child(2) {position: absolute; left: 36%; top: 6%; width: 28%; z-index: 10;}
+        .aboutme4 img:nth-child(3) {position: absolute; left: 58%; top: 10%; width: 28%; z-index: 10;}
+        .aboutme4 img:nth-child(4) {position: absolute; left: 16%; top: 46%; width: 28%; z-index: 10;}
+        .aboutme4 img:nth-child(5) {position: absolute; left: 37%; top: 50%; width: 28%; z-index: 10;}
+        .aboutme4 img:nth-child(6) { position: absolute; left: 58%; top: 46%; width: 28%; z-index: 10;}
+        .aboutme4 img:nth-child(7) {
+            width: 88%; position: absolute; left: 6%; top: 19%; z-index: 0;
+        }
+
+        #effect1 {
+            background: #f9d3e0; height: 55vh; position: relative; overflow: hidden;
+        }
+        .effect1 {}
+        .effect1 img {position: absolute; left: 0; top: 40%; width: 100vw;}
+
+        #skills {background: #fbd4ca; height: 100vh; position: relative;}
+        .skills {}
+        .skills img:nth-child(1) {width: 31%; position: absolute; left: 33%; top: 7%; z-index: 100;}
+        .skills img:nth-child(2) {width: 34%; position: absolute; left: 31%; top: 19%; z-index: 1;}
+        .skills p {font-size: 1.28vw; position: absolute; left: 35%; top: 38%; font-family: 'Chosunilbo_myungjo'; color: 
+#04839d;}
+        .skills img:nth-child(3) {width: 96.5%; position: absolute; left: 2%;top: 52%;}
+
+        #history {background: #fbd4ca; height: 100vh; position: relative;}
+        .history img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 78vw;}
+        /* .history{ 
+            text-transform: uppercase;
+            -webkit-text-stroke: 6px #1e8ca2;
+            font-size: 25vw;
+            letter-spacing: -0.5vw;
+            color:#fbd4ca ;
+            font-family: 'Impact';
+        }
+        .history .txt1 {position: absolute; top: 5%; left: 30%; z-index: 100;}
+        .history .txt2 { position: absolute; top: 40%; left: 8%;} */
+
+        /* 화살표 */
+        .arrow {background: #fbd4ca; position: relative; height: 50vh;}
+        .arrow img {position: absolute; left: 50%; top: 60%;transform: translate(-50%, -50%); width: 6vw; }
+
+        /* 애니메이션 */
+        #animationBox {}
+        .animationBox {background: #fbd4ca; position: relative; height: 110vh;}
+        .animationBox img {
+            width: 90%; position: absolute; left: 5%; top: 25%;
+        }
+
+        /* 애니메이션사이드 1 */
+        #animationSideBox1 {}
+        .animationSideBox1 {background: #fbd4ca; position: relative; height: 110vh;}
+        .animationSideBox1 .title {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 4vw;
+            position: absolute; left: 5%; top: 10%;
+            font-weight: 900;
+            letter-spacing: -0.1vw;
+        }
+        .animationSideBox1 img { width: 90%; position: absolute; left: 5%; top: 23%; }
+        /* .animationSideBox1 .boxtxt1 {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family:'Roboto+Slab';
+            font-size: 5.5vw;
+            position: absolute; left: 56%; top: 46%;
+            font-weight: bold;
+            z-index: 1000;
+            line-height: 1.52;
+
+        } */
+        .animationSideBox1 .bignum1 {
+            position: absolute; left: 7.2%; top: 80.6%; 
+            color: #1e8ca2; border: 5px solid #1e8ca2; 
+            border-radius: 50%; padding: .3% .8%; font-size: 1.8vw; font-weight: bold;
+        }
+        .animationSideBox1 .back {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.3vw;
+            position: absolute; left: 62%; top: 85.3%;
+            font-weight: bold;
+        }.animationSideBox1 .back:hover {color: white;}
+        .animationSideBox1 .num {display: flex; position: absolute; left: 72%; top: 85%;}
+        .animationSideBox1 .num > li {
+            flex-direction: row; 
+            font-size: 1.8vw; 
+            padding: 2% 8%; 
+            border-radius: 50%; 
+            border: 5px solid #1e8ca2; 
+            margin: 8.8%;
+            font-weight: bold;
+        }
+        .animationSideBox1 .num > li a {color: #1e8ca2; }
+        .animationSideBox1 .num > li:last-child { margin-right: auto;}
+        .animationSideBox1 .num > li a:hover {color: white;}
+        .animationSideBox1 .num > li:hover {border-color: white;}
+        .animationSideBox1 iframe {width: 42.8%; height: 51%; position: absolute; left: 6.35%; top: 26.2%; }
+        /* .animationSideBox1 .loading:hover {
+            color: rgba(4,131,157,0.5);
+        } */
+
+        /* 애니메이션 사이드 2 */
+        #animationSideBox2 {}
+        .animationSideBox2 {background:  #fbd4ca; position: relative; height: 110vh;}
+        .animationSideBox2 .title {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 4vw;
+            position: absolute; left: 5%; top: 10%;
+            font-weight: 900;
+            letter-spacing: -0.1vw;
+        }
+        .animationSideBox2 img { width: 90%; position: absolute; left: 5%; top: 23%; }
+        /* .animationSideBox2 .boxtxt2 {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family:'Roboto+Slab';
+            font-size: 5.5vw;
+            position: absolute; left: 56%; top: 46%;
+            font-weight: bold;
+            z-index: 1000;
+            line-height: 1.52;
+
+        } */
+        .animationSideBox2 .bignum2 {
+            position: absolute; left: 14.3%; top: 80.6%; 
+            color: #1e8ca2; border: 5px solid #1e8ca2; 
+            border-radius: 50%; padding: .3% .8%; font-size: 1.8vw; font-weight: bold;
+        }
+        .animationSideBox2 .back {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.3vw;
+            position: absolute; left: 62%; top: 85.3%;
+            font-weight: bold;
+        }.animationSideBox2 .back:hover {color: white;}
+        .animationSideBox2 .num {display: flex; position: absolute; left: 72%; top: 85%;}
+        .animationSideBox2 .num > li {
+            flex-direction: row; 
+            font-size: 1.8vw; 
+            padding: 2% 8%; 
+            border-radius: 50%; 
+            border: 5px solid #1e8ca2; 
+            margin: 8.8%;
+            font-weight: bold;
+        }
+        .animationSideBox2 .num > li a {color: #1e8ca2; }
+        .animationSideBox2 .num > li:last-child { margin-right: auto;}
+        .animationSideBox2 .num > li a:hover {color: white;}
+        .animationSideBox2 .num > li:hover {border-color: white;}
+        .animationSideBox2 iframe {width: 42.8%; height: 51%; position: absolute; left: 6.35%; top: 26.2%; }
+
+        /* 애니메이션 사이드 3 */
+        #animationSideBox3 {}
+        .animationSideBox3 {background:  #fbd4ca; position: relative; height: 110vh;}
+        .animationSideBox3 .title {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 4vw;
+            position: absolute; left: 5%; top: 10%;
+            font-weight: 900;
+            letter-spacing: -0.1vw;
+        }
+        .animationSideBox3 img { width: 90%; position: absolute; left: 5%; top: 23%; }
+        /* .animationSideBox2 .boxtxt2 {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family:'Roboto+Slab';
+            font-size: 5.5vw;
+            position: absolute; left: 56%; top: 46%;
+            font-weight: bold;
+            z-index: 1000;
+            line-height: 1.52;
+
+        } */
+        .animationSideBox3 .bignum3 {
+            position: absolute; left: 21.8%; top: 80.6%; 
+            color: #1e8ca2; border: 5px solid #1e8ca2; 
+            border-radius: 50%; padding: .3% .8%; font-size: 1.8vw; font-weight: bold;
+        }
+        .animationSideBox3 .back {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.3vw;
+            position: absolute; left: 62%; top: 85.3%;
+            font-weight: bold;
+        }.animationSideBox3 .back:hover {color: white;}
+        .animationSideBox3 .num {display: flex; position: absolute; left: 72%; top: 85%;}
+        .animationSideBox3 .num > li {
+            flex-direction: row; 
+            font-size: 1.8vw; 
+            padding: 2% 8%; 
+            border-radius: 50%; 
+            border: 5px solid #1e8ca2; 
+            margin: 8.8%;
+            font-weight: bold;
+        }
+        .animationSideBox3 .num > li a {color: #1e8ca2; }
+        .animationSideBox3 .num > li:last-child { margin-right: auto;}
+        .animationSideBox3 .num > li a:hover {color: white;}
+        .animationSideBox3 .num > li:hover {border-color: white;}
+        .animationSideBox3 iframe {width: 42.8%; height: 51%; position: absolute; left: 6.35%; top: 26.2%; }
+
+        /* 애니메이션 사이드 4 */
+        #animationSideBox4 {}
+        .animationSideBox4 {background:  #fbd4ca; position: relative; height: 110vh;}
+        .animationSideBox4 .title {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 4vw;
+            position: absolute; left: 5%; top: 10%;
+            font-weight: 900;
+            letter-spacing: -0.1vw;
+        }
+        .animationSideBox4 img { width: 90%; position: absolute; left: 5%; top: 23%; }
+        /* .animationSideBox2 .boxtxt2 {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family:'Roboto+Slab';
+            font-size: 5.5vw;
+            position: absolute; left: 56%; top: 46%;
+            font-weight: bold;
+            z-index: 1000;
+            line-height: 1.52;
+
+        } */
+        .animationSideBox4 .bignum4 {
+            position: absolute; left: 29.1%; top: 80.6%; 
+            color: #1e8ca2; border: 5px solid #1e8ca2; 
+            border-radius: 50%; padding: .3% .8%; font-size: 1.8vw; font-weight: bold;
+        }
+        .animationSideBox4 .back {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.3vw;
+            position: absolute; left: 62%; top: 85.3%;
+            font-weight: bold;
+        }.animationSideBox4 .back:hover {color: white;}
+        .animationSideBox4 .num {display: flex; position: absolute; left: 72%; top: 85%;}
+        .animationSideBox4 .num > li {
+            flex-direction: row; 
+            font-size: 1.8vw; 
+            padding: 2% 8%; 
+            border-radius: 50%; 
+            border: 5px solid #1e8ca2; 
+            margin: 8.8%;
+            font-weight: bold;
+        }
+        .animationSideBox4 .num > li a {color: #1e8ca2; }
+        .animationSideBox4 .num > li:last-child { margin-right: auto;}
+        .animationSideBox4 .num > li a:hover {color: white;}
+        .animationSideBox4 .num > li:hover {border-color: white;}
+        .animationSideBox4 iframe {width: 42.8%; height: 51%; position: absolute; left: 6.35%; top: 26.2%; }
+
+        /* 애니메이션 사이드 5 */
+        #animationSideBox5 {}
+        .animationSideBox5 {background:  #fbd4ca; position: relative; height: 110vh;}
+        .animationSideBox5 .title {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 4vw;
+            position: absolute; left: 5%; top: 10%;
+            font-weight: 900;
+            letter-spacing: -0.1vw;
+        }
+        .animationSideBox5 img { width: 90%; position: absolute; left: 5%; top: 23%; }
+        /* .animationSideBox2 .boxtxt2 {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family:'Roboto+Slab';
+            font-size: 5.5vw;
+            position: absolute; left: 56%; top: 46%;
+            font-weight: bold;
+            z-index: 1000;
+            line-height: 1.52;
+
+        } */
+        .animationSideBox5 .bignum5 {
+            position: absolute; left: 36.4%; top: 80.6%; 
+            color: #1e8ca2; border: 5px solid #1e8ca2; 
+            border-radius: 50%; padding: .3% .8%; font-size: 1.8vw; font-weight: bold;
+        }
+        .animationSideBox5 .back {
+            text-transform: uppercase;
+            color: #1e8ca2;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.3vw;
+            position: absolute; left: 62%; top: 85.3%;
+            font-weight: bold;
+        }.animationSideBox5 .back:hover {color: white;}
+        .animationSideBox5 .num {display: flex; position: absolute; left: 72%; top: 85%;}
+        .animationSideBox5 .num > li {
+            flex-direction: row; 
+            font-size: 1.8vw; 
+            padding: 2% 8%; 
+            border-radius: 50%; 
+            border: 5px solid #1e8ca2; 
+            margin: 8.8%;
+            font-weight: bold;
+        }
+        .animationSideBox5 .num > li a {color: #1e8ca2; }
+        .animationSideBox5 .num > li:last-child { margin-right: auto;}
+        .animationSideBox5 .num > li a:hover {color: white;}
+        .animationSideBox5 .num > li:hover {border-color: white;}
+        .animationSideBox5 iframe {width: 42.8%; height: 51%; position: absolute; left: 6.35%; top: 26.2%; }
+
+        /* 텍스트 애니메이션 */
+        #animationtxt {background: #fbd4ca; overflow: hidden;}
+        .animationtxt { position: relative; height: 50vh; text-transform: uppercase; display: inline-block;}
+        .animationtxt .anitxt {}
+        .animationtxt .anitxt1 {
+            font-size: 9vw; color: #1e8ca2;
+             font-family: 'Roboto Condensed', sans-serif; 
+             font-weight: bold;
+             white-space: nowrap;
+             position: absolute; left: 0; top: 15%;
+            }
+        .animationtxt .anitxt2 {
+            font-size: 9vw; color:  #fbd4ca;
+             font-family: 'Roboto Condensed', sans-serif; 
+             white-space: nowrap;
+             font-weight: bold; 
+             -webkit-text-stroke: 6px #1e8ca2;
+             position: absolute; left: 0; top: 45%;
+        }
+
+        /* website */
+        #website {}
+        .website {background: #FFD87E; position: relative; height: 50vh;}
+        .website img:nth-child(1) {position: absolute; left: 50%; top: 51%; transform: translate(-50%, -50%); width: 25%; z-index: 100;}
+        .website img:nth-child(2) {position: absolute; left: 45%; top: 59%; width: 22%;}
+
+        /* webstandard section 1 */
+        #wsdpage1 {}
+        .wsdpage1 {background: #FFD87E; position: relative; height: 100vh;}
+        .wsdpage1 img:nth-child(1) {position: absolute; left: 56%; top: 15%; width: 37%; display: inline-block;}
+        .wsdpage1 img:nth-child(2) {position: absolute; left: 9%; top: 17.5%; width: 35.5%; display: inline-block;}
+        .wsdpage1 h2 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 56%; top: 18%;}
+        .wsdpage1 p {position: absolute; font-size: 1.65vw; left: 57.1%; top: 37%; font-family: 'Chosunilbo_myungjo'; width: 35.3%; line-height: 1.68; letter-spacing: 0.1vw;}
+        .wsdpage1 .seesite1 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 57%; top: 73%; text-transform: uppercase;}
+        .wsdpage1 .seesite1:hover {color: white;}
+        .wsdpage1 .seecode1 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 77.8%; top: 73%; text-transform: uppercase;}
+        .wsdpage1 .seecode1:hover {color: white;}
+
+        /* webstandard section 2 */
+        .wsdpage2 {background: #FFD87E; position: relative; height: 100vh;}
+        .wsdpage2 img:nth-child(1) {position: absolute; left: 9%; top: 15%; width: 37%; display: inline-block;}
+        .wsdpage2 img:nth-child(2) {position: absolute; left: 56%; top: 18%; width: 35.5%; display: inline-block;}
+        .wsdpage2 h2 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 11.7%; top: 18%;}
+        .wsdpage2 p {position: absolute; font-size: 1.65vw; left: 10.3%; top: 40%; font-family: 'Chosunilbo_myungjo'; width: 35.3%; line-height: 1.68; letter-spacing: 0.1vw;}
+        .wsdpage2 .seesite2 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 10%; top: 73%; text-transform: uppercase;}
+        .wsdpage2 .seesite2:hover {color: white;}
+        .wsdpage2 .seecode2 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 30.8%; top: 73%; text-transform: uppercase;}
+        .wsdpage2 .seecode2:hover {color: white;}
+
+         /* webstandard section 3 */
+         #wsdpage3 {}
+        .wsdpage3 {background: #FFD87E; position: relative; height: 100vh;}
+        .wsdpage3 img:nth-child(1) {position: absolute; left: 56%; top: 15%; width: 37%; display: inline-block;}
+        .wsdpage3 img:nth-child(2) {position: absolute; left: 9%; top: 17.5%; width: 35.5%; display: inline-block;}
+        .wsdpage3 h2 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 61.5%; top: 18%;}
+        .wsdpage3 p {position: absolute; font-size: 1.65vw; left: 57.3%; top: 37%; font-family: 'Chosunilbo_myungjo'; width: 35.1%; line-height: 1.68; letter-spacing: 0.1vw;}
+        .wsdpage3 .seesite3 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 57%; top: 73%; text-transform: uppercase;}
+        .wsdpage3 .seesite3:hover {color: white;}
+        .wsdpage3 .seecode3 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 77.8%; top: 73%; text-transform: uppercase;}
+        .wsdpage3 .seecode3:hover {color: white;}
+
+        /* webstandard section 4 */
+        .wsdpage4 {background: #FFD87E; position: relative; height: 100vh;}
+        .wsdpage4 img:nth-child(1) {position: absolute; left: 9%; top: 15%; width: 37%; display: inline-block;}
+        .wsdpage4 img:nth-child(2) {position: absolute; left: 56%; top: 18%; width: 35.5%; display: inline-block;}
+        .wsdpage4 h2 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 15%; top: 18%;}
+        .wsdpage4 p {position: absolute; font-size: 1.65vw; left: 10.6%; top: 40%; font-family: 'Chosunilbo_myungjo'; width: 35%; line-height: 1.68; letter-spacing: 0.1vw;}
+        .wsdpage4 .seesite4 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 10%; top: 73%; text-transform: uppercase;}
+        .wsdpage4 .seesite4:hover {color: white;}
+        .wsdpage4 .seecode4 {font-family: 'Impact'; font-weight: bold; font-size: 3vw; position: absolute; left: 30.8%; top: 73%; text-transform: uppercase;}
+        .wsdpage4 .seecode4:hover {color: white;}
+
+        /* 화살표 */
+        .rightarrow {background: #FFD87E; position: relative; height: 70vh; overflow: hidden;}
+        .rightarrow img {
+            position: absolute;
+            left: 50%; top: 16%;
+            transform: translate(-50%, 0%);
+            height: 50%;
+        }
+
+        /* effectitle */
+        #effecttitle {}
+        .effecttitle {position: relative; height: 100vh; background: #f9d3e0;}
+        .effecttitle img:nth-child(1) {position: absolute; left: 50%; top: 22%; transform: translate(-50%, -50%); width: 27%; z-index: 1000;}
+        .effecttitle img:nth-child(2) {position: absolute; left: 50%; top: 32%; transform: translate(-50%, -50%); width: 22%;}
+        .effecttitle img:nth-child(3) {position: absolute; left: 50%; top: 76%; transform: translate(-50%, -50%); width: 6vw;}
+        .effecttitle .left {position: absolute; left: 0;top: 0; width: 18vw;}
+        .effecttitle .right {position: absolute; right: 0; top: 0; width: 18vw;}
+
+        /* effect */
+        #effect {}
+        .effect {background: #f9d3e0; position: relative; height: 380vh;}
+        .effect img:nth-child(1) {position: absolute; left: 50%; top: 8%; transform: translate(-50%, -50%); width: 55vw; z-index: 1000;}
+        .effect img:nth-child(2) {position: absolute; left: 50.6%; top: 8.3%; transform: translate(-50%, -50%); width: 55vw; z-index: 900;}
+        .effect img:nth-child(3) {position: absolute; left: 50%; top: 53.5%; transform: translate(-50%, -50%); width: 85vw;}
+
+        .effect > img {display: inline-block;}
+        .effect .effect1 .effectbox1 {
+             width: 52vw; height: 45vh; position: absolute; left: 9.8%; top: 12.4%;
+        }
+        .effect .effect1 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 15.4%;}
+        .effect .effect1 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 15.8%;}
+        .effect .effect1 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 20.8%; z-index: 10;}
+        .effect .effect1 img:nth-child(4) {width: 15vw; position: absolute; left: 72.2%; top: 19.5%;}
+
+        .effect .effect2 .effectbox2 {
+            width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 26.3%;
+        }
+        .effect .effect2 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 29%;}
+        .effect .effect2 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 29.35%;}
+        .effect .effect2 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 34.8%; z-index: 10;}
+        .effect .effect2 img:nth-child(4) {width: 15vw; position: absolute; left: 72.2%; top: 33.4%;}
+
+        .effect .effect3 .effectbox3 {
+            width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 40.5%;
+        }
+        .effect .effect3 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 43.2%;}
+        .effect .effect3 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 43.55%;}
+        .effect .effect3 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 49%; z-index: 10;}
+        .effect .effect3 img:nth-child(4) {width: 15vw; position: absolute; left: 72.2%; top: 47.65%;}
+
+        .effect .effect4 .effectbox4 {
+            width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 54.75%;
+        }
+        .effect .effect4 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 57.5%;}
+        .effect .effect4 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 57.85%;}
+        .effect .effect4 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 63.5%; z-index: 10;}
+        .effect .effect4 img:nth-child(4) {width: 15vw; position: absolute; left: 72.2%; top: 62.15%; }
+
+        .effect .effect5 .effectbox5 {
+           width: 52vw; height: 46.2vh; position: absolute; left: 9.8%; top: 69%;
+        }
+        .effect .effect5 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 71.8%;}
+        .effect .effect5 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 72.15%;}
+        .effect .effect5 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 77.9%; z-index: 10;}
+        .effect .effect5 img:nth-child(4) {width: 15vw; position: absolute; left: 72.2%; top: 76.6%;}
+
+        .effect .effect6 .effectbox6 {
+           width: 52vw; height: 45.2vh; position: absolute; left: 9.8%; top: 83%;
+        }
+        .effect .effect6 img:nth-child(1) {width: 15vw; position: absolute; left: 79%; top: 86%;}
+        .effect .effect6 img:nth-child(2) {width: 15vw; position: absolute; left: 79.7%; top: 86.38%;}
+        .effect .effect6 img:nth-child(3) {width: 15vw; position: absolute; left: 79%; top: 91.8%; z-index: 10;}
+        .effect .effect6 img:nth-child(4) {width: 15vw; position: absolute; left: 72.2%; top: 90.4%;}
+
+
+        
+        /* 텍스트 애니메이션2 */
+        #animationtxt2 {background:#f9d3e0; overflow: hidden;}
+        .animationtxt2 { position: relative; height: 50vh; text-transform: uppercase; display: inline-block;}
+        .animationtxt2 .anitxt2 {}
+        .animationtxt2 .anitxt2 .anitxt3 {
+            font-size: 9vw; color: #B33F4C;
+             font-family: 'Roboto Condensed', sans-serif; 
+             font-weight: bold;
+             white-space: nowrap;
+             position: absolute; left: 0; top: 6%;
+            }
+        .animationtxt2 .anitxt2 .anitxt4 {
+            font-size: 9vw; color:  #f9d3e0;
+             font-family: 'Roboto Condensed', sans-serif; 
+             white-space: nowrap;
+             font-weight: bold; 
+             -webkit-text-stroke: 6px #B33F4C;
+             position: absolute; left: 0; top: 36.5%;
+        }
+
+
+        /* hightitle */
+        #highttitle {}
+        .highttitle {background: #F9D3E0; position: relative; height: 50vh;}
+        .highttitle img:nth-child(1) {width: 31.5vw; position: absolute; left: 50%; top:40.2%; transform: translate(-50%, -50%); z-index: 100;}
+        .highttitle img:nth-child(2) {width: 34vw; position: absolute; left: 50%; top: 58.5%; transform: translate(-50%, -50%);}
+        .highttitle img:nth-child(3) {width: 8.5vw; position: absolute; top: 5.5%; left: 61%;}
+        .highttitle img:nth-child(4) {position: absolute; width: 22vw; left: 9.3%; top: 70%; z-index: 100;}
+
+        /* hightitle */
+        #highlight {}
+        .highlight {background: #F9D3E0; position: relative; height: 125vh;}
+        .highlight img:nth-child(1) {width: 80vw; left: 50%; top: 12%; transform: translate(-50%, 0); position: absolute; z-index: 1000;}
+        .highlight img:nth-child(2) {width: 34.5vw; position: absolute; right: 0%; top: -11%;}
+        .highlight img:nth-child(3) {position: absolute; width: 8%; top: 63%; left: 64%;}
+        .highlight img:nth-child(4) {position: absolute; left: 50%; top: 84%; transform: translate(-50%, -50%); width: 6vw;}
+        .highlight img:nth-child(5) {position: absolute; left: 0; width: 31vw; top: 71%; z-index: 100;}
+        .highlight img:nth-child(6) {width: 10vw; position: absolute; right: 10vw; top: 95%; z-index: 1000;}
+
+        /* react */
+        #reactpage {}
+        .reactpage {background:#F9D3E0; position: relative; height: 190vh;}
+        .reactpage img:nth-child(1) {position: absolute; width: 52vw; left: 50%; top: 6%; transform: translate(-50%, 0); z-index: 1000;}
+        .reactpage img:nth-child(2) {position: absolute; width: 52vw; left: 50.8%; top: 6.8%; transform: translate(-50%, 0); z-index: 900;}
+        .reactpage img:nth-child(3) {width: 80vw; position: absolute; left: 50%; top: 21%; transform: translate(-50%, 0);}
+        .reactpage img:nth-child(4) {position: absolute; width: 12vw; left: 9%; top: 78%;}
+        .reactpage img:nth-child(5) {position: absolute; left: 50%; top: 93%; transform: translate(-50%, -50%); width: 6vw; z-index: 100;}
+        .reactpage .buttons {display: inline-block;}
+        .reactpage .buttons .site {position: absolute; width: 13vw; left: 23%; top: 35%;}
+        .reactpage .buttons .shadow1 {position: absolute; width: 13vw; left: 23.8%; top: 35.8%;}
+        .reactpage .buttons .figma {position: absolute; width: 13vw; left: 23%; top: 46%; z-index: 10;}
+        .reactpage .buttons .shadow2 {position: absolute; width: 13vw; left: 17.3%; top: 46.8%;}
+        .reactpage .buttons .github {position: absolute; width: 13vw; left: 23%; top: 60%;}
+        .reactpage .buttons .shadow3 {position: absolute; width: 13vw; left: 17.3%; top: 57.8%;}
+
+        /* vue */
+        #vuepage {}
+        .vuepage {background:#F9D3E0; position: relative; height: 170vh;}
+        .vuepage img:nth-child(1) {position: absolute; width: 30.5vw; left: 50%; top: 13%; transform: translate(-50%, 0); z-index: 1002;}
+        .vuepage img:nth-child(2) {position: absolute; width: 30.8vw; left: 50.8%; top: 14%; transform: translate(-50%, 0); z-index: 1001;}
+        .vuepage img:nth-child(3) {width: 80vw; position: absolute; left: 50%; top: 28%; transform: translate(-50%, 0); z-index: 100;}
+        .vuepage img:nth-child(4) {position: absolute; width: 20vw; right: 0%; top: -20%;}
+        .vuepage img:nth-child(5) {position: absolute; left: 23vw; width: 8vw; top: 8%;}
+        .vuepage img:nth-child(6) {position: absolute; width: 38vw; left: -19.5%; bottom: 3%;}
+        .vuepage img:nth-child(7) {position: absolute; bottom: 0; width: 11vw; right: 1.5vw;}
+        .vuepage .buttons {display: inline-block;}
+        .vuepage .buttons .site {position: absolute; width: 13vw; left: 23%; top: 43%;}
+        .vuepage .buttons .shadow1 {position: absolute; width: 13vw; left: 23.8%; top: 43.8%;}
+        .vuepage .buttons .figma {position: absolute; width: 13vw; left: 23%; top: 55%; z-index: 1000;}
+        .vuepage .buttons .shadow2 {position: absolute; width: 13vw; left: 17.3%; top: 55.8%;  z-index: 999;}
+        .vuepage .buttons .github {position: absolute; width: 13vw; left: 16.5%; top: 68%; z-index: 1000;}
+        .vuepage .buttons .shadow3 {position: absolute; width: 13vw; left: 17.3%; top: 68.8%;  z-index: 999;}
+        
+        /* footer */
+        footer {}
+        .footer1 {background:#FFD87E; height: 100vh; position: relative;}
+        .footer1 h2 {
+            font-size: 4.5vw; color:#b33f4c; text-transform: uppercase; 
+            text-align: center; position: absolute; left: 50%; top: 19%; 
+            transform: translate(-50%, -50%); white-space: nowrap;
+            font-family: 'Impact'; line-height: 1.3;
+        }
+        .footer1 .number {position: absolute; left: 46%; top: 54%; transform: translate(-50%, -50%); width: 10vw; z-index: 100;}
+        .footer1 .phone {position: absolute; left: 50%; top: 80%; transform: translate(-50%, -50%); width: 30vw;}
+
+        /* footer2 */
+        .footer2 {position: relative; background: #FFD87E; height: 70vh; overflow: hidden;}
+        .footer2 h2 {position: absolute; left: 50%; top: 26%; transform: translate(-50%, -50%); font-size: 4.5vw; font-family: 'Impact'; color: #b33f4c;}
+        .footer2 .emailbox {position: absolute; left: 50%; top: 58%; transform: translate(-50%, -50%); width: 40vw;}
+        .footer2 p {color: #FFD87E; position: absolute; left: 63.6%; font-size: 2vw; font-family: 'Impact'; text-transform: uppercase; bottom: 38.5%; font-weight: bold;}
+        .footer2 .rec {position: absolute; left: 0; bottom: 0; background: #b33f4c; height: 10vh; width: 100vw; text-align: center; color: #FFD87E; }
+        .footer2 .rec span {text-align: center; font-family: 'Impact'; color:#FFD87E; text-transform: uppercase; font-size: 2.3vw; position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%); font-weight: bold;}
+
+        .container {}
+
+
+
+
+
+        /* 미디어쿼리 */
+        @media (max-width:1920px) {
+            /* banner */
+            #banner img:nth-child(1) {width: 36%; top: 30%;}
+            #banner img:nth-child(2) {width: 46%;top: 16%;}
+            #banner img:nth-child(3) {width: 39.1%; left: 64.8%;}
+            #banner img:nth-child(4) {width: 38%; left: 42%; top: 31.1%;}
+            #banner img:nth-child(5) {width: 14%; left: 14%; top: 43%;}
+            #banner img:nth-child(6) {top: 40.5%;}
+            #banner img:nth-child(7) {width: 50%; left: 75%; top: 51%;}
+            #banner p {font-size: 4vw; padding: 7vw;}
+            #banner img:nth-child(8) {width: 45%; width: 26%; left: 13%; top: 71%;}
+            #banner img:nth-child(9) {left: 36.5%; top: 65.5%;}
+            #banner img:nth-child(10) {width: 18%; position: absolute; left: 63%; top: 82%;}
+            #banner img:nth-child(11) {left: 94%; width: 13%; top: 88%;}
+            #banner img:nth-child(12) {width: 7%;}
+
+            /* aboutme */
+            .aboutme .me {top: 21%; left: 59%; width: 34%;}
+            .aboutme h2 {top: 12%;}
+            .aboutme p {top: 31%;}
+            .aboutme .box {left: 19%; top: 76%; width: 17%;}
+            .aboutme2 .me2 {right: 59%; top: 19%;width: 34%;}
+            .aboutme2 .TitleBox {left: 32%; width: 35%; top: 8%;}
+            .aboutme2 h2 {top: 26%;} 
+            .aboutme2 p {top: 41%;}
+            .aboutme2 .box2 {width: 17%; right: 20%;top: 73%;}
+            .aboutme3 .me3 { left: 60%; top: 19%; width: 34%;}
+            .aboutme3 .TitleBox {left: 32%; top: 8%; width: 35%;}
+            .aboutme3 h2 {top: 19%;}
+            .aboutme3 p {width: 42.2%; left: 10%; top: 36%;}
+            .aboutme3 .box3 {left: 53.9%; top: 80%; width: 4.5%;}
+
+            /* animation */
+            .animationSideBox1 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox1 img { width: 88%; left: 7%;}
+            .animationSideBox1 iframe {width: 41.8%; height: 49%; left: 8.37%;top: 26.2%;}
+            .animationSideBox1 .bignum1 {left: 9.2%; top: 78.6%;}
+            .animationSideBox1 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox1 .num {left: 73.5%; top: 82.7%;}
+
+            .animationSideBox2 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox2 img { width: 88%; left: 7%;}
+            .animationSideBox2 iframe {width: 41.8%; height: 49%; left: 8.37%;top: 26.2%;}
+            .animationSideBox2 .bignum2 {left: 16.1%; top: 78.6%;}
+            .animationSideBox2 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox2 .num {left: 73.5%; top: 82.7%;}
+
+            .animationSideBox3 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox3 img { width: 88%; left: 7%;}
+            .animationSideBox3 iframe {width: 41.8%; height: 49%; left: 8.37%;top: 26.2%;}
+            .animationSideBox3 .bignum3 {left: 23.3%; top: 78.6%;}
+            .animationSideBox3 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox3 .num {left: 73.5%; top: 82.7%;}
+
+            .animationSideBox4 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox4 img { width: 88%; left: 7%;}
+            .animationSideBox4 iframe {width: 41.8%; height: 49%; left: 8.37%;top: 25.8%;}
+            .animationSideBox4 .bignum4 {left: 30.5%; top: 78.6%;}
+            .animationSideBox4 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox4 .num {left: 73.5%; top: 82.7%;}
+
+            .animationSideBox5 .title {font-size: 3.5vw; top: 11%; left: 7%;}
+            .animationSideBox5 img { width: 88%; left: 7%;}
+            .animationSideBox5 iframe {width: 41.8%; height: 49%; left: 8.4%;top: 26.9%;}
+            .animationSideBox5 .bignum5 {left: 37.6%; top: 78.6%;}
+            .animationSideBox5 .back {font-size: 3vw; left: 64%; top: 83%;}
+            .animationSideBox5 .num {left: 73.5%; top: 82.7%;}
+
+            /* effect */
+            .effect img:nth-child(3) {top: 53%;}
+            .effect .effect1 .effectbox1 {top: 13% }
+            .effect .effect1 img:nth-child(1) {width: 13vw; left: 78%; top: 16%;}
+            .effect .effect1 img:nth-child(2) {width: 13vw; left: 78.8%; top: 16.5%;}
+            .effect .effect1 img:nth-child(3) {width: 13vw; left: 78%; top: 21%;}
+            .effect .effect1 img:nth-child(4) {width: 13vw; left: 72.3%; top: 20%;}
+
+            .effect .effect2 img:nth-child(1) {width: 13vw; left: 78%; top: 29.9%;}
+            .effect .effect2 img:nth-child(2) {width: 13vw; left: 78.9%; top: 30.4%;}
+            .effect .effect2 img:nth-child(3) {width: 13vw;left: 78%;top: 34.8%;}
+            .effect .effect2 img:nth-child(4) { width: 13vw; left: 72.5%;top: 33.8%;}
+
+            .effect .effect3 .effectbox3 {top: 40.2%;}
+            .effect .effect3 img:nth-child(1) {width: 13vw; left: 78%; top: 43.7%;}
+            .effect .effect3 img:nth-child(2) {width: 13vw; left: 79%; top: 44.2%;}
+            .effect .effect3 img:nth-child(3) {width: 13vw; left: 78%; top: 48.5%}
+            .effect .effect3 img:nth-child(4) {width: 13vw; left: 72.5%; top: 47.5%;}
+
+            .effect .effect4 .effectbox4 {top: 53.95%;}
+            .effect .effect4 img:nth-child(1) {width: 13vw;left: 78%;}
+            .effect .effect4 img:nth-child(2) {width: 13vw; left: 79%; top: 58%;}
+            .effect .effect4 img:nth-child(3) {width: 13vw; left: 78%; top: 62.6%;}
+            .effect .effect4 img:nth-child(4) {width: 13vw; left: 72.5%;top: 61.6%;}
+
+            .effect .effect5 .effectbox5 {top: 67.9%;}
+            .effect .effect5 img:nth-child(1) {width: 13vw; left: 78%; top: 71.3%;}
+            .effect .effect5 img:nth-child(2) { width: 13vw; left: 78.9%; top: 71.9%;}
+            .effect .effect5 img:nth-child(3) {width: 13vw; left: 78%; top: 76.5%;}
+            .effect .effect5 img:nth-child(4) { width: 13vw; left: 72.5%;top: 75.6%;}
+
+            .effect .effect6 .effectbox6 {top: 81.6%;}
+            .effect .effect6 img:nth-child(1) {width: 13vw; left: 78%; top: 84.8%;}
+            .effect .effect6 img:nth-child(2) {width: 13vw; left: 79%; top: 85.38%;}
+            .effect .effect6 img:nth-child(3) { width: 13vw; left: 78%; top: 90.3%;}
+            .effect .effect6 img:nth-child(4) { width: 13vw; left: 72.5%; top: 89.3%;}
+
+        }
+        @media (max-width:1280px) {
+            /* header */
+            .header .header_menu .left {font-size: 3vw; padding: 2.8vh 6vw;}
+            .header .header_menu .right {font-size: 3vw; padding: 2.8vh 6vw;}
+            .header .header_menu .title { font-size: 5vw; padding: 1.2vw;}
+
+            /* banner */
+            #banner img:nth-child(2) {width: 51%;top: 18%; left: 41.6%;}
+
+
+        }
+
+    </style>
+</head>
+<body>
+        <div id="wrap">
+            <header id="header">
+                <div class="header">
+                    <div class="header_menu">
+                        <div class="left">Menu</div>
+                        <div class="title">Portfolio</div>
+                        <div class="right">github</div>
+                    </div>
+                </div>
+            </header>
+            <!-- //header -->
+        <nav id="banner">
+            <img src="assets/img/bannerDot.svg" alt="이미지">
+            <img src="assets/img/banner1.svg" alt="이미지">
+            <img src="assets/img/banner2.svg" alt="이미지">
+            <img src="assets/img/banner3.svg" alt="이미지">
+            <img src="assets/img/bannerBox.svg" alt="이미지">
+            <img src="assets/img/bannerArrow1.svg" alt="이미지">
+            <img src="assets/img/bannerArrow2.svg" alt="이미지">
+            <img src="assets/img/bannerArrow3.svg" alt="이미지">
+            <img src="assets/img/bannerArrow4.svg" alt="이미지">
+            <img src="assets/img/bannerArrow5.svg" alt="이미지">
+            <img src="assets/img/bannerArrow6.svg" alt="이미지">
+            <img src="assets/img/bannerArrow7.svg" alt="이미지">
+            <p>제자리 걸음보다는 항상 배우려는 자세로 한 걸음씩 나아가는 신입 프론트앤드 개발자 김소라 라고 합니다. 저의 사이트에 오신것을 환영하며 바로 시작하겠습니다!! LET’S GOOOOOOOO</p>
+        </nav>
+        <section id="aboutme">
+            <div class="container">
+                <div class="aboutme">
+                    <h2>[IF SOMEONE ASKED ME TO DESCRIBE YOU IN JUST TWO WORDS, 
+                        I’D SAY SIMPLY AMAZING]</h2>
+                    <p>안녕하세요. 앞으로 프론트앤드 개발자로 일하게 될 김소라 라고 합니다. 저는 대학을 졸업하고 아르바이트를 하면서 다른 분야로 취업준비를 하다가 우연한 기회로 웹 퍼블리셔로 전향하게 되었습니다. 항상 저에게는 컴퓨터는 생소하고 거리가 먼 존재였습니다. 하지만 좋은 기회를 얻어 시작하게된 코딩공부가 처음에는 막연하고 고정관념에 갖혀 부정하기에만 그쳤습니다. 하지만 시간이 지나고 배움의 깊이가 깊어질수록 재미있고 앞으로의 저 자신이 궁금해지기도 하고 더 많은것을 배우고 도움을 주고 받는 사람이 되고 싶다는 욕심이 생기게 되었습니다. 저는 무언가를 할때 하면 하고 아니면 아니다 라는 마인드로 행동을 합니다. 이런 부분이 어떻게 보면 극단적으로 보일수 있겠지만 그만큼 지금저에게 코딩은 끝까지 가보고 싶은 존재가  되었습니다. 그만큼 기대하셔도 좋다고 말씀드리고 싶습니다.</p>
+                    <img class="me" src="assets/img/aboutme.svg" alt="이미지">
+                    <img class="box" src="assets/img/seemore.svg" alt="이미지">
+                </div>
+            </div>
+        </section>
+        <section id="aboutme2">
+            <div class="container">
+                <div class="aboutme2">
+                    <img class="TitleBox"src="assets/img/TitleBox.svg" alt="타이틀이미지">
+                    <h2>[POSITIVE THINKING, POSITIVE OUTCOME.]</h2>
+                    <p>웃으면 복이 온다는 말이 있죠. 저는 항상 미소를 머금도 다닙니다. 웃고 있으면 좋은일이 없더라고좋은일이 생기게 되는 날들이 많았거든요. 그리고 제가 웃음으로서 상대방에게도 좋은 영향력이 된다는걸 알게 된 후로는 항상 좋은 생각을 하면서 밝게 사려고 노력합니다.분명 좋은 기회를 얻어 업무를 시작하게 되면 매일이 좋은날은 아니겠죠. 하지만 저는 기분에 좌지우지 되어 업무에도 영향력이 생기게 하는 사람이 아닌 공과사는 확실히 구분하며 긍정적인 마인드로 업무에 임할것을 약속드립니다.</p>
+                    <img class="me2" src="assets/img/aboutme2.svg" alt="이미지">
+                    <img class="box2" src="assets/img/seemore.svg" alt="이미지">
+                </div>
+            </div>
+        </section>
+        <section id="aboutme3">
+            <div class="container">
+                <div class="aboutme3">
+                    <img class="TitleBox"src="assets/img/TitleBox.svg" alt="타이틀이미지">
+                    <h2>[I’M COMPLETELY READY TO START MY LIFE AS A PUBLISHER.]</h2>
+                    <p>생소하던 ‘프론드앤드 개발자’라는 타이틀을 달고 앞으로 기업 성장에 큰 이바지가 되고 싶습니다. 어릴적부터 아버지께서 성인이 되서 알바를 하게 되던 취직을 하여 일을 할게 되었을때  단순히 직원으로서 월급을 받기 위해 업무를 처리하지 말고 내 회사라는 마인드를 가지고 책임감을 가지고 일을 하라고 하셨습니다.  만약 귀사에 입사를 하게 된다면, 지금 당장은 신입으로서 부족할 수도 있겠지만, 항상 매사에 욕심을 가지고 임직원 및 동료, 선후배들께 열심히 배우려는 자세에 들면서 하루하루 다르게 성장해가는 인재가 되겠습니다. 코딩을 배우기 전에는 그저 나와는 거리가 먼 분야라고 생각해왔었지만 코딩을 배우고 나서는 흥미와 욕심이 생기고 저도 모르는 근성에 대해서도 알게 되었습니다. 그만큼 코딩은 앞으로 저에게 있어서 없어서는 안 될 존재입니다. 항상 현재에만 머무르지 않고 자발적으로 노력하여 새로운 지식을 쌓으며 결과물을 좀 더 신속하고 만족스럽게 제작하는 우수한 프론트앤드 개발자가 되겠습니다. 말이 아닌 행동으로 보이겠습니다.</p>
+                    <img class="me3" src="assets/img/aboutme3.svg" alt="이미지">
+                    <img class="box3" src="assets/img/home.svg" alt="이미지">
+                </div>
+            </div>
+        </section>
+        <section id="aboutme4">
+            <div class="container">
+                <div class="aboutme4">
+                    <img src="assets/img/img1.svg" alt="이미지">
+                    <img src="assets/img/img2.svg" alt="이미지">
+                    <img src="assets/img/img3.svg" alt="이미지">
+                    <img src="assets/img/img4.svg" alt="이미지">
+                    <img src="assets/img/img5.svg" alt="이미지">
+                    <img src="assets/img/img6.svg" alt="이미지">
+                    <img src="assets/img/longDot.svg" alt="이미지">
+                </div>
+            </div>
+        </section>
+        <section id="effect1">
+            <div class="container">
+                <div class="effect1">
+                    <img src="assets/img/arrowleft.svg" alt="화살표이미지">
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="container">
+                <div class="skills">
+                    <img src="assets/img/letmeshow.svg" alt="타이틀">
+                    <img src="assets/img/skills.svg" alt="타이틀">
+                    <img src="assets/img/skillsBox.svg" alt="타이틀">
+                    <p>아래의 수치들은 제가 활용할 수 있는 능력들이랍니다.</p>
+                </div>
+            </div>
+        </section>
+        <section id="history">
+            <div class="container">
+                <div class="history">
+                    <img src="assets/img/thehistory.svg" alt="타이틀이미지">
+                    <!-- <p class="txt1">the</p>
+                    <p class="txt2">history</p> -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="arrow">
+                    <img src="assets/img/arrow.svg" alt="화살표">
+                </div>
+            </div>
+        </section>
+        <section id="animationBox">
+            <div class="container">
+                <div class="animationBox">
+                    <img src="assets/img/anibox.svg" alt="이미지">
+                </div>
+            </div>
+        </section>
+        <section id="animationSideBox1">
+            <div class="container">
+                <div class="animationSideBox1">
+                    <p class="title">history of animation effect</p>
+                    <img src="assets/img/anibox2.svg" alt="이미지">
+                    <!-- <div class="boxtxt1">loading animation</div> -->
+                    <div class="bignum1">1</div>
+                    <a class="back" href="#">Back</a>
+                    <ul class="num">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/GaspAnimation.html" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="animationSideBox2">
+            <div class="container">
+                <div class="animationSideBox2">
+                    <p class="title">history of animation effect</p>
+                    <img src="assets/img/anibox3.svg" alt="이미지">
+                    <!-- <div class="boxtxt2">Rocket animation</div> -->
+                    <div class="bignum2">2</div>
+                    <a class="back" href="#">Back</a>
+                    <ul class="num">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/RocketAnimation.html" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="animationSideBox3">
+            <div class="container">
+                <div class="animationSideBox3">
+                    <p class="title">history of animation effect</p>
+                    <img src="assets/img/anibox4.svg" alt="이미지">
+                    <!-- <div class="boxtxt3">Rocket animation</div> -->
+                    <div class="bignum3">3</div>
+                    <a class="back" href="#">Back</a>
+                    <ul class="num">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/svg-textAnimation.html" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="animationSideBox4">
+            <div class="container">
+                <div class="animationSideBox4">
+                    <p class="title">history of animation effect</p>
+                    <img src="assets/img/anibox5.svg" alt="이미지">
+                    <!-- <div class="boxtxt4">Rocket animation</div> -->
+                    <div class="bignum4">4</div>
+                    <a class="back" href="#">Back</a>
+                    <ul class="num">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/TentacleAnimation.html" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="animationSideBox5">
+            <div class="container">
+                <div class="animationSideBox5">
+                    <p class="title">history of animation effect</p>
+                    <img src="assets/img/anibox6.svg" alt="이미지">
+                    <!-- <div class="boxtxt5">Rocket animation</div> -->
+                    <div class="bignum5">5</div>
+                    <a class="back" href="#">Back</a>
+                    <ul class="num">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/CubeAnimation.html" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="animationtxt">
+            <div class="container">
+                <div class="animationtxt">
+                    <div class="anitxt">
+                        <p class="anitxt1">I would like to show you all about me. this is sora's creative portfolio page.</p>
+                        <p class="anitxt2">this is sora's creative portfolio page. I would like to show you all about me.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="website">
+            <div class="container">
+                <div class="website">
+                    <img src="assets/img/website.svg" alt="타이틀이미지">
+                    <img src="assets/img/reference2.svg" alt="타이틀이미지">
+                </div>
+            </div>
+        </section>
+        <section id="wsdpage1">
+            <div class="container">
+                <div class="wsdpage1">
+                    <img src="assets/img/sitedot.svg" alt="이미지">
+                    <img src="assets/img/wsdmokeup.svg" alt="목업이미지">
+                    <h2>webstandard site</h2>
+                    <p>웹 표준을 준수하여 작업한 사이트 입니다. 슬라이드, 탭, 메뉴, 팝업, 동영상 기능을 작업하였습니다.
+                        slick.js를 이용하여 슬라이드, 라이트박스 생성 플러그인을 이용하여 갤러리 효과를 주었습니다.</p>
+                    <a class="seesite1" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    <a class="seecode1" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="wsdpage2">
+            <div class="container">
+                <div class="wsdpage2">
+                    <img src="assets/img/sitedot.svg" alt="이미지">
+                    <img src="assets/img/rpsmokeup.svg" alt="목업이미지">
+                    <h2>RESPONSIVE SITE</h2>
+                    <p>미디어 쿼리를 이용하여 작업한 반응형 사이트입니다. 
+                        디바이스 종류에 따라 유연하게 화면을 변경할수 있으며, 메뉴 슬라이드, 탭, 동영상, 마우스 오버등을 동적인 효과를 주었습니다.</p>
+                    <a class="seesite2" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    <a class="seecode2" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="wsdpage3">
+            <div class="container">
+                <div class="wsdpage3">
+                    <img src="assets/img/sitedot.svg" alt="이미지">
+                    <img src="assets/img/mbmokeup.svg" alt="목업이미지">
+                    <h2>megabox SITE</h2>
+                    <p>메가박스 반응형 사이트 입니다. 이미지 슬라이더, 탭메뉴, 모달 등 다양한 스크립트 요소를 활용하였고, 
+                        Swiper플러그인을 이용하여 css효과를 주었고, 크로스 브라우징은 익스클로러 8버전부터 지원합니다.</p>
+                    <a class="seesite3" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    <a class="seecode3" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="wsdpage4">
+            <div class="container">
+                <div class="wsdpage4">
+                    <img src="assets/img/sitedot.svg" alt="이미지">
+                    <img src="assets/img/cvmokeup.svg" alt="목업이미지">
+                    <h2>naver clova</h2>
+                    <p>네이버 클로바 사이트입니다. 
+                        이미지 스프라이트 기법을 활용하여 로고와 아이콘을 페이지에 위치 시켜주고, background에 이미지를 넣어 배경에 넣어주어 사이트를 만들었습니다.</p>
+                    <a class="seesite4" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    <a class="seecode4" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="rightarrow">
+            <div class="container">
+                <div class="rightarrow">
+                    <img src="assets/img/rightsidearrow.svg" alt="화살표이미지">
+                </div>
+            </div>
+        </section>
+        <section id="effecttitle">
+            <div class="container">
+                <div class="effecttitle">
+                    <img src="assets/img/whatsnext.svg" alt="타이틀이미지">
+                    <img src="assets/img/letssee.svg" alt="타이틀이미지">
+                    <img src="assets/img/redarrow.svg" alt="화살표">
+                    <img class="left" src="assets/img/redsidedot.svg" alt="이미지">
+                    <img class="right" src="assets/img/redsidedot.svg" alt="이미지">
+                </div>
+            </div>
+        </section>
+        <section id="effect">
+            <div class="container">
+                <div class="effect">
+                    <img src="assets/img/effecttxt.svg" alt="이미지">
+                    <img src="assets/img/effecttxtsdw.svg" alt="이미지">
+                    <img src="assets/img/effectbox.svg" alt="박스틀이미지">
+
+                    <div class="effect1">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox1" src="http://ssra10.dothome.co.kr/port/effect/parallaxEffect01.html" scrolling="yes" frameborder="0"></iframe>   
+                    </div>
+                    <div class="effect2">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox2" src="http://ssra10.dothome.co.kr/port/effect/mouseEffect01.html" scrolling="yes" frameborder="0"></iframe>
+                    </div>
+                    <div class="effect3">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox3" src="http://ssra10.dothome.co.kr/port/effect/sliderEffect01.html" scrolling="yes" frameborder="0"></iframe> 
+                    </div>
+                    <div class="effect4">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox4" src="http://ssra10.dothome.co.kr/port/effect/quizEffect01.html" scrolling="yes" frameborder="0"></iframe>
+                    </div>
+                    <div class="effect5">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox5" src="http://ssra10.dothome.co.kr/port/effect/mouseEffect02.html" scrolling="yes" frameborder="0"></iframe>
+                    </div>
+                    <div class="effect6">
+                        <img src="assets/img/viewbox.svg" alt="버튼이미지">
+                        <img src="assets/img/viewboxsdw.svg" alt="버튼이미지">
+                        <img src="assets/img/figmabox.svg" alt="버튼이미지">
+                        <img src="assets/img/figmaboxsdw.svg" alt="버튼이미지">
+                        <iframe class="effectbox6" src="http://ssra10.dothome.co.kr/port/effect/parallaxEffect02.html" scrolling="yes" frameborder="0"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="animationtxt2">
+        <div class="container">
+            <div class="animationtxt2">
+                <div class="anitxt2">
+                    <p class="anitxt3">IT’S ABOUT OVER SORA’S PORTFOLIO. HOW WAS IT? HOPE YOU ENJOYED IT MUCH.</p>
+                    <p class="anitxt4">HOPE YOU ENJOYED IT MUCH. IT’S ABOUT OVER SORA’S PORTFOLIO. HOW WAS IT? </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id ="highttitle">
+        <div class ="container">
+            <div class ="highttitle">
+                <img src="assets/img/lastsection.svg" alt="타이틀이미지">
+                <img src="assets/img/showoffu.svg" alt="타이틀이미지">
+                <img src="assets/img/barrow1.svg" alt="화살표이미지">
+                <img src="assets/img/barrow2.svg" alt="화살표이미지">
+            </div>
+        </div>
+    </section>
+    <section id="highlight">
+        <div class="container">
+            <div class="highlight">
+                <img src="assets/img/thehightlight.svg" alt="타이틀이미지">
+                <img src="assets/img/barrow3.svg" alt="화살표이미지">
+                <img src="assets/img/barrow2.svg" alt="화살표이미지">
+                <img src="assets/img/boppsitarrow.svg" alt="3단화살표">
+                <img src="assets/img/barrow1.svg" alt="화살표이미지">
+                <img src="assets/img/barrow4.svg" alt="화살표이미지">
+            </div>
+        </div>
+    </section>
+    <section id="reactpage">
+        <div class="container">
+            <div class="reactpage">
+                <img src="assets/img/react.svg" alt="타이틀이미지">
+                <img src="assets/img/reactsdw.svg" alt="타이틀이미지">
+                <img src="assets/img/reactbox.svg" alt="박스이미지">
+                <img src="assets/img/barrow7.svg" alt="화살표이미지">
+                <img src="assets/img/boppsitarrow.svg" alt="3단화살표">
+                <div class="buttons">
+                    <img class="site" src="assets/img/bsitebox.svg" alt="박스이미지">
+                    <img class="shadow1" src="assets/img/bsdw.svg" alt="그림자이미지">
+                    <img class="figma" src="assets/img/bfigmabox.svg" alt="박스이미지">
+                    <img class="shadow2" src="assets/img/bsdw.svg" alt="그림자이미지">
+                    <img class="github" src="assets/img/bgithubbox.svg" alt="박스이미지">
+                    <img class="shadow3" src="assets/img/bsdw.svg" alt="그림자이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="vuepage">
+        <div class="container">
+            <div class="vuepage">
+                <img src="assets/img/vue.svg" alt="타이틀이미지">
+                <img src="assets/img/vuesdw.svg" alt="타이틀이미지">
+                <img src="assets/img/reactbox.svg" alt="박스이미지">
+                <img src="assets/img/barrow8.svg" alt="화살표이미지">
+                <img src="assets/img/barrow9.svg" alt="화살표이미지">
+                <img src="assets/img/barrow10.svg" alt="화살표이미지">
+                <img src="assets/img/barrow11.svg" alt="화살표이미지">
+                <div class="buttons">
+                    <img class="site" src="assets/img/bsitebox.svg" alt="박스이미지">
+                    <img class="shadow1" src="assets/img/bsdw.svg" alt="그림자이미지">
+                    <img class="figma" src="assets/img/bfigmabox.svg" alt="박스이미지">
+                    <img class="shadow2" src="assets/img/bsdw.svg" alt="그림자이미지">
+                    <img class="github" src="assets/img/bgithubbox.svg" alt="박스이미지">
+                    <img class="shadow3" src="assets/img/bsdw.svg" alt="그림자이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer1">
+                <h2>IF YOU REALLY INTERESTED IN ME,<br> YOU DON’T NEED TO OVERTHINK ABOUT IT.</h2>
+                <img class="number" src="assets/img/number.svg" alt="번호이미지">
+                <img class="phone" src="assets/img/cellphone.svg" alt="핸드폰이미지">
+            </div>
+        </div>
+    </footer>
+    <footer>
+        <div class="container">
+            <div class="footer2">
+                <h2>JUST CONTACT ME NOW :)</h2>
+                <img class="emailbox" src="assets/img/emailbox.svg" alt="이메일박스이미지">
+                <p>email</p>
+                <div class="rec"><span>sora's portfolio</span></div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

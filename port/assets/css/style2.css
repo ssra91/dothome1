@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* layout */
+#contents {}
+#section1 {height: 100vh; background: #FFD87E;}
+#section2 {height: 2000px; background: #FFD87E;}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+
+/* header */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 2000;
+    width: 100%; height: 80px;
+    border-bottom: 2px solid #c66559;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+#header h1 {
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    padding: 17px;
+    color: #b43f4d;
+    letter-spacing: 2px;
+}
+#header a {
+    font-size: 24px;
+    font-family: 'Staatliches', cursive;
+    padding: 25px;
+    color: #b43f4d;
+    display: inline-block;
+}
+
+/* container */
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* sec1 */
+.sec1 {
+    height: 100vh;
+    background: url(../img/bannerDot.svg) no-repeat right bottom / 600px;
+}
+.sec1 .text-wrap .t {
+    left: 50%; top: 60%;
+    transform: translate(-50%, -50%) rotate(10deg) skewX(-20deg);
+    z-index: 900;
+}
+.sec1 .text-wrap .p {
+    left: 30%; top: 30%;
+    transform: translate(-50%, -50%) rotate(-10deg) skewX(-20deg);
+    z-index: 800;
+}
+.sec1 .text-wrap .t, .text-wrap .p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    color: #fff;
+    font-size: 8vw;
+    white-space: nowrap;
+    text-shadow: 
+        1px 1px 0 #51B3A3, 
+        2px 2px 0 #51B3A3, 
+        3px 4px 0 #51B3A3, 
+        4px 5px 0 #51B3A3,
+        5px 7px 0 #51B3A3,
+        6px 8px 0 #51B3A3,
+        7px 10px 0 #51B3A3,
+        8px 11px 0 #51B3A3,
+        9px 13px 0 #51B3A3,
+        10px 14px 0 #51B3A3,
+        11px 16px 0 #51B3A3,
+        12px 17px 0 #51B3A3,
+        13px 19px 0 #51B3A3,
+        14px 20px 0 #51B3A3,
+        15px 22px 0 #51B3A3,
+        16px 23px 0 #51B3A3,
+        17px 25px 0 #51B3A3,
+        18px 26px 0 #51B3A3,
+        19px 28px 0 #51B3A3,
+        20px 29px 0 #51B3A3,
+        21px 30px 0 #389788,
+        23px 31px 0 #389788,
+        24px 32px 0 #389788,
+        26px 33px 0 #389788,
+        27px 34px 0 #389788,
+        29px 35px 0 #389788,
+        30px 36px 0 #389788,
+        32px 37px 0 #389788,
+        33px 38px 0 #389788,
+        35px 39px 0 #389788,
+        36px 40px 0 #389788,
+        38px 41px 0 #389788,
+        39px 42px 0 #389788,
+        41px 43px 0 #389788,
+        42px 44px 0 #389788,
+        44px 45px 0 #389788,
+        45px 46px 0 #389788,
+        47px 47px 0 #389788,
+        48px 49px 0 #7ee5d6,
+        49px 51px 0 #7ee5d6,
+        50px 53px 0 #7ee5d6,
+        51px 55px 0 #7ee5d6,
+        52px 57px 0 #7ee5d6,
+        53px 59px 0 #7ee5d6,
+        54px 61px 0 #7ee5d6,
+        55px 63px 0 #7ee5d6,
+        56px 65px 0 #7ee5d6,
+        57px 67px 0 #7ee5d6,
+        58px 69px 0 #7ee5d6,
+        59px 71px 0 #7ee5d6,
+        60px 73px 0 #7ee5d6,
+        61px 75px 0 #7ee5d6,
+        62px 77px 0 #7ee5d6,
+        63px 79px 0 #7ee5d6,
+        65px 80px 0 #51B3A3,
+        68px 81px 0 #51B3A3,
+        70px 82px 0 #51B3A3,
+        72px 83px 0 #51B3A3,
+        74px 84px 0 #51B3A3,
+        76px 85px 0 #51B3A3,
+        78px 86px 0 #51B3A3,
+        80px 87px 0 #51B3A3,
+        82px 88px 0 #51B3A3,
+        84px 89px 0 #51B3A3,
+        86px 90px 0 #51B3A3,
+        88px 91px 0 #51B3A3,
+        90px 92px 0 #51B3A3;
+}
+
+
+/* sec2 */
+.sec2 {
+    padding: 30vh 0;
+}
+.sec2 .text-wrap {
+    text-align: center;
+}
+.sec2 .text-wrap .a {
+    font-size: 16px;
+    color: #b33f4c;
+    padding-bottom: 6vh;
+    font-family: 'NanumSquare', sans-serif !important;
+}
+.sec2 .text-wrap .b {
+    font-family: 'TmonMonsori';
+    font-weight: bold;
+    font-size: 4vw;
+}
+.sec2 .text-wrap .b span {
+    display: inline-block;
+    color: #b33f4c;
+    padding-bottom: .5vw;
+}
+.sec2 .text-wrap .b span:nth-child(even){
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px #b33f4c;
+}
+
+
+
+
+
+
+
