@@ -1,0 +1,26 @@
+/* layout */
+#contents {}
+#section1 {height: 100vh; background: #FFD87E;}
+#section2 {height: 1200px; background: #FFD87E;}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+
+.contianer {}
+
+/* header */
+#header {
+    height: 80px; width: 100%; background: #ffd87e; 
+    border-bottom: 2px solid #b43f4d; 
+    color: #b43f4d;
+    font-weight: bold;
+    display: flex; justify-content: space-between; 
+    text-transform: uppercase;
+}
+#header a {color: #b43f4d; text-transform: uppercase; padding: 25px; display: inline-block;}
+#header h1 {}
+
+/* section1 */
+.sec1 a {}
