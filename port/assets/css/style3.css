@@ -203,6 +203,7 @@
     padding-bottom: 6vh;
     font-family: 'NanumSquare', sans-serif !important;
     font-weight: bold;
+    opacity: 0;
 }
 .sec2 .text-wrap .txt4 {
     font-family: 'TmonMonsori';
@@ -210,6 +211,7 @@
     font-size: 4.5vw;
     display: inline-block;
     z-index: 1000;
+    /* opacity: 0; */
 }
 .sec2 .text-wrap .txt4 span {
     display: inline-block;
@@ -217,6 +219,7 @@
     padding-bottom: .5vw;
     display: inline-block;
     z-index: 1000;
+    /* opacity: 0; */
 }
 .sec2 .text-wrap .txt4 span:nth-child(even){
     -webkit-text-fill-color: transparent;
