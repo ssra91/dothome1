@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="ssra10">
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
-    <meta name="keywords" content="김소라, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, ssra10, publisher, css3, html, markup, design, Webstoryboy">
-    <title>Sora | ssra10 | Slider Effect </title>
+    <meta name="keywords"
+        content="김소라, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, ssra10, publisher, css3, html, markup, design, Webstoryboy">
+    <title>Sora | ssra10 | Illustrator</title>
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/docs.min.css" rel="stylesheet">
@@ -45,6 +47,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
     <a class="sr-only" href="#content">Skip to main content</a>
     <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
@@ -70,142 +73,97 @@
     </header>
     <div class="bs-header bgs5" id="content">
         <div class="container">
-            <h1>Slider Effect Reference v1.0 &lt;/doc&gt;</h1>
+            <h1>Illustrator Reference v1.0 &lt;/doc&gt;</h1>
             <p><a href="https://ssra10.dothome.co.kr" target="_blank">ssra10.dothome.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-12" role="main">
+            <div class="col-md-9" role="main">
                 <!-- 배너광고 -->
                 <div class="ad">
                     <script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-	new PartnersCoupang.G({ id:347661 });
-</script>
+                    <script>
+                        new PartnersCoupang.G({
+                            id: 347661
+                        });
+                    </script>
                 </div>
                 <!-- //배너광고 -->
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Slider Effect01</h2>
-                    <p class="bs-callout bs-callout-info">이미지 슬라이드를 이용한 효과입니다. (제이쿼리,자바스크립트)</p>
-                    <iframe width="100%" height="800px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>   
-                    
-<pre class="line-numbers language-js"><code>//jQuery 
-    const sliderWrap = $(".slider_wrap");
-    const sliderImg = $(".slider_img");
-    const slider = $(".slider");
-    
-    let currentIndex = 0; //현재 첫 번째 보이는 이미지
-    let sliderCount = slider.length;  //이미지 갯수
-
-    //3초에 한번씩 함수를 실행
-    setInterval(function(){
-        let nextIndex = (currentIndex + 1) % sliderCount; //그 다음 이미지를 보여주기 위한 함수 +1 (currentIndex +1)
-
-        slider.eq(currentIndex).fadeOut(); //첫번째 이미지를 의미(slider.eq(currentIndex))
-        slider.eq(nextIndex).fadeIn();  //두번째 이미지를 나타나게 하는것 
-
-        console.log("currentIndex : " + currentIndex);
-        console.log("nextIndex :" + nextIndex);
-        //currentIndex++;
-        currentIndex = nextIndex;
-    },3000);
-</code></pre>
-                
-<iframe width="100%" height="800px" src="sliderEffect01-javascript.html" frameborder="0"></iframe>                 
-<pre class="line-numbers language-js"><code>//JavaScript 
-    const sliderWrap = document.querySelector(".slider_wrap");
-    const sliderImg = document.querySelector(".slider-img");
-    const slider = document.querySelectorAll(".slider");
-
-    let currentIndex = 0;  //현재 보이는 첫번째 이미지
-    let sliderCount = slider.length;  //이미지 갯수
-
-    setInterval(() => {   //setInterval (function(){}); 를 화살표 함수로 바꿨다.
-        let nextIndex = (currentIndex + 1) % sliderCount;
-                            //(0 + 1) % 5 -> 1
-                            //(1 + 1) % 5 -> 2
-                            //(2 + 1) % 5 -> 3
-                            //(3 + 1) % 5 -> 4
-                            //(4 + 1) % 5 -> 0
-                            //(0 + 1) % 5 -> 1
-                            //(0 + 1) % 5 -> 2
-
-        //slider.eq(currentindex).fadeOut();
-        //slider[currentIndex]  //슬라이드를 배열식으로 해서 첫번째 인자를 가져오라.
-        slider[currentIndex].style.opacity = "0";
-        slider[nextIndex].style.opacity = "1"; 
-        currentIndex = nextIndex;
-    }, 3000);
-</code></pre>   
+                    <h2 id="intro2" class="page-header">캐릭터 디자인</h2>
+                    <p class="bs-callout bs-callout-info">도형을 활용한 심플한 캐릭터 그리기</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <a href="#" class="thumbnail">
+                                <img src="img/sample01.jpg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Intro1 -->
-
-                 <!-- Intro2 -->
-                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">Slider Effect02</h2>
-                    <p class="bs-callout bs-callout-info">이미지 슬라이드를 이용한 효과입니다. (제이쿼리,자바스크립트)</p>
-                    <iframe width="100%" height="800px" src="sliderEffect02-jquery.html" frameborder="0"></iframe>   
-                    
-<pre class="line-numbers language-js"><code>//jQuery 
-const sliderWrap = $(".slider_wrap");
-const sliderImg = $(".slider_img");
-const slider = $(".slider");
-
-let currentIndex = 0;
-let sliderCount = slider.length;
-
-setInterval(function(){
-    // if(currentIndex < sliderCount -1){
-    //     currentIndex++; //0123401234
-    // }else {
-    //     currentIndex = 0;
-    // }
-    currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
-
-    let sliderPosition = currentIndex *(-800) +"px";
-                            // 0 * -800px -> 0
-                            // 1 * -800px -> -800px 두번째이미지
-                            // 2 * -800px -> 1600px 세번째이미지
-                            // 3 * -800px -> 2400px 네번째이미지
-    sliderImg.animate({left:sliderPosition},400);
-    
-
-    // console.log("currentIndex :"+ currentIndex)
-    // console.log("sliderPosition:" + sliderPosition)
-},3000);    
-</code></pre>
-                
-<iframe width="100%" height="800px" src="sliderEffect02-javascript.html" frameborder="0"></iframe>                 
-<pre class="line-numbers language-js"><code>//JavaScript 
-const sliderWrap = document.querySelector(".slider_wrap");
-const sliderImg = document.querySelector(".slider_img");
-const slider = document.querySelectorAll(".slider");   
-
-let currentIndex = 0;
-let sliderCount = slider.length;
-let sliderWidth = slider.clientwidth;
-
-setInterval(function(){
-    // if (currentIndex < sliderCount -1){
-    //     currentIndex++;
-    // }else {
-    //     currentIndex = 0;
-    // }
-    currentIndex < sliderCount -1 ? currentIndex++ : currentIndex = 0;
-    let sliderPosition = currentIndex * sliderWidth;
-    //sliderImg.animate({left:sliderPosition},400);
-    sliderImg.style.left = sliderPosition;
-    sliderImg.style.transition = "all 0.6s";
-
-    gsap.to(sliderImg,{duration:0.6, left:sliderPosition, ease: "sine.out"});
-},3000);    
-</code></pre>   
+                <!-- intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">레이어 마스크</h2>
+                    <p class="bs-callout bs-callout-info">레이어 마스크는 레이어의 일부분을 보이지 않도록 숨기는 기능입니다. 특정 모양의 선택영역을 만들고 내부의 픽셀을
+                        잘라낸 것과 같은 결과가 만들어집니다.</p>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="img/Sample03.jpg">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="img/Sample04.jpg">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="img/Sample05.jpg">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="img/Sample06.jpg">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="img/Sample07.jpg">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="img/Sample08.jpg">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="img/Sample09.jpg">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="img/Sample10.jpg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Intro1 -->
+
+
+                <!-- //Intro3 -->
             </div>
-            <!-- //col-md-12 -->
+            <!-- //col-md-9 -->
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">레이어 마스크</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
         </div>
         <!-- //row -->
     </div>
@@ -231,4 +189,5 @@ setInterval(function(){
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
 </body>
+
 </html>

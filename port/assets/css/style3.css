@@ -7,8 +7,8 @@
 
 /* layout */
 #contents {}
-#section1 {height: 100vh; background: url(../img/bannerDot.svg) no-repeat 92% bottom/560px #FFD87E;}
-#section2 {height: 1300px; background:#FFD87E; position: relative;}
+#section1 {height: 100vh; background: #FFD87E;}
+#section2 {height: 2000px; background:#FFD87E; position: relative;}
 /* #section2 {height: 1300px; background: url(../img/bannerArrow2.svg) no-repeat top right/750px,
     url(../img/bannerArrow3.svg) no-repeat left 80%,
     url(../img/bannerArrow4.svg) no-repeat 30% 40%,
@@ -41,7 +41,7 @@
     -webkit-backdrop-filter: blur(10px);
     font-weight: 900; 
     font-family: 'Staatliches', cursive;
-
+    opacity: 0;
 }
 #header a {
     color: #b43f4d; 
@@ -61,7 +61,35 @@
 /* section1 */
 .sec1 {
     height: 100vh;
-    background:url(../img/bannerArrow1.svg) no-repeat bottom center;
+}
+.scrollbtn {
+    position: absolute;
+    left: 5vw; bottom: 5vw;
+    border: 1px solid #b33f4c;
+    background-color: #ffd87e;
+    color: #b33f4c;
+    padding: 10px 50px;
+    font-size: 30px;
+    box-shadow: 10px 10px 0 0 #b33f4c;
+    font-family: 'Staatliches', cursive;
+    transition: box-shadow .4s ease;
+    z-index: 1;
+    opacity: 0;
+    font-weight: bold;
+}
+.scrollbtn:hover {
+    box-shadow: 0 0 0 0 #b33f4c;
+}
+.svgdot {
+    width: 600px;
+    position: absolute;
+    right: 10vw; bottom: 0vw;
+}
+.svgdot svg {
+    width: 100%;
+}
+.svgdot svg path {
+    opacity: 0;
 }
 .sec1 .text-wrap {text-transform: uppercase;}
 .sec1 .text-wrap a {
@@ -75,21 +103,21 @@
 }
 .sec1 .text-wrap a:hover {box-shadow: 18px 18px 5px #b43f4d;}
 .sec1 .text-wrap .txt1 {
-    left: 42%; top: 35%;
+    left: 42%; top: 55%;
     transform: translate(-50%, -50%) rotate(-10deg) skewX(-20deg);
-    z-index: 800;
+    z-index: 800; opacity: 0;
 }
 .sec1 .text-wrap .txt2 {
-    left: 60%; top: 65%;
+    left: 60%; top: 35%;
     transform: translate(-50%, -50%) rotate(10deg) skewX(-20deg);
-    z-index: 900;
+    z-index: 900; opacity: 0;
 }
 
 .sec1 .text-wrap .txt1, .text-wrap .txt2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     position: absolute;
-    color: #FFEFC9;
+    color: #fff;
     font-size: 8vw;
     white-space: nowrap;
     text-shadow: 
@@ -164,7 +192,7 @@
 
 /* sec2 */
 .sec2 {
-    padding: 40vh 0;
+    padding: 40vh 0; height: 100vh;
 }
 .sec2 .text-wrap {
     text-align: center;
