@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* layout */
 #contents {}
 #section1 {height: 100vh; background: url(../img/bannerDot.svg) no-repeat 92% bottom/560px #FFD87E;}
