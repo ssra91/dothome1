@@ -13,7 +13,7 @@
     url(../img/bannerArrow3.svg) no-repeat left 80%,
     url(../img/bannerArrow4.svg) no-repeat 30% 40%,
     url(../img/bannerArrow5.svg) no-repeat 70% 68%/200px,url(../img/bannerArrow7.svg) no-repeat 45% 95%/100px #FFD87E;} */
-#section3 {}
+#section3 {height: 100vh; background: #F9D3E0;}
 #section4 {}
 #section5 {}
 #section6 {}
@@ -232,9 +232,17 @@
     display: inline-block;
     z-index: 1000;
     opacity: 0;
-    animation: animate__backInUp 2s;
+    /* animation: animate__backInUp 2s; */
+    transform: translateY(100px);
+    transition: all 0.77s cubic-bezier(0, 0.48, 0, 1.04);
+    min-width: 20px;
     
 }
+.sec2 .text-wrap .txt4 span.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .sec2 .text-wrap .txt4 span:nth-child(even){
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -253,4 +261,25 @@
 /* 미디어쿼리 */
 @media (max-width:1920px){
     .sec2 .text-wrap .txt4 {font-size: 3.8vw;}
+}
+@media (max-width:980px){
+    .svgdot {
+        width: 820px;
+        bottom: 13vw;
+        }
+    .sec1 .text-wrap .txt1, .text-wrap .txt2 {
+        font-size: 10vw; top: 38%;
+    }
+    .sec1 .text-wrap .txt1 {
+        left: 45%; top: 38%;
+    }
+    .sec1 .text-wrap .txt2 {
+        top: 62%;
+    }
+    .sec1 .arrow {
+        bottom: 35px;
+    }
+    .sec1 .arrow img {
+        width: 4vw;
+    }
 }
