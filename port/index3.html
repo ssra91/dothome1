@@ -14,10 +14,9 @@
     <link href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@200;300;700;900&display=swap" rel="stylesheet">
 
-
 </head> 
+
 <body>
-    
     <div id="header">
         <div><a href="#">menu</a></div>
         <h1>portfolio</h1>
@@ -569,7 +568,14 @@
             <div class="container">
                 <div class="sec4">
                     <div class="aboutme2">
-                        <span>LET ME INTRODUCE MYSELF TO YOU</span>
+                        <h1>
+                            <span>LET</span>
+                            <span>me</span>
+                            <span>introduce</span>
+                            <span>myself</span>
+                            <span>to</span>
+                            <span>you</span>
+                        </h1>
                         <h2>[POSITIVE THINKING, POSITIVE OUTCOME.]</h2>
                         <p>웃으면 복이 온다는 말이 있죠. 저는 항상 미소를 머금도 다닙니다. 
                             웃고 있으면 좋은일이 없더라고좋은일이 생기게 되는 날들이 많았거든요. 그리고 제가 웃음으로서 상대방에게도 좋은 영향력이 된다는걸 알게 된 후로는 항상 좋은 생각을 하면서 밝게 사려고 노력합니다.
@@ -599,7 +605,39 @@
             </div>
         </div>
         <!-- //section5 -->
-        <div id="section6"></div><!-- //section6 -->
+        <div id="section6">
+            <div class="container">
+                <div class="sec6">
+                    <div class="aboutme4">
+                        <div class="img-wrap">
+                            <img src="assets/img/img1.svg" alt="이미지">
+                            <img src="assets/img/img2.svg" alt="이미지">
+                            <img src="assets/img/img3.svg" alt="이미지">
+                            <img src="assets/img/img4.svg" alt="이미지">
+                            <img src="assets/img/img5.svg" alt="이미지">
+                            <span src="assets/img/img6.svg" alt="이미지"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //section6 -->
+        <div id="section7">
+            <div class="sec7-wrap">
+                <div class="container">
+                    <div class="sec7">
+                        <div class="anipage">
+                            <div class="page1"></div>
+                            <div class="page2"></div>
+                            <div class="page3"></div>
+                            <div class="page4"></div>
+                            <div class="page5"></div>
+                            <div class="page6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //section7 -->
     </div>
     <script src="assets/js/jquery.min_1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
@@ -638,25 +676,27 @@
                     $device.find('.arrow-wrap .arr5').addClass('animate5');
                 }
                 if($(this).scrollTop() > $aboutmeOST){
-                    gsap.to(".sec3 h2",{duration: 2, opacity:1, bottom:"70vh", delay: .3, ease: "power4.out"})
-                    gsap.to(".sec3 p",{duration: 2, opacity:1, bottom:"6vh", delay: .8, ease: "power4.out"})
-                    gsap.to(".sec3 img",{duration: 2, opacity:1, bottom:"5vh", delay: .8, ease: "power4.out"})
+                    if($(this).scrollTop() > $offset){
+                        $("#section3").css('background','#F9D3E0');
+                        gsap.to(".sec3 h2",{duration: 2, opacity:1, bottom:"70vh", delay: .3, ease: "power4.out"})
+                        gsap.to(".sec3 p",{duration: 2, opacity:1, bottom:"6vh", delay: 1, ease: "power4.out"})
+                        gsap.to(".sec3 img",{duration: 2, opacity:1, bottom:"5vh", delay: 1, ease: "power4.out"})
+                    }
                 }
                 if($(this).scrollTop() > $aboutme2OST){
-                    gsap.to(".sec4 span",{duration: 2, opacity:1, bottom:"75vh", delay: .3, ease: "power4.out"})
-                    gsap.to(".sec4 h2",{duration: 2, opacity:1, bottom:"49vh", delay: .3, ease: "power4.out"})
-                    gsap.to(".sec4 p",{duration: 2, opacity:1, bottom:"10vh", delay: .8, ease: "power4.out"})
+                    gsap.to(".sec4 .aboutme2 h1",{duration: 2, opacity:1, bottom:"77vh", delay: .3, ease: "power4.out"})
+                    gsap.to(".sec4 h2",{duration: 2, opacity:1, bottom:"52vh", delay: .8, ease: "power4.out"})
+                    gsap.to(".sec4 p",{duration: 2, opacity:1, bottom:"9vh", delay: 1.3, ease: "power4.out"})
                     gsap.to(".sec4 img",{duration: 2, opacity:1, bottom:"5vh", delay: .8, ease: "power4.out"})
                 }
                 if($(this).scrollTop() > $aboutme3OST){
-                    gsap.to(".sec5 span",{duration: 2, opacity:1, bottom:"75vh", delay: .3, ease: "power4.out"})
-                    gsap.to(".sec5 h2",{duration: 2, opacity:1, bottom:"62vh", delay: .3, ease: "power4.out"})
-                    gsap.to(".sec5 p",{duration: 2, opacity:1, bottom:"5vh", delay: .8, ease: "power4.out"})
+                    gsap.to(".sec5 span",{duration: 2, opacity:1, bottom:"71vh", delay: .3, ease: "power4.out"})
+                    gsap.to(".sec5 h2",{duration: 2, opacity:1, bottom:"57vh", delay: .8, ease: "power4.out"})
+                    gsap.to(".sec5 p",{duration: 2, opacity:1, bottom:"5vh", delay: 1.3, ease: "power4.out"})
                     gsap.to(".sec5 img",{duration: 2, opacity:1, bottom:"5vh", delay: .8, ease: "power4.out"})
                 }
             });
         });
-
 
         // $(document).ready(function(){
         //     $(window).scroll(function(){
