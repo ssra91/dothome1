@@ -552,7 +552,7 @@
                 <div class="aboutme">
                     <h2>[IF SOMEONE ASKED ME TO DESCRIBE YOU IN JUST TWO WORDS, 
                         I’D SAY SIMPLY AMAZING]</h2>
-                        
+
                 </div>
             </div>
         </div><!-- //section3 -->
@@ -574,26 +574,42 @@
             gsap.to(".sec1 .arrow", {duration: 1.2,opacity:1, delay: 1.3, ease: "elastic.out"})
             gsap.to(".svgdot svg path", {duration: 1.6, opacity:1})
         }, 2000);
+        $(function(){
 
+            var $device = $("#section2");
+            var $offset = $(window).height()/2;
+            var $deviceOST = $device.offset().top - $offset;
 
-        $(document).ready(function(){
             $(window).scroll(function(){
-                $("#section2 .arrow-wrap").each(function(i){
-                    var bottom_of_object = $(this).offset().top+ $(this).outerHeight();
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-                    setTimeout(function(){
-                        if(bottom_of_window > bottom_of_object/2){
-                            gsap.fromTo("#section2 .arrow-wrap .arr1",{transform:"translateY(800px)"},{opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:.5},1000)
-                            gsap.fromTo("#section2 .arrow-wrap .arr2",{transform:"translateY(800px)"},{ opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:.9},2000)
-                            gsap.fromTo("#section2 .arrow-wrap .arr3",{transform:"translateY(800px)"},{ opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:1.3},3000)
-                            gsap.fromTo("#section2 .arrow-wrap .arr4",{transform:"translateY(800px)"},{ opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:1.7},4000)
-                            gsap.fromTo("#section2 .arrow-wrap .arr5",{transform:"translateY(800px)"},{ opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:2.2},5000)
-                        }
-                    });
-                });
+                if($(this).scrollTop() > $deviceOST){
+                    $device.find('.arrow-wrap .arr1').addClass('animate');
+                    $device.find('.arrow-wrap .arr2').addClass('animate2');
+                    $device.find('.arrow-wrap .arr3').addClass('animate3');
+                    $device.find('.arrow-wrap .arr4').addClass('animate4');
+                    $device.find('.arrow-wrap .arr5').addClass('animate5');
+                }
             });
         });
+
+
+        // $(document).ready(function(){
+        //     $(window).scroll(function(){
+        //         $("#section2 .arrow-wrap").each(function(i){
+        //             var bottom_of_object = $(this).offset().top+ $(this).outerHeight();
+        //             var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        //             setTimeout(function(){
+        //                 if(bottom_of_window > bottom_of_object/2){
+        //                     gsap.fromTo("#section2 .arrow-wrap .arr1",{transform:"translateY(800px)"},{opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:.5},1000)
+        //                     gsap.fromTo("#section2 .arrow-wrap .arr2",{transform:"translateY(800px)"},{ opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:.9},2000)
+        //                     gsap.fromTo("#section2 .arrow-wrap .arr3",{transform:"translateY(800px)"},{ opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:1.3},3000)
+        //                     gsap.fromTo("#section2 .arrow-wrap .arr4",{transform:"translateY(800px)"},{ opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:1.7},4000)
+        //                     gsap.fromTo("#section2 .arrow-wrap .arr5",{transform:"translateY(800px)"},{ opacity:0, transform:"translateY(-2000px)", ease:"sine", opacity:1,duration:4, delay:2.2},5000)
+        //                 }
+        //             });
+        //         });
+        //     });
+        // });
 
         // $(document).ready(function(){
         //     $(window).scroll(function(){
@@ -612,18 +628,7 @@
         //     });
         // })
 
-        // $(document).ready(function(){
-        //     $(window).scroll(function(){
-        //         $(".txt4 > span").each(function(i){
-        //             var bottom_of_object = $(this).offset().top + $(this).outerHeight()/2;
-        //             var bottom_of_window = $(window).scrollTop() + $(window).height()/2;
-
-        //             if(bottom_of_window > bottom_of_object/2){
-        //                 $(this).animate({'opacity':'1'},2000);
-        //             }
-        //         });
-        //     });
-        // })
+        
         
     </script>
 </body>
