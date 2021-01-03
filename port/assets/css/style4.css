@@ -66,7 +66,7 @@
     height: 100vh;
 }
 .sec1 .arrow {
-    animation: bounce 1s 6 ease;
+    animation: bounce 1s infinite  ease;
     position: absolute; left: 50%; bottom: 0;
     opacity: 0;
 }
@@ -79,7 +79,7 @@
 }
 .scrollbtn {
     position: absolute;
-    left: 5vw; bottom: 5vw;
+    left: 7vw; bottom: 5vw;
     border: 1px solid #b33f4c;
     background-color: #ffd87e;
     color: #b33f4c;
@@ -96,7 +96,7 @@
     box-shadow: 0 0 0 0 #b33f4c;
 }
 .svgdot {
-    width: 550px;
+    width: 600px;
     position: absolute;
     right: 8vw; bottom: 0vw;
 }
@@ -219,6 +219,7 @@
     padding-bottom: 6vh;
     font-family: 'NanumSquare', sans-serif !important;
     font-weight: bold;
+    opacity: 0;
 }
 .sec2 .text-wrap .txt4 {
     font-family: 'TmonMonsori';
@@ -234,6 +235,13 @@
     display: inline-block;
     z-index: 1000;
     white-space: nowrap;  
+    opacity: 0;
+    /* transform: translateY(100px); */
+    transition: all 0.77s cubic-bezier(0.87, -0.01, 0.12, 0.65);
+}
+.sec2 .text-wrap .txt4 span.show {
+    /* transform: translateY(0); */
+    opacity: 1;
 }
 .sec2 .text-wrap .txt4 span:nth-child(even){
     -webkit-text-fill-color: transparent;
@@ -281,8 +289,52 @@
 #section2 .arrow-wrap .arr5.animate5 {transform: translateY(-3000px);}
 
 /* sec3 */
-.sec3 {height: 100vh; }
+.sec3 {position: relative; left: 0; top: 0; width: 100%; height: 100vh;}
 .sec3 .aboutme { color: #3F52A0; display: inline-block;}
+.sec3 .aboutme h1 {
+    text-align: center; text-transform: uppercase;
+    justify-content: center; 
+    align-items: center; -webkit-font-smoothing: antialiased;
+}
+.sec3 .aboutme h1 span {
+    font-size: 2vw; font-family: 'Roboto Slab', serif; 
+    font-weight: bold; position: absolute; top: 11vh;
+    padding: 1vh 1vw; opacity: 0;
+    animation: bounce1 .3s ease infinite alternate; 
+    
+    text-shadow: 0 1px 0 #e7b1c4,
+               0 2px 0 #e2c0cc,
+               0 3px 0 #e2c0cc,
+               0 4px 0 #e2c0cc,
+               0 5px 0 #e2c0cc,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px rgba(186, 89, 89, .4);
+}
+
+.sec3 .aboutme h1 span:nth-child(1) { animation-delay: .1s; position: absolute; left: 21%;}
+.sec3 .aboutme h1 span:nth-child(2) { animation-delay: .2s; position: absolute; left: 29%;}
+.sec3 .aboutme h1 span:nth-child(3) { animation-delay: .3s; position: absolute; left: 36%;}
+.sec3 .aboutme h1 span:nth-child(4) { animation-delay: .4s; position: absolute; left: 55%;}
+.sec3 .aboutme h1 span:nth-child(5) { animation-delay: .5s;  position: absolute; left: 69%;}
+.sec3 .aboutme h1 span:nth-child(6) { animation-delay: .5s;  position: absolute; left: 74%;}
+@keyframes bounce1 {
+    100% {
+      top: 13vh;
+      text-shadow: 0 1px 0 #e2c0cc,
+                   0 2px 0 #e2c0cc,
+                   0 3px 0 #e2c0cc,
+                   0 4px 0 #e2c0cc,
+                   0 5px 0 #e2c0cc,
+                   0 6px 0 #e2c0cc,
+                   0 7px 0 #e2c0cc,
+                   0 8px 0 #e2c0cc,
+                   0 9px 0 #e2c0cc,
+                   0 50px 25px rgba(186, 89, 89, 0.1);
+    }
+  }
 .sec3 h2 {font-family: 'Roboto Slab', serif; font-weight: bold; font-size: 2vw; position: absolute; bottom: 0; left: 0; opacity: 0; text-shadow: 0 1px 0 #e2c0cc,
     0 2px 0 #e2c0cc,
     0 3px 0 #e2c0cc,
@@ -424,58 +476,75 @@
     0 10px 10px rgba(186, 89, 89, .3);}
 .sec5 p {font-family: 'Chosunilbo_myungjo'; font-size: 1.05vw; width: 47%; line-height: 1.83; letter-spacing: 0.13; position: absolute; right:53%; bottom:0; text-align: right; opacity: 0;}
 .sec5 img {width: 39%; box-shadow: 10px 10px 0 0 #3F52A0; border: 6px solid #3F52A0; position: absolute; right: 0; bottom: 0; opacity: 0;}
-.sec5 img:hover {box-shadow: 0 0 0 0 #3F52A0;}
+.sec5 img:hover { animation: pulse 1s 1;}
+@keyframes pulse {
+    0% {box-shadow:0 0 0 0 #3F52A0}
+    100% {box-shadow: 0 0 0 2rem rgba(255,255,255,0)}   
+}
 
 /* sec6 */
 .bg-dot {background:url(../img/longDot.svg) no-repeat; width:98%; height: 68vh; position: absolute; left: 1%;  top:20vh;}
 .sec6 {height: 100vh;}
 /* .sec6 {background:url(../img/longDot.svg) no-repeat center; width:100%; height: 66vh; position: absolute; left: 0;  top:20vh; } */
 .sec6 .img-wrap {}
-.sec6 .img-wrap > img {width: 30%; box-shadow: 10px 10px 0 0 #3F52A0;}
-.sec6 .img-wrap > img:hover {box-shadow:0 0 0 0 #3F52A0;}
-.sec6 .img-wrap img:nth-child(1) {position: absolute; left: -70%; top: 12vh; transform:rotate(-10deg);}
-.sec6 .img-wrap img:nth-child(2) {position: absolute; left: 35%; top: 10vh;}
-.sec6 .img-wrap img:nth-child(3) {position: absolute; left: 70%; top:12vh; transform:rotate(10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
+.sec6 .img-wrap > img {width: 30%; box-shadow: 10px 10px 0 0 #3F52A0; opacity: 0;}
+.sec6 .img-wrap > img:hover {box-shadow:0 0 0 0 #3F52A0; mix-blend-mode: multiply;}
+.sec6 .img-wrap img:nth-child(1) {position: absolute; left: 0%; top: 12vh; transform:rotate(-10deg);}
+.sec6 .img-wrap img:nth-child(2) {position: absolute; left: 0%; top: 10vh;}
+.sec6 .img-wrap img:nth-child(3) {position: absolute; left: 0%; top:12vh; transform:rotate(10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
 .sec6 .img-wrap img:nth-child(3):hover {box-shadow:0 0 0 0 #3F52A0;}
-.sec6 .img-wrap img:nth-child(4) {position: absolute; left: 0%; top:54vh; transform:rotate(10deg);}
-.sec6 .img-wrap img:nth-child(5) {position: absolute; left: 35%; top:56vh;}
-.sec6 .img-wrap img:nth-child(6) {position: absolute; left: 70%; top: 54vh; transform:rotate(-10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
+.sec6 .img-wrap img:nth-child(4) {position: absolute; right: 0%; top:54vh; transform:rotate(10deg);}
+.sec6 .img-wrap img:nth-child(5) {position: absolute; right: 0%; top:56vh;}
+.sec6 .img-wrap img:nth-child(6) {position: absolute; right: 0%; top: 54vh; transform:rotate(-10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
 .sec6 .img-wrap img:nth-child(6):hover {box-shadow:0 0 0 0 #3F52A0;}
-.sec6 .dotimg {}
 
 
 
 
 
 /* 미디어쿼리 */
-@media (max-width:1540px){
+@media only screen and (max-width:1540px){
+    .svgdot { width: 550px;}
+    .sec1 .text-wrap .txt1 {left: 46%; font-size: 9.5vw;}
+    .sec1 .text-wrap .txt2 {left: 65%; font-size: 9.5vw;}
+
+
     /* sec2 */
     .sec2 .text-wrap .txt4 {font-size: 4.5vw;}
 
     /* sec3 */
-    .sec3 {padding: 33vh 0;}
-    .sec3 h2 {font-size: 2.6vw;}
-    .sec3 p {font-size: 1.3vw; width: 43%;}
+    /* .sec3 {padding: 33vh 0;} */
+    .sec3 h2 {font-size: 2.5vw;}
+    .sec3 p {font-size: 1.3vw; width: 43%; bottom: 12vh;}
     .sec3 img {width: 39%;}
+    .sec3 .aboutme h1 span:nth-child(1) {left: 25%;}
+    .sec3 .aboutme h1 span:nth-child(2) {left: 31%;}
+    .sec3 .aboutme h1 span:nth-child(3) {left: 37%;}
+    .sec3 .aboutme h1 span:nth-child(4) {left: 53%;}
+    .sec3 .aboutme h1 span:nth-child(5) {left: 64%;}
+    .sec3 .aboutme h1 span:nth-child(6) { left: 68%;}
 
     /* sec4 */
+    .sec4 h2 {font-size: 2.5vw; bottom:54vh; left: 46vw; width: 47%;}
+    .sec4 p {left: 47vw; width: 44%; font-size: 1.3vw; bottom: 16vh;}
+    .sec4 img {width: 39%;}
     .sec4 .aboutme2 h1 span:nth-child(1) {left: 25%;}
     .sec4 .aboutme2 h1 span:nth-child(2) {left: 31%;}
-    .sec4 .aboutme2 h1 span:nth-child(3) {left: 36%;}
-    .sec4 .aboutme2 h1 span:nth-child(4) {left: 51%;}
-    .sec4 .aboutme2 h1 span:nth-child(5) {left: 62%;}
-    .sec4 .aboutme2 h1 span:nth-child(6) { left: 66%;}
+    .sec4 .aboutme2 h1 span:nth-child(3) {left: 37%;}
+    .sec4 .aboutme2 h1 span:nth-child(4) {left: 53%;}
+    .sec4 .aboutme2 h1 span:nth-child(5) {left: 64%;}
+    .sec4 .aboutme2 h1 span:nth-child(6) { left: 68%;}
 
     /* sec5 */
-    .sec5 h2 {font-size: 2.3vw; width:46%; text-align: right; position: absolute; bottom: 0; right:52%;}
-    .sec5 p {font-size: 1.1vw; width: 46.8%;}
-    .sec5 img {width: 30%; right:3vw;}
+    .sec5 h2 {font-size: 2.3vw; width:46%; text-align: right; position: absolute; bottom: 0; right:52%; bottom: 61vh;}
+    .sec5 p {font-size: 1.2vw; width: 46.9%; bottom: 13vh;}
+    .sec5 img {width: 39%; right:0;}
     .sec5 .aboutme3 h1 span:nth-child(1) {left: 25%;}
     .sec5 .aboutme3 h1 span:nth-child(2) {left: 31%;}
-    .sec5 .aboutme3 h1 span:nth-child(3) {left: 36%;}
-    .sec5 .aboutme3 h1 span:nth-child(4) {left: 51%;}
-    .sec5 .aboutme3 h1 span:nth-child(5) {left: 62%;}
-    .sec5 .aboutme3 h1 span:nth-child(6) { left: 66%;}
+    .sec5 .aboutme3 h1 span:nth-child(3) {left: 37%;}
+    .sec5 .aboutme3 h1 span:nth-child(4) {left: 53%;}
+    .sec5 .aboutme3 h1 span:nth-child(5) {left: 64%;}
+    .sec5 .aboutme3 h1 span:nth-child(6) { left: 68%;}
 
     .sec6 .img-wrap > img {width: 28%;}
     .sec6 .img-wrap img:nth-child(1) {left: 5%; top: 13vh;}
@@ -485,24 +554,11 @@
     .sec6 .img-wrap img:nth-child(5) {left: 37%; top:57vh;}
     .sec6 .img-wrap img:nth-child(6) {left: 70%; top: 55vh;}
 }
-@media (max-width:980px){
-    .svgdot {
-        width: 820px;
-        bottom: 13vw;
-        }
-    .sec1 .text-wrap .txt1, .text-wrap .txt2 {
-        font-size: 10vw; top: 38%;
-    }
-    .sec1 .text-wrap .txt1 {
-        left: 45%; top: 38%;
-    }
-    .sec1 .text-wrap .txt2 {
-        top: 62%;
-    }
-    .sec1 .arrow {
-        bottom: 35px;
-    }
-    .sec1 .arrow img {
-        width: 4vw;
-    }
+@media only screen and (max-width:980px){
+    .svgdot { width: 820px;bottom: 13vw;}
+    .sec1 .text-wrap .txt1, .text-wrap .txt2 { font-size: 10vw; top: 38%;}
+    .sec1 .text-wrap .txt1 {left: 45%; top: 38%;}
+    .sec1 .text-wrap .txt2 {top: 62%; }
+    .sec1 .arrow { bottom: 35px;}
+    .sec1 .arrow img { width: 4vw;}
 }

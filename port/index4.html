@@ -551,6 +551,14 @@
             <div class="container">
                 <div class="sec3">
                     <div class="aboutme">
+                        <h1>
+                            <span>LET</span>
+                            <span>me</span>
+                            <span>introduce</span>
+                            <span>myself</span>
+                            <span>to</span>
+                            <span>you</span>
+                        </h1>
                         <h2>[IF SOMEONE ASKED ME TO DESCRIBE YOU IN JUST TWO WORDS, 
                             I’D SAY SIMPLY AMAZING]</h2>
                         <p>안녕하세요. 앞으로 프론트앤드 개발자로 일하게 될 김소라 라고 합니다. 
@@ -675,6 +683,16 @@
             var $aboutme3OST = $aboutme3.offset().top - $offset; 
             var $aboutme4OST = $aboutme4.offset().top - $offset; 
 
+            // $(".sec2 .text-wrap").each(function(){
+            //    if($(window).scrollTop() > $("#section2").offset().top){
+            //     $("#section2 .sec2 .text-wrap span").each(function(i){
+            //        setTimeout(() => {
+            //         $("#section2 .sec2 .text-wrap span").eq(i).addClass("show");
+            //             },1000)
+            //         });
+            //     }
+            // });
+
 
             $(window).scroll(function(){
                 if($(this).scrollTop() > $deviceOST){
@@ -683,13 +701,22 @@
                     $device.find('.arrow-wrap .arr3').addClass('animate3');
                     $device.find('.arrow-wrap .arr4').addClass('animate4');
                     $device.find('.arrow-wrap .arr5').addClass('animate5');
+                    setTimeout(function(){
+                        gsap.to(".sec2 .text-wrap .txt3", {duration: 1, opacity:1, delay: .3, ease: "power2.out"})
+                        gsap.to(".sec2 .text-wrap .one", {duration: 1, opacity:1, delay: .6, ease: "power2.out"})
+                        gsap.to(".sec2 .text-wrap .two", {duration: 1, opacity:1, delay: .9, ease: "power2.out"})
+                        gsap.to(".sec2 .text-wrap .three", {duration: 1,opacity:1, delay: 1.2, ease: "power2.out"})
+                        gsap.to(".sec2 .text-wrap .four", {duration: 1, opacity:1, delay: 1.5, ease: "power2.out"})
+                        
+                    }, 1000);
                 }
                 if($(this).scrollTop() > $aboutmeOST){
                     if($(this).scrollTop() > $offset){
                         $("#section3").css('background','#F9D3E0');
-                        gsap.to(".sec3 h2",{duration: 2, opacity:1, bottom:"74vh", delay: .3, ease: "power4.out"})
-                        gsap.to(".sec3 p",{duration: 2, opacity:1, bottom:"15vh", delay: 1, ease: "power4.out"})
-                        gsap.to(".sec3 img",{duration: 2, opacity:1, bottom:"9vh", delay: 1, ease: "power4.out"})
+                        gsap.to(".sec3 .aboutme h1 span",{duration: 2, opacity:1, top:"11vh", delay: .3, ease: "power4.out"})
+                        gsap.to(".sec3 h2",{duration: 2, opacity:1, bottom:"66vh", delay: .3, ease: "power4.out"})
+                        gsap.to(".sec3 p",{duration: 2, opacity:1, bottom:"11vh", delay: 1, ease: "power4.out"})
+                        gsap.to(".sec3 img",{duration: 2, opacity:1, bottom:"5vh", delay: 1, ease: "power4.out"})
                     }
                 }
                 if($(this).scrollTop() > $aboutme2OST){
@@ -705,7 +732,12 @@
                     gsap.to(".sec5 img",{duration: 2, opacity:1, bottom:"10vh", delay: .8, ease: "power4.out"})
                 }
                 if($(this).scrollTop() > $aboutme4OST){
-                    gsap.to(".sec6 .img-wrap img:nth-child(1)",{duration: 2, left:"0%", rotationY: 360, ease: "power2.out"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(1)",{duration: 1, opacity:1, left:"0%", rotationY: 360, delay:".5", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(2)",{duration: 1, opacity:1, left:"35%", rotationY: 360, delay:"1",  ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(3)",{duration: 1, opacity:1, left:"70%", rotationY: 360, delay:"1.5", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(4)",{duration: 1, opacity:1, right:"70%", rotationY: -360, delay:".5", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(5)",{duration: 1, opacity:1, right:"35%", rotationY: -360, delay:"1", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(6)",{duration: 1, opacity:1, right:"0%", rotationY: -360, delay:"1.5", ease: "sine"})
                     // gsap.to(".sec6 h2",{duration: 2, opacity:1, bottom:"63vh", delay: .8, ease: "power4.out"})
                     // gsap.to(".sec6 p",{duration: 2, opacity:1, bottom:"11vh", delay: 1.3, ease: "power4.out"})
                     // gsap.to(".sec6 img",{duration: 2, opacity:1, bottom:"10vh", delay: .8, ease: "power4.out"})
