@@ -371,17 +371,21 @@
 .sec5 img:hover {box-shadow: 0 0 0 0 #3F52A0;}
 
 /* sec6 */
-.sec6 {}
-.sec6 .aboutme4 {}
-.sec6 .aboutme4 .img-wrap {}
-.sec6 .aboutme4 .img-wrap img {width: 28vw;}
-.sec6 .aboutme4 .img-wrap img:nth-child(1) {position: absolute; left: 0;top: 0;}
-.sec6 .aboutme4 .img-wrap img:nth-child(2) {position: absolute; left: 30vw; top: 0;}
-.sec6 .aboutme4 .img-wrap img:nth-child(3) {position: absolute; left: 60vw; top: 0;}
-.sec6 .aboutme4 .img-wrap img:nth-child(4) {position: absolute; left: 0vw; top: 40vh;}
-.sec6 .aboutme4 .img-wrap img:nth-child(5) {position: absolute; left: 40vw; top: 40vh;}
-.sec6 .aboutme4 .img-wrap img:nth-child(6) {position: absolute; left: 60vw; top: 40vh;}
-.sec6 .aboutme4 .img-wrap span {width: 98%; height: 60vh; position: absolute; left: 0;top: 25vh;}
+.bg-dot {background:url(../img/longDot.svg) no-repeat; width:98%; height: 68vh; position: absolute; left: 1%;  top:20vh;}
+.sec6 {height: 100vh;}
+/* .sec6 {background:url(../img/longDot.svg) no-repeat center; width:100%; height: 66vh; position: absolute; left: 0;  top:20vh; } */
+.sec6 .img-wrap {}
+.sec6 .img-wrap > img {width: 25%; box-shadow: 10px 10px 0 0 #3F52A0;}
+.sec6 .img-wrap > img:hover {box-shadow:0 0 0 0 #3F52A0;}
+.sec6 .img-wrap img:nth-child(1) {position: absolute; left: 5%; top: 13vh; transform:rotate(-10deg);}
+.sec6 .img-wrap img:nth-child(2) {position: absolute; left: 37%; top: 11vh;}
+.sec6 .img-wrap img:nth-child(3) {position: absolute; left: 70%; top:13vh; transform:rotate(10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
+.sec6 .img-wrap img:nth-child(3):hover {box-shadow:0 0 0 0 #3F52A0;}
+.sec6 .img-wrap img:nth-child(4) {position: absolute; left: 5%; top:55vh; transform:rotate(10deg);}
+.sec6 .img-wrap img:nth-child(5) {position: absolute; left: 37%; top:57vh;}
+.sec6 .img-wrap img:nth-child(6) {position: absolute; left: 70%; top: 55vh; transform:rotate(-10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
+.sec6 .img-wrap img:nth-child(6):hover {box-shadow:0 0 0 0 #3F52A0;}
+.sec6 .dotimg {}
 
 
 
@@ -390,6 +394,14 @@
 /* 미디어쿼리 */
 @media (max-width:1920px){
     .sec2 .text-wrap .txt4 {font-size: 3.8vw;}
+
+    /* .sec6 .img-wrap > img {width: 30%;}
+    .sec6 .img-wrap img:nth-child(1) {left: 0; top: 12vh;}
+    .sec6 .img-wrap img:nth-child(2) {left: 35%; top: 10vh;}
+    .sec6 .img-wrap img:nth-child(3) {left: 70%; top:12vh;}
+    .sec6 .img-wrap img:nth-child(4) {left: 0; top:54vh;}
+    .sec6 .img-wrap img:nth-child(5) {left: 35%; top:56vh;}
+    .sec6 .img-wrap img:nth-child(6) {left: 70%; top: 54vh;} */
 }
 @media (max-width:980px){
     .svgdot {
