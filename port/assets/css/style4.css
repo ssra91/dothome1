@@ -502,9 +502,40 @@
 
 /* sec7 */
 .sec7 {height: 100vh;}
-.sec7 .title {font-size: 3vw; font-weight: bold;}
-.sec7 .title .txt1 {}
-.sec7 .title .txt2 {}
+.sec7 .title {}
+.sec7 .title .txt1, .sec7 .title .txt2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    color: #fff;
+    font-size: 4vw;
+    white-space: nowrap;
+    text-shadow: 
+        1px 1px 0 #FFD063, 
+        2px 2px 0 #FFD063, 
+        3px 4px 0 #FFD063, 
+        4px 5px 0 #FFD063,
+        5px 7px 0 #FFD063,
+        6px 8px 0 #FFD063,
+        7px 10px 0#E8B466,
+        8px 11px 0#E8B466,
+        9px 13px 0#E8B466,
+        10px 14px 0#E8B466,
+        11px 16px 0 #E8B466,
+        12px 17px 0 #E8B466,
+        13px 19px 0 #554122,
+        14px 20px 0 #554122,
+        15px 22px 0 #554122,
+        16px 23px 0 #554122,
+        17px 25px 0 #554122,
+        18px 26px 0 #554122,
+        19px 28px 0#b43f4d,
+        20px 29px 0#b43f4d,
+        21px 30px 0#b43f4d,
+        23px 31px 0#b43f4d,
+        24px 32px 0#b43f4d,
+        26px 33px 0#b43f4d;
+}
 
 
 
