@@ -615,16 +615,50 @@
     .sec1 .arrow img {width: 95%; bottom: 2vh;}
     .svgdot { width: 470px; right: 6vw; bottom: 6vh; }
 
-    .sec3 h2 {bottom: 60vh; font-size: 3.5vw;width: 66vw;}
+    .sec3 h2 {bottom: 59vh; font-size: 3.5vw;width: 66vw;}
     .sec3 p { font-size: 1.4vw; width: 47%; bottom:14vh;}
     .sec3 img { width: 41%; bottom:9vh;}
     .sec3 .aboutme h1 span {font-size: 2.8vw;}
-    .sec3 .aboutme h1 span:nth-child(1) {left: 15%;}
+    .sec3 .aboutme h1 span:nth-child(1) {left: 15%; }
     .sec3 .aboutme h1 span:nth-child(2) {left: 23%;}
     .sec3 .aboutme h1 span:nth-child(3) {left: 30%;}
     .sec3 .aboutme h1 span:nth-child(4) {left: 51.5%;}
     .sec3 .aboutme h1 span:nth-child(5) {left: 67%;}
     .sec3 .aboutme h1 span:nth-child(6) { left: 72.5%;}
+
+    .sec4 h2 {bottom: 57vh; font-size: 3.5vw;}
+    .sec4 p {font-size: 1.5vw; bottom:21vh;}
+    .sec4 img { width: 41%; bottom:20vh;}
+    .sec4 .aboutme2 h1 span {font-size: 2.8vw;}
+    .sec4 .aboutme2 h1 span:nth-child(1) {left: 15%; }
+    .sec4 .aboutme2 h1 span:nth-child(2) {left: 23%;}
+    .sec4 .aboutme2 h1 span:nth-child(3) {left: 30%;}
+    .sec4 .aboutme2 h1 span:nth-child(4) {left: 51.5%;}
+    .sec4 .aboutme2 h1 span:nth-child(5) {left: 67%;}
+    .sec4 .aboutme2 h1 span:nth-child(6) { left: 72.5%;}
+
+
+    .sec5 h2 {width:80vw; bottom: 63vh; font-size: 3.5vw; left:0;}
+    .sec5 p {font-size: 1.4vw; bottom:12vh;}
+    .sec5 .aboutme3 h1 span {font-size: 2.8vw;}
+    .sec5 .aboutme3 h1 span:nth-child(1) {left: 15%; }
+    .sec5 .aboutme3 h1 span:nth-child(2) {left: 23%;}
+    .sec5 .aboutme3 h1 span:nth-child(3) {left: 30%;}
+    .sec5 .aboutme3 h1 span:nth-child(4) {left: 51.5%;}
+    .sec5 .aboutme3 h1 span:nth-child(5) {left: 67%;}
+    .sec5 .aboutme3 h1 span:nth-child(6) { left: 72.5%;}
+
+    .bg-dot {top: 28vh;}
+    .sec6 .img-wrap > img {width: 29%;}
+    .sec6 .img-wrap img:nth-child(1) {left: 5%; top: 13vh;}
+    .sec6 .img-wrap img:nth-child(2) {left: 36%; top: 18vh;}
+    .sec6 .img-wrap img:nth-child(3) {left: 71%; top:18vh;}
+    .sec6 .img-wrap img:nth-child(4) {left: 1%; top: 55vh;}
+    .sec6 .img-wrap img:nth-child(5) {left: 36%; top:56vh;}
+    .sec6 .img-wrap img:nth-child(6) {left: 71%; top: 55vh;}
+
+    .sec7 .title .txt2 {right: 13%;}
+    
 
     .container {max-width: 1000px;}
 
