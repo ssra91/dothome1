@@ -651,12 +651,12 @@
         </div>
         <!-- //section7 -->
 
-        <div class="section8">
+        <div id="section8">
             <div class="container">
                 <div class="sec8">
                     <div class="history">
                         <span class="txt1">the</span>
-                        <span class="txt1">history</span>
+                        <span class="txt2">history</span>
                     </div>
                 </div>
             </div>
@@ -706,6 +706,7 @@
             var $aboutme3 = $("#section5");
             var $aboutme4 = $("#section6");
             var $skill = $("#section7");
+            var $history = $("#section8");
 
 
             var $offset = $(window).height()/2;
@@ -715,6 +716,8 @@
             var $aboutme3OST = $aboutme3.offset().top - $offset; 
             var $aboutme4OST = $aboutme4.offset().top - $offset; 
             var $skillOST = $skill.offset().top - $offset;
+            var $historyOST = $history.offset().top - $offset;
+
 
             // $(".sec2 .text-wrap").each(function(){
             //    if($(window).scrollTop() > $("#section2").offset().top){
@@ -779,6 +782,11 @@
                 if($(this).scrollTop() > $skillOST){
                     gsap.to(".sec7 .title .txt1", {duration: 0.8, opacity:1, left:"50%", delay: .3, ease: "power4.out"})
                     gsap.to(".sec7 .title .txt2", {duration: 0.8, opacity:1, right:"5%", delay: .3, ease: "power4.out"})
+                }
+
+                if($(this).scrollTop() > $historyOST){
+                    gsap.to(".sec8 .history .txt1",{duration: .5, opacity:1, bottom:"34vh", delay: .3, ease: "power4.out"})
+                    gsap.to(".sec8 .history .txt2",{duration: .5, opacity:1, bottom:"10vh", delay: .6, ease: "power4.out"})
                 }
             });
         });
