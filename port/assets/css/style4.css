@@ -20,7 +20,7 @@
 #section4 {height: 100vh; background: #F9D3E0; position: relative;}
 #section5 {height: 100vh; background: #F9D3E0; position: relative;}
 #section6 {height: 150vh; background: #F9D3E0; position: relative;}
-#section7 {height: 100vh; background: #999; position: relative;}
+#section7 {height: 100vh; background: #FBD4CA; position: relative;}
 
 /* container */
 .container {
@@ -503,6 +503,16 @@
 /* sec7 */
 .sec7 {height: 100vh;}
 .sec7 .title {}
+.sec7 .title .txt1 {
+    left: 0%; top: 18vh;
+    transform: translate(-50%, -50%) rotate(7deg) skewX(-10deg);
+    z-index: 800; 
+}
+.sec7 .title .txt2 {
+    right: 0%; top: 23vh;
+    transform: skewX(-10deg);
+    z-index: 900; 
+}
 .sec7 .title .txt1, .sec7 .title .txt2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
@@ -510,31 +520,33 @@
     color: #fff;
     font-size: 4vw;
     white-space: nowrap;
+    text-transform: uppercase;
+    opacity: 0;
     text-shadow: 
-        1px 1px 0 #FFD063, 
-        2px 2px 0 #FFD063, 
-        3px 4px 0 #FFD063, 
-        4px 5px 0 #FFD063,
-        5px 7px 0 #FFD063,
-        6px 8px 0 #FFD063,
-        7px 10px 0#E8B466,
-        8px 11px 0#E8B466,
-        9px 13px 0#E8B466,
-        10px 14px 0#E8B466,
-        11px 16px 0 #E8B466,
-        12px 17px 0 #E8B466,
-        13px 19px 0 #554122,
-        14px 20px 0 #554122,
-        15px 22px 0 #554122,
-        16px 23px 0 #554122,
-        17px 25px 0 #554122,
-        18px 26px 0 #554122,
-        19px 28px 0#b43f4d,
-        20px 29px 0#b43f4d,
-        21px 30px 0#b43f4d,
-        23px 31px 0#b43f4d,
-        24px 32px 0#b43f4d,
-        26px 33px 0#b43f4d;
+        1px 1px 0#FABBCF, 
+        2px 2px 0#FABBCF, 
+        3px 4px 0#FABBCF, 
+        4px 5px 0#FABBCF,
+        5px 7px 0#FABBCF,
+        6px 8px 0#FABBCF,
+        7px 10px 0#E3ADAA,
+        8px 11px 0#E3ADAA,
+        9px 13px 0#E3ADAA,
+        10px 14px 0#E3ADAA,
+        11px 16px 0 #E3ADAA,
+        12px 17px 0 #E3ADAA,
+        13px 19px 0 #51A0AD,
+        14px 20px 0 #51A0AD,
+        15px 22px 0 #51A0AD,
+        16px 23px 0 #51A0AD,
+        17px 25px 0 #51A0AD,
+        18px 26px 0 #51A0AD,
+        19px 28px 0#04839D,
+        20px 29px 0#04839D,
+        21px 30px 0#04839D,
+        23px 31px 0#04839D,
+        24px 32px 0#04839D,
+        26px 33px 0#04839D;
 }
 
 
@@ -592,7 +604,31 @@
     .sec6 .img-wrap img:nth-child(4) {left: 5%; top:55vh;}
     .sec6 .img-wrap img:nth-child(5) {left: 37%; top:57vh;}
     .sec6 .img-wrap img:nth-child(6) {left: 70%; top: 55vh;}
+
+    /* sec6 */
+    .sec7 .title .txt2 {right: 12%;}
 }
+
+@media only screen and (max-width:1210px){
+    .sec1 .text-wrap .txt1 {font-size: 10.5vw; top: 37%;}
+    .sec1 .text-wrap .txt2 {left: 61%; font-size: 10.5vw;top: 62%;}
+    .sec1 .arrow img {width: 95%; bottom: 2vh;}
+    .svgdot { width: 470px; right: 6vw; bottom: 6vh; }
+
+    .sec3 h2 {bottom: 60vh; font-size: 3.5vw;width: 66vw;}
+    .sec3 p { font-size: 1.4vw; width: 47%; bottom:14vh;}
+    .sec3 img { width: 41%; bottom:9vh;}
+    .sec3 .aboutme h1 span {font-size: 2.8vw;}
+    .sec3 .aboutme h1 span:nth-child(1) {left: 15%;}
+    .sec3 .aboutme h1 span:nth-child(2) {left: 23%;}
+    .sec3 .aboutme h1 span:nth-child(3) {left: 30%;}
+    .sec3 .aboutme h1 span:nth-child(4) {left: 51.5%;}
+    .sec3 .aboutme h1 span:nth-child(5) {left: 67%;}
+    .sec3 .aboutme h1 span:nth-child(6) { left: 72.5%;}
+
+    .container {max-width: 1000px;}
+
+
 @media only screen and (max-width:980px){
     .svgdot { width: 820px;bottom: 13vw;}
     .sec1 .text-wrap .txt1, .text-wrap .txt2 { font-size: 10vw; top: 38%;}
