@@ -21,6 +21,8 @@
 #section5 {height: 100vh; background: #F9D3E0; position: relative;}
 #section6 {height: 150vh; background: #F9D3E0; position: relative;}
 #section7 {height: 100vh; background: #FBD4CA; position: relative;}
+#section8 {height: 100vh; background: #999; position: relative;}
+
 
 /* container */
 .container {
@@ -549,6 +551,10 @@
         26px 33px 0#04839D;
 }
 
+.sec8 {}
+.sec8 .history {font-size: 10vw; text-transform: uppercase;}
+.sec8 .history .txt1 {position: absolute;}
+.sec8 .history .txt2 {}
 
 
 
@@ -606,7 +612,7 @@
     .sec6 .img-wrap img:nth-child(6) {left: 70%; top: 55vh;}
 
     /* sec6 */
-    .sec7 .title .txt2 {right: 12%;}
+    .sec7 .title .txt2 {right: 13%;}
 }
 
 @media only screen and (max-width:1210px){
@@ -661,9 +667,32 @@
     
 
     .container {max-width: 1000px;}
+}
 
+@media only screen and (max-width:1020px) {
+    .svgdot { width: 700px; right: 16vw; bottom: 15vh;}
+    .sec1 .text-wrap .txt1 {font-size: 10.5vw; top: 30vh;}
+    .sec1 .text-wrap .txt2 { left: 58%; top: 54%;}
+    .scrollbtn {left: 7vw; bottom: 8vh; font-size: 22px; }
+    .sec1 .arrow img {width: 90%;}
+    .sec1 .arrow {left: 47%;}
+    .sec2 .text-wrap .txt4 {font-size: 5vw;}
 
-@media only screen and (max-width:980px){
+    .sec3 h2 { font-size: 4vw;width: 84vw; bottom: 57vh;}
+    .sec3 p { font-size: 1.6vw; width: 49%; bottom: 12vh;}
+    .sec3 .aboutme h1 span { font-size: 3.3vw;}
+    .sec5 .aboutme3 h1 span:nth-child(1) {left: 10%; }
+    .sec5 .aboutme3 h1 span:nth-child(2) {left: 19%;}
+    .sec5 .aboutme3 h1 span:nth-child(3) {left: 27%;}
+    .sec5 .aboutme3 h1 span:nth-child(4) {left: 52%;}
+    .sec5 .aboutme3 h1 span:nth-child(5) {left: 69%;}
+    .sec5 .aboutme3 h1 span:nth-child(6) { left: 75%;}
+
+    .container {max-width: 850px;}
+
+}
+
+@media only screen and (max-width:960px){
     .svgdot { width: 820px;bottom: 13vw;}
     .sec1 .text-wrap .txt1, .text-wrap .txt2 { font-size: 10vw; top: 38%;}
     .sec1 .text-wrap .txt1 {left: 45%; top: 38%;}
