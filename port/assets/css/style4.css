@@ -20,6 +20,7 @@
 #section4 {height: 100vh; background: #F9D3E0; position: relative;}
 #section5 {height: 100vh; background: #F9D3E0; position: relative;}
 #section6 {height: 150vh; background: #F9D3E0; position: relative;}
+#section7 {height: 100vh; background: #999; position: relative;}
 
 /* container */
 .container {
@@ -498,6 +499,13 @@
 .sec6 .img-wrap img:nth-child(6) {position: absolute; right: 0%; top: 54vh; transform:rotate(-10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
 .sec6 .img-wrap img:nth-child(6):hover {box-shadow:0 0 0 0 #3F52A0;}
 .aniimg {position: absolute; left: 0; bottom: 20vh; width: 100%;}
+
+/* sec7 */
+.sec7 {height: 100vh;}
+.sec7 .title {font-size: 3vw; font-weight: bold;}
+.sec7 .title .txt1 {}
+.sec7 .title .txt2 {}
+
 
 
 
