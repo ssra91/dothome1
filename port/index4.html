@@ -784,13 +784,25 @@
                     gsap.to(".sec7 .title .txt2", {duration: 0.8, opacity:1, right:"5%", delay: .3, ease: "power4.out"})
                 }
 
-                if($(this).scrollTop() > $historyOST){
-                    gsap.to(".sec8 .history .txt1",{duration: .5, opacity:1, bottom:"34vh", delay: .3, ease: "power4.out"})
-                    gsap.to(".sec8 .history .txt2",{duration: .5, opacity:1, bottom:"10vh", delay: .6, ease: "power4.out"})
-                }
+                // if($(this).scrollTop() > $historyOST){
+                //     gsap.to(".sec8 .history .txt1",{duration: .5, opacity:1, bottom:"34vh", delay: .3, ease: "power4.out"})
+                //     gsap.to(".sec8 .history .txt2",{duration: .5, opacity:1, bottom:"10vh", delay: .6, ease: "power4.out"})
+                // }
             });
         });
-        
+        const word = document.querySelectorAll(".sec8 .history");
+                window.addEventListener("mousemove", e => {
+                    document.querySelectorAll(".sec8 .history").forEach( elem => {
+                        const { x, y } = e;
+                        const rect = elem.getBoundingClientRect();
+                        const mouseX = (x - rect.left - rect.width/2) / rect.width * 5;
+                        const mouseY = (y - rect.top - rect.height/2) / rect.height * 5;
+                        elem.style.textShadow = `${mouseX}px ${-mouseY}px 0px rgba(241, 25, 98, 0.4),
+                                                ${-mouseX}px ${mouseY}px 0px rgba(3, 25, 89, 0.4),
+                                                ${mouseY}px ${-mouseX}px 0px rgba(188, 53, 68, 0.4),
+                                                ${-mouseY}px ${mouseX}px 0px rgba(190, 97, 62, 0.4)`
+                    });
+                });
         
     </script>
 </body>

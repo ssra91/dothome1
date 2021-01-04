@@ -553,8 +553,8 @@
 
 .sec8 {height: 100vh;}
 .sec8 .history {}
-.sec8 .history .txt1 {position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0%); z-index: 700; opacity: 0;}
-.sec8 .history .txt2 {position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0%); z-index: 800; opacity: 0;}
+.sec8 .history .txt1 {position: absolute; left: 50%; bottom: 34vh; transform: translate(-50%, 0%); z-index: 700;}
+.sec8 .history .txt2 {position: absolute; left: 50%; bottom: 10vh; transform: translate(-50%, 0%); z-index: 800;}
 .sec8 .history .txt1, .sec8 .history .txt2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
@@ -565,7 +565,7 @@
     text-transform: uppercase;
 
     text-shadow: 
-        1px 1px 0#FABBCF, 
+        1px 1px 0#fabbcf, 
         2px 2px 0#FABBCF, 
         3px 4px 0#FABBCF, 
         4px 5px 0#FABBCF,
