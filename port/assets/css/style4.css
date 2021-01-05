@@ -22,6 +22,7 @@
 #section6 {height: 150vh; background: #F9D3E0; position: relative;}
 #section7 {height: 100vh; background: #999; position: relative;}
 #section8 {height: 120vh; background: #FBD4CA; position: relative;}
+#section9 {height: 120vh; background: #FFD87E; position: relative;}
 
 /* container */
 .container {
@@ -491,12 +492,12 @@
 .sec6 .img-wrap {}
 .sec6 .img-wrap > img {width: 30%; box-shadow: 10px 10px 0 0 #3F52A0; opacity: 0; transition:cubic-bezier(0.075, 0.82, 0.165, 1)}
 .sec6 .img-wrap > img:hover {box-shadow:0 0 0 0 #3F52A0; mix-blend-mode: multiply;}
-.sec6 .img-wrap img:nth-child(1) {transform:rotate(-10deg);}
+.sec6 .img-wrap img:nth-child(1) {transform:rotate(-10deg); left: 0%; top:12vh; position: absolute;}
 .sec6 .img-wrap img:nth-child(2) {position: absolute; left: 0%; top: 10vh;}
 .sec6 .img-wrap img:nth-child(3) {position: absolute; left: 0%; top:12vh; transform:rotate(10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
 .sec6 .img-wrap img:nth-child(3):hover {box-shadow:0 0 0 0 #3F52A0;}
-.sec6 .img-wrap img:nth-child(4) {position: absolute; right: 0%; top:0; transform:rotate(10deg);}
-.sec6 .img-wrap img:nth-child(5) {position: absolute; right: 0%; top:56vh;}
+.sec6 .img-wrap img:nth-child(4) {position: absolute; right: 0%; top: 54vh; transform:rotate(10deg);}
+.sec6 .img-wrap img:nth-child(5) {position: absolute; right: 0%; top: 56vh;}
 .sec6 .img-wrap img:nth-child(6) {position: absolute; right: 0%; top: 54vh; transform:rotate(-10deg); box-shadow: -10px 10px 0 0 #3F52A0;}
 .sec6 .img-wrap img:nth-child(6):hover {box-shadow:0 0 0 0 #3F52A0;}
 .aniimg {position: absolute; left: 0; bottom: 20vh; width: 100%;}
@@ -652,6 +653,65 @@
 marquee {font-size: 5vw; font-weight: bold; color: #04839d;}
 .up {position:absolute; left:0; bottom: 15vh;}
 .down {position: absolute; bottom: 5vh; left:0;-webkit-text-stroke:3px #04839d; color:#e3adaa; }
+
+/* .cursor {
+    position: absolute;
+    width: 20px; height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(.5);
+    transition: transform 0.3s ease-in-out;
+} */
+
+.sec9 {height: 100vh; }
+.sec9 .sitepage {}
+.sec9 .sitepage .title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    color: #fff;
+    font-size: 6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    /* opacity: 0; */
+    text-shadow: 
+        1px 1px 0#FABBCF, 
+        2px 2px 0#FABBCF, 
+        3px 4px 0#FABBCF, 
+        4px 5px 0#FABBCF,
+        5px 7px 0#FABBCF,
+        6px 8px 0#FABBCF,
+        7px 10px 0#E3ADAA,
+        8px 11px 0#E3ADAA,
+        9px 13px 0#E3ADAA,
+        10px 14px 0#E3ADAA,
+        11px 16px 0 #E3ADAA,
+        12px 17px 0 #E3ADAA,
+        13px 19px 0 #51A0AD,
+        14px 20px 0 #51A0AD,
+        15px 22px 0 #51A0AD,
+        16px 23px 0 #51A0AD,
+        17px 25px 0 #51A0AD,
+        18px 26px 0 #51A0AD,
+        19px 28px 0#04839D,
+        20px 29px 0#04839D,
+        21px 30px 0#04839D,
+        23px 31px 0#04839D,
+        24px 32px 0#04839D,
+        26px 33px 0#04839D;}
+.sec9 .sitepage .title .txt1 {left: 19vw; top: 15vh; transform:rotate(7deg) skewX(-10deg); z-index: 800; position: absolute;}
+.sec9 .sitepage .title .txt2 {left: 16vw; top: 24vh; transform: skewX(-10deg); z-index: 900;  position: absolute;}
+.sec9 .sitepage .wsd {width:42%; position:absolute; left: 0; top:57vh; display: inline-block;}
+.sec9 .sitepage h1 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 39.5vw; top: 58vh;}
+.sec9 .sitepage p {position: absolute; font-size: 1.2vw; left: 40vw; top: 75vh; font-family: 'Chosunilbo_myungjo'; width: 41%; line-height: 1.68; letter-spacing: 0.1vw;}
+.sec9 .sitepage .dot {width: 42%; position: absolute; right:0; top:56vh; display: inline-block;}
+.sec9 .sitepage .seesite1 {font-weight: bold; font-size: 2vw; position: absolute; left: 40vw; top: 99vh; text-transform: uppercase;}
+.sec9 .sitepage .seecode1 {font-weight: bold; font-size: 2vw; position: absolute; left: 55vw; top: 99vh; text-transform: uppercase;}
+
+
 
 
 

@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style4.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -665,7 +666,29 @@
         </div>
         <!-- //section8 -->
 
-
+        <div id="section9">
+            <div class="container">
+                <div class="sec9">
+                    <div class="sitepage">
+                        <div class="title">
+                            <div class="txt1">web site</div>
+                            <div class="txt2">reference</div>
+                        </div>
+                        <div>
+                            <img class ="wsd" src="assets/img/mockup1.svg" alt="이미지">
+                            <img class="dot" src="assets/img/sitedot.svg" alt="이미지">
+                        </div>
+                        <h1>webstandard</h1>
+                        <p>웹 표준을 준수하여 작업한 사이트 입니다. 
+                            슬라이드, 탭, 메뉴, 팝업, 동영상 기능을 작업하였습니다. 
+                            slick.js를 이용하여 슬라이드, 
+                            라이트박스 생성 플러그인을 이용하여 갤러리 효과를 주었습니다.</p>
+                        <a class="seesite1" href="#">see site&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                        <a class="seecode1" href="#">see code&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- <div id="section9">
             <div class="sec7-wrap">
@@ -770,12 +793,12 @@
                     gsap.to(".sec5 img",{duration: 2, opacity:1, bottom:"10vh", delay: .8, ease: "power4.out"})
                 }
                 if($(this).scrollTop() > $aboutme4OST){
-                    gsap.fromTo(".sec6 .img-wrap img:nth-child(1)",{opacity:0, x:0, y:0},{opacity:1, x:40,y:70, duration:1, delay:".5", ease: "sine"})
-                    gsap.fromTo(".sec6 .img-wrap img:nth-child(2)",{duration: 1, opacity:1, left:"35%", rotationY: 360, delay:"1",  ease: "sine"})
-                    gsap.fromTo(".sec6 .img-wrap img:nth-child(3)",{opacity:0, x:0, y:-180},{opacity:1, x:-40, y:-140, duration:"1", delay:".5", ease: "sine"})
-                    gsap.fromTo(".sec6 .img-wrap img:nth-child(4)",{opacity:0, x:0, y:0},{opacity:1, x:-40, y:-70, duration:"1", delay:".5", ease: "sine"})
-                    gsap.fromTo(".sec6 .img-wrap img:nth-child(5)",{duration: 1, opacity:1, right:"35%", rotationY: -360, delay:"1", ease: "sine"})
-                    gsap.fromTo(".sec6 .img-wrap img:nth-child(6)",{duration: 1, opacity:1, right:"0%", rotationY: -360, delay:"1.5", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(1)",{duration: 1, opacity:1, left:"0%", rotationY: 360, delay:".5", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(2)",{duration: 1, opacity:1, left:"35%", rotationY: 360, delay:"1",  ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(3)",{duration: 1, opacity:1, left:"70%", rotationY: 360, delay:".5", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(4)",{duration: 1, opacity:1, right:"70%", rotationY: -360, delay:".5", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(5)",{duration: 1, opacity:1, right:"35%", rotationY: -360, delay:"1", ease: "sine"})
+                    gsap.to(".sec6 .img-wrap img:nth-child(6)",{duration: 1, opacity:1, right:"0%", rotationY: -360, delay:"1.5", ease: "sine"})
                     // gsap.to(".sec6 h2",{duration: 2, opacity:1, bottom:"63vh", delay: .8, ease: "power4.out"})
                     // gsap.to(".sec6 p",{duration: 2, opacity:1, bottom:"11vh", delay: 1.3, ease: "power4.out"})
                     // gsap.to(".sec6 img",{duration: 2, opacity:1, bottom:"10vh", delay: .8, ease: "power4.out"})
@@ -792,6 +815,20 @@
                 // }
             });
         });
+
+        // var shadow = document.querySelector(".sec8 .history");
+        //     window.querySelector("mousemove",e => {
+        //         document.querySelectorAll(".sec8 .history").forEach(elem => {
+        //             var { x, y } = e;
+        //             var rect = elem.getBoundingClientRect();
+        //             var mouseX = (x - rect.left - rect.width/2) / rect.width *2;
+        //             var mouseY = (y - rect.top - rect.height/2) / rect.height *2;
+        //             elem.style.textShadow = `${mouseX}px ${-mouseY}px 0px rgba(255, 165, 0, 0.4),
+        //                                     ${-mouseX}px ${mouseY}px 0px rgba(255, 35, 251, 0.4),
+        //                                     ${mouseY}px ${-mouseX}px 0px rgba(255, 255, 73, 0.4),
+        //                                     ${-mouseY}px ${mouseX}px 0px rgba(102, 249, 255, 0.4)`
+        //         });
+        //     });
         
     </script>
 </body>
