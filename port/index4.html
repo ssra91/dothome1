@@ -732,6 +732,7 @@
             var $aboutme4 = $("#section6");
             var $skill = $("#section7");
             var $history = $("#section8");
+            var $site = $("#section9");
 
 
             var $offset = $(window).height()/2;
@@ -742,6 +743,7 @@
             var $aboutme4OST = $aboutme4.offset().top - $offset; 
             var $skillOST = $skill.offset().top - $offset;
             var $historyOST = $history.offset().top - $offset;
+            var $siteOST = $site.offset().top - $offset;
 
 
             // $(".sec2 .text-wrap").each(function(){
@@ -807,6 +809,12 @@
                 if($(this).scrollTop() > $skillOST){
                     gsap.to(".sec7 .title .txt5", {duration: 0.8, opacity:1, left:"50%", delay: .3, ease: "power4.out"})
                     gsap.to(".sec7 .title .txt6", {duration: 0.8, opacity:1, right:"5%", delay: .3, ease: "power4.out"})
+                }
+
+                if($(this).scrollTop() > $siteOST){
+                    gsap.to(".sec9 .sitepage .title .txt1", {duration: 0.8, opacity:1, left:"19vw", delay: .3, ease: "power4.out"})
+                    gsap.to(".sec9 .sitepage .title .txt2", {duration: 0.8, opacity:1, left:"16vw", delay: .3, ease: "power4.out"})
+                    gsap.to(".sec9 .sitepage .dot", {duration: 3, opacity:1, delay: 1, ease: "ease-in"})
                 }
 
                 // if($(this).scrollTop() > $historyOST){
