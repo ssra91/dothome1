@@ -104,19 +104,17 @@
     box-shadow: 0 0 0 0 #b33f4c;
 }
 
-.sec1 .text-wrap .t {
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%) rotate(10deg) skewX(-20deg);
-    z-index: 900;
-    opacity: 0;
-}
-.sec1 .text-wrap .p {
-    left: 30%; top: 40%;
+.sec1 .text-wrap .txt1 {
+    left: 42%; top: 55%;
     transform: translate(-50%, -50%) rotate(-10deg) skewX(-20deg);
-    z-index: 800;
-    opacity: 0;
+    z-index: 800; opacity: 0;
 }
-.sec1 .text-wrap .t, .text-wrap .p {
+.sec1 .text-wrap .txt2 {
+    left: 60%; top: 35%;
+    transform: translate(-50%, -50%) rotate(10deg) skewX(-20deg);
+    z-index: 900; opacity: 0;
+}
+.sec1 .text-wrap .txt1, .text-wrap .txt2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     position: absolute;
@@ -223,7 +221,7 @@
 .sec2 .text-wrap .b {
     font-family: 'TmonMonsori';
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 3.8vw;
 }
 .sec2 .text-wrap .b > div {
     padding-bottom: .5vw;
@@ -288,4 +286,7 @@
 }
 .sec2 .about .lay .right .img img {
     margin-top: -2px;
+}
+.sec2 .about .lay .right span {
+    position: absolute; left: 0; top: 30%;
 }

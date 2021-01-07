@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Portfolio5</title>
     
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style5.css">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -29,8 +29,8 @@
             <div class="container">
                 <div class="sec1">
                     <div class="text-wrap">
-                        <span class="t">TIME TO SHOW</span>
-                        <span class="p">PORTFOLIO</span>
+                        <span class="txt1">welcome to my</span>
+                        <span class="txt2">PORTFOLIO</span>
                     </div>
                 </div>
             </div> 
@@ -547,6 +547,7 @@
                                 <div class="img">
                                     <img src="http://ssra11.dothome.co.kr/port/assets/img/aboutme.svg" alt="">
                                 </div>
+                                <span><img src="assets/img/longDot.svg" alt="이미지"></span>
                             </div>
                         </div>
                     </div>
@@ -570,8 +571,8 @@
         var s = skrollr.init();
 
         setTimeout(function(){
-            gsap.to(".sec1 .text-wrap .t", {duration: 0.8, opacity:1, top:"60%", delay: .3, ease: "power4.out"})
-            gsap.to(".sec1 .text-wrap .p", {duration: 0.8, opacity:1, top:"30%", delay: .3, ease: "power4.out"})
+            gsap.to(".sec1 .text-wrap .txt1", {duration: 0.8, opacity:1, top:"35%", delay: .3, ease: "power4.out"})
+            gsap.to(".sec1 .text-wrap .txt2", {duration: 0.8, opacity:1, top:"65%", delay: .3, ease: "power4.out"})
             gsap.to("#header", {duration: 0.6, top:0, opacity:1, delay: 1, ease: "expo.out"})
             gsap.to(".scrollbtn", {duration: 0.6, bottom: "5vw", opacity:1, delay: 1.3, ease: "expo.out"})
             gsap.to(".svg-bg svg path", {duration: 1.6, stagger:0.0084, opacity:1})
