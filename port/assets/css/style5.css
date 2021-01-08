@@ -200,7 +200,7 @@
 
 #section2 .scrollbtn2 {
     position: absolute;
-    left: 0vw; top: 114vw;
+    left: 0vw; top: 78.5%;
     border: 1px solid #2f4082;
     background-color: #F9D3E0;
     color: #2f4082;
@@ -281,26 +281,17 @@
     position: absolute;
     content:'';
 }
-.bubble-1  {left: 20%; animation: bubble-move 5s -100ms ease-in infinite;}
+.bubble-1  {left: 00%; animation: bubble-move 5s -100ms ease-in infinite;}
 .bubble-2  {left: 12%; animation: bubble-move 5s -1320ms ease-in infinite;}
 .bubble-3  {left: 36%; animation: bubble-move 5s -2320ms ease-in infinite;}
 .bubble-4  {left: 40%; animation: bubble-move 5s -800ms ease-in infinite;}
 .bubble-5  {left: 66%; animation: bubble-move 5s -320ms ease-in infinite;}
 .bubble-6  {left: 70%; animation: bubble-move 5s -1320ms ease-in infinite;}
-.bubble-7  {left: 73%; animation: bubble-move 5s -5320ms ease-in infinite;}
-.bubble-8  {left: 89%; animation: bubble-move 5s -6420ms ease-in infinite;}
-.bubble-9  {left: 15%; animation: bubble-move 5s -4320ms ease-in infinite;}
+.bubble-7  {left: 83%; animation: bubble-move 5s -5320ms ease-in infinite;}
+.bubble-8  {left: 95%; animation: bubble-move 5s -6420ms ease-in infinite;}
+.bubble-9  {left: 25%; animation: bubble-move 5s -4320ms ease-in infinite;}
 .bubble-10 {left: 56%; animation: bubble-move 5s -2320ms ease-in infinite;}
-.bubble-11 {left: 76%; animation: bubble-move 5s -4620ms ease-in infinite;}
-.bubble-12 {left: 82%; animation: bubble-move 5s -420ms ease-in infinite;}
-.bubble-13 {left: 19%; animation: bubble-move 5s -2220ms ease-in infinite;}
-.bubble-14 {left: 45%; animation: bubble-move 5s -1120ms ease-in infinite;}
-.bubble-15 {left: 39%; animation: bubble-move 5s -320ms ease-in infinite;}
-.bubble-16 {left: 78%; animation: bubble-move 5s -350ms ease-in infinite;}
-.bubble-17 {left: 66%; animation: bubble-move 5s -320ms ease-in infinite;}
-.bubble-18 {left: 55%; animation: bubble-move 5s -320ms ease-in infinite;}
-.bubble-19 {left: 63%; animation: bubble-move 5s -420ms ease-in infinite;}
-.bubble-20 {left: 10%; animation: bubble-move 5s -320ms ease-in infinite;}
+
 
 @keyframes bubble-move {
 	0% {width: 1px; height: 1px; transform: translatey(500%)}
@@ -346,36 +337,41 @@
 .sec2 .about h1 strong {
     display: block;
     font-weight: 900;
-    transform: rotate(7deg) skewX(-10deg);
+    transform: rotate(7deg) skewX(-10deg) translateY(-10px); opacity: 0;
 }
 .sec2 .about h1 em {
     display: block;
-    transform: rotate(-7deg) skewX(-10deg) translateY(30px);
+    transform: rotate(-7deg) skewX(-10deg) translateY(0px); opacity: 0;
 }
 .sec2 .about .lay {
     display: flex;
     justify-content: space-between;
 }
 .sec2 .about .lay h2 {
-    font-size: 29px;
-    font-family: 'Roboto Slab', serif; 
+    font-size: 43px;
+    font-family: 'Staatliches', cursive; 
     text-transform: uppercase;
     position: absolute;
-    left: 0;
-    top: 85vw;
-    width: 50%;
-    text-align: left;
+    left: -9vw;
+    opacity: 0;
+    top: auto;
+    /*width:60%*/
+    width: 69%;
+    text-align: right;
     color: #3F52A0;
     font-weight: bold;
 }
 .sec2 .about .lay .left {
-    flex: 0 0 47%;
+    /* flex: 0 0 47%; */
+    flex: 0 0 55%;
     font-family: 'Chosunilbo_myungjo';
     color: #3F52A0;
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 19px;
     line-height: 1.8;
     text-align: justify;
-    margin-top: 6vw;
+    margin-top: 10vw;
+    opacity: 0;
 }
 .sec2 .about .lay .right {
     flex: 0 0 47%;
@@ -388,7 +384,8 @@
     position: absolute;
     z-index: 2;
     top: 0;
-    left: 0;
+    left: 20%;
+    /* left: 0; */
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -416,7 +413,7 @@
     position: absolute;
     z-index: 10;
     bottom: calc(2% * 1);
-    left: calc(78% * 1);
+    left: calc(97% * 1);  /* 78% */
     transform: rotate(-20deg) scale(1);
     transition: .2s cubic-bezier(0.29, 0.57, 0.12, 0.99);
     width: 120px;
@@ -462,7 +459,7 @@
 .sec2 .about .lay .right .img img {
     margin-top: -2px;
 } */
-.sec2 .about .lay .dot {
-    position: absolute; left: 46px; top: 74%; width: 40%; opacity: 0;
+#section2 .dot {
+    position: absolute; left: 0; top: 62%; /* top: 170vh; */ width: 12%; opacity: 0;
 }
 
