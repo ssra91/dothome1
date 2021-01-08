@@ -422,7 +422,7 @@
     width: 120px;
     height: 120px;
     background: #3F52A0;
-    box-shadow: 0 10px 20px -6px #3F52A0;
+    box-shadow: 0 10px 20px -6px #8089af;
     border-radius: 50%;
     color: #fff;
     display: flex;
@@ -431,6 +431,9 @@
     text-transform: uppercase;
     cursor: pointer;
     overflow: hidden;
+    font-size: 25px;
+    font-family: 'Staatliches', cursive;
+    opacity: 80%;
 }
 .sec2 .about .lay .right .clickBtn:before {
     content: '';
