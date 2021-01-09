@@ -465,7 +465,7 @@
     margin-top: -2px;
 } */
 .sec2 .about .lay .dot {
-    position: absolute; left: 0;  margin-top: 1vw; top:74.5%;/* top: 73.3%;*/ width: 40vh;  /* top: 170vh; */ /*width: 9.5%;*/ /*width: 7vw;*/ /*width: 12vh;*/ opacity: 0;
+    position: absolute; left: 0;  margin-top: 1.5vw; top:74.5%;/* top: 73.3%;*/ width: 40vh;  /* top: 170vh; */ /*width: 9.5%;*/ /*width: 7vw;*/ /*width: 12vh;*/ opacity: 0;
 }
 
 /* @media only screen and (max-width:1640px){
