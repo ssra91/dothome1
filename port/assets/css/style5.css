@@ -15,8 +15,8 @@
 /* layout */
 #contents {}
 #section1 {height: 100vh; background: #FFD87E; position: relative;}
-#section2 {background: #FFD87E; }
-#section3 {}
+#section2 {background: #FFD87E;}
+#section3 {background: #F9D3E0; height: 130vh;}
 #section4 {}
 #section5 {}
 #section6 {}
@@ -198,26 +198,7 @@
 
 
 
-#section2 .scrollbtn2 {
-    position: absolute;
-    left: 0vw; top: 80%;
-    /* margin-top: 0.5vw; */
-    margin-top: 0.7vw;
-    border: 1px solid #2f4082;
-    background-color: #F9D3E0;
-    color: #2f4082;
-    padding: 10px 20px; /*50px*/
-    /* font-size: 30px; */
-    font-size: 25px;
-    margin-right: 0 10px 0 0;
-    box-shadow: 10px 10px 0 0#2f4082;
-    font-family: 'Staatliches', cursive;
-    transition: box-shadow .4s ease;
-    opacity: 0;
-}
-#section2 .scrollbtn2:hover {
-    box-shadow: 0 0 0 0 #2f4082;
-}
+
 .sec2 {
     padding: 50vh 0;
 }
@@ -338,21 +319,18 @@
     26px 33px 0#3F52A0;
     padding-bottom: 150px;
 }
-.sec2 .about h1 strong {
+.sec2 .about h1 {
     display: block;
     font-weight: 900;
-    transform: rotate(7deg) skewX(-10deg) translateY(-10px); opacity: 0;
-}
-.sec2 .about h1 em {
-    display: block;
-    transform: rotate(-7deg) skewX(-10deg) translateY(0px); opacity: 0;
+    left:0; top:0;
+    transform: rotate(0deg) skewX(-10deg) translateY(-10px); opacity: 0;
 }
 .sec2 .about .lay {
     display: flex;
     justify-content: space-between;
 }
 .sec2 .about .lay h2 {
-    font-size: 42px;
+    font-size: 45px;
     font-family: 'Staatliches', cursive; 
     text-transform: uppercase;
     position: absolute;
@@ -375,7 +353,7 @@
     line-height: 1.8;
     text-align: justify;
     /* margin-top: 6vw; */
-    margin-top: 7.5vw;
+    margin-top: 4vw;
     /* opacity: 0; */
 }
 .sec2 .about .lay .right {
@@ -464,17 +442,47 @@
 .sec2 .about .lay .right .img img {
     margin-top: -2px;
 } */
-#section2 .dot {
+#section2 span {
     /* position: absolute; left: 0;  margin-top: 1.5vw; top:74.5%;*//* top: 73.3%;*//* width: 40vh; */ /* top: 170vh; */ /*width: 9.5%;*/ /*width: 7vw;*/ /*width: 12vh;*//* opacity: 0; */
     position: relative;
 }
-#section2 .dot img {
-    left: 0;
+#section2 span .dot {
     position: absolute;
-    height: 25vw;
-    width: 22vw;
-    margin-top: 5vw;
+    bottom: 48vh; left: 0;
+    width: 30vw;
+    /* margin-top: 5vw; */
 }
+#section2 span a {
+    position: absolute;
+    width: 8vw;
+    text-align: center;
+    left: 0; bottom: 49vh;
+    border: 1px solid #2f4082;
+    background-color: #F9D3E0;
+    color: #2f4082;
+    padding: 10px 20px; /*50px*/
+    /* font-size: 30px; */
+    font-size: 25px;
+    margin-right: 0 10px 0 0;
+    box-shadow: 10px 10px 0 0#2f4082;
+    font-family: 'Staatliches', cursive;
+    transition: box-shadow .4s ease;
+    opacity: 0;
+}
+#section2 span a:hover {
+    box-shadow: 0 0 0 0 #2f4082;
+}
+
+/* section3 */
+.sec3 {background: url(../img/longDot.svg) no-repeat center center; }
+.sec3 .img_wrap {width: 100%; position: relative;}
+.sec3 .img_wrap .a {position: absolute; left:0; top: 12vh; width: 25%; transform:rotate(-10deg);}
+.sec3 .img_wrap .b {position: absolute; left:35%; top: 0vh;  width: 25%;}
+.sec3 .img_wrap .c {position: absolute; left:70%; top: 12vh;  width: 25%; transform:rotate(10deg);}
+.sec3 .img_wrap .d {position: absolute; left:0; top: 51vh;  width: 25%; transform:rotate(10deg);}
+.sec3 .img_wrap .e {position: absolute; left:35%; bottom: 0vh;  width: 25%;}
+.sec3 .img_wrap .f {position: absolute; left:70%; top: 51vh;  width: 25%; transform:rotate(-10deg);}
+
 
 /* @media only screen and (max-width:1640px){
     .container {max-width: 1100px;}
