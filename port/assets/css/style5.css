@@ -17,9 +17,9 @@
 #section1 {height: 100vh; background: #FFD87E; position: relative;}
 #section2 {background: #FFD87E;}
 #section3 {background: #F9D3E0; height: 130vh;}
-#section4 {}
-#section5 {}
-#section6 {}
+#section4 {background: #FBD4CA; }
+#section5 {background: #FBD4CA; }
+#section6 {background: #FFD87E;}
 
 /* scroll */
 .scroll {
@@ -477,12 +477,209 @@
 .sec3 {background: url(../img/longDot.svg) no-repeat center center; }
 .sec3 .img_wrap {width: 100%; position: relative;}
 .sec3 .img_wrap .a {position: absolute; left:0; top: 12vh; width: 25%; transform:rotate(-10deg);}
-.sec3 .img_wrap .b {position: absolute; left:35%; top: 0vh;  width: 25%;}
+.sec3 .img_wrap .b {position: absolute; left:35%; top: 10vh;  width: 25%;}
 .sec3 .img_wrap .c {position: absolute; left:70%; top: 12vh;  width: 25%; transform:rotate(10deg);}
 .sec3 .img_wrap .d {position: absolute; left:0; top: 51vh;  width: 25%; transform:rotate(10deg);}
-.sec3 .img_wrap .e {position: absolute; left:35%; bottom: 0vh;  width: 25%;}
+.sec3 .img_wrap .e {position: absolute; left:35%; top: 53vh;  width: 25%;}
 .sec3 .img_wrap .f {position: absolute; left:70%; top: 51vh;  width: 25%; transform:rotate(-10deg);}
 
+/* section4 */
+.sec4 .title .txt1 {
+    left: 0%; top: 18vh;
+    transform: translate(-50%, -50%) rotate(7deg) skewX(-10deg);
+    z-index: 800; 
+}
+.sec4 .title .txt2 {
+    right: 0%; top: 23vh;
+    transform: skewX(-10deg);
+    z-index: 900; 
+}
+.sec4 .title .txt1, .sec4 .title .txt2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    color: #fff;
+    font-size: 4vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    /* opacity: 0; */
+    text-shadow: 
+        1px 1px 0#FABBCF, 
+        2px 2px 0#FABBCF, 
+        3px 4px 0#FABBCF, 
+        4px 5px 0#FABBCF,
+        5px 7px 0#FABBCF,
+        6px 8px 0#FABBCF,
+        7px 10px 0#E3ADAA,
+        8px 11px 0#E3ADAA,
+        9px 13px 0#E3ADAA,
+        10px 14px 0#E3ADAA,
+        11px 16px 0 #E3ADAA,
+        12px 17px 0 #E3ADAA,
+        13px 19px 0 #51A0AD,
+        14px 20px 0 #51A0AD,
+        15px 22px 0 #51A0AD,
+        16px 23px 0 #51A0AD,
+        17px 25px 0 #51A0AD,
+        18px 26px 0 #51A0AD,
+        19px 28px 0#04839D,
+        20px 29px 0#04839D,
+        21px 30px 0#04839D,
+        23px 31px 0#04839D,
+        24px 32px 0#04839D,
+        26px 33px 0#04839D;
+}
+#section4 .menu {
+    font-family: 'Poppins';
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+}
+#section4 .menu_item {
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    text-shadow: 5px 5px rgb(4, 131, 157), 5px 5px rgba(227, 137, 170, .9), 10px 10px rgba(255, 255, 255, .9);
+    position: absolute; left: 0; bottom: 0;
+} 
+.sec5 .history {position: relative; padding: 70vh 0;}
+.sec5 .history .txt1 {position: absolute; left: 50%; bottom: 63vh; transform: translate(-50%, 0%); z-index: 700;}
+.sec5 .history .txt2 {position: absolute; left: 50%; bottom: 40vh; transform: translate(-50%, 0%); z-index: 800;}
+.sec5 .history .txt1, .sec5 .history .txt2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    color: #fff;
+    font-size: 17vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: 
+        1px 1px 0#fabbcf, 
+        2px 2px 0#FABBCF, 
+        3px 4px 0#FABBCF, 
+        4px 5px 0#FABBCF,
+        5px 7px 0#FABBCF,
+        6px 8px 0#FABBCF,
+        7px 10px 0#FABBCF,
+        8px 11px 0#FABBCF,
+        9px 13px 0#FABBCF,
+        10px 14px 0#FABBCF,
+        11px 16px 0#FABBCF,
+        12px 17px 0#FABBCF,
+        13px 19px 0#FABBCF,
+        14px 20px 0#FABBCF,
+        15px 22px 0#e3adaa,
+        16px 23px 0#e3adaa,
+        17px 25px 0#e3adaa,
+        18px 26px 0#e3adaa,
+        19px 28px 0#e3adaa,
+        20px 29px 0#e3adaa,
+        21px 30px 0 #E3ADAA,
+        23px 31px 0 #E3ADAA,
+        24px 32px 0 #E3ADAA,
+        26px 33px 0 #E3ADAA,
+        27px 34px 0 #E3ADAA,
+        29px 35px 0 #E3ADAA,
+        30px 36px 0 #E3ADAA,
+        32px 37px 0 #E3ADAA,
+        33px 38px 0 #E3ADAA,
+        35px 39px 0 #E3ADAA,
+        36px 40px 0 #51a0ad,
+        38px 41px 0 #51a0ad,
+        39px 42px 0 #51a0ad,
+        41px 43px 0 #51a0ad,
+        42px 44px 0 #51a0ad,
+        44px 45px 0 #51a0ad,
+        45px 46px 0 #51a0ad,
+        47px 47px 0 #51a0ad,
+        48px 49px 0 #51A0AD,
+        49px 51px 0 #51A0AD,
+        50px 53px 0 #51A0AD,
+        51px 55px 0 #51A0AD,
+        52px 57px 0 #51A0AD,
+        53px 59px 0 #51A0AD,
+        54px 61px 0 #51A0AD,
+        55px 63px 0 #04839d,
+        56px 65px 0 #04839d,
+        57px 67px 0 #04839d,
+        58px 69px 0 #04839d,
+        59px 71px 0 #04839d,
+        60px 73px 0 #04839d,
+        61px 75px 0 #04839d,
+        62px 77px 0 #04839d,
+        63px 79px 0 #04839d,
+        65px 80px 0 #04839D,
+        68px 81px 0 #04839D,
+        70px 82px 0 #04839D,
+        72px 83px 0 #04839D,
+        74px 84px 0 #04839D,
+        76px 85px 0 #04839D;
+}
+
+/* sec6 */
+.sec6 {height: 120vh; }
+.sec6 .sitepage {}
+.sec6 .sitepage .title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    color: #fff;
+    font-size: 6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 
+        1px 1px 0#FFD063, 
+        2px 2px 0#FFD063, 
+        3px 4px 0#FFD063, 
+        4px 5px 0#FFD063,
+        5px 7px 0#FFD063,
+        6px 8px 0#FFD063,
+        7px 10px 0#E8B466,
+        8px 11px 0#E8B466,
+        9px 13px 0#E8B466,
+        10px 14px 0#E8B466,
+        11px 16px 0 #E8B466,
+        12px 17px 0 #E8B466,
+        13px 19px 0 #353333,
+        14px 20px 0#353333,
+        15px 22px 0#353333,
+        16px 23px 0#353333,
+        17px 25px 0#353333,
+        18px 26px 0#353333,
+        19px 28px 0#000,
+        20px 29px 0#000,
+        21px 30px 0#000,
+        23px 31px 0#000,
+        24px 32px 0#000,
+        26px 33px 0#000;}
+        
+.sec6 .sitepage .title .txt1 {left: 0%; top: 15vh; transform:translate(-50%, -50%) rotate(7deg) skewX(-10deg); z-index: 800; position: absolute; opacity: 0;}
+.sec6 .sitepage .title .txt2 {right:0%; top: 26vh; transform:translate(-50%, -50%) skewX(-10deg); z-index: 900;  position: absolute;opacity: 0;}
+.sec6 .sitepage .wsd {width:50%; position:absolute; left: 0; top:47vh; display: inline-block;}
+.sec6 .sitepage h1 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 38.5vw; top: 51vh;}
+.sec6 .sitepage p {position: absolute; font-size: 1.2vw; left: 39vw; top: 72vh; font-family: 'Chosunilbo_myungjo'; width: 41%; line-height: 1.68; letter-spacing: 0.1vw;}
+.sec6 .sitepage .dot {width: 45%; position: absolute; right:0; top:49vh; display: inline-block; opacity: 0;}
+.sec6 .sitepage .seesite {font-weight: bold; font-size: 2vw; position: absolute; left: 39vw; top: 98vh; text-transform: uppercase;}
+.sec6 .sitepage .seecode {font-weight: bold; font-size: 2vw; position: absolute; left: 54vw; top: 98vh; text-transform: uppercase;}
+
+/* .sec6-1 {height: 100vh;}
+.sec6-1 .sitepage .rps {width:50%; position:absolute; right: 0; top:23vh; display: inline-block;}
+.sec6-1 .sitepage h1 {text-transform: uppercase; font-size: 4.2vw; font-family: 'Impact'; position: absolute; left: 0.6vw; top: 27vh;}
+.sec6-1 .sitepage p {position: absolute; font-size: 1.2vw; left: 1.8vw; top: 47vh; font-family: 'Chosunilbo_myungjo'; width: 41%; line-height: 1.68; letter-spacing: 0.1vw;}
+.sec6-1 .sitepage .dot {width: 45%; position: absolute; left:0; top:25vh; display: inline-block;}
+.sec6-1 .sitepage .seesite {font-weight: bold; font-size: 2vw; position: absolute; left: 1.5vw; top: 74vh; text-transform: uppercase;}
+.sec6-1 .sitepage .seecode {font-weight: bold; font-size: 2vw; position: absolute; left: 17vw; top: 74vh; text-transform: uppercase;} */
+
+/* #section4 .anitxt .up {position:absolute; left:0; bottom: 15vh;}
+#section4 .anitxt .down {position: absolute; bottom: 5; left:0;-webkit-text-stroke:3px #04839d; color:#e3adaa; } */
 
 /* @media only screen and (max-width:1640px){
     .container {max-width: 1100px;}
