@@ -20,6 +20,8 @@
 #section4 {background: #FBD4CA; }
 #section5 {background: #FBD4CA; }
 #section6 {background: #FFD87E;}
+#section7 {background: #FFD87E;}
+
 
 /* scroll */
 .scroll {
@@ -670,13 +672,13 @@
 .sec6 .sitepage .seesite {font-weight: bold; font-size: 2vw; position: absolute; left: 39vw; top: 98vh; text-transform: uppercase;}
 .sec6 .sitepage .seecode {font-weight: bold; font-size: 2vw; position: absolute; left: 54vw; top: 98vh; text-transform: uppercase;}
 
-/* .sec6-1 {height: 100vh;}
-.sec6-1 .sitepage .rps {width:50%; position:absolute; right: 0; top:23vh; display: inline-block;}
-.sec6-1 .sitepage h1 {text-transform: uppercase; font-size: 4.2vw; font-family: 'Impact'; position: absolute; left: 0.6vw; top: 27vh;}
-.sec6-1 .sitepage p {position: absolute; font-size: 1.2vw; left: 1.8vw; top: 47vh; font-family: 'Chosunilbo_myungjo'; width: 41%; line-height: 1.68; letter-spacing: 0.1vw;}
-.sec6-1 .sitepage .dot {width: 45%; position: absolute; left:0; top:25vh; display: inline-block;}
-.sec6-1 .sitepage .seesite {font-weight: bold; font-size: 2vw; position: absolute; left: 1.5vw; top: 74vh; text-transform: uppercase;}
-.sec6-1 .sitepage .seecode {font-weight: bold; font-size: 2vw; position: absolute; left: 17vw; top: 74vh; text-transform: uppercase;} */
+.sec7 {height: 100vh;}
+.sec7 .sitepage .rps {width:50%; position:absolute; right: 0; top:23vh; display: inline-block;}
+.sec7 .sitepage h1 {text-transform: uppercase; font-size: 4.2vw; font-family: 'Impact'; position: absolute; left: 0.6vw; top: 27vh;}
+.sec7 .sitepage p {position: absolute; font-size: 1.2vw; left: 1.8vw; top: 47vh; font-family: 'Chosunilbo_myungjo'; width: 41%; line-height: 1.68; letter-spacing: 0.1vw;}
+.sec7 .sitepage .dot {width: 45%; position: absolute; left:0; top:25vh; display: inline-block;}
+.sec7 .sitepage .seesite {font-weight: bold; font-size: 2vw; position: absolute; left: 1.5vw; top: 74vh; text-transform: uppercase;}
+.sec7 .sitepage .seecode {font-weight: bold; font-size: 2vw; position: absolute; left: 17vw; top: 74vh; text-transform: uppercase;}
 
 /* #section4 .anitxt .up {position:absolute; left:0; bottom: 15vh;}
 #section4 .anitxt .down {position: absolute; bottom: 5; left:0;-webkit-text-stroke:3px #04839d; color:#e3adaa; } */
