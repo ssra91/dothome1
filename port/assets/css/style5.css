@@ -14,9 +14,12 @@
 
 /* layout */
 #contents {}
-#section1 {height: 100vh; background: #FFD87E; position: relative;}
-#section2 {background: #FFD87E;}
-#section3 {background: #F9D3E0; height: 130vh;}
+#section1 {height: 100vh; position: relative;}
+#section2 {
+    background: url(../img/longDot.svg) no-repeat left -20% bottom 10%;
+    background-size: 800px;
+}
+#section3 {background: #F9D3E0;}
 #section4 {background: #FBD4CA; }
 #section5 {background: #FBD4CA; }
 #section6 {background: #FFD87E;}
@@ -478,9 +481,7 @@
 /* section3 */
 .sec3 {background: url(../img/longDot.svg) no-repeat center center; }
 .sec3 .img_wrap {width: 100%; position: relative;}
-.sec3 .img-wrap {width: 25%; box-shadow: 10px 10px 0 0 #3F52A0; transition:cubic-bezier(0.075, 0.82, 0.165, 1)}
-.sec6 .img-wrap > img:hover {box-shadow:0 0 0 0 #3F52A0;}
-.sec3 .img_wrap .a {position: absolute; left:0; top: 12vh; width: 25%; transform:rotate(-10deg); box-shadow: 10px 10px 0 0 #3F52A0;}
+.sec3 .img_wrap .a {position: absolute; left:0; top: 12vh; width: 25%; transform:rotate(-10deg);}
 .sec3 .img_wrap .b {position: absolute; left:35%; top: 10vh;  width: 25%;}
 .sec3 .img_wrap .c {position: absolute; left:70%; top: 12vh;  width: 25%; transform:rotate(10deg);}
 .sec3 .img_wrap .d {position: absolute; left:0; top: 51vh;  width: 25%; transform:rotate(10deg);}
@@ -488,7 +489,7 @@
 .sec3 .img_wrap .f {position: absolute; left:70%; top: 51vh;  width: 25%; transform:rotate(-10deg);}
 
 /* section4 */
-/* .sec4 .title .txt1 {
+.sec4 .title .txt1 {
     left: 0%; top: 18vh;
     transform: translate(-50%, -50%) rotate(7deg) skewX(-10deg);
     z-index: 800; 
@@ -506,7 +507,7 @@
     font-size: 4vw;
     white-space: nowrap;
     text-transform: uppercase;
-    opacity: 0;
+    /* opacity: 0; */
     text-shadow: 
         1px 1px 0#FABBCF, 
         2px 2px 0#FABBCF, 
@@ -625,10 +626,10 @@
         72px 83px 0 #04839D,
         74px 84px 0 #04839D,
         76px 85px 0 #04839D;
-} */
+}
 
 /* sec6 */
-/* .sec6 {height: 120vh; }
+.sec6 {height: 120vh; }
 .sec6 .sitepage {}
 .sec6 .sitepage .title {
     font-family: 'Poppins', sans-serif;
@@ -681,14 +682,6 @@
 .sec7 .sitepage .dot {width: 45%; position: absolute; left:0; top:25vh; display: inline-block;}
 .sec7 .sitepage .seesite {font-weight: bold; font-size: 2vw; position: absolute; left: 1.5vw; top: 74vh; text-transform: uppercase;}
 .sec7 .sitepage .seecode {font-weight: bold; font-size: 2vw; position: absolute; left: 17vw; top: 74vh; text-transform: uppercase;}
-
-.sec8 {height: 100vh;}
-.sec8.sitepage .mgb {width:50%; position:absolute; left: 0; top:47vh; display: inline-block;}
-.sec8.sitepage h1 {text-transform: uppercase; font-size: 4.5vw; font-family: 'Impact'; position: absolute; left: 38.5vw; top: 51vh;}
-.sec8.sitepage p {position: absolute; font-size: 1.2vw; left: 39vw; top: 72vh; font-family: 'Chosunilbo_myungjo'; width: 41%; line-height: 1.68; letter-spacing: 0.1vw;}
-.sec8.sitepage .dot {width: 45%; position: absolute; right:0; top:49vh; display: inline-block; opacity: 0;}
-.sec8.sitepage .seesite {font-weight: bold; font-size: 2vw; position: absolute; left: 39vw; top: 98vh; text-transform: uppercase;}
-.sec8.sitepage .seecode {font-weight: bold; font-size: 2vw; position: absolute; left: 54vw; top: 98vh; text-transform: uppercase;} */
 
 /* #section4 .anitxt .up {position:absolute; left:0; bottom: 15vh;}
 #section4 .anitxt .down {position: absolute; bottom: 5; left:0;-webkit-text-stroke:3px #04839d; color:#e3adaa; } */
