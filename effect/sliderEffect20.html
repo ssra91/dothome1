@@ -404,82 +404,80 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script>
-    var sliderWrap = $(".slider-wrap"),
-        sliderImg = $(".slider-img"),
-        slider = $(".slider"),
-        sliderNav = $(".slider-nav"),
-        sliderDot = $(".slider-dot"),
-        sliderCount = $(".slider_count"),
-        sliderNumber = sliderCount.find(".sliderNumber"),
-        sliderTotal = sliderCount.find(".sliderTotal");
-    var dotHTML = "",
-        currentIndex = 0,
-        duration = 1000,
-        easing = "easeOutExpo",
-        sliderLength = slider.length,
-        sliderTimer = "",
-        interval = 3000;
-    //이미지 위치 설정, 닷 메뉴 설정
-    slider.each(function(index){
-        $(this).css({ "left": 100*index+"%" });
-        dotHTML += "<a href='#'>0"+ (index+1) +"</a>";
-    });
-    sliderDot.html(dotHTML);
-    //이미지 움직이기
-    function gotoSlider(num){
-        sliderImg.stop().animate({ "left": num*-100+"%"}, duration, easing);
-        currentIndex = num;
-        gotoActive();
-    }
-    //활성화 표시하기
-    function gotoActive(){
-        slider.removeClass("active").eq(currentIndex).addClass("active");
-        sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
-        sliderNumber.text("0" + (currentIndex + 1));
-        sliderTotal.text("0" + sliderLength);
-    }
-    //버튼 클릭하기
-    sliderNav.on("click","a",function(e){
-        e.preventDefault();
-        var nextIndex = (currentIndex + 1) % sliderLength;
-        var prevIndex = (currentIndex - 1) % sliderLength;
-        if( currentIndex == 0 ) prevIndex = sliderLength - 1;
-        if( $(this).hasClass("prev") ){
-            gotoSlider(prevIndex);
-        } else {
-            gotoSlider(nextIndex);
+        var sliderWrap = $(".slider-wrap"),
+            sliderImg = $(".slider-img"),
+            slider = $(".slider"),
+            sliderNav = $(".slider-nav"),
+            sliderDot = $(".slider-dot"),
+            sliderCount = $(".slider_count"),
+            sliderNumber = sliderCount.find(".sliderNumber"),
+            sliderTotal = sliderCount.find(".sliderTotal");
+        var dotHTML = "",
+            currentIndex = 0,
+            duration = 1000,
+            easing = "easeOutExpo",
+            sliderLength = slider.length,
+            sliderTimer = "",
+            interval = 300000000;
+        //이미지 위치 설정, 닷 메뉴 설정
+        slider.each(function(index){
+            $(this).css({ "left": 100*index+"%" });
+            dotHTML += "<a href='#'>0"+ (index+1) +"</a>";
+        });
+        sliderDot.html(dotHTML);
+        //이미지 움직이기
+        function gotoSlider(num){
+            sliderImg.stop().animate({ "left": num*-100+"%"}, duration, easing);
+            currentIndex = num;
+            gotoActive();
         }
-    });
-    //닷 버튼 클릭하기
-    sliderDot.on("click","a",function(e){
-        e.preventDefault();
-        if( !$(this).hasClass("active") ){
-            gotoSlider( $(this).index() );
+        //활성화 표시하기
+        function gotoActive(){
+            slider.removeClass("active").eq(currentIndex).addClass("active");
+            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+            sliderNumber.text("0" + (currentIndex + 1));
+            sliderTotal.text("0" + sliderLength);
         }
-    });
-    //자동 플레이
-    function startTimer(){
-        sliderTimer = setInterval(function(){
-            var intervalNum = (currentIndex + 1) % sliderLength;
-            gotoSlider(intervalNum);
-        }, interval);
-    }
-    function stopTimer(){
-        clearInterval(sliderTimer)
-    }
-    sliderWrap.on({mouseenter: stopTimer, mouseleave: startTimer});
-
-    //글씨 쪼개기
-    $(".split").each(function(){
-        var text = $(this).text();
-        let split = text.split("").join("</span><span aria-hidden='true'>");
-            split = "<span aria-hidden='true'>" + split + "</span>";
-            $(this).html(split).attr("aria-label",text);
-    });
-
-    //바로 시작하기
-    gotoSlider(currentIndex);
-    startTimer();
+        //버튼 클릭하기
+        sliderNav.on("click","a",function(e){
+            e.preventDefault();
+            var nextIndex = (currentIndex + 1) % sliderLength;
+            var prevIndex = (currentIndex - 1) % sliderLength;
+            if( currentIndex == 0 ) prevIndex = sliderLength - 1;
+            if( $(this).hasClass("prev") ){
+                gotoSlider(prevIndex);
+            } else {
+                gotoSlider(nextIndex);
+            }
+        });
+        //닷 버튼 클릭하기
+        sliderDot.on("click","a",function(e){
+            e.preventDefault();
+            if( !$(this).hasClass("active") ){
+                gotoSlider( $(this).index() );
+            }
+        });
+        //자동 플레이
+        function startTimer(){
+            sliderTimer = setInterval(function(){
+                var intervalNum = (currentIndex + 1) % sliderLength;
+                gotoSlider(intervalNum);
+            }, interval);
+        }
+        function stopTimer(){
+            clearInterval(sliderTimer)
+        }
+        sliderWrap.on({mouseenter: stopTimer, mouseleave: startTimer});
+        //글씨 쪼개기
+        $(".split").each(function(){
+            var text = $(this).text();
+            let split = text.split("").join("</span><span aria-hidden='true'>");
+                split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-label", text);
+        });
+        //바로 시작하기
+        gotoSlider(currentIndex);
+        startTimer();
 </script>
 
 </html>
