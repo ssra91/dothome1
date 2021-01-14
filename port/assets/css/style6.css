@@ -24,7 +24,9 @@
     background: url(../img/longDot.svg) no-repeat center center;
     background-size: 68%; 
 }
-#section4 {}
+#section4 {
+    
+}
 #section5 {}
 #section6 {}
 #section7 {}
@@ -480,13 +482,210 @@
 .sec3 figure .e {margin: 0 7vh 20vh 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082;}
 .sec3 figure .f {margin: 0 7vh 20vh 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transform:rotate(-10deg);}
 
-/* #section4 .anitxt .up {position:absolute; left:0; bottom: 15vh;}
-#section4 .anitxt .down {position: absolute; bottom: 5; left:0;-webkit-text-stroke:3px #04839d; color:#e3adaa; } */
 
-/* @media only screen and (max-width:1640px){
-    .container {max-width: 1100px;}
-    #section2 .dot {top: 62%;}
-    .sec2 .about .lay .right .img {left: 20%; width: 97%; height: 97%;}
-    .sec2 .about .lay .right .clickBtn {bottom: calc(5% * 1); left: calc(93% * 1); width: 110px; height: 110px;}
-    #section2 .scrollbtn2 {left: 23vw; top: 77.5%;}
-} */
+/* section4 */
+.sec4 {position: relative; background: url(../img/sitedot.svg) no-repeat right 0 bottom 5vh;
+    background-size: 42%;}
+.sec4 .history {position: relative; padding: 70vh 0;}
+.sec4 .history .txt1 {position: absolute; left: 50%; bottom: 63vh; transform: translate(-50%, 0%); z-index: 700;}
+.sec4 .history .txt2 {position: absolute; left: 50%; bottom: 40vh; transform: translate(-50%, 0%); z-index: 800;}
+.sec4 .history .txt1, .sec4 .history .txt2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    color: #fff;
+    font-size: 17vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: 
+        1px 1px 0#fabbcf, 
+        2px 2px 0#FABBCF, 
+        3px 4px 0#FABBCF, 
+        4px 5px 0#FABBCF,
+        5px 7px 0#FABBCF,
+        6px 8px 0#FABBCF,
+        7px 10px 0#FABBCF,
+        8px 11px 0#FABBCF,
+        9px 13px 0#FABBCF,
+        10px 14px 0#FABBCF,
+        11px 16px 0#FABBCF,
+        12px 17px 0#FABBCF,
+        13px 19px 0#FABBCF,
+        14px 20px 0#FABBCF,
+        15px 22px 0#e3adaa,
+        16px 23px 0#e3adaa,
+        17px 25px 0#e3adaa,
+        18px 26px 0#e3adaa,
+        19px 28px 0#e3adaa,
+        20px 29px 0#e3adaa,
+        21px 30px 0 #E3ADAA,
+        23px 31px 0 #E3ADAA,
+        24px 32px 0 #E3ADAA,
+        26px 33px 0 #E3ADAA,
+        27px 34px 0 #E3ADAA,
+        29px 35px 0 #E3ADAA,
+        30px 36px 0 #E3ADAA,
+        32px 37px 0 #E3ADAA,
+        33px 38px 0 #E3ADAA,
+        35px 39px 0 #E3ADAA,
+        36px 40px 0 #51a0ad,
+        38px 41px 0 #51a0ad,
+        39px 42px 0 #51a0ad,
+        41px 43px 0 #51a0ad,
+        42px 44px 0 #51a0ad,
+        44px 45px 0 #51a0ad,
+        45px 46px 0 #51a0ad,
+        47px 47px 0 #51a0ad,
+        48px 49px 0 #51A0AD,
+        49px 51px 0 #51A0AD,
+        50px 53px 0 #51A0AD,
+        51px 55px 0 #51A0AD,
+        52px 57px 0 #51A0AD,
+        53px 59px 0 #51A0AD,
+        54px 61px 0 #51A0AD,
+        55px 63px 0 #04839d,
+        56px 65px 0 #04839d,
+        57px 67px 0 #04839d,
+        58px 69px 0 #04839d,
+        59px 71px 0 #04839d,
+        60px 73px 0 #04839d,
+        61px 75px 0 #04839d,
+        62px 77px 0 #04839d,
+        63px 79px 0 #04839d,
+        65px 80px 0 #04839D,
+        68px 81px 0 #04839D,
+        70px 82px 0 #04839D,
+        72px 83px 0 #04839D,
+        74px 84px 0 #04839D,
+        76px 85px 0 #04839D;
+}
+.sec4 h1 {
+    text-transform: uppercase; font-size: 4.5vw; 
+    left: 20%; top: 0; display:block;
+    position: absolute; margin-top:150vh;
+    color:#fff;
+    text-shadow: 
+        1px 1px 0#fabbcf, 
+        2px 2px 0#fabbcf, 
+        3px 4px 0#fabbcf, 
+        4px 5px 0#fabbcf,
+        5px 7px 0#fabbcf,
+        6px 8px 0#fabbcf,
+        7px 10px 0#e3adaa,
+        8px 11px 0#e3adaa,
+        9px 13px 0#e3adaa,
+        10px 14px 0#e3adaa,
+        11px 16px 0 #e3adaa,
+        12px 17px 0 #e3adaa,
+        13px 19px 0 #51a0ad,
+        14px 20px 0#51a0ad,
+        15px 22px 0#51a0ad,
+        16px 23px 0#51a0ad,
+        17px 25px 0#51a0ad,
+        18px 26px 0#51a0ad,
+        19px 28px 0#04839D,
+        20px 29px 0#04839D,
+        21px 30px 0#04839D,
+        23px 31px 0#04839D,
+        24px 32px 0#04839D,
+        26px 33px 0#04839D;
+        font-weight: 900;
+        transform: rotate(0deg) skewX(-10deg) translateY(-10px);
+        font-family: 'Poppins', sans-serif;
+}
+.sec4 figure {width:45%; margin-top: 35vh; padding-bottom: 5vh;}
+.sec4 figure img {}
+
+/* btn */
+.sec4 .btn-wrap {
+    position: relative;
+}
+.sec4 .btn1 {
+    border: none;
+    position: absolute; left: 0%; bottom: 0;
+    /* position: relative; */
+    background: none;
+    padding: 10px 50px;
+    margin-bottom: 11vh;
+    /* display: inline-block; */
+    text-transform: uppercase;
+    /* margin-left: 800px; */
+        /* margin-left: 266%; */
+    margin-left: 42vw;
+    color: inherit;
+    letter-spacing: 2px;
+    font-size: 20px;
+    outline: none;
+    transition: all 0.4s;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+.sec4 .btn1::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 04.s;
+}
+.sec4 .btn2 {
+    border: none;
+    position: absolute; left: 0; bottom: 0;
+    margin-bottom: 11vh;
+    background: none;
+    padding: 10px 46px;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-left: 1050px;
+    color: inherit;
+    letter-spacing: 2px;
+    font-size: 20px;
+    outline: none;
+    transition: all 0.4s;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+.sec4 .btn2::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 04.s;
+}
+.sec4 .btn-3d {
+    color: #fff;
+    display: inline-block;
+    outline: 1px solid transparent;
+    transform-style: preserve-3d;
+}
+.sec4 .btn-perspective {
+    width: 300px;
+    position: relative;
+}
+.sec4 .btn-one {
+    background-color: #1ABC9C;
+}
+.sec4 .btn-one:after {
+    width: 20%;
+    height: 100%;
+    left: -20%;
+    top: 0;
+    background: #16A085;
+    transform-origin:100% 0%;
+    transform: rotateY(-90deg);
+}
+.sec4 .btn-one:hover {transform: rotateY(25deg);  }
+
+.sec4 .btn-two {
+    background-color: #9B59B6;
+}
+.sec4 .btn-two:after {
+    width: 20%;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    background: #8E44AD;
+    transform-origin: 0% 0%;
+    transform: rotateY(90deg);
+}
+.sec4 .btn-two:hover {transform: rotateY(-25deg);}
+
