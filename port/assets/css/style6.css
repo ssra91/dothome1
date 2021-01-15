@@ -484,8 +484,11 @@
 
 
 /* section4 */
-.sec4 {position: relative; background: url(../img/sitedot.svg) no-repeat right 0 bottom 5vh;
-    background-size: 42%;}
+.sec4 {
+    position: relative; 
+    background: url(../img/sitedot.svg) no-repeat right 0 bottom 5vh;
+    background-size: 42%;
+}
 .sec4 .history {position: relative; padding: 70vh 0;}
 .sec4 .history .txt1 {position: absolute; left: 50%; bottom: 63vh; transform: translate(-50%, 0%); z-index: 700;}
 .sec4 .history .txt2 {position: absolute; left: 50%; bottom: 40vh; transform: translate(-50%, 0%); z-index: 800;}
@@ -596,6 +599,20 @@
 .sec4 figure {width:45%; margin-top: 35vh; padding-bottom: 5vh;}
 .sec4 figure img {}
 
+.sec4 p {
+    font-size: 28px;
+    font-family: 'Chosunilbo_myungjo';
+    text-align: justify;
+    line-height: 1.68;
+    letter-spacing: 0.1vw;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0 1% 30vh;
+    width: 40%;
+
+}
+
 /* btn */
 .sec4 .btn-wrap {
     position: relative;
@@ -606,7 +623,7 @@
     /* position: relative; */
     background: none;
     padding: 10px 50px;
-    margin-bottom: 11vh;
+    margin-bottom: 14vh;
     /* display: inline-block; */
     text-transform: uppercase;
     /* margin-left: 800px; */
@@ -630,7 +647,7 @@
 .sec4 .btn2 {
     border: none;
     position: absolute; left: 0; bottom: 0;
-    margin-bottom: 11vh;
+    margin-bottom: 14vh;
     background: none;
     padding: 10px 46px;
     display: inline-block;
@@ -662,28 +679,28 @@
     position: relative;
 }
 .sec4 .btn-one {
-    background-color: #1ABC9C;
+    background-color: #51a0ad;
 }
 .sec4 .btn-one:after {
     width: 20%;
     height: 100%;
     left: -20%;
     top: 0;
-    background: #16A085;
+    background: #04839D;
     transform-origin:100% 0%;
     transform: rotateY(-90deg);
 }
 .sec4 .btn-one:hover {transform: rotateY(25deg);  }
 
 .sec4 .btn-two {
-    background-color: #9B59B6;
+    background-color: #51a0ad;
 }
 .sec4 .btn-two:after {
     width: 20%;
     height: 100%;
     left: 100%;
     top: 0;
-    background: #8E44AD;
+    background: #04839D;
     transform-origin: 0% 0%;
     transform: rotateY(90deg);
 }
