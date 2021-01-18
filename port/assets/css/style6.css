@@ -24,7 +24,7 @@
     background: url(../img/longDot.svg) no-repeat center center;
     background-size: 77%; position: relative;
 }
-#section4 {}
+#section4 {position: relative;}
 #section5 {}
 #section6 {}
 #section7 {}
@@ -470,22 +470,20 @@
     box-shadow: 0 0 0 0 #2f4082;
 }
 
-/* section3 */
 .sec3 {}
-.sec3 figure {width: 20%; display: flex;}
-.sec3 figure .a {margin: 18vh 7vh 5vh 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transform:rotate(-10deg); transition: box-shadow .4s ease;}
-.sec3 figure .a:hover {background-blend-mode: luminosity; box-shadow: 0 0 0 0 #2f4082;}
-.sec3 figure .b {margin: 18vh 7vh 5vh 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transition: box-shadow .4s ease;}
-.sec3 figure .b:hover {background-blend-mode: luminosity; box-shadow: 0 0 0 0 #2f4082;}
-.sec3 figure .c {margin: 18vh 7vh 5vh 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transform:rotate(10deg); transition: box-shadow .4s ease;}
-.sec3 figure .c:hover {background-blend-mode: luminosity; box-shadow: 0 0 0 0 #2f4082;}
-.sec3 figure .d {margin: 0 7vh 20vh 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transform:rotate(10deg); transition: box-shadow .4s ease;}
-.sec3 figure .d:hover {background-blend-mode: luminosity; box-shadow: 0 0 0 0 #2f4082;}
-.sec3 figure .e {margin: 0 7vh 20vh 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transition: box-shadow .4s ease;}
-.sec3 figure .e:hover {background-blend-mode: luminosity; box-shadow: 0 0 0 0 #2f4082;}
-.sec3 figure .f {margin: 0 7vh 20vh 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transform:rotate(-10deg); transition: box-shadow .4s ease;}
-.sec3 figure .f:hover {background-blend-mode: luminosity; box-shadow: 0 0 0 0 #2f4082;}
-
+.sec3 figure {width: 22%; display: flex;}
+.sec3 figure .a {transform: rotate(-14deg) translate(52px, 76px); margin: 0 40% 0 0; border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transition: box-shadow .4s ease;}
+.sec3 figure .a:hover {box-shadow: 0 0 0 0 #2f4082;}
+.sec3 figure .b {transform: rotate(-6deg) translate(-43px, -57px); margin: 0 40%;border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transition: box-shadow .4s ease;}
+.sec3 figure .b:hover {box-shadow: 0 0 0 0 #2f4082;}
+.sec3 figure .c {transform: rotate(9deg) translate(-167px, 0px); margin: 0 0 0 25%;border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transition: box-shadow .4s ease;}
+.sec3 figure .c:hover {box-shadow: 0 0 0 0 #2f4082;}
+.sec3 figure .d {transform: rotate(6deg) translate(-214px, -124px); margin: 0 0 0 130%;border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transition: box-shadow .4s ease;}
+.sec3 figure .d:hover {box-shadow: 0 0 0 0 #2f4082;}
+.sec3 figure .e {transform: rotate(11deg) translate(-143px, -95px); border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082;margin: 0 10% 0 0; transition: box-shadow .4s ease;}
+.sec3 figure .e:hover {box-shadow: 0 0 0 0 #2f4082;}
+.sec3 figure .f {transform: rotate(-6deg) translate(-48px, -186px); border: 6px solid #3F52A0; box-shadow: 10px 10px 0 0#2f4082; transition: box-shadow .4s ease;}
+.sec3 figure .f:hover {box-shadow: 0 0 0 0 #2f4082;}
 
 /* section4 */
 /* sec4 */
@@ -510,13 +508,45 @@
     text-transform: uppercase;
     text-shadow: 1px 1px 0#fabbcf, 2px 2px 0#FABBCF, 3px 4px 0#FABBCF, 4px 5px 0#FABBCF, 5px 7px 0#FABBCF, 6px 8px 0#FABBCF, 7px 10px 0#FABBCF, 8px 11px 0#FABBCF, 9px 13px 0#FABBCF, 10px 14px 0#FABBCF, 11px 16px 0#FABBCF, 12px 17px 0#FABBCF, 13px 19px 0#FABBCF, 14px 20px 0#FABBCF, 15px 22px 0#e3adaa, 16px 23px 0#e3adaa, 17px 25px 0#e3adaa, 18px 26px 0#e3adaa, 19px 28px 0#e3adaa, 20px 29px 0#e3adaa, 21px 30px 0 #E3ADAA, 23px 31px 0 #E3ADAA, 24px 32px 0 #E3ADAA, 26px 33px 0 #E3ADAA, 27px 34px 0 #E3ADAA, 29px 35px 0 #E3ADAA, 30px 36px 0 #E3ADAA, 32px 37px 0 #E3ADAA, 33px 38px 0 #E3ADAA, 35px 39px 0 #E3ADAA, 36px 40px 0 #51a0ad, 38px 41px 0 #51a0ad, 39px 42px 0 #51a0ad, 41px 43px 0 #51a0ad, 42px 44px 0 #51a0ad, 44px 45px 0 #51a0ad, 45px 46px 0 #51a0ad, 47px 47px 0 #51a0ad, 48px 49px 0 #51A0AD, 49px 51px 0 #51A0AD, 50px 53px 0 #51A0AD, 51px 55px 0 #51A0AD, 52px 57px 0 #51A0AD, 53px 59px 0 #51A0AD, 54px 61px 0 #51A0AD, 55px 63px 0 #04839d, 56px 65px 0 #04839d, 57px 67px 0 #04839d, 58px 69px 0 #04839d, 59px 71px 0 #04839d, 60px 73px 0 #04839d, 61px 75px 0 #04839d, 62px 77px 0 #04839d, 63px 79px 0 #04839d, 65px 80px 0 #04839D, 68px 81px 0 #04839D, 70px 82px 0 #04839D, 72px 83px 0 #04839D, 74px 84px 0 #04839D, 76px 85px 0 #04839D;
 }
-#section4 svg {
+
+.jelly-container2 {
+	width: 100%; height: 180vh;
+    overflow: hidden;
+    display:initial;
+	background: linear-gradient(to bottom, rgba(255, 221, 212, 0.63), transparent);
 }
-.cls-1 {
-    fill: #FBD3CA;
-    stroke: #04839D;
-    stroke-miterlimit: 10;
+.jelly-container2 > div {
+	width: 75px; height: 75px;
+	background: rgba(255, 221, 212, 0.63);
+	border-radius: 50%;
+	position: absolute; bottom: -650px;
 }
+.jelly-container2 > div:after {
+	border-top: 1px solid rgba(255,255,255,0.63);
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg); 
+	width: 85%; height: 85%;
+    border-radius: 50%;
+    position: absolute;
+    content:'';
+}
+.bubble2-1  {left: 00%; animation: bubble-move 5s -100ms ease-in infinite;}
+.bubble2-2  {left: 12%; animation: bubble-move 5s -1320ms ease-in infinite;}
+.bubble2-3  {left: 36%; animation: bubble-move 5s -2320ms ease-in infinite;}
+.bubble2-4  {left: 40%; animation: bubble-move 5s -800ms ease-in infinite;}
+.bubble2-5  {left: 66%; animation: bubble-move 5s -320ms ease-in infinite;}
+.bubble2-6  {left: 70%; animation: bubble-move 5s -1320ms ease-in infinite;}
+.bubble2-7  {left: 83%; animation: bubble-move 5s -5320ms ease-in infinite;}
+.bubble2-8  {left: 95%; animation: bubble-move 5s -6420ms ease-in infinite;}
+.bubble2-9  {left: 25%; animation: bubble-move 5s -4320ms ease-in infinite;}
+.bubble2-10 {left: 56%; animation: bubble-move 5s -2320ms ease-in infinite;}
+
+
+@keyframes bubble-move {
+	0% {width: 1px; height: 1px; transform: translatey(500%)}
+	100% {width: 75px; height: 75px; transform: translatey(-1000%)}
+}
+
 .sec4 .site-wrap {
     height: 1000px;
     position: relative;
