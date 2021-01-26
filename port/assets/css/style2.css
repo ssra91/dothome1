@@ -18,7 +18,7 @@
 #section2 {background: #FFD87E;}
 #section3 {}
 #section4 {background: #FBD3CA;}
-#section5 {}
+#section5 {background: #F9D3E0; height: 3000px;}
 #section6 {}
 
 /* scroll */
@@ -303,7 +303,7 @@
     padding-top: 300px;
     text-align: center;
 }
-.title span {
+.title strong {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     color: #fff;
@@ -314,6 +314,16 @@
     text-transform: uppercase;
     text-shadow: 1px 1px 0#fabbcf, 2px 2px 0#FABBCF, 3px 4px 0#FABBCF, 4px 5px 0#FABBCF, 5px 7px 0#FABBCF, 6px 8px 0#FABBCF, 7px 10px 0#FABBCF, 8px 11px 0#FABBCF, 9px 13px 0#FABBCF, 10px 14px 0#FABBCF, 11px 16px 0#FABBCF, 12px 17px 0#FABBCF, 13px 19px 0#FABBCF, 14px 20px 0#FABBCF, 15px 22px 0#e3adaa, 16px 23px 0#e3adaa, 17px 25px 0#e3adaa, 18px 26px 0#e3adaa, 19px 28px 0#e3adaa, 20px 29px 0#e3adaa, 21px 30px 0 #E3ADAA, 23px 31px 0 #E3ADAA, 24px 32px 0 #E3ADAA, 26px 33px 0 #E3ADAA, 27px 34px 0 #E3ADAA, 29px 35px 0 #E3ADAA, 30px 36px 0 #E3ADAA, 32px 37px 0 #E3ADAA, 33px 38px 0 #E3ADAA, 35px 39px 0 #E3ADAA, 36px 40px 0 #51a0ad, 38px 41px 0 #51a0ad, 39px 42px 0 #51a0ad, 41px 43px 0 #51a0ad, 42px 44px 0 #51a0ad, 44px 45px 0 #51a0ad, 45px 46px 0 #51a0ad, 47px 47px 0 #51a0ad, 48px 49px 0 #51A0AD, 49px 51px 0 #51A0AD, 50px 53px 0 #51A0AD, 51px 55px 0 #51A0AD, 52px 57px 0 #51A0AD, 53px 59px 0 #51A0AD, 54px 61px 0 #51A0AD, 55px 63px 0 #04839d, 56px 65px 0 #04839d, 57px 67px 0 #04839d, 58px 69px 0 #04839d, 59px 71px 0 #04839d, 60px 73px 0 #04839d, 61px 75px 0 #04839d, 62px 77px 0 #04839d, 63px 79px 0 #04839d, 65px 80px 0 #04839D, 68px 81px 0 #04839D, 70px 82px 0 #04839D, 72px 83px 0 #04839D, 74px 84px 0 #04839D, 76px 85px 0 #04839D;
 }
+.title strong span {
+    position: relative;
+    display: inline-block;
+}
+.title strong span:nth-child(1){z-index: 1;}
+.title strong span:nth-child(2){z-index: 2;}
+.title strong span:nth-child(3){z-index: 3;}
+.title strong span:nth-child(4){z-index: 4;}
+.title strong span:nth-child(5){z-index: 5;}
+.title strong span:nth-child(6){z-index: 6;}
 .sec4 .site-wrap {
     height: 1000px;
     position: relative;
@@ -355,6 +365,7 @@
     display: flex;
     justify-content: space-between;
     padding: 50px;
+    box-sizing: border-box;
 }
 .sec4 .site-wrap .site .left {
     flex: 0 0 45%;
@@ -400,4 +411,74 @@
 
 .sec4 .site-wrap .site .right {
     flex: 0 0 50%;
+}
+
+
+/* sec5 */
+.sec5 {}
+.sec5 .title {
+    margin-bottom: 0;
+}
+.sec5 h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    display: inline-block;
+    font-size: 13vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    -webkit-text-fill-color: #F9D3E0;
+    -webkit-text-stroke: 2px #B53F4E;
+    text-shadow : 
+        1px 1px 0#B53F4E, 
+        2px 2px 0#B53F4E, 
+        3px 3px 0#B53F4E, 
+        4px 4px 0#B53F4E, 
+        5px 5px 0#B53F4E, 
+        6px 6px 0#B53F4E, 
+        7px 7px 0#B53F4E, 
+        8px 8px 0#B53F4E, 
+        9px 9px 0#B53F4E, 
+        10px 10px 0#B53F4E, 
+        11px 11px 0#B53F4E, 
+        12px 12px 0#B53F4E, 
+        13px 13px 0#B53F4E,
+        14px 14px 0#B53F4E,
+        15px 15px 0#B53F4E,
+        16px 16px 0#B53F4E,
+        17px 17px 0#B53F4E;
+}
+.script-wrap {
+    border: 10px double #B53F4E;
+    margin-top: -60px;
+    padding: 20px;
+}
+.script-wrap .script {
+    display: flex;
+    border: 1px dotted #B53F4E;
+    height: 450px;
+    margin-bottom: 20px;
+}
+.script-wrap .script .left {
+    flex: 0 0 70%;
+    border-right: 1px dotted #B53F4E;
+}
+.script-wrap .script .right {
+    flex: 0 0 30%;
+    box-sizing: border-box;
+    padding: 40px;
+    
+}
+.script-wrap .script .right p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 20px;
+    color: #8c0c1c;
+    line-height: 1.4;
+}
+.script-wrap .script .right a {
+    display: inline-block;
+    padding: 10px 40px;
+    border: 1px dotted #B53F4E;
+    
 }
