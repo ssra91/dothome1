@@ -1530,7 +1530,6 @@
 
 .sec6 .script-wrap .script .left a {
     display: inline-block;
-    padding: 10px 40px;
     border: 1px dotted #3F52A0;
     color: #3F52A0;
     font-weight: bold;
@@ -1541,6 +1540,10 @@
 .sec6 .script-wrap .script .left a:hover {
     box-shadow: 0 0 0 0;
 }
+.sec6 .script-wrap .script .left a:nth-child(1) {margin: 3vh 30%; padding: 10px 40px;}
+.sec6 .script-wrap .script .left a:nth-child(2) {margin: 6vh 30%; padding: 10px 30px;}
+.sec6 .script-wrap .script .left a:nth-child(3) {margin: 3vh 30%; padding: 10px 30px;}
+
 
 .sec6 .script-wrap-1 {
     border: 10px double #3F52A0;
@@ -1561,11 +1564,11 @@
 }
 .sec6 .script-wrap-1 .script .left {
     flex: 1 1 70%;
-    border-right: 1px dotted #3F52A0;
-    padding: 40px;
+    border-right: 1px dotted #3F52A0;  
 }
 .sec6 .script-wrap-1 .script .right {
     flex: 0 0 30%;
+    padding: 40px;
     box-sizing: border-box;
 }
 .sec6 .script-wrap-1 .script .right iframe {
@@ -1575,7 +1578,7 @@
 }
 .sec6 .script-wrap-1 .script .right a {
     display: inline-block;
-    padding: 10px 40px;
+    /* padding: 10px 40px; */
     border: 1px dotted #3F52A0;
     color: #3F52A0;
     font-weight: bold;
@@ -1586,3 +1589,6 @@
 .sec6 .script-wrap-1 .script .right a:hover {
     box-shadow: 0 0 0 0;
 }
+.sec6 .script-wrap-1 .script .right a:nth-child(1) {margin: 3vh 30%; padding: 10px 40px;}
+.sec6 .script-wrap-1 .script .right a:nth-child(2) {margin: 6vh 30%; padding: 10px 30px;}
+.sec6 .script-wrap-1 .script .right a:nth-child(3) {margin: 3vh 30%; padding: 10px 30px;}
