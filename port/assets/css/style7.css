@@ -291,7 +291,7 @@
     text-align: center;
     padding-top: 60vh;
 }
-.sec2 .about h1 {
+.sec2 .about .i {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     color: #fff;
@@ -324,11 +324,14 @@
     26px 33px 0#3F52A0;
     padding-bottom: 150px;
 }
-.sec2 .about h1 {
+.sec2 .about .i {
     display: block;
     font-weight: 900;
     left:0; top:0;
-    transform: rotate(0deg) skewX(-10deg) translateY(-10px);
+    transform: rotate(0deg) skewX(0deg) translateY(0px);
+}
+.sec2 .about .i > span {
+    opacity: 0;
 }
 .sec2 .about .lay {
     display: flex;
@@ -339,8 +342,8 @@
     font-family: 'Staatliches', cursive; 
     text-transform: uppercase;
     position: absolute;
-    left: -0.6vw;
-    /* opacity: 0; */
+    left: -2vw;
+    opacity: 0;
     top: auto;
     /*width:60%*/
     width: 48%;
@@ -349,17 +352,15 @@
     font-weight: bold;
 }
 .sec2 .about .lay .left {
-    /* flex: 0 0 47%; */
     flex: 0 0 47%;
     font-family: 'Chosunilbo_myungjo';
     color: #3F52A0;
-    /* font-size: 18px; */
     font-size: 18px;
     line-height: 1.8;
     text-align: justify;
     /* margin-top: 6vw; */
     margin-top: 5vw;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .sec2 .about .lay .right {
     flex: 0 0 47%;
@@ -367,6 +368,7 @@
     z-index: 1;
     width: 500px;
     height: 700px;
+    opacity: 0;
 } 
 .sec2 .about .lay .right .img {
     position: absolute;
@@ -379,6 +381,7 @@
     overflow: hidden;
     border: 6px solid #3F52A0;
     box-shadow: 10px 10px 0 0#2f4082;
+    opacity: 0;
   }
 .sec2 .about .lay .right .img > img {
     position: absolute;
@@ -418,7 +421,7 @@
     overflow: hidden;
     font-size: 25px;
     font-family: 'Staatliches', cursive;
-    opacity: 80%;
+    /* opacity: 80%; */
 }
 .sec2 .about .lay .right .clickBtn:before {
     content: '';
@@ -442,7 +445,7 @@
 
 #section2 .scrollbtn2 {
     position: absolute;
-    left: 34%; bottom: 0;
+    left: 34%; bottom: -10vh;
     margin-bottom: 48vh;
     border: 1px solid #2f4082;
     background-color: #F9D3E0;
@@ -452,7 +455,7 @@
     box-shadow: 10px 10px 0 0 #2f4082;
     font-family: 'Staatliches', cursive;
     transition: box-shadow .4s ease;
-    /* opacity: 0; */
+    opacity: 0;
 }
 #section2 .scrollbtn2:hover {
     box-shadow: 0 0 0 0 #2f4082;
@@ -485,7 +488,7 @@
 	width: 100%; height: 180vh;
     overflow: hidden;
     display:initial;
-	background: linear-gradient(to bottom, rgba(247, 198, 215, 0.63), transparent);
+	background: linear-gradient(to bottom, rgba(251, 200, 218, 0.63), transparent);
 }
 .jelly-container2 > div {
 	width: 75px; height: 75px;
