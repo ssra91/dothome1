@@ -570,7 +570,7 @@
             <div class="container">
                 <div class="sec3">
                     <div class="about">
-                        <div class="intro split">Introduce&nbsp; myself</div>
+                        <h1>Introduce&nbsp; myself</h1>
                         <div class="lay">
                             <h2>[POSITIVE THINKING, POSITIVE OUTCOME]</h2>
                             <div class="left">안녕하세요. 앞으로 프론트앤드 개발자로 일하게 될 김소라 라고 합니다. 저는 대학을 졸업하고 아르바이트를 하면서 다른 분야로 취업준비를 하다가 우연한 기회로 웹 퍼블리셔로 전향하게 되었습니다. 항상 저에게는 컴퓨터는 생소하고 거리가 먼 존재였습니다. 하지만 좋은 기회를 얻어 시작하게된 코딩공부가 처음에는 막연하고 고정관념에 갖혀 부정하기에만 그쳤습니다. 하지만 시간이 지나고 배움의 깊이가 깊어질수록 재미있고 앞으로의 저 자신이 궁금해지기도 하고 더 많은것을 배우고 도움을 주고 받는 사람이 되고 싶다는 욕심이 생기게 되었습니다. 저는 무언가를 할때 하면 하고 아니면 아니다 라는 마인드로 행동을 합니다. 이런 부분이 어떻게 보면 극단적으로 보일수 있겠지만 그만큼 지금저에게 코딩은 끝까지 가보고 싶은 존재가 되었습니다. 그만큼 기대하셔도 좋다고 말씀드리고 싶습니다.</div>
@@ -653,7 +653,7 @@
 
             if( pageYOffset > document.getElementById("section3").offsetTop - window.innerHeight/2 ){
                 let tl = gsap.timeline();
-                tl.to(".about .intro span", {duration: .4, opacity:1, rotate:0, skewX:"-10deg", translateY:"-10px", stagger: 0.08, ease: "back.out(1.7)"},"-=.5");
+                tl.to(".about h1", {duration: .4, bottom:0, delay: .3, opacity:1, ease:"power4.out"});
                 tl.to(".lay h2", {duration: 0.4, opacity:1, left:"-0.6vw", delay: .3, ease: "power4.out"});
                 tl.to(".lay .left", {duration: 0.4,stagger:0.05, opacity:1, delay: .3, ease: "power4.out"})
                 tl.to(".lay .right, .lay .right .img", {duration: 0.6, top:0, opacity:1, delay: .6, ease: "expo.out"})
@@ -663,7 +663,7 @@
 
         let active = 0
         const slides = document.querySelectorAll('.right .img img')
-        document.querySelector('.right .clickBtn').addEventListener('click', () => {
+        document.querySelector('.right .clickBtn').addEventListener('click', () =>{
             slides[active].classList.remove('active')
             active = active < slides.length - 1 ? active + 1 : 0
             slides[active].classList.add('active')
