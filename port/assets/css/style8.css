@@ -17,8 +17,8 @@
 #section1 {height: 100vh; position: relative;}
 #section2 {}
 #section3 {
-    background: url(../img/longDot.svg) no-repeat left -20% bottom 25%;
-    background-size: 800px; position: relative;
+    /* background: url(../img/longDot.svg) no-repeat left -20% bottom 25%;
+    background-size: 800px; position: relative; */ position: relative;
 }
 #section4 {width: 100%; position: relative;}
 #section5 {}
@@ -333,8 +333,8 @@
 .sec3 .about h1 {
     display: block;
     font-weight: 900;
-    left:0; bottom: -10vh;
-    transform: rotate(0deg) skewX(-10deg) translateY(-10px);
+    left:0; bottom: -15vh;
+    transform: rotate(0deg) skewX(-10deg) translateY(0px);
     opacity: 0;
 }
 
@@ -347,9 +347,10 @@
     font-family: 'Staatliches', cursive; 
     text-transform: uppercase;
     position: absolute;
-    left: -2vw;
+    left: 0;
     opacity: 0;
-    top: auto;
+    /* top: auto; */
+    top: 26vh;
     /*width:60%*/
     width: 48%;
     text-align: right;
@@ -366,6 +367,7 @@
     /* margin-top: 6vw; */
     margin-top: 5vw;
     opacity: 0;
+    transform: translateX(-10%);
 }
 .sec3 .about .lay .right {
     flex: 0 0 47%;
@@ -374,6 +376,7 @@
     width: 500px;
     height: 700px;
     opacity: 0;
+    transform: translateX(10%);
 } 
 .sec3 .about .lay .right .img {
     position: absolute;
@@ -450,7 +453,7 @@
 
 #section3 .scrollbtn2 {
     position: absolute;
-    left: 34%; bottom: -10vh;
+    left: 33%; bottom: -10vh;
     margin-bottom: 48vh;
     border: 1px solid #2f4082;
     background-color: #F9D3E0;
@@ -465,6 +468,20 @@
 #section3 .scrollbtn2:hover {
     box-shadow: 0 0 0 0 #2f4082;
 }
+.svg-bg2 {
+    width: 500px;
+    position: absolute;
+    left:0vw; bottom: 10vw;
+    
+}
+.svg-bg2 svg {
+    width: 100%; height: 70%;
+    
+}
+.svg-bg2 svg path {
+    opacity: 0;
+    fill: #3F52A0;
+}
 
 /* sec4 */
 .sec4 {
@@ -474,7 +491,7 @@
     position: relative;
     z-index: 100;
     margin-bottom: 500px;
-    padding: 70vh 0;
+    padding: 50vh 0 40vh;
     text-align: center;
 }
 .title span {
@@ -527,3 +544,106 @@
 	0% {width: 1px; height: 1px; transform: translatey(500%)}
 	100% {width: 75px; height: 75px; transform: translatey(-1000%)}
 }
+
+.sec4 .site-wrap {
+    height: 1000px;
+    position: relative;
+    z-index: 200;
+}
+.sec4 .site-wrap .site-title {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.sec4 .site-wrap .site-title span {
+    display: block;
+    font-size: 6vw;
+    line-height: 6.5vw;
+    color:#04839D;
+    font-family: 'TmonMonsori';
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.sec4 .site-wrap .site-title span strong{
+    display: inline-block;
+    padding-right: 40px;
+    letter-spacing: -2px;
+}
+.sec4 .site-wrap .site-title span em {
+    padding-right: 40px;
+    letter-spacing: -2px;
+    display: inline-block;
+    font-style: normal;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #04839D;
+    transform: translateX(-100px);
+}
+
+.sec4 .site-wrap .site {
+    width: 100%;
+    border: 3px solid #04839D;
+    background: #FBD3CA;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.sec4 .site-wrap .site .left {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.sec4 .site-wrap .site .left h3 {
+    color: #04839d;
+    font-family: 'TmonMonsori';
+    font-weight: bold;
+    font-size: 3.5vw;
+    padding-bottom: 20px;
+}
+.sec4 .site-wrap .site .left p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 20px;
+    color: #04839d;
+    line-height: 1.4;
+    padding-right: 5vw;
+    padding: 56px 0;
+    text-align: justify;
+}
+.sec4 .site-wrap .site .left .btn {
+    position: absolute;
+    left: 0px;
+    
+}
+.sec4 .site-wrap .site .left .btn a {
+    display: inline-block;
+    margin-right: 55px;
+    border: 1px solid #04839d;
+    background-color: #FBD3CA;
+    color: #04839d;
+    padding: 10px 50px;
+    font-size: 30px;
+    box-shadow: 10px 10px 0 0 #04839d;
+    font-family: 'Staatliches', cursive;
+    transition: box-shadow .4s ease;
+}
+.sec4 .site-wrap .site .left .btn a:last-child {
+    margin-left: 36px;
+    margin-right:0;
+}
+.sec4 .site-wrap .site .left .btn a:hover {
+    box-shadow: none;
+}
+
+
+.sec4 .site-wrap .site .right {
+    flex: 0 0 50%;
+}
+#tab-menu {
+    background:#04839d;
+    font-family: 'Staatliches', cursive;
+    width: 36%;
+}
+#tab-menu > ul {display: flex; font-size: 20px;}
+#tab-menu > ul > li {padding:15px 40px;}
+#tab-menu > ul > li > a {padding:15px 20px; color:#fff; text-align:center}
+#tab-menu > ul > li.active > a {}
+/* #tab-menu > ul > li > div {position: absolute; left:0; top:43px; background:#fff; padding: 20px; border-radius:0 0 4px 4px;} */
