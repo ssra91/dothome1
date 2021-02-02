@@ -584,7 +584,7 @@
     background: #FBD3CA;
     display: flex;
     justify-content: space-between;
-    padding: 50px;
+    padding: 100px 50px;
     box-sizing: border-box;
 }
 .sec4 .site-wrap .site .left {
@@ -615,7 +615,7 @@
 }
 .sec4 .site-wrap .site .left .btn a {
     display: inline-block;
-    margin-right: 55px;
+    margin-right: 20px;
     border: 1px solid #04839d;
     background-color: #FBD3CA;
     color: #04839d;
@@ -637,13 +637,23 @@
 .sec4 .site-wrap .site .right {
     flex: 0 0 50%;
 }
+
+/* tab-menu */
+/* #tab-menu {font-family: 'Staatliches', cursive;}    
+#tab-menu ul {font-size: 20px;}
+#tab-menu ul > li {padding:15px 60px; display: inline-block; background:#04839d;}
+#tab-menu ul > li > a {padding:0 20px; color:#fff; text-align:center}
+#tab-menu ul > li.active > a {} */
 #tab-menu {
-    background:#04839d;
+    position:absolute;
     font-family: 'Staatliches', cursive;
-    width: 36%;
 }
-#tab-menu > ul {display: flex; font-size: 20px;}
-#tab-menu > ul > li {padding:15px 40px;}
-#tab-menu > ul > li > a {padding:15px 20px; color:#fff; text-align:center}
-#tab-menu > ul > li.active > a {}
-/* #tab-menu > ul > li > div {position: absolute; left:0; top:43px; background:#fff; padding: 20px; border-radius:0 0 4px 4px;} */
+a {text-decoration:none;}
+
+#tab-btn {}
+#tab-btn ul {font-size: 20px; display: inline-flex; background:#04839d;}
+#tab-btn ul > li {text-align:center; padding: 0 60px;}
+#tab-btn ul > li a {padding:15px 20px; display:block; color:#fff;}
+#tab-btn ul > li.active a {border-bottom:3px solid #2b210e; color:#222;}
+
+#tab-cont {background: #fff; line-height: 1.4;}
