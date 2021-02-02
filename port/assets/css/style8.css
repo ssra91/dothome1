@@ -651,9 +651,69 @@
 a {text-decoration:none;}
 
 #tab-btn {}
-#tab-btn ul {font-size: 20px; display: inline-flex; background:#04839d;}
-#tab-btn ul > li {text-align:center; padding: 0 60px;}
+#tab-btn ul {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    float: left;
+    padding-left: 41px;
+    list-style-type: none;
+}
+#tab-btn ul > li {
+    text-align:center; padding: 0 60px; border-radius: 0 0 8px 8px ;
+    display: block;
+    float: right;
+    /* padding: 10px 24px 8px; */
+    background-color: #04839d;
+    margin-right: 46px;
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    color: #777;
+    text-transform: uppercase;
+    transition: all 250ms ease;
+}
+#tab-btn ul > li:before,
+#tab-btn ul > li:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 44px;  
+  background-color: #04839d;
+  transition: all 250ms ease;
+}
+#tab-btn ul > li:before {
+    border-radius: 0 0 8px 8px ;
+    right: -24px;
+    transform: skew(-30deg, 0deg);
+    box-shadow: rgba(0,0,0,.1) 3px 2px 5px, inset rgba(255,255,255,.09) -1px 0;
+}
+#tab-btn ul > li:after {
+    border-radius: 0 0 8px 8px;
+    left: -24px;
+    transform: skew(30deg, 0deg);
+    box-shadow: rgba(0,0,0,.1) -3px 2px 5px, inset rgba(255,255,255,.09) 1px 0;
+}
 #tab-btn ul > li a {padding:15px 20px; display:block; color:#fff;}
-#tab-btn ul > li.active a {border-bottom:3px solid #2b210e; color:#222;}
+#tab-btn ul > li.active a {}
 
 #tab-cont {background: #fff; line-height: 1.4;}
+
+#tab-btn ul > li:hover,
+#tab-btn ul > li:hover:before,
+#tab-btn ul > li:hover:after {
+  background-color: #F4F7F9;
+  color: #444;
+}
+#tab-btn ul > li.active {
+  z-index: 3;
+}
+#tab-btn ul > li.active,
+#tab-btn ul > li.active:before,
+#tab-btn ul > li.active:after {
+  background-color: #1498b3;
+  color: #fff;
+}
