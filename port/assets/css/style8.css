@@ -485,7 +485,6 @@
 
 /* sec4 */
 .sec4 {
-    
 }
 .title {
     position: relative;
@@ -605,7 +604,7 @@
     color: #04839d;
     line-height: 1.4;
     padding-right: 5vw;
-    padding: 56px 0;
+    padding: 52px 0;
     text-align: justify;
 }
 .sec4 .site-wrap .site .left .btn {
@@ -638,17 +637,304 @@
     flex: 0 0 50%;
 }
 
+/* sec4-1 */
+.sec4-1 {
+    padding: 30vh 0;
+}
+.sec4-1 .site-wrap {
+    height: 1000px;
+    position: relative;
+    z-index: 200;
+}
+.sec4-1 .site-wrap .site-title {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.sec4-1 .site-wrap .site-title span {
+    display: block;
+    font-size: 6vw;
+    line-height: 6.5vw;
+    color:#04839D;
+    font-family: 'TmonMonsori';
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.sec4-1 .site-wrap .site-title span strong{
+    display: inline-block;
+    padding-right: 40px;
+    letter-spacing: -2px;
+}
+.sec4-1 .site-wrap .site-title span em {
+    padding-right: 40px;
+    letter-spacing: -2px;
+    display: inline-block;
+    font-style: normal;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #04839D;
+    transform: translateX(-100px);
+}
+
+.sec4-1 .site-wrap .site {
+    width: 100%;
+    border: 3px solid #04839D;
+    background: #FBD3CA;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    box-sizing: border-box;
+}
+.sec4-1 .site-wrap .site .left {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.sec4-1 .site-wrap .site .left h3 {
+    color: #04839d;
+    font-family: 'TmonMonsori';
+    font-weight: bold;
+    font-size: 3.5vw;
+    padding-bottom: 20px;
+}
+.sec4-1 .site-wrap .site .left p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 20px;
+    color: #04839d;
+    line-height: 1.4;
+    padding-right: 5vw;
+    padding: 68px 0;
+    text-align: justify;
+}
+.sec4-1 .site-wrap .site .left .btn {
+    position: absolute;
+    left: 0px;
+    
+}
+.sec4-1 .site-wrap .site .left .btn a {
+    display: inline-block;
+    margin-right: 20px;
+    border: 1px solid #04839d;
+    background-color: #FBD3CA;
+    color: #04839d;
+    padding: 10px 50px;
+    font-size: 30px;
+    box-shadow: 10px 10px 0 0 #04839d;
+    font-family: 'Staatliches', cursive;
+    transition: box-shadow .4s ease;
+}
+.sec4-1 .site-wrap .site .left .btn a:last-child {
+    margin-left: 36px;
+    margin-right:0;
+}
+.sec4-1 .site-wrap .site .left .btn a:hover {
+    box-shadow: none;
+}
+
+
+.sec4-1 .site-wrap .site .right {
+    flex: 0 0 50%;
+}
+
+/* sec4-2 */
+.sec4-2 {
+
+}
+.sec4-2 .site-wrap {
+    height: 1000px;
+    position: relative;
+    z-index: 200;
+}
+.sec4-2 .site-wrap .site-title {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.sec4-2 .site-wrap .site-title span {
+    display: block;
+    font-size: 6vw;
+    line-height: 6.5vw;
+    color:#04839D;
+    font-family: 'TmonMonsori';
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.sec4-2 .site-wrap .site-title span strong{
+    display: inline-block;
+    padding-right: 40px;
+    letter-spacing: -2px;
+}
+.sec4-2 .site-wrap .site-title span em {
+    padding-right: 40px;
+    letter-spacing: -2px;
+    display: inline-block;
+    font-style: normal;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #04839D;
+    transform: translateX(-100px);
+}
+
+.sec4-2 .site-wrap .site {
+    width: 100%;
+    border: 3px solid #04839D;
+    background: #FBD3CA;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    box-sizing: border-box;
+}
+.sec4-2 .site-wrap .site .left {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.sec4-2 .site-wrap .site .left h3 {
+    color: #04839d;
+    font-family: 'TmonMonsori';
+    font-weight: bold;
+    font-size: 3.5vw;
+    padding-bottom: 20px;
+}
+.sec4-2 .site-wrap .site .left p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 20px;
+    color: #04839d;
+    line-height: 1.4;
+    padding-right: 5vw;
+    padding: 68px 0;
+    text-align: justify;
+}
+.sec4-2 .site-wrap .site .left .btn {
+    position: absolute;
+    left: 0px;
+    
+}
+.sec4-2 .site-wrap .site .left .btn a {
+    display: inline-block;
+    margin-right: 20px;
+    border: 1px solid #04839d;
+    background-color: #FBD3CA;
+    color: #04839d;
+    padding: 10px 50px;
+    font-size: 30px;
+    box-shadow: 10px 10px 0 0 #04839d;
+    font-family: 'Staatliches', cursive;
+    transition: box-shadow .4s ease;
+}
+.sec4-2 .site-wrap .site .left .btn a:last-child {
+    margin-left: 36px;
+    margin-right:0;
+}
+.sec4-2 .site-wrap .site .left .btn a:hover {
+    box-shadow: none;
+}
+
+
+.sec4-2 .site-wrap .site .right {
+    flex: 0 0 50%;
+}
+
+/* sec4-3 */
+.sec4-3 {
+    padding: 30vh 0;
+}
+.sec4-3 .site-wrap {
+    height: 1000px;
+    position: relative;
+    z-index: 200;
+}
+.sec4-3 .site-wrap .site-title {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.sec4-3 .site-wrap .site-title span {
+    display: block;
+    font-size: 6vw;
+    line-height: 6.5vw;
+    color:#04839D;
+    font-family: 'TmonMonsori';
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.sec4-3 .site-wrap .site-title span strong{
+    display: inline-block;
+    padding-right: 40px;
+    letter-spacing: -2px;
+}
+.sec4-3 .site-wrap .site-title span em {
+    padding-right: 40px;
+    letter-spacing: -2px;
+    display: inline-block;
+    font-style: normal;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #04839D;
+    transform: translateX(-100px);
+}
+
+.sec4-3 .site-wrap .site {
+    width: 100%;
+    border: 3px solid #04839D;
+    background: #FBD3CA;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    box-sizing: border-box;
+}
+.sec4-3 .site-wrap .site .left {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.sec4-3 .site-wrap .site .left h3 {
+    color: #04839d;
+    font-family: 'TmonMonsori';
+    font-weight: bold;
+    font-size: 3.2vw;
+    padding-bottom: 20px;
+}
+.sec4-3 .site-wrap .site .left p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 20px;
+    color: #04839d;
+    line-height: 1.4;
+    padding-right: 5vw;
+    padding: 60px 0;
+    text-align: justify;
+}
+.sec4-3 .site-wrap .site .left .btn {
+    position: absolute;
+    left: 0px;
+    
+}
+.sec4-3 .site-wrap .site .left .btn a {
+    display: inline-block;
+    margin-right: 20px;
+    border: 1px solid #04839d;
+    background-color: #FBD3CA;
+    color: #04839d;
+    padding: 10px 50px;
+    font-size: 30px;
+    box-shadow: 10px 10px 0 0 #04839d;
+    font-family: 'Staatliches', cursive;
+    transition: box-shadow .4s ease;
+}
+.sec4-3 .site-wrap .site .left .btn a:last-child {
+    margin-left: 36px;
+    margin-right:0;
+}
+.sec4-3 .site-wrap .site .left .btn a:hover {
+    box-shadow: none;
+}
+
+
+.sec4-3 .site-wrap .site .right {
+    flex: 0 0 50%;
+}
+
 /* tab-menu */
-/* #tab-menu {font-family: 'Staatliches', cursive;}    
-#tab-menu ul {font-size: 20px;}
-#tab-menu ul > li {padding:15px 60px; display: inline-block; background:#04839d;}
-#tab-menu ul > li > a {padding:0 20px; color:#fff; text-align:center}
-#tab-menu ul > li.active > a {} */
 #tab-menu {
     position:absolute;
     font-family: 'Staatliches', cursive;
 }
 a {text-decoration:none;}
+
 
 #tab-btn {}
 #tab-btn ul {
@@ -700,7 +986,7 @@ a {text-decoration:none;}
 #tab-btn ul > li a {padding:15px 20px; display:block; color:#fff;}
 #tab-btn ul > li.active a {}
 
-#tab-cont {background: #fff; line-height: 1.4;}
+#tab-cont {color: #F9D3E0; line-height: 1.4;}
 
 #tab-btn ul > li:hover,
 #tab-btn ul > li:hover:before,
@@ -717,3 +1003,4 @@ a {text-decoration:none;}
   background-color: #1498b3;
   color: #fff;
 }
+
