@@ -1273,18 +1273,18 @@ a {text-decoration:none;}
     padding: 20px;
 }
 .sec5 .border {
-    border-bottom: 3px solid #B53F4E;
+    border-bottom: 10px double #B53F4E;
     margin-bottom:20px;
 }
 .script-wrap .script {
     border: 1px dotted #B53F4E;
-    height: 800px;
+    height: 700px;
     margin-bottom: 20px;
 }
 .script-wrap .script .left {}
 .script-wrap .script .left iframe {
     width: 97%;
-    height: 760px;
+    height: 660px;
     margin: 20px;
 }
 .script-wrap .script-2 {
@@ -1339,7 +1339,7 @@ a {text-decoration:none;}
 }
 .script-wrap .script-3 {
     border: 1px dotted #B53F4E;
-    height: 800px;
+    height: 700px;
     margin-bottom: 20px;
 }
 .script-wrap .script-3 .left {
@@ -1347,7 +1347,7 @@ a {text-decoration:none;}
 }
 .script-wrap .script-3 .left iframe {
     width: 97%;
-    height: 760px;
+    height: 660px;
     margin: 20px;
 }
 .script-wrap .script-4 {
@@ -1403,7 +1403,7 @@ a {text-decoration:none;}
 }
 .script-wrap .script-5 {
     border: 1px dotted #B53F4E;
-    height: 800px;
+    height: 700px;
     margin-bottom: 20px;
 }
 .script-wrap .script-5 .left {
@@ -1411,7 +1411,7 @@ a {text-decoration:none;}
 }
 .script-wrap .script-5 .left iframe {
     width: 97%;
-    height: 760px;
+    height: 660px;
     margin: 20px;
 }
 
@@ -1472,7 +1472,7 @@ a {text-decoration:none;}
 
 .script-wrap .script-7 {
     border: 1px dotted #B53F4E;
-    height: 800px;
+    height: 700px;
     margin-bottom: 20px;
 }
 .script-wrap .script-7 .left {
@@ -1480,7 +1480,7 @@ a {text-decoration:none;}
 }
 .script-wrap .script-7 .left iframe {
     width: 97%;
-    height: 760px;
+    height: 660px;
     margin: 20px;
 }
 .script-wrap .script-8 {
