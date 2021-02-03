@@ -1188,7 +1188,7 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup2.jpg" alt="목업이미지">
                                 </div>
                             </div> 
                             <div class="site">
@@ -1201,7 +1201,7 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup2.jpg" alt="목업이미지">
                                 </div>
                             </div> 
                             <div class="site">
@@ -1214,12 +1214,12 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup2.jpg" alt="목업이미지">
                                 </div>
                             </div> 
 
                         </div>
-                        <div id="tab-btn">
+                        <div id="tab-btn-1">
                             <ul>
                                 <li><a href="#">Tab3</a></li>
                                 <li><a href="#">Tab2</a></li>
@@ -1255,7 +1255,7 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup4.jpg" alt="목업이미지">
                                 </div>
                             </div> 
                             <div class="site">
@@ -1268,7 +1268,7 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup4.jpg" alt="목업이미지">
                                 </div>
                             </div> 
                             <div class="site">
@@ -1281,12 +1281,12 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup4.jpg" alt="목업이미지">
                                 </div>
                             </div> 
 
                         </div>
-                        <div id="tab-btn">
+                        <div id="tab-btn-2">
                             <ul>
                                 <li><a href="#">Tab3</a></li>
                                 <li><a href="#">Tab2</a></li>
@@ -1322,7 +1322,7 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup3.png" alt="목업이미지">
                                 </div>
                             </div> 
                             <div class="site">
@@ -1335,7 +1335,7 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup3.png" alt="목업이미지">
                                 </div>
                             </div> 
                             <div class="site">
@@ -1348,12 +1348,12 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="assets/img/mockup1.jpg" alt="목업이미지">
+                                    <img src="assets/img/mockup3.png" alt="목업이미지">
                                 </div>
                             </div> 
 
                         </div>
-                        <div id="tab-btn">
+                        <div id="tab-btn-3">
                             <ul>
                                 <li><a href="#">Tab3</a></li>
                                 <li><a href="#">Tab2</a></li>
@@ -1427,6 +1427,10 @@
 
         // tab menu
         let tabBtn = $("#tab-btn > ul > li");
+        let tabBtn_1 = $("#tab-btn-1 > ul > li");
+        let tabBtn_2 = $("#tab-btn-2 > ul > li");
+        let tabBtn_3 = $("#tab-btn-3 > ul > li");
+
         let tabCont = $("#tab-cont > div"); 
         let tabCont_1 = $("#tab-cont-1 > div"); 
         let tabCont_2 = $("#tab-cont-2 > div"); 
@@ -1443,21 +1447,28 @@
             let index = target.index();
             tabBtn.removeClass().eq(index).addClass("active");
             tabCont.hide().eq(index).fadeIn();  
+        });
+        tabBtn_1.click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            tabBtn_1.removeClass().eq(index).addClass("active"); 
             tabCont_1.hide().eq(index).fadeIn();
+        });
+        tabBtn_2.click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            tabBtn_2.removeClass().eq(index).addClass("active"); 
             tabCont_2.hide().eq(index).fadeIn();
+        });
+        tabBtn_3.click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            tabBtn_3.removeClass().eq(index).addClass("active"); 
             tabCont_3.hide().eq(index).fadeIn();
         });
-
-        // function tab(){
-        // let target = $(this);
-        // // let index = target.index();
-        // // tabBtn.removeClass();
-        // // tabBtn.eq(index).addClass("active");
-        // // tabBtn.find("div").hide();
-        // // tabBtn.eq(index).find("div").show();
-        // target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("div").hide();   
-        // }
-        // tabBtn.find("a").click(tab).focus(tab);
     </script>
 </body>
 </html>
