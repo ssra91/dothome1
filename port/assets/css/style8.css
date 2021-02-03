@@ -11,6 +11,15 @@
     font-style: normal;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+/* ::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+} */
 
 /* layout */
 #contents {}
@@ -1238,7 +1247,7 @@ a {text-decoration:none;}
 .sec5 span:first-child {
     transform: translateY(170PX);
 }
-.sec5 span {
+.sec5 .tit > span {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     color: #fff;
@@ -1301,6 +1310,8 @@ a {text-decoration:none;}
 .script-wrap .script-2 .right {
     flex: 0 0 70%;
     box-sizing: border-box;
+    height: 450px;
+    overflow-y: scroll;
 }
 /* .script-wrap .script-2 .right iframe {
     width: 95%;
