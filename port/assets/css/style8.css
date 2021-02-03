@@ -943,7 +943,7 @@ a {text-decoration:none;}
     padding: 0px;
     overflow: hidden;
     float: left;
-    padding-left: 40px;
+    padding-left: 24px;
     list-style-type: none;
 }
 #tab-btn ul > li {
@@ -976,6 +976,12 @@ a {text-decoration:none;}
     right: -24px;
     transform: skew(-30deg, 0deg);
     box-shadow: rgba(0,0,0,.1) 3px 2px 5px, inset rgba(255,255,255,.09) -1px 0;
+}
+#tab-btn ul > li:last-child:after {
+    border-radius: 0 0 8px 8px;
+    left: -24px;
+    transform: skew(0deg, 0deg);
+    box-shadow: rgba(0,0,0,.1) -3px 2px 5px, inset rgba(255,255,255,.09) 1px 0;
 }
 #tab-btn ul > li:after {
     border-radius: 0 0 8px 8px;
@@ -1012,7 +1018,7 @@ a {text-decoration:none;}
     padding: 0px;
     overflow: hidden;
     float: left;
-    padding-left: 40px;
+    padding-left: 24px;
     list-style-type: none;
 }
 #tab-btn-1 ul > li {
@@ -1045,6 +1051,12 @@ a {text-decoration:none;}
     right: -24px;
     transform: skew(-30deg, 0deg);
     box-shadow: rgba(0,0,0,.1) 3px 2px 5px, inset rgba(255,255,255,.09) -1px 0;
+}
+#tab-btn-1 ul > li:last-child:after {
+    border-radius: 0 0 8px 8px;
+    left: -24px;
+    transform: skew(0deg, 0deg);
+    box-shadow: rgba(0,0,0,.1) -3px 2px 5px, inset rgba(255,255,255,.09) 1px 0;
 }
 #tab-btn-1 ul > li:after {
     border-radius: 0 0 8px 8px;
@@ -1079,7 +1091,7 @@ a {text-decoration:none;}
     padding: 0px;
     overflow: hidden;
     float: left;
-    padding-left: 40px;
+    padding-left: 24px;
     list-style-type: none;
 }
 #tab-btn-2 ul > li {
@@ -1112,6 +1124,12 @@ a {text-decoration:none;}
     right: -24px;
     transform: skew(-30deg, 0deg);
     box-shadow: rgba(0,0,0,.1) 3px 2px 5px, inset rgba(255,255,255,.09) -1px 0;
+}
+#tab-btn-2 ul > li:last-child:after {
+    border-radius: 0 0 8px 8px;
+    left: -24px;
+    transform: skew(0deg, 0deg);
+    box-shadow: rgba(0,0,0,.1) -3px 2px 5px, inset rgba(255,255,255,.09) 1px 0;
 }
 #tab-btn-2 ul > li:after {
     border-radius: 0 0 8px 8px;
@@ -1146,7 +1164,7 @@ a {text-decoration:none;}
     padding: 0px;
     overflow: hidden;
     float: left;
-    padding-left: 40px;
+    padding-left: 24px;
     list-style-type: none;
 }
 #tab-btn-3 ul > li {
@@ -1179,6 +1197,12 @@ a {text-decoration:none;}
     right: -24px;
     transform: skew(-30deg, 0deg);
     box-shadow: rgba(0,0,0,.1) 3px 2px 5px, inset rgba(255,255,255,.09) -1px 0;
+}
+#tab-btn-3 ul > li:last-child:after {
+    border-radius: 0 0 8px 8px;
+    left: -24px;
+    transform: skew(0deg, 0deg);
+    box-shadow: rgba(0,0,0,.1) -3px 2px 5px, inset rgba(255,255,255,.09) 1px 0;
 }
 #tab-btn-3 ul > li:after {
     border-radius: 0 0 8px 8px;
