@@ -1389,41 +1389,24 @@
                                     <a href="#">FIGMA</a>
                                 </div>
                                 <div class="right">
-<pre><code class="language-js">const sliderWrap = $(".slider_wrap");
-const sliderImg = $(".slider_img");
-const slider = $(".slider");
-const sliderBtn = $(".slider-btn");
-
-let currentIndex = 0;
-let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderHeight = slider.height();
-let sliderTotalWidth = sliderWidth * sliderCount; 
-
-sliderImg.css({width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth}); 
-//오른쪽은 상관없지만 왼쪽에는 해놔야 이미지가 자연스럽게 움직임
-
-function moveLeft(){
-    //alert("왼쪽 버튼을 클릭")
-    sliderImg.animate({left: + sliderWidth }, 400, function(){
-        $(".slider:last-child").prependTo(sliderImg);
-        sliderImg.css("left","");
-    }); //기준점이 left로 되있어서 left만 줌
+<pre><code class="language-js">window.addEventListener("scroll",function(){
+let pageYOffset = window.pageYOffset + screen.height/2;
+for(let i =1; i<9; i++){
+    document.querySelector(".s"+i+"OffsetTop").textContent = document.getElementById("section"+i).offsetTop;
+    if (pageYOffset > document.getElementById("section"+i).offsetTop ) {
+        document.querySelector(".s"+i+"OffsetTop").style.color = "red"; 
+    }else {
+        document.querySelector(".s"+i+"OffsetTop").style.color = "white";
+    }
 }
-function moveRight(){
-    //alert("오른쪽 버튼을 클릭")
-    sliderImg.animate({left: - sliderWidth }, 400, function(){
-        $(".slider:first-child").appendTo(sliderImg);
-        sliderImg.css("left","");
-    }); 
-}
-
-sliderBtn.find(".prev").click(function(){
-    moveLeft();
+document.querySelectorAll(".content-item").forEach(elem => {
+    if(pageYOffset > elem.offsetTop){
+        elem.classList.add("show");
+    }else {
+        elem.classList.remove("show");
+    }
 });
-sliderBtn.find(".next").click(function(){
-    moveRight();
-});   
+});  
 </code></pre>
                                 </div>
                             </div>
@@ -1436,7 +1419,38 @@ sliderBtn.find(".next").click(function(){
                             </div>
                             <div class="script-4">
                                 <div class="left">
-                                    <!-- <iframe src="effect/quizEffect01.html" frameborder="0"></iframe> -->
+<pre><code class="language-js">const sliderWrap = $(".slider_wrap");
+const sliderImg = $(".slider_img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = slider.width();
+let sliderHeight = slider.height();
+let sliderTotalWidth = sliderWidth * sliderCount; 
+
+sliderImg.css({width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth}); 
+
+function moveLeft(){
+    sliderImg.animate({left: + sliderWidth }, 400, function(){
+        $(".slider:last-child").prependTo(sliderImg);
+        sliderImg.css("left","");
+    });
+}
+function moveRight(){
+    sliderImg.animate({left: - sliderWidth }, 400, function(){
+        $(".slider:first-child").appendTo(sliderImg);
+        sliderImg.css("left","");
+    }); 
+}
+sliderBtn.find(".prev").click(function(){
+    moveLeft();
+});
+sliderBtn.find(".next").click(function(){
+    moveRight();
+});   
+    </code></pre>
                                 </div>
                                 <div class="right">
                                     <h3>슬라이더 효과</h3>
@@ -1463,7 +1477,38 @@ sliderBtn.find(".next").click(function(){
                                     <a href="#">FIGMA</a>
                                 </div>
                                 <div class="right">
-                                    <!-- <iframe src="effect/parallaxEffect02.html" frameborder="0"></iframe> -->
+<pre><code class="language-js">let x = 0,
+y = 0,
+mouseX = 0,
+mouseY = 0,
+angleX = 0,
+angleY = 0,
+fmouseX = 0,
+fmouseY = 0;  
+document.addEventListener("mousemove", function(e){
+   x = e.pageX;
+   y = e.pageY;
+
+   mouseX = Math.max(-100, Math.min(100, window.innerWidth/2 - x));
+   mouseY = Math.max(-100, Math.min(100, window.innerHeight/2 - y));
+   angleX = (12 * mouseX) / 100;
+   angleY = (12 * mouseY) / 100;
+   fmouseX += (angleX - fmouseX) * 0.1;
+   fmouseY += (angleY - fmouseY) * 0.1;
+
+   const move = document.querySelector(".move-image");
+   move.style.transform = "translate(-50%, -50%) perspective(600px) rotateX("+fmouseY+"deg) rotateY("+ -fmouseX+"deg)";
+
+   gsap.to(".cursor", {duration: 0.3, left: x, top: y});
+});
+
+document.addEventListener("mousemove", function(){
+   document.querySelector(".pageX").textContent = x;
+   document.querySelector(".pageY").textContent = y;
+   document.querySelector(".mouseX").textContent = mouseX;
+   document.querySelector(".mouseY").textContent = mouseY;
+});
+</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -1475,7 +1520,63 @@ sliderBtn.find(".next").click(function(){
                             </div>
                             <div class="script-8">
                                 <div class="left">
-                                    <!-- <iframe src="effect/quizEffect01.html" frameborder="0"></iframe> -->
+<pre><code class="language-js">const questionQuiz = document.querySelectorAll(".quiz");
+const questionAsk = document.querySelectorAll(".question");
+const questionNum =  document.querySelectorAll(".num");
+const confirmBottom = document.querySelectorAll(".confirm-bottom")
+const questionBtn =  document.querySelectorAll(".confirm-btn");
+const questionAnswer =  document.querySelectorAll(".confirm-answer");
+const questionEx =  document.querySelectorAll(".confirm-ex");
+
+// const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다."
+const quizInfo = [{
+    quizNum : 1,
+    quizAsk : "글씨의 색을 변경하는 CSS 속성은 무엇인가요?",
+    quizAnswer : "color 속성",
+    quizEx : "글씨 속성은 color 값을 이용합니다."
+},
+{
+    quizNum : 2,
+    quizAsk : "position: relative는 언제 사용하나요?",
+    quizAnswer : "color 속성",
+    quizEx : "글씨 속성은 color 값을 이용합니다."
+},
+{
+    quizNum : 3,
+    quizAsk : "콘텐츠 요소를 가운데로 오게 하는 방법 3가지 이상을 설명하시오.",
+    quizAnswer : "color 속성",
+    quizEx : "글씨 속성은 color 값을 이용합니다."
+}
+];
+
+
+for(let i=0; i<quizInfo.length; i++){
+    questionNum[i].innerHTML = quizInfo[i].quizNum;
+    questionAsk[i].innerHTML = quizInfo[i].quizAsk;
+    questionAnswer[i].innerHTML = quizInfo[i].quizAnswer;
+    questionEx[i].innerHTML = quizInfo[i].quizEx;
+};
+questionQuiz.forEach((elem, index)=>{
+    questionNum[index].innerHTML = quizInfo[index].quizNum;
+    questionAsk[index].innerHTML = quizInfo[index].quizAsk;
+    questionAnswer[index].innerHTML = quizInfo[index].quizAnswer;
+    questionEx[index].innerHTML = quizInfo[index].quizEx;
+});
+
+//정답 숨기기
+// questionAnswer.hide();
+// questionEx.hide();
+for(let i=0; i<quizInfo.length; i++){
+    confirmBottom[i].style.display="none";
+}
+
+questionBtn.forEach(elem => {
+    elem.addEventListener("click", function(){
+        this.style.display = "none";
+        this.nextElementSibling.style.display = "block";
+    });
+});
+</code></pre>
                                 </div>
                                 <div class="right">
                                     <h3>퀴즈 이펙트</h3>

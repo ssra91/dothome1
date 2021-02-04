@@ -1370,7 +1370,8 @@ a {text-decoration:none;}
 .script-wrap .script-4 .left {
     flex: 1 1 70%;
     border-right: 1px dotted #B53F4E;
-    padding: 40px;
+    height: 450px;
+    overflow-y: scroll;
 }
 .script-wrap .script-4 .right {
     flex: 0 0 30%;
@@ -1444,6 +1445,8 @@ a {text-decoration:none;}
 .script-wrap .script-6 .right {
     flex: 0 0 70%;
     box-sizing: border-box;
+    height: 450px;
+    overflow-y: scroll;
 }
 .script-wrap .script-6 .right iframe {
     width: 95%;
@@ -1502,7 +1505,8 @@ a {text-decoration:none;}
 .script-wrap .script-8 .left {
     flex: 1 1 70%;
     border-right: 1px dotted #B53F4E;
-    padding: 40px;
+    height: 450px;
+    overflow-y: scroll;
 }
 .script-wrap .script-8 .right {
     flex: 0 0 30%;
