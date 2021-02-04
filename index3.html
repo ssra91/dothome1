@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공비서 사이트</title>
+
+    <style>
+        
+        *{margin: 0; padding: 0;}
+        ul, li {list-style: none;}
+        a {text-decoration: none;}
+        
+        #header {
+            width: 100%; 
+            height: 32px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #d9e6e8;
+        }
+        .wrap {
+            width: 1100px;
+            height: inherit;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .wrap .left {float: left;}
+        .wrap .left .title {
+            width: 160px;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            border: 1px solid #d9e6e8;
+            border-collapse: collapse;
+            border-top: 0;
+            border-bottom: 0;
+            color: #acb6ba;
+        }
+        .wrap .main {float: left;}
+        .wrap .main .title {
+            width: 160px;
+            padding: 6px 15px;
+            position: relative;
+            font-size: 12px;
+            display: inline-block;
+            border-top: 0;
+            border-bottom: 0;
+            color: #18292e;
+            cursor: pointer;
+        }
+        .wrap .right {}
+        .wrap .right .menu {
+            float: right;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 11px;
+        }
+        .wrap .right .menu ul {}
+        .wrap .right .menu ul li {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .wrap .right .menu ul li a {color: #acb6ba;}
+        
+        .wrap .right .alram {
+            float: right;
+            border-right: 1px solid #d9e6e8;
+            border-left: 1px solid #d9e6e8;
+        }
+        .wrap .right .alram button {
+            padding: 0 15px 2px 15px;
+            height: 32px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #3a5965;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+
+
+        #contents {}
+        .aside {
+            width: 160px;
+            background: #333;
+            height: inherit;
+        }
+        .aside .profile {
+            width: 100%;
+            height: 157px;
+            background: #fff;
+        }
+        .aside .gallery {
+            width: 100%;
+            height: 45px;
+            display: block;
+            margin: 4px 0;
+            background: #f9f9fb;
+            color: #718c96;
+            font-size: 13px;
+            font-weight: bold;
+
+        }
+        .aside .menu {}
+        .aside .menu2 {}
+        .aside .store-box {}
+
+
+        #footer {
+            width: 100%;
+            height: 140px;
+        }
+
+        .container {
+            width: 1100px; 
+            height: 1214px;
+            background: #666;
+            margin: 0 auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="wrap">
+            <div class="left">
+                <div class="title">공대남의 비즈니스 서비스</div>
+            </div>
+            <div class="main">
+                <div class="title"></div>
+            </div>
+            <div class="right">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">마이페이지(샵주)</a>
+                        </li>
+                        <li>
+                            <a href="#">이용권정보</a>
+                        </li>
+                        <li>
+                            <a href="#">로그아웃</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="alram">
+                    <button>알림</button>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <!-- //header -->
+    <div id="contents">
+        <div class="container">
+            <div class="aside">
+                <div class="profile"></div>
+                <div class="gallery"></div>
+                <div class="menu">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="menu2">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="store-box"></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- //contents -->
+    <div id="footer"></div>
+    <!-- //footer -->
+</body>
+</html>
