@@ -9,7 +9,7 @@
         
         *{margin: 0; padding: 0;}
         ul, li {list-style: none;}
-        a {text-decoration: none;}
+        a {text-decoration: none; color: #000;}
         
         #header {
             width: 100%; 
@@ -49,13 +49,14 @@
             color: #18292e;
             cursor: pointer;
         }
-        .wrap .right {}
+        .wrap .right {position: relative;}
         .wrap .right .menu {
             float: right;
             padding-right: 20px;
-            padding-top: 10px;
+            padding-top: 8px;
             padding-bottom: 10px;
             font-size: 11px;
+            margin-right: 50px;
         }
         .wrap .right .menu ul {}
         .wrap .right .menu ul li {
@@ -63,11 +64,14 @@
             display: inline-block;
         }
         .wrap .right .menu ul li a {color: #acb6ba;}
-        
+        .wrap .right .menu ul li .red {color: red;}
         .wrap .right .alram {
             float: right;
             border-right: 1px solid #d9e6e8;
             border-left: 1px solid #d9e6e8;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
         .wrap .right .alram button {
             padding: 0 15px 2px 15px;
@@ -112,6 +116,56 @@
         #footer {
             width: 100%;
             height: 140px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            background-color: #e9eded;
+            font-size: 12px;
+            border-top: 1px solid #d9e6e8;
+        }
+        .footer-wrap {
+            padding-left: 30px;
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .footer-wrap ul {
+            margin: 20px 0;
+            color: #969ea1;
+        }
+        .footer-wrap ul li {
+            display: inline;
+            position: relative;
+            margin-right: 28px;
+        }
+        .footer-wrap ul li a {
+            text-decoration: none;
+            color: #969ea1;
+        }
+        .footer-link {
+            position: absolute;
+            left: 385px;
+            top: -22px;
+        }
+        .footer-link li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .footer-link li a {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background: url(https://www.gongbiz.kr/resources/static/assets/img/common/ic_foot_sns2.png) no-repeat;
+            text-indent: -500em;
+        }
+        .footer-link li .instagram {
+            background-position: -22px 0;
+        }
+        .footer-link li .facebook {
+            background-position: 0 0;
+        }
+        .footer-link li .naverblog {
+            background-position: -44px 0;
         }
 
         .container {
@@ -131,7 +185,7 @@
                 <div class="title">공대남의 비즈니스 서비스</div>
             </div>
             <div class="main">
-                <div class="title"></div>
+                <div class="title">안썼군요</div>
             </div>
             <div class="right">
                 <div class="menu">
@@ -140,7 +194,7 @@
                             <a href="#">마이페이지(샵주)</a>
                         </li>
                         <li>
-                            <a href="#">이용권정보</a>
+                            <a class="red" href="#">이용권정보</a>
                         </li>
                         <li>
                             <a href="#">로그아웃</a>
@@ -157,25 +211,79 @@
     <div id="contents">
         <div class="container">
             <div class="aside">
-                <div class="profile"></div>
-                <div class="gallery"></div>
+                <div class="profile">
+                    <a class="tit" href="#">헤렌테스트</a>
+                    <div class="mine">점주 김소라</div>
+                    <a class="members" href="#">직원</a>
+                </div>
+                <div class="gallery">우리샾 앨범</div>
                 <div class="menu">
-                    <ul>
-                        <li></li>
+                    <ul class="list">
+                        <li class="header"> <a href="#">예약</a></li>
+                        <li> <a href="#">예약 캘린더</a></li>
+                        <li class="header"> <a href="#">매출관리</a></li>
+                        <li> <a href="#">매출등록/목록</a></li>
+                        <li> <a href="#">우리샵 매출</a></li>
+                        <li> <a href="#">직원별 매출</a></li>
+                        <li> <a href="#">고객별 매출</a></li>
+                        <li class="header"> <a href="#">고객관리</a></li>
+                        <li> <a href="#">고객차트</a></li>
+                        <li> <a href="#">회원권/포인트 관리</a></li>
+                        <li class="header"> <a href="#">제품관리</a></li>
+                        <li class="header"> <a href="#">우리샵 관리</a></li>
+                        <li> <a href="#">시술메뉴</a></li>
+                        <li> <a href="#">포인트/행사</a></li>
+                        <li> <a href="#">직원관리</a></li>
+                        <li> <a href="#">화면 잠금 관리</a></li>
+                        <li class="header"> <a href="#">문자</a></li>
+                        <li> <a href="#">문자 발송</a></li>
+                        <li> <a href="#">발송 내역</a></li>
+                        <li> <a href="#">문자충전/내역</a></li>
+                        <li> <a href="#">자동문자 설정</a></li>
+                        <li class="header"> <a href="#">부가서비스</a></li>
+                        <li> <a href="#">네이버예약</a></li>
                     </ul>
                 </div>
                 <div class="menu2">
-                    <ul>
-                        <li></li>
+                    <ul class="list2">
+                        <li class="header2"><a href="#">고객센터</a></li>
+                        <li><a href="#">사용법 안내</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">이벤트 게시판</a></li>
+                        <li><a href="#">문의하기</a></li>
                     </ul>
                 </div>
                 <div class="store-box"></div>
             </div>
-
         </div>
     </div>
     <!-- //contents -->
-    <div id="footer"></div>
+    <div id="footer">
+        <div class="footer-wrap">
+            <div>
+                <ul class="footer-menu">
+                    <li class="item"><a href="#">이용약관</a></li>
+                    <li class="item"><a href="#">개인정보취급방침</a></li>
+                    <li class="item"><a href="#">이용방법</a></li>
+                    <li class="item"><a href="#">공지사항</a></li>
+                </ul>
+                <ul class="footer-link">
+                    <li class="item">공비서<b>SNS</b></li>
+                    <li class="item"><a class="instagram" href="https://www.instagram.com/gongbiz_official/?hl=ko">인스타그램</a></li>
+                    <li class="item"><a class="facebook" href="https://www.facebook.com/gongbiz/">페이스북</a></li>
+                    <li class="item"><a class="naverblog" href="https://blog.naver.com/bongbong323">네이버블로그</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="footer-menu2">
+                    <li class="item"><a href="#"><b>(주)헤렌</b></a></li>
+                    <li class="item"><a href="#">대표이사 : 이한주</a></li>
+                    <li class="item">사업자등록번호 701-87-00540</li>
+                    <li class="item">고객센터 1600-3145</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- //footer -->
 </body>
 </html>
