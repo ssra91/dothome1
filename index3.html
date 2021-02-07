@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <title>공비서</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공비서 사이트</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100">
+    <meta name="google-site-verification" content="Gv3JfWuRO6oLE-iz2nc2S90JGIVvTeKLkBtwxhv2loA" />
+    <meta name="naver-site-verification" content="2766b76833e0230e67320ddc173839e7aef41cc8"/>
+    <meta name="keywords" content="고객관리 프로그램, CRM, 네일샵프로그램, 재고관리프로그램, 미용실창업, 네일샵 창업, 회원관리프로그램, 왁싱샵 창업, 헬스장 창업, 필라테스 창업, 피부샵 창업, 애견샵창업, CRM프로그램, 고객관리노트, 미용실고객관리프로그램, 네일샵 오픈, 네일샵고객관리프로그램, 고객관리어플, 미용실고객관리, 매출관리프로그램, 무료고객관리프로그램, 요가창업, 미용실프로그램"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
 
     <style>
         
         *{margin: 0; padding: 0;}
         ul, li {list-style: none;}
         a {text-decoration: none; color: #000;}
-        
+        body {
+            position: relative;
+            font-family: "Noto Sans KR","Apple SD Gothic Neo","Nanum Barun Gothic","Malgun Gothic","돋옴",Dotum,sans-serif;
+            font-size: 12px;
+            line-height: 1;
+            letter-spacing: -0.5px;
+            background-color: #f5f7f7;
+            margin: 0;
+            color: #37454a;
+        }
         #header {
             width: 100%; 
             height: 32px;
@@ -49,6 +63,24 @@
             color: #18292e;
             cursor: pointer;
         }
+        .wrap .main .title .logo-icon {
+            background: url(https://www.gongbiz.kr/resources/static/img/icon/icon_gstore.png) no-repeat;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+        }
+        .wrap .main .title .text {
+            margin-left: 20px;
+        }
+        .wrap .main .rightarrow {
+            background: url(https://www.gongbiz.kr/resources/static/img/icon/gstore_arrow_right.png) no-repeat;
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            margin-left: 6px;
+            margin-bottom: 1px;
+        }
         .wrap .right {position: relative;}
         .wrap .right .menu {
             float: right;
@@ -86,38 +118,127 @@
 
 
 
-        #contents {}
+        #contents {
+           
+        }
         .aside {
             width: 160px;
             background: #333;
             height: inherit;
+            background-color: #f5f7f7;
         }
         .aside .profile {
             width: 100%;
             height: 157px;
-            background: #fff;
+            background: #3fdcdb;
+            background: -webkit-linear-gradient(left, #3fdcdb, #4ab0e3);
+            background: -o-linear-gradient(right, #3fdcdb, #4ab0e3);
+            background: -moz-linear-gradient(right, #3fdcdb, #4ab0e3);
+            background: linear-gradient(to right, #3fdcdb, #4ab0e3);
         }
+        .aside .profile .b {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            }
+        .aside .profile .tit {
+            display: block;
+            padding-left: 20px;
+            padding-top: 30px;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        .aside .mine{
+            padding: 0 10px 0 20px;
+            margin-top: 10px;
+            font-size: 13px;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #fff;
+            text-overflow: ellipsis;
+        }
+        .aside .mine span a {
+            color: #fff;
+            margin-left: 10px;
+    }
         .aside .gallery {
-            width: 100%;
-            height: 45px;
             display: block;
             margin: 4px 0;
+            padding: 15px 20px;
             background: #f9f9fb;
             color: #718c96;
             font-size: 13px;
             font-weight: bold;
-
+            border: 1px solid #d9e6e8;
+            border-collapse: collapse;
         }
-        .aside .menu {}
-        .aside .menu2 {}
+        .aside .gallery a {
+            color: #718c96;
+        }
+        .aside .gallery i {float: right;}
+        .aside .gallery a.fa {    
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        .aside .profile .members {
+            display: block;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #ffffff;
+        }
+        .aside .menu {
+            position: relative;
+            background-color: #ffffff;
+            border: 1px solid #d9e6e8;
+            border-bottom: 0;
+            border-collapse: collapse;
+            height: 622px;
+            padding-bottom: 20px;
+        }
+        .aside .menu .list {
+            font-size: 13px;
+            padding: 10px 20px;
+            }
+        .menu .list .header {
+            margin-top: 23px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .menu .list li {
+            margin-top: 8px;
+        }
+        .aside .menu2 {
+            height: 112px;
+            padding: 20px 20px;
+            font-size: 14px;
+            background: #fafcfc;
+            border: 1px solid #d9e6e8;
+            border-top: 0;
+            
+        }
+        .menu2 .list2 .header2 {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .menu2 .list2 li {margin-top: 8px;}
         .aside .store-box {}
 
-
+        
         #footer {
             width: 100%;
             height: 140px;
-            padding-top: 30px;
-            padding-bottom: 10px;
+            padding-top: 40px;
             background-color: #e9eded;
             font-size: 12px;
             border-top: 1px solid #d9e6e8;
@@ -137,6 +258,19 @@
             position: relative;
             margin-right: 28px;
         }
+        
+        .footer-menu li::after {
+            position: absolute;
+            right: -18px;
+            top: 4px;
+            bottom: 1px;
+            width: 1px;
+            content: " ";
+            background: #d4d9d9;
+        }
+        .footer-menu li:last-child::after {
+            width: 0;
+        }
         .footer-wrap ul li a {
             text-decoration: none;
             color: #969ea1;
@@ -144,12 +278,15 @@
         .footer-link {
             position: absolute;
             left: 385px;
-            top: -22px;
+            top: -23px;
         }
         .footer-link li {
             display: inline-block;
             vertical-align: middle;
-            margin-right: 10px;
+            margin:0 10px 0 10px;
+        }
+        .footer-link li::after {
+            width: 0;
         }
         .footer-link li a {
             display: inline-block;
@@ -167,15 +304,25 @@
         .footer-link li .naverblog {
             background-position: -44px 0;
         }
+        .footer-menu2 li a::after {
+            position: absolute;
+            right: -18px;
+            top: 4px;
+            bottom: 1px;
+            width: 1px;
+            content: " ";
+            background: #d4d9d9;
+        }
 
         .container {
             width: 1100px; 
             height: 1214px;
-            background: #666;
             margin: 0 auto;
         }
-
-
+        .footer-link .item-1 {margin-right: 0;}
+        .footer-link .item-2 {margin-right: 3px;}
+        .footer-link .item-3 {margin-right: 3px;}
+        .footer-link .item-4 {margin-right: 3px;}
     </style>
 </head>
 <body>
@@ -185,7 +332,11 @@
                 <div class="title">공대남의 비즈니스 서비스</div>
             </div>
             <div class="main">
-                <div class="title">안썼군요</div>
+                <div class="title">
+                    <i class="logo-icon"></i>
+                    <span class="text">공비서 스토어</span>
+                    <i class="rightarrow"></i>
+                </div>
             </div>
             <div class="right">
                 <div class="menu">
@@ -212,11 +363,16 @@
         <div class="container">
             <div class="aside">
                 <div class="profile">
-                    <a class="tit" href="#">헤렌테스트</a>
-                    <div class="mine">점주 김소라</div>
+                    <div class="b img"></div>
+                    <a class="tit" href="#">헤렌테스트<br>&nbsp;</a>
+                    <div class="mine"><span><b>점주</b></span>
+                        <span>
+                            <a href="#">테스트</a>
+                        </span>
+                    </div>
                     <a class="members" href="#">직원</a>
                 </div>
-                <div class="gallery">우리샾 앨범</div>
+                <div class="gallery"><a href="#">우리샾 앨범</a><i class="fa fa-picture-o"></i></div>
                 <div class="menu">
                     <ul class="list">
                         <li class="header"> <a href="#">예약</a></li>
@@ -255,6 +411,15 @@
                 </div>
                 <div class="store-box"></div>
             </div>
+            <!-- <div class="main">
+                <div class="main-section">
+                    <div class="top-wrap">
+                        <div class="top-left">
+                            <div class="section-title">우리샵 앨범</div>
+                        </div>
+                    </div>
+                </div>              
+            </div> -->
         </div>
     </div>
     <!-- //contents -->
@@ -268,10 +433,10 @@
                     <li class="item"><a href="#">공지사항</a></li>
                 </ul>
                 <ul class="footer-link">
-                    <li class="item">공비서<b>SNS</b></li>
-                    <li class="item"><a class="instagram" href="https://www.instagram.com/gongbiz_official/?hl=ko">인스타그램</a></li>
-                    <li class="item"><a class="facebook" href="https://www.facebook.com/gongbiz/">페이스북</a></li>
-                    <li class="item"><a class="naverblog" href="https://blog.naver.com/bongbong323">네이버블로그</a></li>
+                    <li class="item-1">공비서<b>SNS</b></li>
+                    <li class="item-2"><a class="instagram" href="https://www.instagram.com/gongbiz_official/?hl=ko">인스타그램</a></li>
+                    <li class="item-3"><a class="facebook" href="https://www.facebook.com/gongbiz/">페이스북</a></li>
+                    <li class="item-4"><a class="naverblog" href="https://blog.naver.com/bongbong323">네이버블로그</a></li>
                 </ul>
             </div>
             <div>
