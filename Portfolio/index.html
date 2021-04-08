@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {height: 20000px; font-family: 'NEXON Lv2 Gothic Bold';}
+        iframe {
+            border: 0;/* width: 100%; height:100%; */
+        }
+        em {font-style: normal;}
+        .scroll {
+            position: fixed; right: 10px; top: 10px;
+            width: 50px; height: 50px; line-height: 50px;
+            text-align: center; color: #fff;
+            background: rgba(0,0,0,0.5);
+            z-index: 100000000;
+        }
+        #section1 {}
+        #section2 {}
+        #section3 {}
+        #section4 {}
+        #section5 {}
+        #section6 {}
+        /* commom */
+        .fixed {
+            position: fixed; 
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+        img {
+            width: 100%; vertical-align: top;
+            object-fit: cover;
+        }
+         /* section1 */
+         .s1Txt01 {
+            font-size: 8vw;
+        }
+        .s1Txt02 {
+            font-size: 8vw;
+            white-space: nowrap;
+        }
+        .s1Txt03 {
+            width: 0%;
+            height: 0%;
+            z-index: 900;
+        }
+        .s1Txt04 {
+           width: 30vw;
+           height: 30vw;
+           background: #000;
+           border-radius: 50%;
+        }
+        .s1Txt05 {
+            color: #fff;
+            font-size: 4vw;
+        }
+
+        /* section2 */
+        .s2Txt01 {
+            width: 100vw; height: 100vh;
+            background: #000;
+        }
+        .s2Txt02 h2 {
+            font-size: 4vw;
+            text-align: center;
+            line-height: 1.2;
+            background-repeat: no-repeat;
+            background-image: url(img/textbg.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+        }
+        .s2Txt03 {
+            color: #fff;
+            font-size: 3vw;
+        }
+        .s2Txt03 .text1 {
+            top: 30%;
+            display: flex;
+            justify-content: space-between;
+            width: 55vw;
+        }
+        .s2Txt03 .text1 h3 {
+            flex: 0 0 32%;
+            font-size: 2vw;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+        .s2Txt03 .text1 p {
+            flex: 0 0 60%;
+            font-size: 1vw;
+            line-height: 1.8;
+            font-family: 'NEXON Lv2 Gothic Light';
+        }
+
+        .s2Txt03 .text2 {
+            top: 30%; display: none;
+        }
+        .s2Txt03 .text3 {
+            top: 30%; display: none;
+        }
+        .s2Txt03 .text4 {
+            top: 30%; display: none;
+        }
+
+        .s2Txt04 {
+            width: 60vw;
+            height: 60vh;
+            background-image: url(img/applepaddle.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            /* background-color: #fff; */
+            top: 70%;
+        }
+        .s2Txt04 .imgWrap {
+            width: 94%; height: 100%;
+            margin: 3%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px 30px 0 0;
+        }
+        .s2Txt04 .imgWrap > div {
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 100%; height: 100%;
+            transform: translate(-50%, -50%);
+        }
+        .s2Txt04 .imgWrap > div .view {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            width: 100px; height: 100px;
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            line-height: 100px;
+            text-decoration: none;
+            transition: all 400ms ease;
+        }
+        .s2Txt04 .imgWrap > div .view.white {
+            background: rgba(255,255,255,.5);
+            color: rgba(255,255,255,0.8);
+            box-shadow: 0 0 0 6px inset rgba(255,255,255,.9);
+        }
+        .s2Txt04 .imgWrap > div .view.white:hover {
+            background: rgba(255,255,255,.7);
+            color: rgba(255,255,255,1);
+            box-shadow: 0 0 0 0 inset rgba(255,255,255,.9);
+        }
+        .s2Txt04 .imgWrap > div .view:hover {
+            box-shadow: 0 0 0 6px inset rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.7);
+        }
+
+         /* section3 */
+        .s3Txt01 {
+             width: 100vw; height: 100vh;
+             background: #000;
+             overflow: hidden;
+         }
+        .s3Txt02 h2 {
+            font-size: 4vw;
+            text-align: center;
+            line-height: 1.2;
+            background-repeat: no-repeat;
+            background-image: url(img/textbg.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+
+        .txtBox {}
+        .txtBox1 {left: 200%;}
+        .txtBox2 {left: 200%;}
+        .txtBox3 {left: 200%;}
+        .txtBox4 {left: 200%;}
+        .txtBox5 {left: 200%;}
+        .txtBox6 {left: 200%;}
+
+        .aniBox1 {top: 20%;}
+        .aniBox2 {top: 80%;}
+        .aniBox3 {top: 20%;}
+        .aniBox4 {top: 80%;}
+        .aniBox5 {top: 20%;}
+        .aniBox6 {top: 80%;}
+
+
+    /* section4 */
+    .s4Txt01 {
+    }
+    .s4Txt02 {
+        background: rgb(128, 59, 128);
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+    }
+    .s4Txt03 {
+        background: rgb(45, 45, 128);
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+    }
+    .s4Txt04 {
+        background:rgb(102,102,245);
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+    }
+    .s4Txt05 {
+        background: rgb(118, 221, 118);
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+    }
+    .s4Txt06 {
+        background: rgb(240, 240, 82);
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+    }
+    .s4Txt07 {
+        background: rgb(250, 185, 66);
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+    }
+    .s4Txt08 {
+        background:  rgb(250, 133, 133);
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+    }
+    .s4Txt09 {
+        width: 20vw;
+        height: 20vw;
+        -webkit-text-stroke:3px rgb(216, 238, 175);
+    }
+    .s4Txt10 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(117, 165, 212);
+    }
+    .s4Txt11 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(247, 181, 244);
+    }
+    .s4Txt12 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(240, 145, 159);
+    }
+    .s4Txt13 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(240, 157, 146);
+    }
+    .s4Txt14 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(235, 129, 231);
+    }
+    .s4Txt15 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(130, 199, 146);
+    }
+    .s4Txt16 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(204, 113, 121);
+    }
+    .s4Txt17 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(229, 241, 113);
+    }
+    .s4Txt18 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(144, 196, 128);
+    }
+    .s4Txt19 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(204, 146, 202);
+    }
+    .s4Txt20 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(130, 194, 199);
+    }
+    .s4Txt21 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(70, 117, 172);
+    }
+    .s4Txt22 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(110, 163, 74);
+    }
+    .s4Txt23 {
+        width: 30vw;
+        height: 30vw;
+        -webkit-text-stroke:3px rgb(33, 166, 175);
+    }
+    .s4Txt24 {
+            font-size: 8vw;
+            white-space: nowrap;
+        }
+    </style>
+<body>
+    <div class="scroll">0</div>
+    <div id="contents">
+        <section id="section1"
+            data-0 = 'display:block'
+            data-7999 = 'display:none'
+        >
+            <div class="s1Txt01 fixed" 
+                data-0="top: 50%; opacity:1"
+                data-500="top: 30%; opacity:0"
+            >안녕하세요!</div>
+            <div class="s1Txt02 fixed"
+                data-300="top: 70%; opacity:0"
+                data-800="top: 50%; opacity:1; font-size: 8vw;"
+                data-1700="top: 50%; opacity:1; font-size: 0vw;"
+            >프론트앤드 개발자 김소라입니다.</div>
+            <div class="s1Txt03 fixed"
+                data-1600="width: 0%; height: 0%"
+                data-3000="width: 100%; height: 100%"
+            ><img src="img/apple-01.jpg" alt="이미지" class="fixed"
+                data-1600="border-radius:500px"
+                data-3000="border-radius:0px"
+            >
+            </div>
+            <div class="s1Txt04 fixed" data-title="검은색 원"
+                data-2300="width: 0vw; height: 0vw;"
+                data-3300="width: 30vw; height: 30vw;"
+                data-5000="width: 30vw; height: 30vw;"
+                data-7600="width: 230vw; height: 230vw;"
+            >
+            <span class="s1Txt05 fixed"
+                data-2800="transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
+                data-4300="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                data-5000="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                data-7000="transform: translate(-50%, -50%) scale(0) rotate(0deg)"
+            >Hello!</span>
+            </div>
+        </section>
+        <!-- //section1 -->
+        <section id="section2"
+        data-7899="display:none"
+        data-7900="display:block"
+        data-30000="display:block"
+        data-30001="display:none">   
+        <div class="s2Txt01 fixed" data-titlt="검은색 배경"></div>
+        <div class="s2Txt02">
+            <h2 class="fixed"
+                data-7900 = "opacity:0; top: 50%; transform: translate(-50%, -50%) scale(1.5)"
+                data-8200 = "opacity:1; top: 50%; transform: translate(-50%, -50%) scale(1.5)"
+                data-8800 = "opacity:1; top: 14%; transform: translate(-50%, -50%) scale(1)"
+                data-27000 = "opacity:1; top: 14%; transform: translate(-50%, -50%) scale(1)"
+                data-28000 = "opacity:1; top: 50%; transform: translate(-50%, -50%) scale(1.5)"
+            >The sites I've been working on</h2>
+            <div class="s2Txt03">
+                <div class="fixed text1"
+                    data-9800 = "top: 50%; opacity:0"
+                    data-10800 = "top: 30%; opacity:1"
+                    data-11800 = "top: 30%; opacity:1"
+                    data-12800 = "top: 50%; opacity:0"
+                    >
+                    <h3>웹표준을 준수한 사이트 제작</h3>
+                    <p>
+                        웹접근성지침서2.0을 바탕으로  웹 표준에 필요한 인식의 용이성, 
+                        운용의 용이성, 이해의 용이성, 견고성을 바탕으로 사이트를 제작하였습니다.
+                    </p>
+                </div>
+                <div class="fixed text1"
+                    data-13800 = "top: 50%; opacity:0"
+                    data-14800 = "top: 30%; opacity:1"
+                    data-15800 = "top: 30%; opacity:1"
+                    data-16800 = "top: 50%; opacity:0"
+                    >
+                    <h3>반응형 사이트 제작</h3>
+                    <p>
+                        반응형 페이지에 맞춰 모든 사이지의 디바이스에서 나올 수 있도록
+                        제작하고 웹표준 또한 준수하였습니다.
+                    </p>
+                </div>
+                <div class="fixed text1"
+                    data-17800 = "top: 50%; opacity:0"
+                    data-18800 = "top: 30%; opacity:1"
+                    data-19800 = "top: 30%; opacity:1"
+                    data-20800 = "top: 50%; opacity:0"
+                    >
+                    <h3>영화 사이트 제작</h3>
+                    <p>
+                        영화 기업사이트를 제작하여 사이트 제작의 이해를 나타내었습니다.
+                    </p>
+                </div>
+                <div class="fixed text1"
+                    data-21800 = "top: 50%; opacity:0"
+                    data-22800 = "top: 30%; opacity:1"
+                    data-23800 = "top: 30%; opacity:1"
+                    data-24800 = "top: 50%; opacity:0"
+                    >
+                    <h3>리액트를 이용한 사이트 제작</h3>
+                    <p>
+                        리액트를 이용하여 사이트를 제작하여 이해도를 나타낼 수 있습니다.
+                    </p>
+                </div>        
+            </div>  
+            <div class="s2Txt04 fixed"
+                data-8600 = "top: 150%"
+                data-9600 = "top: 70%"
+                data-27000 = "top: 70%"
+                data-28000 = "top: 150%"
+                >
+                <div class="imgWrap">
+                    <div class="img1"
+                        data-12000 = "left: 50%"
+                        data-14000 = "left: -50%"
+                    ><img src="img/webs.png" alt="웹표준">
+                    <a href="#" class="view">VIEW</a>
+                </div>
+                    <div class="img2"
+                        data-12000 = "left: 150%"
+                        data-14000 = "left: 50%"
+                        data-16000 = "left: 50%"
+                        data-18000 = "left: -50%"
+                    ><img src="img/resp.png" alt="반응형">
+                    <a href="#" class="view">VIEW</a>
+                </div>
+                    <div class="img3"
+                        data-16000 = "left: 150%"
+                        data-18000 = "left: 50%"
+                        data-20000 = "left: 50%"
+                        data-22000 = "left: -50%"
+                    ><img src="img/mega.PNG" alt="메가박스">
+                    <a href="#" class="view">VIEW</a>
+                </div>
+                    <div class="img4"
+                        data-20000 = "left: 150%"
+                        data-22000 = "left: 50%"
+                    ><img src="img/port.png" alt="리액트">
+                    <a href="#" class="view white">VIEW</a>
+                </div>
+                
+                <!-- <div class="img3">웹표준이미지3</div>
+                <div class="img4">웹표준이미지4</div> -->
+            </div>
+        </div>
+    </section>
+    <!-- //section2 -->
+    <section id="section3"
+    data-28999 = 'display:none'
+    data-29000 = 'display:block'
+    data-40000 = 'display:block'
+    >
+    <div class="s3Txt01 fixed" data-title="검은색 배경"
+        data-29000 = "width:300vw; height:200vw"
+        data-32000 = "width:30vw; height:30vw"
+        data-42100 = "width: 60vw; height:60vw"
+        data-43000 = "width:100vw; height:100vw"
+        >
+        <div class="s3Txt02">
+            <h2 class="txtBox fixed"
+                data-31000="left: 50%"
+                data-33000="left: -150%"
+            ><span>I've been working on Sites</span></h2>
+            <h2 class="txtBox1 fixed"
+                data-33000="left: 200%"
+                data-35000="left: -200%"
+            ><span>Animation1</span></h2>
+            <h2 class="txtBox2 fixed"
+                data-34000="left: 200%"
+                data-36000="left: -200%"
+            ><span>Animation2</span></h2>
+            <h2 class="txtBox3 fixed"
+                data-35000="left: 200%"
+                data-37000="left: -200%"
+            ><span>Animation3</span></h2>
+            <h2 class="txtBox4 fixed"
+                data-36000="left: 200%"
+                data-38000="left: -200%"
+            ><span>Animation4</span></h2>
+            <h2 class="txtBox5 fixed"
+                data-37000="left: 200%"
+                data-39000="left: -200%"
+            ><span>Animation5</span></h2>
+            <h2 class="txtBox6 fixed"
+                data-38000="left: 200%"
+                data-40000="left: -200%"
+            ><span>Animation6</span></h2>
+        </div>
+    </div>
+            <div class="s3Txt03">
+                <div class="aniBox1 fixed"
+                    data-32000="left: 200%"
+                    data-37000="left: -200%"
+                >
+                    <div class="view">
+                        <iframe src="http://ssra10.dothome.co.kr/port/animation/TentacleAnimation.html" height="400" width="500" scrolling="no"></iframe>
+                    </div>
+                </div>
+                <div class="aniBox2 fixed"
+                    data-33000="left: 200%"
+                    data-38000="left: -200%"
+                >
+                    <div>
+                        <iframe src="http://ssra10.dothome.co.kr/port/animation/LoadingAnimation.html" height="400" width="500" scrolling="no" ></iframe>
+                    </div>
+            </div>
+                <div class="aniBox3 fixed"
+                    data-34000="left: 200%"
+                    data-39000="left: -200%"
+                >
+                <div>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/GaspAnimation.html"height="400" width="500" scrolling="no" ></iframe>
+                </div>
+            </div>
+                <div class="aniBox4 fixed"
+                    data-35000="left: 200%"
+                    data-40000="left: -200%"
+                >
+                <div>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/WaveCircle.html"height="400" width="500" scrolling="no" ></iframe>
+                </div>
+            </div>
+                <div class="aniBox5 fixed"
+                    data-36000="left: 200%"
+                    data-41000="left: -200%"
+                >
+                <div>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/TailAnimation.html"height="400" width="500" scrolling="no" ></iframe>
+                </div>
+            </div>
+                <div class="aniBox6 fixed"
+                    data-37000="left: 200%"
+                    data-42000="left: -200%"
+                >
+                <div>
+                    <iframe src="http://ssra10.dothome.co.kr/port/animation/CubeAnimation.html"height="400" width="500" scrolling="no" ></iframe>
+                </div>
+            </div>
+      
+        </section>
+        <!-- //section3 -->
+        <section id="section4"
+            data-42000 = 'display:block'
+            data-62000 = 'display:none'
+        >
+            <div class="s4Txt01 fixed" data-title="검정색배경"></div>
+            <div class="s4Txt02">
+                <div class="s4Txt02 fixed" data-title="빨간색원"
+                data-43500="width: 0vw; height: 0vw;"
+                data-56000="width: 40vw; height: 40vw;"
+                data-58000="width: 80vw; height: 80vw;"
+                data-60000="width: 230vw; height: 230vw;"
+                >
+                </div> 
+            </div>
+            <div class="s4Txt03">
+                <div class="s4Txt03 fixed" data-title="주황색원"
+                data-44800="width: 0vw; height: 0vw;"
+                data-56000="width: 40vw; height: 40vw;"
+                data-58000="width: 80vw; height: 80vw;"
+                data-60000="width: 230vw; height: 230vw;"
+                >
+                </div> 
+            </div>
+            <div class="s4Txt04">
+                <div class="s4Txt04 fixed" data-title="노란색원"
+                data-46100="width: 0vw; height: 0vw;"
+                data-56000="width: 40vw; height: 40vw;"
+                data-58000="width: 80vw; height: 80vw;"
+                data-60000="width: 230vw; height: 230vw;"
+                >
+                </div> 
+            </div>
+            <div class="s4Txt05">
+                <div class="s4Txt05 fixed" data-title="초록색원"
+                data-47400="width: 0vw; height: 0vw;"
+                data-56000="width: 40vw; height: 40vw;"
+                data-58000="width: 80vw; height: 80vw;"
+                data-60000="width: 230vw; height: 230vw;"
+                >
+                </div> 
+            </div>
+            <div class="s4Txt06">
+                <div class="s4Txt06 fixed" data-title="파란색원"
+                data-48700="width: 0vw; height: 0vw;"
+                data-56000="width: 40vw; height: 40vw;"
+                data-58000="width: 80vw; height: 80vw;"
+                data-60000="width: 230vw; height: 230vw;"
+                >
+                </div> 
+            </div>
+            <div class="s4Txt07">
+                <div class="s4Txt07 fixed" data-title="남색원"
+                data-50000="width: 0vw; height: 0vw;"
+                data-56000="width: 40vw; height: 40vw;"
+                data-58000="width: 80vw; height: 80vw;"
+                data-60000="width: 230vw; height: 230vw;"
+                >
+                </div> 
+            </div>
+            <div class="s4Txt08">
+                <div class="s4Txt08 fixed" data-title="보라색원"
+                data-51300="width: 0vw; height: 0vw;"
+                data-56000="width: 40vw; height: 40vw;"
+                data-58000="width: 80vw; height: 80vw;"
+                data-60000="width: 230vw; height: 230vw;"
+                >
+                </div> 
+                <span class="s4Txt09 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(360deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(180deg); width: 30vw; height: 30vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(0deg);width: 60vw; height: 60vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(-360deg);width: 90vw; height: 90vw;"
+                >☆</span>
+                <span class="s4Txt10 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(-360deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(-160deg); width: 60vw; height: 60vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(180deg);width: 90vw; height: 90vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(360deg);width: 60vw; height: 60vw;"
+                >☆</span>
+                <span class="s4Txt11 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(-220deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(0deg); width: 50vw; height: 50vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(150deg);width: 100vw; height: 100vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(360deg);width: 50vw; height: 50vw;"
+                >☆</span>
+                <span class="s4Txt12 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(-360deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(-180deg); width: 80vw; height: 80vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(0deg);width: 130vw; height: 130vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(180deg);width: 50vw; height: 50vw;"
+                >☆</span>
+                <span class="s4Txt13 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(270deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(90deg); width: 30vw; height: 30vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(0deg);width: 60vw; height: 60vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(-0deg);width: 90vw; height: 90vw;"
+                >☆</span>
+                <span class="s4Txt14 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(-270deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(0deg); width: 20vw; height: 20vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(180deg);width: 40vw; height: 40vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(270deg);width: 20vw; height: 20vw;"
+                >☆</span>
+                <span class="s4Txt15 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(-50deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(-160deg); width: 70vw; height: 70vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(0deg);width: 20vw; height: 20vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(160deg);width: 70vw; height: 70vw;"
+                >☆</span>
+                <span class="s4Txt16 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(-230deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(0deg); width: 50vw; height: 50vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(230deg);width: 100vw; height: 100vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(300deg);width: 50vw; height: 50vw;"
+                >☆</span>
+                <span class="s4Txt17 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(360deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(180deg); width: 80vw; height: 80vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(0deg);width: 130vw; height: 130vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(-180deg);width: 50vw; height: 50vw;"
+                >☆</span>
+                <span class="s4Txt18 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(180deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(20deg); width: 30vw; height: 30vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(0deg);width: 60vw; height: 60vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(-20deg);width: 90vw; height: 90vw;"
+                >☆</span>
+                <span class="s4Txt19 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(-90deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(0deg); width: 20vw; height: 20vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(900deg);width: 40vw; height: 40vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(270deg);width: 20vw; height: 20vw;"
+                >☆</span>
+                <span class="s4Txt20 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(0deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(-150deg); width: 70vw; height: 70vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(0deg);width: 20vw; height: 20vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(150deg);width: 70vw; height: 70vw;"
+                >☆</span>
+                <span class="s4Txt21 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(-85deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(-30deg); width: 25vw; height: 25vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(0deg);width: 55vw; height: 55vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(-170deg);width: 65vw; height: 65vw;"
+                >☆</span>
+                <span class="s4Txt22 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(50deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(-130deg); width: 35vw; height: 35vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(-260deg);width: 45vw; height: 45vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(200deg);width: 25vw; height: 25vw;"
+                >☆</span>
+                <span class="s4Txt23 fixed"
+                data-54000="transform: translate(-50%, -50%) scale(0) rotate(150deg); width: 0vw; height: 0vw;"
+                data-55000="transform: translate(-50%, -50%) scale(1) rotate(-125deg); width: 95vw; height: 95vw;"
+                data-56000="transform: translate(-50%, -50%) scale(1) rotate(30deg);width: 45vw; height: 45vw;"
+                data-57000="transform: translate(-50%, -50%) scale(0) rotate(160deg);width: 85vw; height: 85vw;"
+                >☆</span>
+            </div>
+            <div class="s4Txt24 fixed" 
+                data-56000="display:none;"
+                data-57500="top: 50%; opacity:0; display:block; "
+                data-59500="top: 50%; opacity:1; display:block; "
+                data-62000 ="top: 30%; opacity:0; display:block; "
+            >잘 부탁드립니다 :)</div>
+        </section>
+        <!-- //section4 -->
+        <section id="section5">
+        </section>
+        <!-- //section5 -->
+        <section id="section6">
+        </section>
+        <!-- //section6 -->
+    </div>
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $(".scroll").text(scrollTop);
+        })
+    </script>
+</body>
+</html>

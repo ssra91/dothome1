@@ -1592,3 +1592,13 @@ a {text-decoration:none;}
 .sec6-wrap > div:nth-child(4) {background: #666;}
 .sec6-wrap > div:nth-child(5) {background: #555;}
 
+
+/* section7 */
+.sec7 .text-wrap {margin: 10vh 0; font-size: 58px; text-transform: uppercase; text-align: center; color: #b33f4c; font-weight: bold; font-family: 'TmonMonsori';}
+.sec7 .text-wrap .a {}
+.sec7 .text-wrap .b {}
+.sec7 .phone {padding-top: 70vh; width: 70%; }
+.sec7 .phone img {width: 100%;}
+
+
+
