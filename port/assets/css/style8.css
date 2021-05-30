@@ -32,7 +32,7 @@
 #section4 {width: 100%; position: relative;}
 #section5 {}
 #section6 {position: relative; background: #fff; width: 100%; height: 900vh; z-index: 1000;}
-#section7 {}
+#section7 {height: 310vh; width: 100%;}
 
 
 /* scroll */
@@ -1545,7 +1545,7 @@ a {text-decoration:none;}
 }
 
 .txt-wrap  {
-    height: 1000px;
+    height: 900px;
     position: relative;
     z-index: 200;
 }
@@ -1594,11 +1594,22 @@ a {text-decoration:none;}
 
 
 /* section7 */
-.sec7 .text-wrap {margin: 10vh 0; font-size: 58px; text-transform: uppercase; text-align: center; color: #b33f4c; font-weight: bold; font-family: 'TmonMonsori';}
+.sec7 .text-wrap {margin: 18vh 0; font-size: 71px; text-transform: uppercase; text-align: center; color: #b33f4c; font-weight: bold; font-family: 'TmonMonsori';}
 .sec7 .text-wrap .a {}
 .sec7 .text-wrap .b {}
-.sec7 .phone {padding-top: 70vh; width: 70%; }
+.sec7 .text-wrap2 .c {font-size: 40px; text-transform: uppercase; text-align: center; margin-top: 40vh; font-weight: bold; color:#b33f4c; font-family: 'TmonMonsori';}
+.sec7 .phone {padding-top: 60vh; width: 70%; margin-left: 11vw;}
+.sec7 .num {margin-top:5vh; color: #ffd87e;width: 270px; border-radius:20px; border:3px solid #b33f4c;padding: 15px 0; font-family: 'TmonMonsori'; background: #b33f4c; font-size: 65px; font-weight: bold; text-align: center;}
 .sec7 .phone img {width: 100%;}
+.sec7 .box-wrap {border: #b33f4c 3px solid; margin-top: 35vh; width: 70%; margin-left:9vw; height: 35px;} 
+.sec7 .box-wrap .left {display: flex; height: 35px;}
+.sec7 .box-wrap h3 { background: #b33f4c;  flex: 0 0 10%; padding: 5px 15px 0 15px; font-size: 21px; font-family: 'TmonMonsori'; text-transform: uppercase; color: #ffd87e;  text-align: center;}
+.sec7 .box-wrap p {flex: 0 0 90%;}
+
+
+
+/* section8 */
+.sec8 {background:#8c0c1c; width: 100%; height: 80px;}
 
 
 
