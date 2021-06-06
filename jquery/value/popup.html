@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <style>
+        * {padding: 0; margin: 0;list-style: none;}
+        /* body {padding: 50px;} */
+        .popup {
+            position: fixed; 
+            left: 50%; top: 50%; 
+            transform: translate(-50%, -50%);
+            border-radius: 12px;
+            padding:45px 20px 40px 30px; 
+            border: 1px solid red; 
+            box-sizing: border-box;
+            width: 600px; height: 537px;
+            }
+        .popup .title {font-size: 26px; font-weight: 700; line-height: 35px; color: #000;}
+        .popup p {font-size: 18px; line-height: 24px; font-weight: 400; color: #333; padding-top: 13px;}
+        .popup .btn {}
+        .popup .close {position: absolute; right: 30px; top: 30px; width: 30px; height: 30px; background: url("../img/close.png")no-repeat; background-size: 30px 30px; color: transparent;}
+        .popup .box {padding-top: 10px;}
+
+        table {padding-top: 33px; }
+        table th {text-align: left; font-size: 12px; line-height: 40px; padding-right: 10px;}
+        table input,textarea {font-size: 12px; line-height: 20px; font-weight: 700; color: #ccc; padding: 10px; width: 410px;}
+        table input {height: 25px; border: 1px solid #ccc; border-radius: 4px;}
+        table textarea {height: 170px; border: 1px solid #ccc; border-radius: 4px;}
+        
+    
+    
+    
+    </style>
+    <script></script>
+</head>
+<body>
+    <div class="popup">
+        <div class="box">
+            <div class="title">3D매물투어 제작의뢰</div>
+            <p>제작의뢰상담을 위한 정보를 입력해주세요.</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th><label for="text1"></label>의뢰할 지역</th>
+                        <td><input type="txt" id="text" placeholder="의뢰하고 싶은 상세지번을 입력해주세요."></td>
+                    </tr>
+                    <tr>
+                        <th><label for="text2"></label>의뢰내용</th>
+                        <td style="padding-top: 10px;"><textarea style="resize: none;" id="text2" placeholder="3D 투어링 제작과 관련하여 문의사항을 편하게 입력해 주세요."></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="#a" class="btn">의뢰신청</a>
+        <a href="#a" class="close">닫기</a>
+    </div>
+</body>
+</html>
